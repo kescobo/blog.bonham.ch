@@ -1,19 +1,19 @@
 +++
 
-prepath = "coder-xranklin-demo"
+prepath = "categorical-ambiguity"
 generate_rss = true
-rss_website_url = "https://tlienart.github.io/coder-xranklin-demo/"
-rss_website_title = "Coder Xranklin demo"
-rss_website_descr = "Coder Xranklin demo"
+rss_website_url = "https://kescobo.github.io/categorical-ambiguity/"
+rss_website_title = "Kevin Bonham dot com"
+rss_website_descr = "Personal website of Kevin Bonham, PhD"
 
 # Layout information.
 
-author = "John Doe"
-author_blurb = "Full Stack DevOps<br>Magician<br>"
-author_short = "johndoe"
+author = "Kevin Bonham"
+author_blurb = "Senior Research Scientist"
+author_short = "kbonham"
 
-meta_descr = "John Doe's website"
-meta_kw = "blog,developer,personal"
+meta_descr = "Kevin Bonham's website"
+meta_kw = "microbiome,data science,teaching"
 
 tw_card = "summary"
 tw_title = author_short
@@ -35,12 +35,12 @@ nav_items = [
 
 # Social URLs for the home page
 
-social_github   = "https://github.com/johndoe/"
-social_gitlab   = "https://gitlab.com/johndoe/"
-social_twitter  = "https://twitter.com/johndoe/"
-social_linkedin = "https://www.linkedin.com/in/johndoe/"
-social_medium   = "https://medium.com/@johndoe"
-rss_link        = "https://myhugosite.com/index.xml"
+social_github   = "https://github.com/kescobo/"
+social_gitlab   = "https://gitlab.com/kescobo/"
+social_twitter  = "https://twitter.com/kevbonham/"
+social_polywork = "https://www.polywork.com/ksbonham"
+social_linkedin = "https://www.linkedin.com/in/kevin-bonham-6a10b566/"
+rss_link        = "https://kevinbonham.com/index.xml"
 
 # Layout / Franklin specifics
 
