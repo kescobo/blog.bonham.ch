@@ -52,6 +52,8 @@ heading_post = """
   </a>
   """
 fn_title = ""
+
+ignore=["_drafts/"]
 +++
 
 \newcommand{\html}[1]{~~~#1~~~}
