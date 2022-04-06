@@ -10,5 +10,5 @@ jobs:
       - uses: actions/checkout@v2
       - uses: tlienart/xranklin-build-action@v2
         with:
-          BASE_URL_PREFIX: "coder-xranklin-demo"
+          BASE_URL_PREFIX: ""
           CLEAR_CACHE: ${{ contains(github.event.head_commit.message, '[clear]') }}
