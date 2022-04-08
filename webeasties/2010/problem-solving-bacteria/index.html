@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Language" content="en">
+  <meta name="color-scheme" content="light dark">
+
+  <meta name="author" content="Kevin Bonham">
+  <meta name="description" content="Kevin Bonham's website">
+  <meta name="keywords" content="microbiome,data science,teaching">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="kbonham">
+  <meta name="twitter:description" content="Kevin Bonham's website">
+
+  <meta property="og:title" content="summary">
+  <meta property="og:description" content="Kevin Bonham's website">
+  <meta property="og:type" content="website">
+
+  <title>kbonham</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+  <link rel="stylesheet" href="/categorical-ambiguity/css/coder.min.css" media="screen">
+  <link rel="stylesheet" href="/categorical-ambiguity/css/coder-dark.min.css" media="screen">
+
+  <link rel="icon" type="image/png" href="/categorical-ambiguity/assets/infra/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/categorical-ambiguity/assets/infra/favicon-16x16.png" sizes="16x16">
+
+  <link rel="apple-touch-icon" href="/categorical-ambiguity/assets/infra/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/categorical-ambiguity/assets/infra/apple-touch-icon.png">
+
+  
+  <meta name="generator" content="Franklin.jl" />
+
+  
+
+  
+
+  <style>
+  :root {
+    --block-background: #f4f0ec;
+  }
+  .hljs {
+    padding: 1em;
+  }
+  </style>
+
+</head>
+
+<body class="preload-transitions colorscheme-auto">
+
+  <div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+      <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+  </div>
+
+  <main class="wrapper">
+
+    <nav class="navigation">
+  <section class="container">
+
+    <a class="navigation-title" href="/categorical-ambiguity/">
+      kbonham
+    </a>
+
+    <input type="checkbox" id="menu-toggle">
+    <label class="menu-button float-right" for="menu-toggle">
+      <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+    </label>
+
+    <ul class="navigation-list">
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/categorical-ambiguity/about/">About</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/categorical-ambiguity/posts/">Blog</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/categorical-ambiguity/projects/">Projects</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/categorical-ambiguity/contact/">Contact me</a>
+        </li>
+      
+
+      
+      
+    </ul>
+
+  </section>
+</nav>
+
+
+    <div class="content">
+
+         
+        <section class="container page">
+          
+
+       
+       
+       
+       
+<p><em>This post initially appeared on <a href="http://scienceblogs.com/webeasties">Science Blogs</a></em></p>
+<p>This is just <a href="http://goo.gl/x1Nhu">awesome</a>:</p>
+<p>A strain of Escherichia coli bacteria can now solve [<a href="/categorical-ambiguity/tag/sudoku"<a href=] puzzles</p>
+[...]<p>"Because sudoku has simple rules, we felt that maybe bacteria could solve it for us, as long as we designed a circuit for them to follow," says team leader Ryo Taniuchi.</p>
+<p>The mechanism is ingenious and yet straightforward at the same time.</p>
+<p>Basically, they have 16 different strains of bacteria, with each initial strain representing a spatial coordinate on a 4x4 grid. Each bacterium has a "4C3 leak" system, which is a chunk of DNA that the team designed that has 4 possible outputs. Depending on incoming signals, different chunks of that DNA will be excised, leaving only 1 output remaining.</p>
+<p>Once there is only 1 element left, that bacterium is "differentiated," and starts making viruses that can transmit information about its location and identity. Bacteria strains in the same row, column or section can receive information from that bacterium, but others express special anti-sense RNA sequences that will silence incoming viruses from other locations (this probably doesn't make sense if you've never played sudoku before - you can check out the team's <a href="http://goo.gl/EgxC3">abstract</a> to learn more).</p>
+<p>All 16 strains are thrown into a flask to grow together, with a few of the strains pre-differentiated to start the puzzle off - once these have communicated to all of their neighbors, each strain "location" will differentiate and transmit that new information to its neighbors, and the puzzle will solve itself. The information in this culture flask must then be visualized by taking the viruses floating around in the flask and adding them to another set of engineered bacteria which are plated out in a 4x4 grid, and express particularly colored fluorescent proteins.</p>
+<p>I think that the viruses and bacteria used in this system can barely even be called viruses and bacteria. We don't call a hammer "shaped steel with a rubber grip," even though that's what it's made from. These "organisms" are so heavily engineered, so sculpted to our ends that they are barely a shadow of their former selves. They are membrane-enclosed tools. And we're only getting better at these sorts of manipulations.</p>
+<p>Like I said - awesome.</p>
+
+
+      </section>
+    </div>
+
+    <footer class="footer">
+      <section class="container">
+        © 2022 Kevin Bonham · Powered by
+  <a href="https://franklin.jl">Franklin.jl</a> &
+  <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      </section>
+    </footer>
+
+  </main>
+
+  
+
+  
+
+<script src="/categorical-ambiguity/libs/coder.min.js"></script>
+
+</body>
+</html>

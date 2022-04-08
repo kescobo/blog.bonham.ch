@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Language" content="en">
+  <meta name="color-scheme" content="light dark">
+
+  <meta name="author" content="Kevin Bonham">
+  <meta name="description" content="Kevin Bonham's website">
+  <meta name="keywords" content="microbiome,data science,teaching">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="kbonham">
+  <meta name="twitter:description" content="Kevin Bonham's website">
+
+  <meta property="og:title" content="summary">
+  <meta property="og:description" content="Kevin Bonham's website">
+  <meta property="og:type" content="website">
+
+  <title>kbonham</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+  <link rel="stylesheet" href="/categorical-ambiguity/css/coder.min.css" media="screen">
+  <link rel="stylesheet" href="/categorical-ambiguity/css/coder-dark.min.css" media="screen">
+
+  <link rel="icon" type="image/png" href="/categorical-ambiguity/assets/infra/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/categorical-ambiguity/assets/infra/favicon-16x16.png" sizes="16x16">
+
+  <link rel="apple-touch-icon" href="/categorical-ambiguity/assets/infra/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/categorical-ambiguity/assets/infra/apple-touch-icon.png">
+
+  
+  <meta name="generator" content="Franklin.jl" />
+
+  
+
+  
+
+  <style>
+  :root {
+    --block-background: #f4f0ec;
+  }
+  .hljs {
+    padding: 1em;
+  }
+  </style>
+
+</head>
+
+<body class="preload-transitions colorscheme-auto">
+
+  <div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+      <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+  </div>
+
+  <main class="wrapper">
+
+    <nav class="navigation">
+  <section class="container">
+
+    <a class="navigation-title" href="/categorical-ambiguity/">
+      kbonham
+    </a>
+
+    <input type="checkbox" id="menu-toggle">
+    <label class="menu-button float-right" for="menu-toggle">
+      <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+    </label>
+
+    <ul class="navigation-list">
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/categorical-ambiguity/about/">About</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/categorical-ambiguity/posts/">Blog</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/categorical-ambiguity/projects/">Projects</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/categorical-ambiguity/contact/">Contact me</a>
+        </li>
+      
+
+      
+      
+    </ul>
+
+  </section>
+</nav>
+
+
+    <div class="content">
+
+         
+        <section class="container page">
+          
+
+       
+       
+       
+       
+<p><em>This post initially appeared on <a href="http://scienceblogs.com/webeasties">Science Blogs</a></em></p>
+<p>One of my earliest memories is of waves. I was 7 or 8 years old, on some nameless stretch of sand in southern California, and I was trapped.  I don't remember when I learned to swim, and I don't remember a time when I didn't love the ocean. But I remember the day I learned to respect it. 
+My brother Steve and his friend Chris were already back on the beach, but I don't remember why I hadn't followed them. Maybe I had something to prove; they were 3 years older and teased me incessantly, so I was always trying to show them that I could be tough. Maybe I meant to follow them, but couldn't swim quite as fast. Or maybe I wanted to catch one last wave. What I do remember is trying to work against the outward pull of the surf, only to see Steve and Chris shouting at me and pointing behind me. I turned to see something out of a nightmare, a wall of water that filled my entire field of vision, seconds from trying to pummel me into the sand. I dove.</p>
+<p>For what felt like hours, I struggled to gain ground against the waves, but every time I would move towards the beach, another giant would rear its head and I would be forced to turn and face it, diving as deep as possible to avoid taking the full force on my head. By the time I dragged myself onto the sand (helped by my laughing older brother), I was exhausted. I remember distinctively hearing Chris say, "you must have balls the size of oranges." I doubt I really understood what that meant (or even if he did), but I did know it conferred a measure of respect.</p>
+<p>Knowing what I know now, I doubt those waves were much larger than 4 feet, and I couldn't have been stuck for more than a minute or two. But truly enormous waves do exist. Some people are trapped by them, some people are killed by them, and some people seek to ride them. All of these stories are told in Susan Casey's book, <a href="http://www.susancasey.com/about-the-book/">The Wave</a>.</p>
+<p>Rather than do a full <a href="/categorical-ambiguity/tag/book-review">book review</a>, I'll just point you to the <a href="http://www.nytimes.com/2010/09/19/books/review/Morris-t.html">NYT,</a> which does a far better job actually describing the book than I would:</p>
+<p>Until very recently giant waves lived only as lore. There was the story of the Tlingit Indian woman who returned from berry picking to find her entire village disappeared. The polar explorer Ernest Shackleton once reported narrowly surviving "a mighty upheaval of the ocean," the biggest wave he'd seen in 26 years of seafaring. But witnesses of a 100-foot wave at close range rarely lived to tell, and experts dismissed stories about these waves because they seemingly violated basic principles of ocean physics.</p>
+<p>From non-linear wave mechanics to epic barrels and harrowing surf, it's a fantastic read, and highly recommended. I'll just mention a few negative impressions (I agree with all the positives mentioned in the professional book review). Casey follows 2 trajectories to explore giant waves - the surfing and the science. It's a unique approach, and I think couching the horror of 100 foot waves for oil tankers along with the thrill of a surfer on a 100 foot wave makes the former accessible, but at times it felt like the science was getting short-shrift in favor of telling more glorious tales of big-wave rider Laird Hamilton. Don't get me wrong - I loved the surf stories, but it felt a bit lop-sided. The story of a bay in Alaska that is consistently thrashed by waves measuring over 1000 ft (yes, 3 zeros!) was at least as fascinating as the story of big waves at Mavericks (even though that break was in my backyard growing up).</p>
+<p>Another problem I perceived was some dense jargon, but surprisingly more on the surfing side than the science side. Having grown up surfing, I understand what a "gnarly barrel" and getting "sucked over the falls" means, but I doubt the average reader would. Many times, phrases like these were used with no explanation, and I got the sense that said reader would not fully appreciate the majesty of the moment if they couldn't connect to the imagery. I'd be interested to know if there are any non-surfers that read this book and had a different impression.</p>
+<p>Those caveats aside, I can absolutely recommend this book.</p>
+<p>Edit to add video of the author on the Daily Show:</p>
+<p><a href="http://www.thedailyshow.com/watch/tue-november-30-2010/susan-casey">The Daily Show - Susan Casey</a>Tags: <a href="http://www.thedailyshow.com/full-episodes/">Daily Show Full Episodes</a>,<a href="http://www.indecisionforever.com/">Political Humor & Satire Blog</a>,<a href="http://www.facebook.com/thedailyshow">The Daily Show on Facebook</a></p>
+<p>And Laird Hamilton on Colbert:</p>
+ <h2 id="post_images" > Post Images<a class="heading-link" href="#post_images">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h2><ul>
+<li><img src="/categorical-ambiguity/_assets/img/webeasties/Screen%20shot%202011-03-07%20at%204.31.21%20PM.png" alt="Image at http://scienceblogs.com/webeasties/Screen%20shot%202011-03-07%20at%204.31.21%20PM.png"></li>
+</ul>
+
+
+      </section>
+    </div>
+
+    <footer class="footer">
+      <section class="container">
+        © 2022 Kevin Bonham · Powered by
+  <a href="https://franklin.jl">Franklin.jl</a> &
+  <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      </section>
+    </footer>
+
+  </main>
+
+  
+
+  
+
+<script src="/categorical-ambiguity/libs/coder.min.js"></script>
+
+</body>
+</html>

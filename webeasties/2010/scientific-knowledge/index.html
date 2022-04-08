@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Language" content="en">
+  <meta name="color-scheme" content="light dark">
+
+  <meta name="author" content="Kevin Bonham">
+  <meta name="description" content="Kevin Bonham's website">
+  <meta name="keywords" content="microbiome,data science,teaching">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="kbonham">
+  <meta name="twitter:description" content="Kevin Bonham's website">
+
+  <meta property="og:title" content="summary">
+  <meta property="og:description" content="Kevin Bonham's website">
+  <meta property="og:type" content="website">
+
+  <title>kbonham</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+  <link rel="stylesheet" href="/categorical-ambiguity/css/coder.min.css" media="screen">
+  <link rel="stylesheet" href="/categorical-ambiguity/css/coder-dark.min.css" media="screen">
+
+  <link rel="icon" type="image/png" href="/categorical-ambiguity/assets/infra/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/categorical-ambiguity/assets/infra/favicon-16x16.png" sizes="16x16">
+
+  <link rel="apple-touch-icon" href="/categorical-ambiguity/assets/infra/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/categorical-ambiguity/assets/infra/apple-touch-icon.png">
+
+  
+  <meta name="generator" content="Franklin.jl" />
+
+  
+
+  
+
+  <style>
+  :root {
+    --block-background: #f4f0ec;
+  }
+  .hljs {
+    padding: 1em;
+  }
+  </style>
+
+</head>
+
+<body class="preload-transitions colorscheme-auto">
+
+  <div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+      <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+  </div>
+
+  <main class="wrapper">
+
+    <nav class="navigation">
+  <section class="container">
+
+    <a class="navigation-title" href="/categorical-ambiguity/">
+      kbonham
+    </a>
+
+    <input type="checkbox" id="menu-toggle">
+    <label class="menu-button float-right" for="menu-toggle">
+      <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+    </label>
+
+    <ul class="navigation-list">
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/categorical-ambiguity/about/">About</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/categorical-ambiguity/posts/">Blog</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/categorical-ambiguity/projects/">Projects</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/categorical-ambiguity/contact/">Contact me</a>
+        </li>
+      
+
+      
+      
+    </ul>
+
+  </section>
+</nav>
+
+
+    <div class="content">
+
+         
+        <section class="container page">
+          
+
+       
+       
+       
+       
+<p><em>This post initially appeared on <a href="http://scienceblogs.com/webeasties">Science Blogs</a></em></p>
+<p>The "Science and the Public" story of the year might just be Arsenic using bacteria. Certainly, <a href="http://scienceblogs.com/webeasties/2010/12/guest_post_arsenate-based_dna.php">Alex's critique</a> has been the most popular post on this blog since we started and has received quite a bit of attention from other bloggers as well as in <a href="http://www.slate.com/id/2276919/">conventional</a> <a href="http://www.newsweek.com/2010/12/08/claims-of-a-new-life-form-get-whacked.html">media.</a> 
+This might be a teachable moment in science communication, but even though it's clear that this wasn't handled particularly well, it's hard to see how things can be done better in the future. Heather's <a href="http://scienceblogs.com/webeasties/2010/12/if_you_read_alex_bradleys.php">follow-up post </a>is a great summary of how science works in the real world, but I think it also illustrates a fundamental difference in how science goes about collecting knowledge compared to most people in their daily lives, and especially compared to how the media reports what is "news."</p>
+<p>Consider Heather's first steps in the scientific process:</p>
+<p>Scientist thinks they have made major new discovery</p>
+<p>Scientists writes up said discovery and submits paper to peer-reviewed journal (the bigger the claim, the fancier the journal)</p>
+<p>If editors of journal like the paper, they send it off to 3 or so experts in the field who review it, and provide the editor with feedback as to whether they feel the work is valid or not.</p>
+<p>Eventually, lets say the paper makes its way through the reviewers and gets published.</p>
+<p>Advancing science is a formal process, and it's collaborative. In principal, it doesn't fall sway to arguments from authority or many of the other fallacies that people often succumb to. Arguments are based on data, and rebuttals use data to refute claims. I think that's been accurately reflected in this debate: Wolfe-Simon and her colleagues published a paper containing a great deal of data, which they interpreted in a particular way. Most of the criticism has focused on the data, their methods for collecting it, or the claims they made based on the data. As a scientist, attacks on your data can feel like personal attacks, and sometimes debates like this can get quite heated, but the currency is almost always the data itself.</p>
+<p>As I said, this is how it works in principal, but scientists are human too. In reality, an established lab with lots of credibility will have an easier time publishing sketchy data than a freshly minted assistant professor, and people will look more critically at a paper that's published by a fierce competitor, but in general, over time, these biases work themselves out. The critical piece is the process that happens after a paper is published:</p>
+<p>other scientists start to pick at the paper (again, the bigger the claim, the more criticism typically surfaces).</p>
+<p>Original author might perform additional experiments that address these claims.</p>
+<p>Other scientists might carry out experiments that disprove the claims.</p>
+<p>Original claim either does, or does not, stand the test of time.</p>
+<p>Unfortunately, media rarely reports this part of the story. It's no wonder really; it can take decades for a consensus to be reached. Science advances incrementally, in fits and starts, and the really fundamental breakthroughs often aren't appreciated until years later. But this process is the key to the success of science: the process acknowledges the propensity for error. And because of that, we get <a href="http://chem.tufts.edu/answersinscience/relativityofwrong.htm">incrementally closer</a> to the right answer.</p>
+<p>There's more to say on this, but I wanted to throw this out and get some feed back. Do you think that there's a way for science or science reporting to make this long slog interesting, or to make it seem like a good thing? In most other contexts, constantly getting things wrong would be seen as a bad thing, but I think it's the greatest strength of science.</p>
+
+
+      </section>
+    </div>
+
+    <footer class="footer">
+      <section class="container">
+        © 2022 Kevin Bonham · Powered by
+  <a href="https://franklin.jl">Franklin.jl</a> &
+  <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      </section>
+    </footer>
+
+  </main>
+
+  
+
+  
+
+<script src="/categorical-ambiguity/libs/coder.min.js"></script>
+
+</body>
+</html>

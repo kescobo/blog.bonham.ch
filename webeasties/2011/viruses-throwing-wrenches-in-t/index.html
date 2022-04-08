@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Language" content="en">
+  <meta name="color-scheme" content="light dark">
+
+  <meta name="author" content="Kevin Bonham">
+  <meta name="description" content="Kevin Bonham's website">
+  <meta name="keywords" content="microbiome,data science,teaching">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="kbonham">
+  <meta name="twitter:description" content="Kevin Bonham's website">
+
+  <meta property="og:title" content="summary">
+  <meta property="og:description" content="Kevin Bonham's website">
+  <meta property="og:type" content="website">
+
+  <title>kbonham</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+  <link rel="stylesheet" href="/categorical-ambiguity/css/coder.min.css" media="screen">
+  <link rel="stylesheet" href="/categorical-ambiguity/css/coder-dark.min.css" media="screen">
+
+  <link rel="icon" type="image/png" href="/categorical-ambiguity/assets/infra/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/categorical-ambiguity/assets/infra/favicon-16x16.png" sizes="16x16">
+
+  <link rel="apple-touch-icon" href="/categorical-ambiguity/assets/infra/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/categorical-ambiguity/assets/infra/apple-touch-icon.png">
+
+  
+  <meta name="generator" content="Franklin.jl" />
+
+  
+
+  
+
+  <style>
+  :root {
+    --block-background: #f4f0ec;
+  }
+  .hljs {
+    padding: 1em;
+  }
+  </style>
+
+</head>
+
+<body class="preload-transitions colorscheme-auto">
+
+  <div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+      <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+  </div>
+
+  <main class="wrapper">
+
+    <nav class="navigation">
+  <section class="container">
+
+    <a class="navigation-title" href="/categorical-ambiguity/">
+      kbonham
+    </a>
+
+    <input type="checkbox" id="menu-toggle">
+    <label class="menu-button float-right" for="menu-toggle">
+      <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+    </label>
+
+    <ul class="navigation-list">
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/categorical-ambiguity/about/">About</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/categorical-ambiguity/posts/">Blog</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/categorical-ambiguity/projects/">Projects</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/categorical-ambiguity/contact/">Contact me</a>
+        </li>
+      
+
+      
+      
+    </ul>
+
+  </section>
+</nav>
+
+
+    <div class="content">
+
+         
+        <section class="container page">
+          
+
+       
+       
+       
+       
+<p><em>This post initially appeared on <a href="http://scienceblogs.com/webeasties">Science Blogs</a></em></p>
+<p>I've said it before, and I'll say it again - pathogens are devious little bastards:</p>
+<a href="http://http://www.sciencemag.org/content/331/6015/330.abstract">Discovery of a Viral NLR Homolog that Inhibits the Inflammasome</a><p>In order to respond to a virus, a cell first has to recognize that it's there. There are <a href="http://goo.gl/P8DNu">a lot</a> of ways the cell tries to do this - some receptors (like the <a href="http://goo.gl/SHLWZ">TLRs</a> I study) look for features that are unique to pathogens that are outside the cell. Others look for molecules (like DNA and RNA) that are shared between us and pathogens, but are in the wrong place (DNA outside the nucleus is a pretty sure sign of infection).</p>
+<p>NOD-like receptors (that's the "NLR" from the title) are a bit different - they seem to recognize signs of infection, rather than the infection itself. Viruses can be like a bull in a china shop; TLR's see bulls, NLR's see the smashed plates. When NLRs see the damage, they respond by forming the inflammasome (which I've <a href="http://scienceblogs.com/webeasties/2010/11/saturday_review_the_inflammaso.php">reviewed before</a>), and kicking off an immune response. 
+Inflammation is usually (<a href="http://goo.gl/nGbla">though not always</a>) bad for bugs, so many pathogens have evolved ways to escape detection. Often, this involves hiding to avoid detection (like <a href="http://goo.gl/FDuIO">ERV's sombreros</a>), but other times they make proteins that throw gum in the works - screwing up vital processes.</p>
+<p>Gregory et. al. found an example of the latter - a protein called Orf63 made by Kaposi's sarcoma-associated herpesvirus (KSHV), which looks like an NLR. The similarity is more than just coincidence. In order for NLRs to form the inflammasome, a lot of them have to come together and associate with a bunch of other proteins. Orf63 pretends to be an NLR, so it gets pulled into the complex, but it can't associate with all of the accessories. 
+Once the virus infects a cell, it makes a bunch of Orf63. By the time the NLRs start seeing all the evidence of KSHV screwing with the cell, it's too late; Orf63 effectively blocks all inflammasome activity in the cell. 
+Like I said - devious little bastards.</p>
+<p>Gregory SM, Davis BK, West JA, Taxman DJ, Matsuzawa S, Reed JC, Ting JP, & Damania B (2011). Discovery of a Viral NLR Homolog that Inhibits the Inflammasome. Science (New York, N.Y.), 331 (6015), 330-4 PMID: <a href="review">21252346</a></p>
+ <h2 id="post_images" > Post Images<a class="heading-link" href="#post_images">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h2>
+
+      </section>
+    </div>
+
+    <footer class="footer">
+      <section class="container">
+        © 2022 Kevin Bonham · Powered by
+  <a href="https://franklin.jl">Franklin.jl</a> &
+  <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      </section>
+    </footer>
+
+  </main>
+
+  
+
+  
+
+<script src="/categorical-ambiguity/libs/coder.min.js"></script>
+
+</body>
+</html>

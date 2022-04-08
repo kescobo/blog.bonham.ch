@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Language" content="en">
+  <meta name="color-scheme" content="light dark">
+
+  <meta name="author" content="Kevin Bonham">
+  <meta name="description" content="Kevin Bonham's website">
+  <meta name="keywords" content="microbiome,data science,teaching">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="kbonham">
+  <meta name="twitter:description" content="Kevin Bonham's website">
+
+  <meta property="og:title" content="summary">
+  <meta property="og:description" content="Kevin Bonham's website">
+  <meta property="og:type" content="website">
+
+  <title>kbonham</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+  <link rel="stylesheet" href="/categorical-ambiguity/css/coder.min.css" media="screen">
+  <link rel="stylesheet" href="/categorical-ambiguity/css/coder-dark.min.css" media="screen">
+
+  <link rel="icon" type="image/png" href="/categorical-ambiguity/assets/infra/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/categorical-ambiguity/assets/infra/favicon-16x16.png" sizes="16x16">
+
+  <link rel="apple-touch-icon" href="/categorical-ambiguity/assets/infra/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/categorical-ambiguity/assets/infra/apple-touch-icon.png">
+
+  
+  <meta name="generator" content="Franklin.jl" />
+
+  
+
+  
+
+  <style>
+  :root {
+    --block-background: #f4f0ec;
+  }
+  .hljs {
+    padding: 1em;
+  }
+  </style>
+
+</head>
+
+<body class="preload-transitions colorscheme-auto">
+
+  <div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+      <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+  </div>
+
+  <main class="wrapper">
+
+    <nav class="navigation">
+  <section class="container">
+
+    <a class="navigation-title" href="/categorical-ambiguity/">
+      kbonham
+    </a>
+
+    <input type="checkbox" id="menu-toggle">
+    <label class="menu-button float-right" for="menu-toggle">
+      <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+    </label>
+
+    <ul class="navigation-list">
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/categorical-ambiguity/about/">About</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/categorical-ambiguity/posts/">Blog</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/categorical-ambiguity/projects/">Projects</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/categorical-ambiguity/contact/">Contact me</a>
+        </li>
+      
+
+      
+      
+    </ul>
+
+  </section>
+</nav>
+
+
+    <div class="content">
+
+         
+        <section class="container page">
+          
+
+       
+       
+       
+       
+<p><em>This post initially appeared on <a href="http://scienceblogs.com/webeasties">Science Blogs</a></em></p>
+<p>Way back in high school bio, I learned about the 2 main ways that eukaryotic organisms (everything other than bacteria and archaea) make their metabolic living: <a href="http://en.wikipedia.org/wiki/Photosynthesis">photosynthesis </a>and <a href="http://en.wikipedia.org/wiki/Oxidative_phosphorylation">oxidative phosphorylation</a> (also known as respiration). These two processes are fundamentally related - photosynthesis combines CO2 and water to produce sugar and oxygen, while respiration breaks down sugars using oxygen, leaving water and CO2. But the cells of plants, animals and fungi can't do either of these things on their own. Sometime in our distant evolutionary past, we took on tiny passengers that do the work for us. 
+As <a href="http://scienceblogs.com/webeasties/2011/05/artificial_engineerable_animal.php">Heather wrote yesterday</a> about chloroplasts,</p>
+<p>Some photosynthetic bacteria eons ago found itself nestled inside another cell, realized it was a pretty sweet place to call home, and viola - a new cell organelle was born. OK fine, that is a bit of an oversimplification. The endosymbiotic theory is a bit more complicated, but that's the general idea.</p>
+<p>And it's the same general idea for mitochondria, which perform respiration. As you probably know, only plants have chloroplasts (until the Harvard scientists Heather mentioned have their way), but ALL eukaryotes have mitochondria. <a href="http://en.wikipedia.org/wiki/Lactic_acid_fermentation#Glycolysis">It's possible</a> to get energy from sugar without oxygen, but it's not very efficient. Our mitochondria extract over 10 times as much energy from a single molecule of glucose than would be possible without them. But all that efficiency comes with a price - a byproduct of respiration is "reactive oxygen species" or ROS (<a href="http://scientopia.org/blogs/scicurious/2011/05/06/friday-weird-science-i-hope-you-like-your-sperm-and-your-cell-phones-neat/">no, not ROUS</a>).</p>
+<p>Yet, as with so many things in evolution, a cell sees lemons and decides to make lemonade:</p>
+<a href="http://www.ncbi.nlm.nih.gov/pubmed?term=21525932">TLR signalling augments macrophage bactericidal activity through mitochondrial ROS</a><p>Reactive oxygen species are, as you might have guessed, reactive. They can cause all kinds of damage to proteins and lipds, and even DNA. Evidently, macrophages have learned to harness this destructive power to their advantage, by shuttling the ROS produced by mitochondria into the phagosomes that contain bacteria.</p>
+<p>For a long time, researchers have known that macrophages use ROS to cope with bacterial invaders. There are enzymes like inducible nitric oxide synthase (iNOS) and NADPH oxidase that intentionally make ROS to deal with bacteria. But A West et al have now shown that macrophages can divert the waste stream from mitochondria, recycling these destructive molecules for their bacteriacidal activity.</p>
+<p>First, they hit macrophages in cell cuture with a few related stimuli - some activate bacteria-sensing TLRs, some hit virus-sensing TLRs, and some are just general activators. They found that mitochondrial ROS (mROS) increased in response to bacteria-related signals, but not to the others. In the plots below, the doted lines represent the stimulated cells, while the solid lines show control cells. Lines further to the right indicate more mROS.</p>
+<p>They also showed that mitochonrial membranes associate with phagosomes containing latex beads coated with TLR ligands, but not the beads themselves. These images show macrophages stained with an antibody that makes a mitochondrial membrane protein fluoresce green. The beads are red, and the places that they localize together are in yellow in the bottom panels.</p>
+<p>They also did some biochemistry showing parts of the TLR signaling pathway interacting directly with mitochondria. But the most convincing experiment is in the last panel. Here, they use salmonella to infect mice that over-express an enzyme called catylase in their mitochondria (MCAT). Catylase is one of the enzymes that normal cells use to protect themselves from rogue ROS - it helps convert them into harmless molecules, and these mice generally live longer and show less age-related oxidative damage. However, this decrease in mitochondrial ROS severly impaired the macrophages' ability to deal with bacterial infection. After 5 days, these mice had over five times as many bacteria in their spleen than wild-type mice.</p>
+<p>I'm not sure if there are any direct health implications of this work (maybe antioxidants aren't all they're cracked up to be), but I think it's a cool example of evolution making the best out of a bad situation.</p>
+<p>West, A., Brodsky, I., Rahner, C., Woo, D., Erdjument-Bromage, H., Tempst, P., Walsh, M., Choi, Y., Shadel, G., & Ghosh, S. (2011). TLR signalling augments macrophage bactericidal activity through mitochondrial ROS Nature, 472 (7344), 476-480 DOI: <a href="review">10.1038/nature09973</a></p>
+ <h2 id="post_images" > Post Images<a class="heading-link" href="#post_images">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h2>
+
+      </section>
+    </div>
+
+    <footer class="footer">
+      <section class="container">
+        © 2022 Kevin Bonham · Powered by
+  <a href="https://franklin.jl">Franklin.jl</a> &
+  <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      </section>
+    </footer>
+
+  </main>
+
+  
+
+  
+
+<script src="/categorical-ambiguity/libs/coder.min.js"></script>
+
+</body>
+</html>

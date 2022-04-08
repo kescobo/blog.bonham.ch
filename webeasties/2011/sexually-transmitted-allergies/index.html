@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Language" content="en">
+  <meta name="color-scheme" content="light dark">
+
+  <meta name="author" content="Kevin Bonham">
+  <meta name="description" content="Kevin Bonham's website">
+  <meta name="keywords" content="microbiome,data science,teaching">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="kbonham">
+  <meta name="twitter:description" content="Kevin Bonham's website">
+
+  <meta property="og:title" content="summary">
+  <meta property="og:description" content="Kevin Bonham's website">
+  <meta property="og:type" content="website">
+
+  <title>kbonham</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+  <link rel="stylesheet" href="/categorical-ambiguity/css/coder.min.css" media="screen">
+  <link rel="stylesheet" href="/categorical-ambiguity/css/coder-dark.min.css" media="screen">
+
+  <link rel="icon" type="image/png" href="/categorical-ambiguity/assets/infra/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/categorical-ambiguity/assets/infra/favicon-16x16.png" sizes="16x16">
+
+  <link rel="apple-touch-icon" href="/categorical-ambiguity/assets/infra/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/categorical-ambiguity/assets/infra/apple-touch-icon.png">
+
+  
+  <meta name="generator" content="Franklin.jl" />
+
+  
+
+  
+
+  <style>
+  :root {
+    --block-background: #f4f0ec;
+  }
+  .hljs {
+    padding: 1em;
+  }
+  </style>
+
+</head>
+
+<body class="preload-transitions colorscheme-auto">
+
+  <div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+      <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+  </div>
+
+  <main class="wrapper">
+
+    <nav class="navigation">
+  <section class="container">
+
+    <a class="navigation-title" href="/categorical-ambiguity/">
+      kbonham
+    </a>
+
+    <input type="checkbox" id="menu-toggle">
+    <label class="menu-button float-right" for="menu-toggle">
+      <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+    </label>
+
+    <ul class="navigation-list">
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/categorical-ambiguity/about/">About</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/categorical-ambiguity/posts/">Blog</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/categorical-ambiguity/projects/">Projects</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/categorical-ambiguity/contact/">Contact me</a>
+        </li>
+      
+
+      
+      
+    </ul>
+
+  </section>
+</nav>
+
+
+    <div class="content">
+
+         
+        <section class="container page">
+          
+
+       
+       
+       
+       
+<p><em>This post initially appeared on <a href="http://scienceblogs.com/webeasties">Science Blogs</a></em></p>
+<p>While researching <a href="http://scienceblogs.com/webeasties/2011/07/allergic_to_spunk.php">Wednesday's post</a>, I ran into a number of strange case studies. They didn't quite fit into that post, but I thought they were too interesting to ignore. If you're interested, follow me down the pubmed rabbit hole.</p>
+<p>When I typed "semen allergy" into google scholar last week, the very first hit was this paper [[pdf](http://www.jiaci.org/issues/vol17issue03/10.pdf)]: 
+We report the case of a 20-year-old woman with documented Brazil nut allergy who developed widespread [hives] and mild [shortness of breath] after intercourse with her boyfriend who had earlier consumed Brazil nuts. Skin prick testing with the boyfriend's semen after Brazil nut consumption conï¬rmed signiï¬cant reactivity whereas a sample before nut consumption was negative.</p>
+<p>The abstract sort of says it all: woman has known allergy, boyfriend eats allergen, they have sex and girl has allergic reaction. For the uninitiated, the skin-prick testing thing might seem a bit weird - they got samples from the boyfriend before and after he ate brazil nuts (masturbation for science!) and injected them under the girlfriend's skin - but this is a standard allergy test. Allergists already do this with bread mold and ground up dust mites, so I guess semen should be any stranger, but I still raised an eyebrow. If there's an allergic reaction, after thirty minutes or so, the area around the skin prick will develop a characteristic "wheal and flare," which is a raised lump at the site of the prick (the wheal) and a reddish circle of inflammation surrounding it (the flare). 
+If you have an allergy, but you don't know the cause, allergists will draw a grid on your back and inject a standard battery of allergens. I know from experience that this is an unpleasant procedure, especially when they don't find anything and decide that the shallow pricks on the back weren't enough, so they opt to inject a few other allergens deeper in your shoulder... but I digress.</p>
+<p>(<a href="http://www.flickr.com/photos/allspaw/93786866/">Source</a>, flickr user <a href="http://www.flickr.com/photos/allspaw/with/93786866/">jspar</a>)</p>
+<p>These doctors found that the woman responded to her boyfriends semen after he had eaten brazil nuts.</p>
+<p>(From the paper)</p>
+<p>Seems a bit like cheating the way the light is positioned, and I think I can see a bit of a wheal on the left side, but they claim:</p>
+<p>We believe this to be the ï¬rst case of a sexually transmitted allergic reaction.</p>
+<p>That was published in 2007.</p>
+<p>But then I found this other paper from 1986:</p>
+<p>A woman complained of severe itching and flushing after sexual intercourse or other physical contact with her husband. She developed a weal and flare on intradermal [under the skin] testing with her husband's semen and sweat, pooled donor semen and the sweat from her 2 sons.</p>
+<p>This poor woman. I'd like to quote the paper at length, but the pdf I have is a scanned copy and I can't copy paste, so I'll summarize. Woman is literally allergic to her husband - if she puts her face on a pillow that he's slept on, she breaks out into hives. When they do a skin-prick test with his semen, she goes into anaphylaxis - nausea, dizziness, sweating and increased heart rate. 
+She also has a known allergy to a bunch of green/yellow vegetables, which she avoids, but her husband eats in copious quantities. They suspect that he might be transferring dietary allergens in his semen because (and here's why the 2007 paper above is full of crap) of a paper from 1978 in which a woman who has an allergy to walnuts has an allergic reaction to her husband's semen after he's eaten walnuts, but not before. Sound familiar? I can't seem to find said paper online, but they also apparently went so far as to search for (and find) walnut proteins in the husband's semen.</p>
+<p>Back to the vegetable allergy woman though: In addition to the husband's semen, they also tested his sweat, sweat from her two sons (one of whom ate the vegetables she was allergic to and one that did not), and semen pooled from a number of anonymous donors, and she had reactions to all of them (though, interestingly - her reaction to the pooled donor-semen was not as severe). She also had reactions to ground up hair from her husband (but not her sons) caused a reaction. They stopped short of testing her son's semen - I guess they'd reached the limits of propriety with the random strangers.</p>
+<p>These doctors were clearly having a great time testing everything they could think of but, and I'll take the time to transcribe this because it's awesome:</p>
+<p>This mysterious case obviously needed further testing[...] However, she solved her problem, at least temporarily, by leaving her husband! She did not wish to return for further testing.</p>
+<p>That is one of few exclamation points I've ever seen in academic literature. I also image a frowny-face emoticon belongs at the end of the last sentence.</p>
+<p>The doctors conclude that it's probably not a dietary antigen, because she's allergic to the pooled donor semen and because she's allergic to sweat from both sons, one of whom doesn't eat the vegetables that she's known to be allergic to. But this woman is allergic to A LOT of stuff, and it seems to me that the sweat thing may be unrelated. And because of the fact that the reaction to her husband's semen was stronger than to that of the donors, and we don't know the diets of the donors, I don't think anything can be ruled out.</p>
+<p>These guys claim to have the first published example of allergy to sweat (and possibly hair), but after the irrational exuberance of that 2007 paper, I feel like I don't know who to trust. It seems pretty clear that you can transmit dietary allergens in semen, and maybe other secretions as well? <a href="http://scienceblogs.com/webeasties/2011/07/allergic_to_spunk.php#comment-4621342">A commenter on my last post</a> mentioned that she(?) and her partner have to avoid foods that the other is allergic to because they can transmit allergies between each other. To Elburto - get thee to an allergist, and you too could be immortalized on pubmed.</p>
+<p>Bansal AS, Chee R, Nagendran V, Warner A, & Hayman G (2007). Dangerous liaison: sexually transmitted allergic reaction to Brazil nuts. Journal of investigational allergology & clinical immunology : official organ of the International Association of Asthmology (INTERASMA) and Sociedad Latinoamericana de Alergia e Inmunologia, 17 (3), 189-91 PMID: <a href="review">17583107</a></p>
+<p>Freeman S (1986). Woman allergic to husband's sweat and semen. Contact dermatitis, 14 (2), 110-2 PMID: <a href="review">3709144</a></p>
+ <h2 id="post_images" > Post Images<a class="heading-link" href="#post_images">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h2>
+
+      </section>
+    </div>
+
+    <footer class="footer">
+      <section class="container">
+        © 2022 Kevin Bonham · Powered by
+  <a href="https://franklin.jl">Franklin.jl</a> &
+  <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      </section>
+    </footer>
+
+  </main>
+
+  
+
+  
+
+<script src="/categorical-ambiguity/libs/coder.min.js"></script>
+
+</body>
+</html>

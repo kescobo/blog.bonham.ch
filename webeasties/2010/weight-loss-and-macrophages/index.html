@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Language" content="en">
+  <meta name="color-scheme" content="light dark">
+
+  <meta name="author" content="Kevin Bonham">
+  <meta name="description" content="Kevin Bonham's website">
+  <meta name="keywords" content="microbiome,data science,teaching">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="kbonham">
+  <meta name="twitter:description" content="Kevin Bonham's website">
+
+  <meta property="og:title" content="summary">
+  <meta property="og:description" content="Kevin Bonham's website">
+  <meta property="og:type" content="website">
+
+  <title>kbonham</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+  <link rel="stylesheet" href="/categorical-ambiguity/css/coder.min.css" media="screen">
+  <link rel="stylesheet" href="/categorical-ambiguity/css/coder-dark.min.css" media="screen">
+
+  <link rel="icon" type="image/png" href="/categorical-ambiguity/assets/infra/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/categorical-ambiguity/assets/infra/favicon-16x16.png" sizes="16x16">
+
+  <link rel="apple-touch-icon" href="/categorical-ambiguity/assets/infra/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/categorical-ambiguity/assets/infra/apple-touch-icon.png">
+
+  
+  <meta name="generator" content="Franklin.jl" />
+
+  
+
+  
+
+  <style>
+  :root {
+    --block-background: #f4f0ec;
+  }
+  .hljs {
+    padding: 1em;
+  }
+  </style>
+
+</head>
+
+<body class="preload-transitions colorscheme-auto">
+
+  <div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+      <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+  </div>
+
+  <main class="wrapper">
+
+    <nav class="navigation">
+  <section class="container">
+
+    <a class="navigation-title" href="/categorical-ambiguity/">
+      kbonham
+    </a>
+
+    <input type="checkbox" id="menu-toggle">
+    <label class="menu-button float-right" for="menu-toggle">
+      <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+    </label>
+
+    <ul class="navigation-list">
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/categorical-ambiguity/about/">About</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/categorical-ambiguity/posts/">Blog</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/categorical-ambiguity/projects/">Projects</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/categorical-ambiguity/contact/">Contact me</a>
+        </li>
+      
+
+      
+      
+    </ul>
+
+  </section>
+</nav>
+
+
+    <div class="content">
+
+         
+        <section class="container page">
+          
+
+       
+       
+       
+       
+<p><em>This post initially appeared on <a href="http://scienceblogs.com/webeasties">Science Blogs</a></em></p>
+<p>Macrophages are really good at gobbling stuff up. It's all right there in the name - they are big (macro) eaters (phage). I study them in the context of the immune system - one of the things they do really well is eat up bacteria and other pathogens that have found their way into your tissues. As a front line sentinel, they also are capable of kick-starting inflammation and recruiting the rest of the cells necessary to clear an infection. But that's not all, there's more.</p>
+<a href="http://goo.gl/Ggmo3">Weight loss and lipolysis promote a dynamic immune response in murine adipose tissue</a><p>Here we characterized the response of adipose tissue <a href="/categorical-ambiguity/tag/macrophages">macrophages</a> (ATMs) to weight loss and fasting in mice and identified a role for lipolysis in ATM recruitment and accumulation. We found that the immune response to weight loss was dynamic; caloric restriction of high-<a href="/categorical-ambiguity/tag/fat">fat</a> diet-fed mice led to an initial increase in ATM recruitment, whereas ATM content decreased following an extended period of weight loss. 
+So why is there an immune response when you lose weight?</p>
+<p>Well... there isn't really.</p>
+<p>When lipolysis is activated and FFA [free fatty acid -KB] concentrations increase acutely, macrophages accumulate rapidly in adipose tissue, without a significant initial increase in inflammation</p>
+<p>Let's back up.</p>
+<p>It's been known <a href="http://goo.gl/upcxU">for a while</a> that the adipose (fat-storing) tissue of obese mice and humans accumulate macrophages. These macrophages have also been linked to inflammation, and immune reactions to insulin, <a href="http://goo.gl/33m2H">leading to diabetes</a>. The thought is, when your adipocytes (the cells that store fat) get overloaded, sometimes they die and spill out all of those fatty molecules. Macrophages need to come and clean up the mess, but the large amounts lipid are tough to breakdown, and they can get a bit overwhelmed. Their inability to deal with the situation (it's actually called "frustrated phagocytosis") can stress them out and cause them to secrete cytokines that get the inflammatory cascade rolling. And when inflammation occurs chronically, you run into problems.</p>
+<p>These researchers wanted to figure out what would happen on the other side if the weight was lost, so the fed the mice a high-fat diet, which caused them to get obese.Then they put them on a calorie-restricted diet. This caused the fat in the adipose tissue, which is stored as triglycerides, to get broken down into smaller free fatty acids (FFA) - a process called lipolysis. It turns out that the release of FFA serves as a signal to recruit even more macrophages.</p>
+<p>These macrophages end up accumulating triglycerides and slowing down the release of FFA, preventing a huge spike in local concentrations of free fat. But what about the immune reaction? As I said above, the immune system doesn't really come into play. These macrophages don't induce inflammation, and once they've mopped up the roaming lipids and the mice get back down to a normal weight, the macrophages bail and leave the tissue happy and healthy. It's only when the work never stops, and the fat stores don't deplete that these cells get stressed and act out.</p>
+<p>Macrophages are often thought of in the context of an immune response, but they're really our bodies' blue collar workers. From wound healing to cleaning up messes to being the first responders during a dangerous situation, macs just do what needs doing. I guess the moral of this story is don't overwork them, or their intricate connection to many of the most important parts of our physiology will come back to bite us.</p>
+<p>Kosteli A, Sugaru E, Haemmerle G, Martin JF, Lei J, Zechner R, & Ferrante AW Jr (2010). Weight loss and lipolysis promote a dynamic immune response in murine adipose tissue. The Journal of clinical investigation, 120 (10), 3466-79 PMID: <a href="review">20877011</a></p>
+ <h2 id="post_images" > Post Images<a class="heading-link" href="#post_images">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h2><ul>
+<li><img src="/categorical-ambiguity/_assets/img/webeasties/3335023599_10a26e44dd.jpg" alt="Image at http://scienceblogs.com/webeasties/3335023599_10a26e44dd.jpg"></li>
+<li><img src="/categorical-ambiguity/_assets/img/webeasties/Screen%20shot%202010-11-11%20at%205.49.40%20PM.png" alt="Image at http://scienceblogs.com/webeasties/Screen%20shot%202010-11-11%20at%205.49.40%20PM.png"></li>
+</ul>
+
+
+      </section>
+    </div>
+
+    <footer class="footer">
+      <section class="container">
+        © 2022 Kevin Bonham · Powered by
+  <a href="https://franklin.jl">Franklin.jl</a> &
+  <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      </section>
+    </footer>
+
+  </main>
+
+  
+
+  
+
+<script src="/categorical-ambiguity/libs/coder.min.js"></script>
+
+</body>
+</html>

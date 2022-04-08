@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Language" content="en">
+  <meta name="color-scheme" content="light dark">
+
+  <meta name="author" content="Kevin Bonham">
+  <meta name="description" content="Kevin Bonham's website">
+  <meta name="keywords" content="microbiome,data science,teaching">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="kbonham">
+  <meta name="twitter:description" content="Kevin Bonham's website">
+
+  <meta property="og:title" content="summary">
+  <meta property="og:description" content="Kevin Bonham's website">
+  <meta property="og:type" content="website">
+
+  <title>kbonham</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+  <link rel="stylesheet" href="/categorical-ambiguity/css/coder.min.css" media="screen">
+  <link rel="stylesheet" href="/categorical-ambiguity/css/coder-dark.min.css" media="screen">
+
+  <link rel="icon" type="image/png" href="/categorical-ambiguity/assets/infra/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/categorical-ambiguity/assets/infra/favicon-16x16.png" sizes="16x16">
+
+  <link rel="apple-touch-icon" href="/categorical-ambiguity/assets/infra/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/categorical-ambiguity/assets/infra/apple-touch-icon.png">
+
+  
+  <meta name="generator" content="Franklin.jl" />
+
+  
+
+  
+
+  <style>
+  :root {
+    --block-background: #f4f0ec;
+  }
+  .hljs {
+    padding: 1em;
+  }
+  </style>
+
+</head>
+
+<body class="preload-transitions colorscheme-auto">
+
+  <div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+      <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+  </div>
+
+  <main class="wrapper">
+
+    <nav class="navigation">
+  <section class="container">
+
+    <a class="navigation-title" href="/categorical-ambiguity/">
+      kbonham
+    </a>
+
+    <input type="checkbox" id="menu-toggle">
+    <label class="menu-button float-right" for="menu-toggle">
+      <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+    </label>
+
+    <ul class="navigation-list">
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/categorical-ambiguity/about/">About</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/categorical-ambiguity/posts/">Blog</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/categorical-ambiguity/projects/">Projects</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/categorical-ambiguity/contact/">Contact me</a>
+        </li>
+      
+
+      
+      
+    </ul>
+
+  </section>
+</nav>
+
+
+    <div class="content">
+
+         
+        <section class="container page">
+          
+
+       
+       
+       
+       
+<p><em>This post initially appeared on <a href="http://scienceblogs.com/webeasties">Science Blogs</a></em></p>
+[This past fall, I <a href="http://scienceblogs.com/webeasties/2012/08/28/plagues-and-pandemics-emerson-sc-214/"This past fall, I <a href="Plagues]<p>Most of this post was written back in September, when it still seemed possible that I would be able to teach the class, write the blog and do science. Please forgive any anachronisms that I failed to purge.</p>
+<p>Last time, I talked about what science is and why it's awesome. This is the first half of lecture 2, which was originally given on 11 September, 2012.</p>
+<p>Lecture 2a (reading: Zimmer - The Tangled Bank, chapters 1-2 and chapter 5)</p>
+<p>In 1650, Bishop James Usher of the Church of Ireland made one of the earliest recorded attempts at determining the age of the earth. By tracing the genealogies of the Old Testament ("Abraham begat Isaac; and Isaac begat Jacob; and Jacob begat Judas and his brethren..."), and cross referencing events in the Bible with other ancient sources, he determined that the earth had been created on October 23rd, 4004 BC at around noon. That's some remarkable precision considering the dubious nature of his source material (as far as I know, he did not include an estimate of error), but we now know that he was off by several billion years.</p>
+<p>Another part of pre-Renaissance European thinking that was ripe for challenge was a hierarchy of existence known as the "Scala Naturae," which literally translates to the ladder of nature, but is often referred to as the <a href="http://en.wikipedia.org/wiki/Great_chain_of_being">Great Chain of Being</a>.</p>
+<p>1579 drawing of the Great Chain of Being from Didacus Valades, Rhetorica Christiana. Source: wikipedia</p>
+<p>This concept, cribbed from Greeks like Aristotle and Plato, placed everything in existence onto a rung in the ladder, from the lowest forms (earth, rocks and minerals) up through plants and animals to the the highest form (God). Each of these rungs could be further subdivided (iron is a lesser mineral than gold, though neither is as high as the lowest plant etc), and one of the defining features of your position in this chain of being was that it is unchanging. Plants don't become animals, and serfs don't become kings (of course, there was political advantage in people believing that their station is fixed and ordained by God, but that's a conversation for another time).</p>
+<p>Both of these notions - the young Earth and the fixed nature of Creation exemplified by the Scala Naturae - began to come under fire in the late 18th and early 19th centuries, when people started actually observing the things around them in a systematic way. Early geologists started to work out the processes by which sediment could turn to stone, and came to understood that the geologic features they observed could not have happened in 6000 years, or even in 60,000 years. By the mid 19th century, it was generally accepted by learned people that the Earth had to be at least millions of years old, if not tens of millions of years old.</p>
+<p>From Lyell's "Principals of Geology" - Click for source</p>
+<p>In addition, these same geologists were finding fossilized creatures in the rock that were quite different from the forms of animals that they knew, and others that resemble modern forms, but were found in strange places (seashells atop mountains for instance), and they began to suspect that something wasn't quite right about the conventional wisdom. Of course, there were those that tried to explain away these observations by invoking catastrophes like floods, earthquakes and volcanoes, but it became increasingly clear that the living world was also in a state of flux.</p>
+<p>These days, the notion of <a href="/categorical-ambiguity/tag/evolution">evolution</a> is almost entirely associated with Charles Darwin, but Darwin was not the first person to come up with the idea - not by a long shot. The notion that organisms could change over time, and the mechanism by which they did so was being seriously debated for decades before Darwin. One of the most well known attempts at a mechanism was from Jean-Baptiste Lamarck, who hypothesized that organisms were constantly struggling to improve themselves in their own lifetimes, and then pass the results of that struggle on to their offspring. In other words, Lamarck's idea suggested that if I do a lot of yoga and weight-lifting, my children will be stronger and more flexible. This idea is a bit reminiscent of the Scala Naturae; organisms in Larmarck's view were always striving towards perfection (striving to climb the ladder of nature).</p>
+<p>Jean-Baptiste Lamarck - Source: wikipedia</p>
+<p>We now know that Lamarck's mechanism is not true - experiences of a parent do not affect their offspring (with a few notable and quite interesting <a href="http://www.nature.com/scitable/topicpage/obesity-epigenetics-and-gene-regulation-927">exceptions</a>) - but even the correct mechanism of natural selection did not originate with Darwin. Edward Blyth, a staunch creationist theologen, hit upon the notion of natural selection as a way of pruning out the weak and deteriorating members of a species - thus preserving God's creation (what we would now call stabilizing selection). In 1831 (the year Darwin left on the famous voyage of the Beagle), the shipwright Patrick Mathew published a hypothesis about a force like natural selection as a means by which species could change, but he only devoted a couple of paragraphs to the idea and buried it in an appendix on a book about growing the best trees for ship-building lumber.</p>
+<p>Darwins principal contribution, and the reason his name became synonymous with the theory of evolution, was the shear weight of his argument. On the Origin of Species by Means of Natural Selection, or the Preservation of Favoured Races in the Struggle for Life is staggeringly complete, and breathtaking in its attention to detail. When I read it for the first time, I was shocked at how many modern creationist tropes, from "irreducible complexity," to the evolution of the eye, to the idea that evolution would take too long, are brought up by Darwin himself and then meticulously refuted. Though our understanding of biology has advanced considerably in the last 150 years, Darwin didn't even need to know about genetics to get the basic story correct.</p>
+<p>Click for source</p>
+<p>In addition, Darwin didn't just make observations and then propose a potential explanation, he also did experiments. For instance, he knew that in order for life to arrive on volcanic islands, it would need to get their from the mainland, but no one knew if this was possible. Darwin collected seeds from around his home in England and then dropped them in a bathtub of salt water for different lengths of time, noting that many floated and could germinate after extended periods of soaking. The technology for extracting the genetic material of an organism and sequencing it in molecular detail is now available in just about every biology lab in the world (and all supports Darwins original theory), but Darwin did the experiments that he could do in order to lend support to what is now the foundation of our biological understanding.</p>
+<p>So what was the theory? Those of you that read a lot of science blogs might have a more sophisticated understanding of evolution, but the core ideas of Darwins theory were Common Ancestry and Descent with Modification. Crucially, the mechanism that enabled decent with modification to produce the myriad of modern species from a common ancestor is Natural Selection. Darwin (and most naturalists at the time) knew that there was variation within populations. Further, they knew that this variation could be passed down to offspring. Animal breeders had known this for millennia, and had been artificially selecting animals by breeding pairs of animals with desirable traits for many generations. Darwin observed that incredible differences between different pigeon breeds, which were documented as arising from a common ancestor, could arise because of artificial selection, surely the struggle for living in the natural world could also lead to profound changes.</p>
+<p> 
+ 
+ 
+ 
+ 
+ 
+ 
+The Need for Genes</p>
+<p>Darwin was able to refute many of the potential criticisms of his theory, but one problem continued to dog him and his supporters: how could new traits arise in a population? Selecting among variation already present in a population is all well and good, but in order to hypothesize common ancestry, Darwinian theory would need a mechanism by which new variation could spread throughout a population. Breeders knew they could select and amplify traits, but they believed that these traits were determined by some quantifiable substance that was mixed during each generation. If something brand new appeared, it would necessarily be diluted out in future generations, like a drop of dye in a lake full of water.</p>
+<p>That all changed when a fastidious German monk started growing peas.</p>
+<p>Up next: Lecture 2b - Genes, traits and the Central Dogma</p>
+ <h2 id="post_images" > Post Images<a class="heading-link" href="#post_images">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h2><ul>
+<li>Missing image: Image at http://upload.wikimedia.org/wikipedia/commons/b/b5/Great<em>Chain</em>of<em>Being</em>2.png | http://upload.wikimedia.org/wikipedia/commons/b/b5/Great<em>Chain</em>of<em>Being</em>2.png</li>
+<li><img src="/categorical-ambiguity/_assets/img/webeasties/fossils.jpg" alt="Image at http://www.fossildino.com/webandword/images/fossils.jpg"></li>
+<li><img src="/categorical-ambiguity/_assets/img/webeasties/Origin_of_Species_1859_edition.jpg" alt="Image at http://anthro.palomar.edu/evolve/images/Origin<em>of</em>Species<em>1859</em>edition.jpg"></li>
+<li>Missing image: Image at http://3.bp.blogspot.com/<em>rY7HiV-yKzo/S8DOH3hRYcI/AAAAAAAADBk/aapBsa0J2mk/s1600/British+Show+Racer+Pigeon+1.jpg | http://3.bp.blogspot.com/</em>rY7HiV-yKzo/S8DOH3hRYcI/AAAAAAAADBk/aapBsa0J2mk/s1600/British+Show+Racer+Pigeon+1.jpg</li>
+<li>Missing image: Image at http://3.bp.blogspot.com/<em>rY7HiV-yKzo/S8oNkQCtiVI/AAAAAAAADMc/5d7dIB4TwMQ/s400/Norwich+Cropper+Pigeon+1.jpg | http://3.bp.blogspot.com/</em>rY7HiV-yKzo/S8oNkQCtiVI/AAAAAAAADMc/5d7dIB4TwMQ/s400/Norwich+Cropper+Pigeon+1.jpg</li>
+<li>Missing image: Image at http://1.bp.blogspot.com/<em>rY7HiV-yKzo/S7g</em>gqKEYMI/AAAAAAAAC3s/35k3hw5Tzhc/s400/Lucerne+Gold+Collar+1.jpg | http://1.bp.blogspot.com/<em>rY7HiV-yKzo/S7g</em>gqKEYMI/AAAAAAAAC3s/35k3hw5Tzhc/s400/Lucerne+Gold+Collar+1.jpg</li>
+</ul>
+
+
+      </section>
+    </div>
+
+    <footer class="footer">
+      <section class="container">
+        © 2022 Kevin Bonham · Powered by
+  <a href="https://franklin.jl">Franklin.jl</a> &
+  <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      </section>
+    </footer>
+
+  </main>
+
+  
+
+  
+
+<script src="/categorical-ambiguity/libs/coder.min.js"></script>
+
+</body>
+</html>

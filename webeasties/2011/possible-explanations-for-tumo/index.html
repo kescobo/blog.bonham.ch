@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Language" content="en">
+  <meta name="color-scheme" content="light dark">
+
+  <meta name="author" content="Kevin Bonham">
+  <meta name="description" content="Kevin Bonham's website">
+  <meta name="keywords" content="microbiome,data science,teaching">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="kbonham">
+  <meta name="twitter:description" content="Kevin Bonham's website">
+
+  <meta property="og:title" content="summary">
+  <meta property="og:description" content="Kevin Bonham's website">
+  <meta property="og:type" content="website">
+
+  <title>kbonham</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+  <link rel="stylesheet" href="/categorical-ambiguity/css/coder.min.css" media="screen">
+  <link rel="stylesheet" href="/categorical-ambiguity/css/coder-dark.min.css" media="screen">
+
+  <link rel="icon" type="image/png" href="/categorical-ambiguity/assets/infra/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/categorical-ambiguity/assets/infra/favicon-16x16.png" sizes="16x16">
+
+  <link rel="apple-touch-icon" href="/categorical-ambiguity/assets/infra/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/categorical-ambiguity/assets/infra/apple-touch-icon.png">
+
+  
+  <meta name="generator" content="Franklin.jl" />
+
+  
+
+  
+
+  <style>
+  :root {
+    --block-background: #f4f0ec;
+  }
+  .hljs {
+    padding: 1em;
+  }
+  </style>
+
+</head>
+
+<body class="preload-transitions colorscheme-auto">
+
+  <div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+      <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+  </div>
+
+  <main class="wrapper">
+
+    <nav class="navigation">
+  <section class="container">
+
+    <a class="navigation-title" href="/categorical-ambiguity/">
+      kbonham
+    </a>
+
+    <input type="checkbox" id="menu-toggle">
+    <label class="menu-button float-right" for="menu-toggle">
+      <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+    </label>
+
+    <ul class="navigation-list">
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/categorical-ambiguity/about/">About</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/categorical-ambiguity/posts/">Blog</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/categorical-ambiguity/projects/">Projects</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/categorical-ambiguity/contact/">Contact me</a>
+        </li>
+      
+
+      
+      
+    </ul>
+
+  </section>
+</nav>
+
+
+    <div class="content">
+
+         
+        <section class="container page">
+          
+
+       
+       
+       
+       
+<p><em>This post initially appeared on <a href="http://scienceblogs.com/webeasties">Science Blogs</a></em></p>
+<p>Abbie over at ERV has a <a href="http://scienceblogs.com/erv/2011/06/viruses_and_prostate_cancer.php">really great summary</a> of a new <a href="http://www.nature.com/nm/journal/vaop/ncurrent/abs/nm.2390.html">Nature Medicine paper</a>, in which the authors managed to turn a mouse's immune system against prostate tumors by infecting them with viruses engineered to express prostate proteins. Some of the results struck her as a bit counterintuitive, but I thought of some possible explanations. I was going to leave this as a comment on her blog, but the more I read the paper, the more stuff bubbled up, and I though it deserved a full post. Go read Abbie's post first though, or this probably won't make much sense.</p>
+<p>Admittedly speculative explanations to follow:</p>
+<p>This vaccine is not causing autoimmunity when it is injected intravenously. But it does induce autoimmunity if you inject the vaccine directly into the prostate.</p>
+<p>I dont know how that works.</p>
+<p>I think there are two explanations here (not mutually exclusive). The first is that the dose of virus used for the direct injection into the prostate is effectively MUCH higher. They use the same number of viruses (1 x 10^7 PFU) for both treatments, but in the intravenous injections, those viruses are going everywhere in the body. That means there will be lots of small infections, many of which will be effectively dealt with by the innate immune system. And the T-cells that do get activated will have to clear that local infection before wandering into the prostate and realizing there's something interesting there too. This will make space for other regulatory systems to kick in, and since most of the infections will be far from the prostate, you won't run as much risk of <a href="http://en.wikipedia.org/wiki/Molecular_mimicry#Epitope_spreading">epitope spreading</a></p>
+<p>But I think the better explanation is that what they're seeing isn't actually "autoimmunity." Rather, it's probably due to the destruction virus-infected non-tumor cells. Putting 10 million infectious virions in one small tissue area means that A LOT of non-tumor cells are going to be infected and potentially targeted by T-cells. They try to control for that with a virus that encodes GFP (a protein from jellyfish), but that's a single protein with a limited number of potential T-cell epitopes. A better control would have been using a viral library from a different tissue (they already have one for B-cells! why didn't they use it?).</p>
+<p>One possible detraction from this point is that say that immune cells from the locally injected mice respond to normal prostate tissue in vitro. But they don't show the data. They also don't mention what happens after 60 days out with the locally injected mice, but DO say that the intravenously injected mice were fine after 60 days (they don't show that data either). Once the mice clear the VSV infection, what happens? If it's really autoimmunity, the prostate should continue to be attacked. Plus, they should be able to transfer autoimmunity by transferring immune cells into healthy (uninfected) mice, but they didn't do that experiment.
+But how the heck is a vaccine with a normal prostate clearing prostate tumors and not killing the normal prostate tissue??</p>
+<p>Normally, T-cells that are reactive against your normal proteins are deleted before they can get out and do damage. Even though cancer cells are technically "self," they usually have tons of mutations, and the hope with cancer vaccines has been to direct the immune system against these so-called "altered self" proteins. So Abbie's question is legit, but I think she answers it herself later on.</p>
+<blockquote><p>...they used human prostate cDNA in mice, which worked better than mouse prostate cDNA in mice</p>
+</blockquote><p>The human prostate proteins are not "self" to the mouse. Our proteins are very similar to mouse proteins, but there are definitely differences. And those differences might look like the differences in the cancer cells - differences T-cells can exploit.</p>
+<p>And theyre doing this via a prostate-specific Th17 response (whiiiiich is usually indicative of autoimmunity) and CD4 T-cell response (think antibodies) instead of CD8 (cytotoxic T-cells) or Natural Killer cells, the cells who normally clear tumors.</p>
+<p>CD4 cells have a lot of jobs. There are a bunch of different types, and we don't need to go into everything here, but basically, they tell other cells what to do and help them do it better (for instance, As Abbie mentioned, they can activate B-cells to make the right type of antibodies). Th17 cells are a type of CD4 cell that is usually seen in infections with extracellular pathogens, and in some types of autoimmune diseases. These cells are very inflammatory and have a bunch of effects on non-immune cells, and they can recruit really destructive immune cells called neutrophils. But all of these effects are non-specific. 
+It's the CD8 T-cells that are able to zero in on specific cells and destroy them without touching their neighbors, but in the text of the paper, they say that CD8 cells are not involved:</p>
+<p>therapy was dependent upon CD4+ T cells but not CD8+ T cells or natural killer (NK) cells (Fig. 3h).</p>
+<p>However, the data they present seems to directly contradict this statement. To do the experiment, they repeated the viral treatment, but depleted different cell types, and plotted how many mice stayed alive. </p>
+<p>The top (ASEL) line shows just the viral treatment - after 50 days, 100% of the mice survived - sweet. If they depleted NK cells (orange), a couple of the mice died around day 30, but it didn't seem to have a huge effect. When they got rid of CD4 cells, all of the mice were dead by 20 days - clearly indicating that CD4 cells are important. But they get the exact same survival curve (black) when they deplete CD8 cells. I've read this section like 10 times trying to figure out what I'm missing, but at least based on the data, it looks pretty CD8 dependent to me.</p>
+<p>In fact, since the survival curves overlap so perfectly, I wonder if the Th17 cells are important at all. They claim that there's a Th17 response and not a Th1 response (again - "data not shown"), but they don't actually show that the Th17 response is required. But CD4+ T helper cells ARE required to "license" (activate) CD8+ killer cells. 
+It's a cool paper, but the more I read it, the more dodgy the immunological explanations seem. The weird thing is, none of their kooky immunology is required to make this a cool paper - even if everything I wrote above is right, the results are still awesome. But honestly, after re-reading this a number of times, I'm kinda surprised some of these glaring errors made it past reviewers.</p>
+ <h2 id="post_images" > Post Images<a class="heading-link" href="#post_images">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h2>
+
+      </section>
+    </div>
+
+    <footer class="footer">
+      <section class="container">
+        © 2022 Kevin Bonham · Powered by
+  <a href="https://franklin.jl">Franklin.jl</a> &
+  <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      </section>
+    </footer>
+
+  </main>
+
+  
+
+  
+
+<script src="/categorical-ambiguity/libs/coder.min.js"></script>
+
+</body>
+</html>

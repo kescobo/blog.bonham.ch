@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Language" content="en">
+  <meta name="color-scheme" content="light dark">
+
+  <meta name="author" content="Kevin Bonham">
+  <meta name="description" content="Kevin Bonham's website">
+  <meta name="keywords" content="microbiome,data science,teaching">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="kbonham">
+  <meta name="twitter:description" content="Kevin Bonham's website">
+
+  <meta property="og:title" content="summary">
+  <meta property="og:description" content="Kevin Bonham's website">
+  <meta property="og:type" content="website">
+
+  <title>kbonham</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+  <link rel="stylesheet" href="/categorical-ambiguity/css/coder.min.css" media="screen">
+  <link rel="stylesheet" href="/categorical-ambiguity/css/coder-dark.min.css" media="screen">
+
+  <link rel="icon" type="image/png" href="/categorical-ambiguity/assets/infra/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/categorical-ambiguity/assets/infra/favicon-16x16.png" sizes="16x16">
+
+  <link rel="apple-touch-icon" href="/categorical-ambiguity/assets/infra/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/categorical-ambiguity/assets/infra/apple-touch-icon.png">
+
+  
+  <meta name="generator" content="Franklin.jl" />
+
+  
+
+  
+
+  <style>
+  :root {
+    --block-background: #f4f0ec;
+  }
+  .hljs {
+    padding: 1em;
+  }
+  </style>
+
+</head>
+
+<body class="preload-transitions colorscheme-auto">
+
+  <div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+      <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+  </div>
+
+  <main class="wrapper">
+
+    <nav class="navigation">
+  <section class="container">
+
+    <a class="navigation-title" href="/categorical-ambiguity/">
+      kbonham
+    </a>
+
+    <input type="checkbox" id="menu-toggle">
+    <label class="menu-button float-right" for="menu-toggle">
+      <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+    </label>
+
+    <ul class="navigation-list">
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/categorical-ambiguity/about/">About</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/categorical-ambiguity/posts/">Blog</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/categorical-ambiguity/projects/">Projects</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/categorical-ambiguity/contact/">Contact me</a>
+        </li>
+      
+
+      
+      
+    </ul>
+
+  </section>
+</nav>
+
+
+    <div class="content">
+
+         
+        <section class="container page">
+          
+
+       
+       
+       
+       
+<p><em>This post initially appeared on <a href="http://scienceblogs.com/webeasties">Science Blogs</a></em></p>
+<p>A while back, I received a question from a reader via e-mail.</p>
+<blockquote><p>Dear Beasties:</p>
+<p>If you had a mutation in either C4 or C5 which one would be worse... I guess the question is is it more important to have the ability to opsonize or the ability to lyse cells with the MAC complex?</p>
+</blockquote><p>I could have done some digging and given a perfunctory answer, but I decided instead to ask my friend Matt Woodruff, another 3rd year grad student in my program whose lab works on compliment, if he could provide an answer and a bit of background. I think you'll agree it was the right choice.</p>
+<p>The Compliment System</p>
+<p>by Matt Woodruff</p>
+<p>The complement system is an extremely ancient system of innate defense originally evolved in Cnidaria (think sea anemones and jellyfish) and conserved at some level through the vast majority of modern organisms. At it's most basic the system is a protein cascade, similar to the blood clotting system, involved in the recognition and destruction/removal of foreign agents. While the details of the actual protein cascades are a bit of a mouthful (a fact often lamented by budding immunologists) they are involved in three main processes: Opsonization, direct killing of foreign bodies, and immune system activation.</p>
+<p>Opsonization is simply the "flagging" of material to be digested by immune cells such as macrophages, dendritic cells and neutrophils. While opsonization can occur in many different ways, it always involves the chemical binding of the complement protein C3 onto the surface of whatever is being flagged (called "complement fixation"). In general, normal cells are protected from this system though an array of inhibitors that prevent binding, or cleave off bound C3 already bound to the surface. While usually considered in the context of microbes, normal cell debris from everyday cellular turnover can also be fixed to help with eventual clearance. In fact, a defect in these opsonization systems has been linked to several autoimmune diseases due to an increased amount of "self" cell debris in the blood (due to improper clearance) helping lead to autoimmune activation.</p>
+<p>Direct killing of microbes by complement is mediated by the formation of a "membrane attack complex" or MAC. Once C3 has been bound to the surface, a cascade of other complement proteins are recruited along side leading to the formation of a pore in the microbial membrane leading to the eventual lysis of the microbial target. The pore itself is actually made up of repeating units of complement protein C9, although C3-C8 (but not necessarily C4) are all required for the formation.</p>
+<p>Finally, while all of this is occurring, the byproducts of complement fixation act as extremely potent immune mediators leading to the activation and migration of immune cells towards the site of the fixation allowing for efficient immune infiltration and clearance of opsonized material at the site of infection. While this is an extremely important process, it is also redundant with several other immune mediators that would all be activated in a roughly similar time frame at the site of infection.</p>
+<p>A "which is more important" scenario is difficult here because the formation of the MAC complex is completely dependent on the initial events leading to opsonization so that any genetic defect that leads to less opsonization will inherently also reduce MAC complex formation. That being said, if we could imagine a system where opsonization and MAC formation were completely independent, I believe that opsonization defects would have a much greater defect in overall health. One of the most powerful and underrated facets of a normal immune response is the mass infiltration of neutrophils to the site of infection, which at least in some scenarios is almost entirely dependent on complement for effective recruitment and clearance. Without the opsonization arm, the innate responses that keep initial infection in check would be much less effective and quickly over-run before the rest of the immune system really ever got off the ground.</p>
+
+
+      </section>
+    </div>
+
+    <footer class="footer">
+      <section class="container">
+        © 2022 Kevin Bonham · Powered by
+  <a href="https://franklin.jl">Franklin.jl</a> &
+  <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      </section>
+    </footer>
+
+  </main>
+
+  
+
+  
+
+<script src="/categorical-ambiguity/libs/coder.min.js"></script>
+
+</body>
+</html>
