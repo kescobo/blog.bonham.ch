@@ -26,9 +26,8 @@ footer_notice = """
     <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>."""
 
 nav_items = [
-  "About" => "/about/",
+  "About" => "https://kevinbonham.com",
   "Blog"  => "/posts/",
-  "Projects" => "/projects/",
   "Contact me" => "/contact/"
 ]
 
@@ -39,7 +38,7 @@ social_gitlab   = "https://gitlab.com/kescobo/"
 social_twitter  = "https://twitter.com/kevbonham/"
 social_polywork = "https://www.polywork.com/ksbonham"
 social_linkedin = "https://www.linkedin.com/in/kevin-bonham-6a10b566/"
-rss_link        = "https://blog.bonham.ch"
+rss_link        = "https://blog.bonham.ch/feed"
 
 # Layout / Franklin specifics
 

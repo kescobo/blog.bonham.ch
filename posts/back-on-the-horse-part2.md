@@ -6,6 +6,9 @@ date = Date("2017-10-26")
 draft = false
 category = "web"
 tags = ["meta", "website", "code"]
+
+rss_descr = "Part 2 of my effort to recover blog posts from my previous life"
+rss_title = title
 +++
 
 Yeah, so my [last post][1] was clearly a bit too optomistic. I've only just now
