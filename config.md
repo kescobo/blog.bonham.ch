@@ -1,8 +1,8 @@
 +++
 
-prepath = "categorical-ambiguity"
+prepath = ""
 generate_rss = true
-rss_website_url = "https://kescobo.github.io/categorical-ambiguity/"
+rss_website_url = "https://blog.bonham.ch"
 rss_website_title = "Kevin Bonham dot com"
 rss_website_descr = "Personal website of Kevin Bonham, PhD"
 
@@ -40,7 +40,7 @@ social_gitlab   = "https://gitlab.com/kescobo/"
 social_twitter  = "https://twitter.com/kevbonham/"
 social_polywork = "https://www.polywork.com/ksbonham"
 social_linkedin = "https://www.linkedin.com/in/kevin-bonham-6a10b566/"
-rss_link        = "https://kevinbonham.com/index.xml"
+rss_link        = "https://blog.bonham.ch"
 
 # Layout / Franklin specifics
 
