@@ -1,6 +1,5 @@
 +++
 
-prepath = ""
 generate_rss = true
 rss_website_url = "https://blog.bonham.ch"
 rss_website_title = "Kevin Bonham dot com"
