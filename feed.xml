@@ -41,4 +41,18 @@
     <atom:name>Kevin Bonham</atom:name>
   </atom:author>
 </item>
+
+<item>
+  <title>
+    <![CDATA[  Getting Back on the Horse - Part 2: Deploying a new Site  ]]>
+  </title>
+  <link> https://blog.bonham.chposts/back-on-the-horse-part2/index.html </link>
+  <guid> https://blog.bonham.chposts/back-on-the-horse-part2/index.html </guid>
+  <description>
+    <![CDATA[  Part 2 of my effort to recover blog posts from my previous life  ]]>
+  </description>
+  <atom:author>
+    <atom:name>Kevin Bonham</atom:name>
+  </atom:author>
+</item>
 </channel></rss>
