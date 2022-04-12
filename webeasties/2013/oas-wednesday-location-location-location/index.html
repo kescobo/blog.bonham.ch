@@ -22,14 +22,14 @@
   <title>kbonham</title>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
-  <link rel="stylesheet" href="/categorical-ambiguity/css/coder.min.css" media="screen">
-  <link rel="stylesheet" href="/categorical-ambiguity/css/coder-dark.min.css" media="screen">
+  <link rel="stylesheet" href="/css/coder.min.css" media="screen">
+  <link rel="stylesheet" href="/css/coder-dark.min.css" media="screen">
 
-  <link rel="icon" type="image/png" href="/categorical-ambiguity/assets/infra/favicon-32x32.png" sizes="32x32">
-  <link rel="icon" type="image/png" href="/categorical-ambiguity/assets/infra/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/assets/infra/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/assets/infra/favicon-16x16.png" sizes="16x16">
 
-  <link rel="apple-touch-icon" href="/categorical-ambiguity/assets/infra/apple-touch-icon.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/categorical-ambiguity/assets/infra/apple-touch-icon.png">
+  <link rel="apple-touch-icon" href="/assets/infra/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/infra/apple-touch-icon.png">
 
   
   <meta name="generator" content="Franklin.jl" />
@@ -62,7 +62,7 @@
     <nav class="navigation">
   <section class="container">
 
-    <a class="navigation-title" href="/categorical-ambiguity/">
+    <a class="navigation-title" href="/">
       kbonham
     </a>
 
@@ -74,19 +74,19 @@
     <ul class="navigation-list">
       
         <li class="navigation-item">
-          <a class="navigation-link" href="/categorical-ambiguity/about/">About</a>
+          <a class="navigation-link" href="/about/">About</a>
         </li>
       
         <li class="navigation-item">
-          <a class="navigation-link" href="/categorical-ambiguity/posts/">Blog</a>
+          <a class="navigation-link" href="/posts/">Blog</a>
         </li>
       
         <li class="navigation-item">
-          <a class="navigation-link" href="/categorical-ambiguity/projects/">Projects</a>
+          <a class="navigation-link" href="/projects/">Projects</a>
         </li>
       
         <li class="navigation-item">
-          <a class="navigation-link" href="/categorical-ambiguity/contact/">Contact me</a>
+          <a class="navigation-link" href="/contact/">Contact me</a>
         </li>
       
 
@@ -113,10 +113,10 @@
 <p>In real estate, they say that the three most important things to consider are location, location and location. The same could probably be said about many aspects of biology, including the immune system - if you get a cut on your toe, you don't want inflammation in your kidney. I've written before about the way that the cells of the immune system manage to navigate the body and <a href="http://scienceblogs.com/webeasties/2012/05/25/how-the-immune-system-get-where-it-needs-to-go/">arrive at the right location</a>, but today we're getting smaller: how is it that proteins get where they need to go within an individual cell?</p>
 <p>When talking about cells, we usually imagine a sac of fluid surrounded by a membrane. Maybe we imagine a separate sac on the inside that contains the DNA (the nucleus), but generally speaking, everything between the outer membrane and the nucleus is thought of as one homogenous mass - the cytoplasm.</p>
 <p>In reality, the organization within cells is as vast and complicated as the organization of cells in the body, and many essential cell processes are entirely dependent on being in the right location at the right time. If you cast your memory back to high school biology, you may remember the term "organelle" (literally "little organ"), which refers to specific compartments within cells that each have different functions. Each of these organelles require a distinct set of proteins, and there's an elaborate set of processes that manage to direct these proteins to the right place.</p>
-<p><a href="http://elife.elifesciences.org/content/2/e00291">Unc93B1 mediates differential trafficking of endosomal <a href="/categorical-ambiguity/tag/tlr">TLR</a>s</a>
+<p><a href="http://elife.elifesciences.org/content/2/e00291">Unc93B1 mediates differential trafficking of endosomal <a href="/tag/tlr">TLR</a>s</a>
  
 Toll-like receptors or TLRs, are proteins that our immune cells use to detect the presence of potentially infectious microbes. It's been known for several years that these TLR's are found in different locations in cells - either on the surface (plasma membrane), or inside compartments called "endosomes," which form when a cell engulfs a foreign particle or microbe (Cartoon 1).</p>
-<p>It's been known for some time that another protein, called Unc93B, is required for those TLRs in endosomes to function. Unc93B is best thought of as a chaperone - it doesn't actively participate in signaling, but it gets the receptors to the right location. Since proper location is essential to the function of these receptors, removing Unc93B blocks the function of all of the endosomal TLRs. But this paper reveals that this chaperone's role in directing TLR <a href="/categorical-ambiguity/tag/localization">localization</a> is more extensive than previously thought.</p>
+<p>It's been known for some time that another protein, called Unc93B, is required for those TLRs in endosomes to function. Unc93B is best thought of as a chaperone - it doesn't actively participate in signaling, but it gets the receptors to the right location. Since proper location is essential to the function of these receptors, removing Unc93B blocks the function of all of the endosomal TLRs. But this paper reveals that this chaperone's role in directing TLR <a href="/tag/localization">localization</a> is more extensive than previously thought.</p>
 <p>All* proteins that end up in vesicles (like endosomes), on the cell surface, or secreted from the cells pass through a similar series of steps called "the <a href="http://www.ncbi.nlm.nih.gov/books/NBK21471/">secretory pathway</a>." These proteins are translated (made) in the cytoplasm along with every other protein, but contain a signal that causes them to be threaded through a protein channel into the interior of the endoplasmic reticulum (ER). Once in the ER, they can be sent along in vesicles that bud from the ER and enter the Golgi apparatus, where they are further modified and sent off to their final destination (check out the <a href="http://www.ncbi.nlm.nih.gov/books/NBK21471/figure/A4740/?report=objectonly">video here</a>... I can't figure out how to embed it).</p>
 <p>If you think of a cell like a supply chain, the ER is the factory where products are assembled, but then they're sent off in trucks to a sorting facility, where the products receive their final packaging and are sent to their destinations. In this analogy, Unc93B is like a tracking bar code for TLRs, it stays with the package and makes sure it gets to the right place. 
 For the endosomal TLRs, the "right place" is a compartment that merges with the endosomes formed when the cell pulls in some foreign particle - in this way, they are present in the best location to detect a possible threat. Actually, there are multiple different types of endosomes, and this paper by Lee et al demonstrates that Unc93B is responsible for sorting different TLRs into different endosomal compartments.</p>
@@ -149,7 +149,7 @@ For the endosomal TLRs, the "right place" is a compartment that merges with the 
 
   
 
-<script src="/categorical-ambiguity/libs/coder.min.js"></script>
+<script src="/libs/coder.min.js"></script>
 
 </body>
 </html>
