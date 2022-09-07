@@ -1,7 +1,7 @@
 +++
 
 generate_rss = true
-rss_website_url = "https://blog.bonham.ch"
+rss_website_url = "http://blog.bonham.ch"
 rss_website_title = "Kevin Bonham dot com"
 rss_website_descr = "Personal website of Kevin Bonham, PhD"
 
