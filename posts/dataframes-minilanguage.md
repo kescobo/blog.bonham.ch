@@ -2,7 +2,7 @@
 using Dates
 
 title = "The DataFrames.jl mini-language just clicked"
-date = Date("2022-05-04")
+date = Date("2022-09-10")
 draft = false
 category = "research"
 tags = ["julia", "code", "dataframes"]
