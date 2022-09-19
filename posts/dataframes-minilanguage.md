@@ -12,7 +12,7 @@ rss_title = title
 +++
 
 
-I use DataFrames.jl *all* the time.
+I use [DataFrames.jl](https://dataframes.juliadata.org/stable/) *all* the time.
 It's incredibly well engineered, well-tested, and fast!
 But there's one aspect that's eluded me for a while,
 and that's the "mini-language" that's used for `transform`ations
@@ -21,7 +21,7 @@ I could use it for basic stuff, but for anything even moderately complicated,
 I'd have to puzzle over the documentation and then go through endless
 rounds of trial and error.
 
-This blog post by the primary architect of `DataFrames.jl`
+[This blog post](https://www.juliabloggers.com/dataframes-jl-minilanguage-explained/) by the primary architect of `DataFrames.jl`
 covers everything I'm about to say comprehensively -
 I've read it several times, and it is very clear.
 
@@ -125,7 +125,6 @@ julia> combine(gdf, "sample" => has_sample => "has_sample")
    3 │       3       false
 ```
 
-
 Another thing I do frequently is some per-column transformations.
 To be consistent, `transform` operations also work on whole-columns.
 Most of the time, I want to do things with `transform()` on individual rows,
@@ -160,7 +159,7 @@ julia> transform(gdf,
 
 OK, so I think that stuff is pretty straightforward,
 but what if we want to do something more complicated,
-maybe involving more than one column and their interactions.
+maybe involving more than one column and their interactions?
 For example, one thing I wanted to do recently was to check a
 *future* value for a given stool sample. For example, I want
 
