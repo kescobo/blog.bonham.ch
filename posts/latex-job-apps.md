@@ -145,12 +145,7 @@ For example, this paragraph looks like this
 in the source code:
 ```
 
-This explains a bit about how,
-but you may be wondering *why?*.
-The reason is that git version control works
-on a line-by-line basis,
-so if you end up making a change,
-its much clearer to have this diff:
+This explains a bit about how, but you may be wondering *why?*. The reason is that git version control works on a line-by-line basis, so if you end up making a change, its much clearer to have this diff:
 
 
 
