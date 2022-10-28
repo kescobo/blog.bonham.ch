@@ -145,11 +145,42 @@ For example, this paragraph looks like this
 in the source code:
 ```
 
-This explains a bit about how, but you may be wondering *why?*. The reason is that git version control works on a line-by-line basis, so if you end up making a change, its much clearer to have this diff:
+This explains a bit about how,
+but you may be wondering *why?*.
+The reason is that git version control works
+on a line-by-line basis,
+so if you end up making a change,
+it's much clearer to have this diff:
 
-
+![A code diff showing a change to a short line of text](/assets/img/good_diff.png)
 
 rather than this one:
+
+![A code diff showing a small change to a long line of text](/assets/img/bad_diff.png)
+
+It will also make it easier to make corrections
+and changes to one version and propagate them to other versions
+as we will see.
+
+#### Separate lines for placeholders
+
+The exact same logic applies to placeholders
+(eg. "...at INSTITUTION" to "...at Northeastern");
+since you *know* you're going to change these bits,
+keep them on separate lines to keep the diffs nice.
+
+But it also keeps your app-specific changes
+separate from any other changes
+that you might make,
+which makes it easy to merge those changes
+without conflicts.
+
+```latex
+For example,
+suppose I have the following text about
+\hl{INTITUTION}
+that has a typoo on the last line.
+```
 
 
 
