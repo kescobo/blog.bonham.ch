@@ -35,8 +35,10 @@ My previous workflow was as follows:
    (Eg. Cover letter, Research statement, Teaching statement, Statement on diversity and inclusion).
    I would include places where I'd want to insert job-specific information,
    like
-   >In my independent lab at **INSTITUTION**, I will...
+   > In my independent lab at **INSTITUTION**, I will...
+   
    or
+   
    > Dear XXX and members of the search committee, ...
 2. For each job app, make a copy of each document,
    and rename it to eg "Northeastern - Cover Letter" from "Cover Letter".
@@ -58,7 +60,7 @@ There are several limitations to this approach,
 here's just a smattering:
 
 - Tons of duplication; I applied for ~13 positions this year,
-  and each one has at least 4 documents, meaning that I have over 50 documents from this year alone.\\
+  and each one has at least 4 documents, meaning that I have over 50 documents from this year alone.
   ... and I am probably on the low end of total applications
 - All the pointing and clicking is tedious.
   Making copies, opening the documents, changing document names, downloading, etc.
@@ -92,7 +94,7 @@ First, a disclaimer about what this post **isn't**:
    And there are a ton of good resources about it online already.
 2. An introduction to $\LaTeX$ - frankly, you wouldn't want me to try to teach it,
    I've mostly cobbled together what little I know from looking at [Overleaf Documentation][overleaf]
-   and the [TeX Stack Exchange][stackexchange].\\
+   and the [TeX Stack Exchange][stackexchange].
    I do provide [some templates][templaterepo] to get you started.
    In case it helps, I'm using the LaTeX workbench extension of VS Code
    on Ubuntu and installed LaTeX with `sudo apt install texlive-full`,
