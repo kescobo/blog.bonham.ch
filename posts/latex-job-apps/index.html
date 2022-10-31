@@ -161,10 +161,10 @@ My previous workflow was as follows:</p>
    I would include places where I'd want to insert job-specific information,
    like</li>
 </ol>
-<blockquote><blockquote><p>In my independent lab at <strong>INSTITUTION</strong>, I will...</p>
-</blockquote></blockquote><p>   or</p>
+<blockquote><blockquote><p>In my independent lab at <strong>INSTITUTION</strong>, I will...
+   or</p>
 <blockquote><blockquote><p>Dear XXX and members of the search committee, ...</p>
-</blockquote></blockquote><ol start="2">
+</blockquote></blockquote></blockquote></blockquote><ol start="2">
 <li>For each job app, make a copy of each document,
    and rename it to eg "Northeastern - Cover Letter" from "Cover Letter".</li>
 <li>Change all generic placeholders to specific ones, eg.</li>
@@ -183,10 +183,10 @@ My previous workflow was as follows:</p>
 here's just a smattering:</p>
 <ul>
 <li>Tons of duplication; I applied for ~13 positions this year,
-  and each one has at least 4 documents, meaning that I have over 50 documents from this year alone.</li>
-</ul>
-<p>  ... and I am probably on the low end of total applications</p>
-<ul>
+  and each one has at least 4 documents, meaning that I have over 50 documents from this year alone.
+<br>
+
+  ... and I am probably on the low end of total applications</li>
 <li>All the pointing and clicking is tedious.
   Making copies, opening the documents, changing document names, downloading, etc.
   Doing this a few times would be bearable but 50 times?</li>
@@ -220,14 +220,13 @@ can be a challenge.</p>
    And there are a ton of good resources about it online already.</li>
 <li>An introduction to \(\LaTeX\) - frankly, you wouldn't want me to try to teach it,
    I've mostly cobbled together what little I know from looking at <a href="https://www.overleaf.com/learn">Overleaf Documentation</a>
-   and the <a href="https://tex.stackexchange.com">TeX Stack Exchange</a>.</li>
-</ol>
-<p>.</p>
-<p>   I do provide <a href="https://github.com/kescobo/ac_job_templates">some templates</a> to get you started.
+   and the <a href="https://tex.stackexchange.com">TeX Stack Exchange</a>.
+<br>
+
+   I do provide <a href="https://github.com/kescobo/ac_job_templates">some templates</a> to get you started.
    In case it helps, I'm using the LaTeX workbench extension of VS Code
    on Ubuntu and installed LaTeX with <code>sudo apt install texlive-full</code>,
-   but you'll want to look up install instructions for your own OS.</p>
-<ol start="3">
+   but you'll want to look up install instructions for your own OS.</li>
 <li>Advice on how to apply for academic positions or what to put
    in your cover letter / CV / research statement etc.
    I haven't landed an academic job yet,
@@ -254,7 +253,7 @@ newlines are treated the same as spaces
 in the rendered text.
 For example, this paragraph looks like this
 in the source code:</p>
-<pre><code class="julia">Semantic line breaks (sembr) can take a little getting used to,
+<pre><code class="md">Semantic line breaks (sembr) can take a little getting used to,
 but they make version control on plain text documents
 much more powerful.
 The basic idea is that, in file formats like markdown and TeX,
@@ -335,7 +334,7 @@ That is, on the <code>umass-ex</code> branch:</p>
 ❯ git commit -am &quot;update teaching statement&quot;
 # now ready to update `main` branch
 ❯ git log --oneline</code></pre>
-<img src="/assets/gitlog_hash.png" alt="snippet of output from <code>git log --oneline</code>"><p>Running <code>git log --oneline</code> will give you a list of commits
+<img src="/assets/img/gitlog_hash.png" alt="snippet of output from <code>git log --oneline</code>"><p>Running <code>git log --oneline</code> will give you a list of commits
 with your commit messages in reverse order
 (see why having descriptive messages is nice?)
 and the <strong>commit hash</strong> which you can use to refer to each commit.</p>
@@ -370,6 +369,17 @@ end</code></pre>
 <pre><code class="bash">for f in $(ls jobapps/*.pdf); do
     cp $f ~/Downloads/$(git rev-parse --abbrev-ref HEAD)-$(basename &quot;$f&quot;)
 done</code></pre>
+<h2 id="conclusion" > Conclusion<a class="heading-link" href="#conclusion">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h2><p>I'm not sure if this would save you a ton of time
+if you haven't already been working on learning LaTeX for other reasons.
+But as I have been, it was a good learning experience and (I think)
+ultimately <em>did</em> save me a bunch of time.</p>
+<p>If you want to play around with it,
+you can use this <a href="https://github.com/kescobo/ac_job_templates">demo repo</a> that I set up
+to give it a whirl.
+Have fun!</p>
 
 
       </section>
