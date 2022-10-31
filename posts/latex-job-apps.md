@@ -35,11 +35,8 @@ My previous workflow was as follows:
    (Eg. Cover letter, Research statement, Teaching statement, Statement on diversity and inclusion).
    I would include places where I'd want to insert job-specific information,
    like
-
    >In my independent lab at **INSTITUTION**, I will...
-
    or
-
    > Dear XXX and members of the search committee, ...
 2. For each job app, make a copy of each document,
    and rename it to eg "Northeastern - Cover Letter" from "Cover Letter".
@@ -61,8 +58,7 @@ There are several limitations to this approach,
 here's just a smattering:
 
 - Tons of duplication; I applied for ~13 positions this year,
-  and each one has at least 4 documents, meaning that I have over 50 documents from this year alone.
-  
+  and each one has at least 4 documents, meaning that I have over 50 documents from this year alone.\\
   ... and I am probably on the low end of total applications
 - All the pointing and clicking is tedious.
   Making copies, opening the documents, changing document names, downloading, etc.
@@ -87,7 +83,6 @@ So, what I wanted was something that
 2. is easy to propagate changes from any version and regenerate outputs
 3. doesn't have dozens of versions floating around in different folders
 
-
 ## LaTeX Workflow and templates
 
 First, a disclaimer about what this post **isn't**:
@@ -97,8 +92,7 @@ First, a disclaimer about what this post **isn't**:
    And there are a ton of good resources about it online already.
 2. An introduction to $\LaTeX$ - frankly, you wouldn't want me to try to teach it,
    I've mostly cobbled together what little I know from looking at [Overleaf Documentation][overleaf]
-   and the [TeX Stack Exchange][stackexchange].
-
+   and the [TeX Stack Exchange][stackexchange].\\
    I do provide [some templates][templaterepo] to get you started.
    In case it helps, I'm using the LaTeX workbench extension of VS Code
    on Ubuntu and installed LaTeX with `sudo apt install texlive-full`,
@@ -134,7 +128,7 @@ in the rendered text.
 For example, this paragraph looks like this
 in the source code:
 
-```
+```md
 Semantic line breaks (sembr) can take a little getting used to,
 but they make version control on plain text documents
 much more powerful.
@@ -243,7 +237,7 @@ That is, on the `umass-ex` branch:
 ❯ git log --oneline
 ```
 
-![snippet of output from `git log --oneline`](/assets/gitlog_hash.png)
+![snippet of output from `git log --oneline`](/assets/img/gitlog_hash.png)
 
 Running `git log --oneline` will give you a list of commits
 with your commit messages in reverse order
@@ -297,3 +291,15 @@ for f in $(ls jobapps/*.pdf); do
     cp $f ~/Downloads/$(git rev-parse --abbrev-ref HEAD)-$(basename "$f")
 done
 ```
+
+## Conclusion
+
+I'm not sure if this would save you a ton of time
+if you haven't already been working on learning LaTeX for other reasons.
+But as I have been, it was a good learning experience and (I think)
+ultimately *did* save me a bunch of time.
+
+If you want to play around with it,
+you can use this [demo repo][templaterepo] that I set up
+to give it a whirl.
+Have fun!
