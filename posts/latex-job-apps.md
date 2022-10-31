@@ -182,16 +182,105 @@ suppose I have the following text about
 that has a typoo on the last line.
 ```
 
+Suppose I go though and change `\hl{INSTITUTION}`
+to `Northeastern` in one of my applications,
+then, as I'm editing my `Harvard` application,
+I notice the typo.
+I can go fix the typo on my `main` branch,
+then merge the fix for that line into my other branches
+without conflicting with any of the other changes.
 
+Don't worry, I'll show how to do this in a bit.
 
-- Making template
-  - generic version
-  - using sembr
-  - place-holders / highlighter
-- making specific version
-  - git branch
-  - modifications (remember sembr!)
-  - "export"
+### Use separate branches for specific applications
+
+Once you have your individual generic documents ready,
+it's time to customize them for your specific applications.
+Rather than making copies of the files,
+use `git` **branches**.
+
+For example:
+
+```sh
+❯ git checkout -b umass-ex # University of Massachusetts, Example
+# make changes to `research.tex` and save them
+❯ git commit -am "update research statement"
+# make changes to `teaching.tex`
+❯ git commit -am "update teaching statement"
+```
+
+If you notice a typo that you want to fix,
+commit everything you have, then
+
+```sh
+❯ git checkout main # this might be `master` instead of `main`
+# fix the typo
+❯ git commit -am "fix typo"
+❯ git checkout umass-ex
+❯ git merge main
+```
+
+If you have other branches, you can just check them out
+and merge there as well.
+
+#### `cherry-pick`ing (advanced)
+
+Sometimes, I don't want to break up my writing flow
+by dealing with all of this branch changes.
+Instead, you can wait and then use `git cherry-pick` to grab
+a single commit from your app-specific branch onto `main`.
+That is, on the `umass-ex` branch:
+
+```sh
+❯ git commit -am "update research statement"
+# fix a typo
+❯ git commit -am "fix apostrophe"
+# keep working on research
+❯ git commit -am "more substitutions on research statement"
+# work on teaching
+❯ git commit -am "update teaching statement"
+# now ready to update `main` branch
+❯ git log --oneline
+```
+
+![snippet of output from `git log --oneline`](/assets/gitlog_hash.png)
+
+Running `git log --oneline` will give you a list of commits
+with your commit messages in reverse order
+(see why having descriptive messages is nice?)
+and the **commit hash** which you can use to refer to each commit.
+
+Now, to get *just that one change* back on to your main branch
+(or any others),
+just check the branch out and do `git cherry-pick`:
+
+```sh
+❯ git checkout main
+❯ git cherry-pick 11aa748
+```
+
+Now, if you've been using semantic line breaks,
+and assuming you haven't previously made changes to the same line,
+your `main` branch should be updated! Magic!
+
+### Export
+
+This was the place that felt like the most time was saved.
+Clicking through `file -> Download As -> pdf` on
+each document was so tedious,
+especially as, if you're anything like me,
+you'll have to do this 10 times per document as you notice more and more typos.
+
+Because the name of your current git branch can be identified
+with the command `git rev-parse --abbrev-ref HEAD`,
+you can simply checkout each branch and make a copy of each `.pdf`
+with the branch name attached.
+
+I [use `fish`][fish], which has a slightly different syntax
+than the shell you might be familiar with,
+but the following makes a copy of each pdf into my `~/Downloads` directory
+with the name of the git branch prepended (eg `umass-ex-research.pdf`):
+
 
 ```
 for f in (ls jobapps/*.pdf)
@@ -199,7 +288,12 @@ for f in (ls jobapps/*.pdf)
 end
 ```
 
-- benefits
-  - version control
-  - merge changes to main branch to others
-  - cherry-pick to go from specific back to main
+[fish]: https://fishshell.com
+
+The same thing in a POSIX shell like bash or zsh is something like this:
+
+```bash
+for f in $(ls jobapps/*.pdf); do
+    cp $f ~/Downloads/$(git rev-parse --abbrev-ref HEAD)-$(basename "$f")
+done
+```
