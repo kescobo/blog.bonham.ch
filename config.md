@@ -28,6 +28,7 @@ footer_notice = """
 nav_items = [
   "About" => "/about/",
   "Blog"  => "/posts/",
+  "We, Beasties"  => "/webeasties/",
   "Contact me" => "/contact/"
 ]
 
