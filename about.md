@@ -2,14 +2,28 @@
 header = "About"
 +++
 
-Kevin Bonham is a Senior Research Scientist
+I am a Senior Research Scientist
 in the Klepac-Ceraj lab at Wellesley College.
-He studies the human microbiome :hankey: :toilet:
-and it's effect on brain :brain: development in kids :baby:.
+I study the human microbiome :hankey: :toilet:
+and its effect on brain :brain: development in kids :baby:.
+Feel free to [be in touch](/contact/)!
 
-He also writes open-source software for the [julia programming language](http://julialang.org).
+I also write open-source software for the [julia programming language](http://julialang.org).
 
-### About Franklin.jl
+## Code
+
+Most of my code is [on github][github], including the code for [this site][site-code]!
+Some other code is on [gitlab][gitlab], though I mostly put private repos there.
+
+[github]: https://github.com/kescobo
+[gitlab]: https://gitlab.com/kescobo
+[site-code]: https://github.com/kescobo/blog.bonham.ch/
+
+## Science
+
+
+
+## About Franklin.jl
 
 Written in Julia, Franklin is an open source static site generator available under the
 [MIT License](https://en.wikipedia.org/wiki/MIT_License).

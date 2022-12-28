@@ -68,13 +68,11 @@ hfun_list_posts() = hfun_list_posts("")
 function get_posts(t::String, basepath::String="posts")
     # find all valid "posts/xxx.md" files, exclude the index which is where
     # the post-list gets placed
-    paths = joinpath.(
-        basepath,
-        filter!(
-            p -> endswith(p, ".md") && p != "index.md",
-            readdir(basepath)
-        )
-    )
+    paths = String[]
+    for (root, dirs, files) in walkdir(basepath)
+        filter!(p -> endswith(p, ".md") && p != "index.md", files)
+        append!(paths, joinpath.(root, files))
+    end
     # for each of those posts, retrieve date and title, both are expected
     # to be there
     posts = [
@@ -102,7 +100,7 @@ function hfun_webeasties_posts(t::String)
                 (
                     node("li",
                         node("span", class="date", Dates.format(p.date, "U d, yyyy")),
-                        node("a", class="title", href=p.href, p.title)
+                        node("a", class="title", href=p.href, " " * p.title)
                     )
                     for p in get_posts(t, "webeasties/")
                 )...

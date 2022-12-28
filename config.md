@@ -26,7 +26,7 @@ footer_notice = """
     <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>."""
 
 nav_items = [
-  "About" => "https://kevinbonham.com",
+  "About" => "/about/",
   "Blog"  => "/posts/",
   "Contact me" => "/contact/"
 ]
@@ -36,7 +36,9 @@ nav_items = [
 social_github   = "https://github.com/kescobo/"
 social_gitlab   = "https://gitlab.com/kescobo/"
 social_twitter  = "https://twitter.com/kevbonham/"
+social_orcid    = "https://orcid.org/0000-0003-3200-7533"
 social_polywork = "https://www.polywork.com/ksbonham"
+social_mastodon = "https://www.scicomm.xyz/@kbonham"
 social_linkedin = "https://www.linkedin.com/in/kevin-bonham-6a10b566/"
 rss_link        = "https://blog.bonham.ch/feed"
 
