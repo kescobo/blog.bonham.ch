@@ -22,12 +22,14 @@ including slack (@kescobo), zulip (@**kevin Bonham**), and [discourse][julia-dis
 
 I haven't been doing much tweeting since the Muskpocolypse,
 but when I did, it was [@kevbonham][twitter].
-More recently, I've been on Mastodon at [@kbonham@scicomm.xyz][mastodon].
+More recently, I've been on Mastodon at [@kbonham@scicomm.xyz][mastodon]
+and on Lemmy at [https://mander.xyz/u/kevin][lemmy].
 
 I've got a [LinkedIn][linkedin] and [Polywork][polywork],
 though don't count on timely replies there.
 
 [twitter]: https://twitter.com/kevbonham
 [mastodon]: https://scicomm.xyz/@kbonham
+[lemmy]: https://mander.xyz/u/kevin
 [linkedin]: https://www.linkedin.com/in/kevin-bonham-6a10b566/
 [polywork]: https://www.polywork.com/ksbonham
