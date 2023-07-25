@@ -7,13 +7,6 @@ now it's just a matter of making them into markdown.
 Let's review
 """
 
-projectdir = joinpath(pwd(), "_literate", "webeasties")
-htmlout = joinpath(projectdir, "html_out/")
-
-using Pkg #hide
-Pkg.activate(projectdir) #hide
-Pkg.instantiate() #hide
-
 #-
 
 using EzXML
