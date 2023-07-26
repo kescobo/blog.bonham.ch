@@ -54,7 +54,7 @@ heading_post = """
   """
 fn_title = ""
 
-ignore=["_drafts/"]
+ignore=["_drafts/", "webeasties/"]
 +++
 
 \newcommand{\html}[1]{~~~#1~~~}
