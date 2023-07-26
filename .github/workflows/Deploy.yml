@@ -3,37 +3,48 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
+    types: [opened, synchronize]
+
+env:
+  GH_USERNAME: "kescobo"
+  REPO_PREFIX: "blog.bonham.ch"
+  PREVIEWS_PREFIX: "previews/PR"  # will be followed by PR number
+
 jobs:
-  build-and-deploy:
+  docs:
     runs-on: ubuntu-latest
+    permissions: write-all
     steps:
-      - name: Git checkout
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-      - name: Cache
-        uses: actions/cache@v2
+      - name: 👀 Set preview path for PRs
+        run: |
+          if ${{ github.event_name == 'pull_request' }}
+          then
+            echo 'PRID=${{ env.PREVIEWS_PREFIX}}${{ github.event.number}}' >> $GITHUB_ENV
+          else
+            echo 'PRID=' >> $GITHUB_ENV
+          fi
+        shell: bash
+
+      - name: 🚀 Build and Deploy
+        uses: tlienart/xranklin-build-action@main
         with:
-          path: |
-                __cache
-                ~/.julia
-          key: ${{ runner.os }}-franklin-cache-${{ github.sha }}
-          restore-keys: ${{ runner.os }}-franklin-cache-
+          SITE_FOLDER: "./"
+          BASE_URL_PREFIX: ${{ env.REPO_PREFIX }}
+          PREVIEW: ${{ env.PRID }}
+          PYTHON_LIBS: "pandas ansi2html"
+          GNUPLOT: false
+          LUNR: true
 
-      # Julia
-      - name: Install Julia
-        uses: julia-actions/setup-julia@v1
+      - name: 🗒️ Preview URL indication for PRs
+        uses: thollander/actions-comment-pull-request@v2
         with:
-          version: 1.8
-
-      # Website build
-      - run: julia -e '
-          using Pkg; Pkg.add(url="https://github.com/tlienart/Xranklin.jl", rev="main");
-          using Xranklin; build();'
-
-      # Deployment and caching
-      - run: touch __site/.nojekyll
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@releases/v4
-        with:
-          BRANCH: gh-pages
-          FOLDER: __site
+          message: |
+            Preview should be up in a couple of mins at
+            https://${{ env.GH_USERNAME }}.github.io/${{ env.REPO_PREFIX }}/${{ env.PRID }}
+            (if you get a 404, wait 30s then refresh).
+        if: github.event_name == 'pull_request'

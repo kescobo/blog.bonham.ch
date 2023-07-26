@@ -108,3 +108,5 @@ function hfun_webeasties_posts(t::String)
         )
 end
 hfun_webeasties_posts() = hfun_webeasties_posts("")
+
+push!(ignore_base, r"webeasties/20\d{2}/")
