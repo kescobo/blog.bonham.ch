@@ -17,4 +17,4 @@ which should make Literate.jl-based posts easier...
 
 Let's see if it works:
 
-\literate{literate/testing-literate/post.jl; project=.} 
+\literate{_assets/literate/testing-literate/post.jl; project=.} 
