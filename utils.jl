@@ -1,6 +1,6 @@
 import Literate
 
-using Dates
+@reexport using Dates
 using Literate
 import Hyperscript as HS
 

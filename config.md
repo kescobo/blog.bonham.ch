@@ -1,5 +1,4 @@
 +++
-
 generate_rss = true
 rss_website_url = "http://blog.bonham.ch"
 rss_website_title = "Kevin Bonham dot com"
@@ -54,7 +53,10 @@ heading_post = """
   """
 fn_title = ""
 
-ignore=["_drafts/", "webeasties/"]
+ignore=["_drafts/"]
+
+# ignore = ["_drafts/"]
+
 +++
 
 \newcommand{\html}[1]{~~~#1~~~}
