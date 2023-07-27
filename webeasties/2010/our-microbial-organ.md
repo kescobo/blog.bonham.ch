@@ -9,7 +9,7 @@ _This post initially appeared on [Science Blogs](http://scienceblogs.com/webeast
 
 Did you know that bacteria make up 90% of the cells in your body? That they make up ~5% of your mass? That they colonize you at the moment of birth and are different if you were born via c-section than if you were born naturally?
 
-All this and more in the [[SITN](/tag/sitn) production](https://sitn.hms.harvard.edu/seminar-archive-2010/), "Our Microbial Organ: The good and bad bugs of the gut." And who's that handsom devil presenting (at least the first part)? Why, it's me!
+All this and more in the [SITN production](https://sitn.hms.harvard.edu/seminar-archive-2010/), "Our Microbial Organ: The good and bad bugs of the gut." And who's that handsom devil presenting (at least the first part)? Why, it's me!
 
 Part 1: Living in a microbial world
 

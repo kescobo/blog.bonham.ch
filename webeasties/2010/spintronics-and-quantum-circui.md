@@ -11,7 +11,7 @@ Know anything about quantum computing (other than it sounds awesome)? Well, I di
 
 Thus far, utilizing charged electrons to make computers has been endlessly fruitful, allowing us to build smaller and faster computer chips.  Unfortunately, we cannot continue improving technology simply by scaling down to smaller sizes because we will eventually reach atomic sizes where our devices will no longer function.  As we look ahead into the not-too-distant future, we will need to explore new, innovative technologies that go beyond utilizing electron charge - one such exciting new direction is the field of spintronics.
 
-[[SITN](/tag/sitn)](https://sitn.hms.harvard.edu/) is a graduate student group at Harvard that Heather, Emily and I are a part of, and it's mission is similar to that of this blog: bring science to a wider audience and make it fun. The Flash is a way for grad students that don't blog or have any other way to get experience writing for a general audience. Drop by and leave some feed back. 
+[SITN](https://sitn.hms.harvard.edu/) is a graduate student group at Harvard that Heather, Emily and I are a part of, and it's mission is similar to that of this blog: bring science to a wider audience and make it fun. The Flash is a way for grad students that don't blog or have any other way to get experience writing for a general audience. Drop by and leave some feed back. 
 
       
   

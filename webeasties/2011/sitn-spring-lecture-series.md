@@ -9,7 +9,7 @@ _This post initially appeared on [Science Blogs](http://scienceblogs.com/webeast
 
 If you don't live in/around Boston, feel free to move along. [Otherwise](https://sitn.hms.harvard.edu/sitn-seminars/):
 
-Dear [SITN](/tag/sitn) followers,
+Dear SITN followers,
 
 For a number of years, Science in the News (SITN) has organized a free public lecture series in the Brigham Circle/Longwood Medical area.  This spring, due to high demand, we are delighted to announce that we will be extending our lecture series into Cambridge!  For our extended series we will be having the following exciting lectures:
 

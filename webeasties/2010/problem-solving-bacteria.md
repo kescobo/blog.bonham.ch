@@ -9,7 +9,7 @@ _This post initially appeared on [Science Blogs](http://scienceblogs.com/webeast
 
 This is just [awesome](http://goo.gl/x1Nhu):
 
-A strain of Escherichia coli bacteria can now solve [[sudoku](/tag/sudoku)] puzzles
+A strain of Escherichia coli bacteria can now solve [sudoku] puzzles
 
 [...]
 

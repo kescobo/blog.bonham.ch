@@ -17,7 +17,7 @@ This lecture series is aimed at a general audience and it starts at 7pm tomorrow
 
 Full schedule:
 
-[[SITN](/tag/sitn) archives](https://sitn.hms.harvard.edu/sitnflash_wp/seminar-archive-2011/).
+[SITN archives](https://sitn.hms.harvard.edu/sitnflash_wp/seminar-archive-2011/).
 
 Last year's lecture series[ on Vimeo](http://vimeo.com/sitn/videos).
 

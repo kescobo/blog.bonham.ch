@@ -9,7 +9,7 @@ _This post initially appeared on [Science Blogs](http://scienceblogs.com/webeast
 
 Last month, [I linked to an article](https://sitn.hms.harvard.edu/sitnflash_wp/2011/09/issue101/) written by Harvard graduate student Laura Strittmatter about Resveratrol, a compound in red wine that had been linked to anti-aging effects in studies on rodents. Recently, a paper was published in Nature calling that research into question. This isn't a problem in science - this is how it's supposed to work. New research examines previous claims, and strengthens the case or knocks it down. Either way, we win.
 
-In that spirit, Laura picked through the new paper and brings us a [special edition](https://sitn.hms.harvard.edu/sitnflash_wp/2011/10/issue104/) of the [Flash](/tag/flash):
+In that spirit, Laura picked through the new paper and brings us a [special edition](https://sitn.hms.harvard.edu/sitnflash_wp/2011/10/issue104/) of the Flash:
 
 A recent article in the journal Nature calls into question previous findings about the scientific basis of lifespan extension. The authors of that article argue that the scientists who first reported lifespan extension in model organisms compared their "long-lived" organisms to improper control organisms, rendering their experimental findings invalid[...]
 

@@ -7,7 +7,7 @@ category = "webeasties"
 
 _This post initially appeared on [Science Blogs](http://scienceblogs.com/webeasties)_
 
-For the past 3 years, I've had the opportunity to spend a week in a house on a beautiful lake in Vermont. Usually, this week is a chance to completely unplug. I take some photos, buy a bunch of books from [Northshire](http://www.northshire.com/) and read them, and lounge around. On this past trip however, I received and e-mail that was equal parts wonderful, exciting and terrifying, offering me an opportunity to teach a course at [[Emerson](/tag/emerson) College](http://emerson.edu).
+For the past 3 years, I've had the opportunity to spend a week in a house on a beautiful lake in Vermont. Usually, this week is a chance to completely unplug. I take some photos, buy a bunch of books from [Northshire](http://www.northshire.com/) and read them, and lounge around. On this past trip however, I received and e-mail that was equal parts wonderful, exciting and terrifying, offering me an opportunity to teach a course at [Emerson College](http://emerson.edu).
 
 The course is [SC-214](/tag/sc-214) - Plagues and Pandemics. From the catalogue:
 
@@ -34,7 +34,7 @@ Thurs 9/6
 
 Course Intro
 
-Why is [Science](/tag/science) Awesome?
+Why is Science Awesome?
 
 What is a Pandemic?
 

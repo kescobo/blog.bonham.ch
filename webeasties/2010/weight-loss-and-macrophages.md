@@ -11,7 +11,7 @@ Macrophages are really good at gobbling stuff up. It's all right there in the na
 
 [Weight loss and lipolysis promote a dynamic immune response in murine adipose tissue](http://goo.gl/Ggmo3)
 
-Here we characterized the response of adipose tissue [macrophages](/tag/macrophages) (ATMs) to weight loss and fasting in mice and identified a role for lipolysis in ATM recruitment and accumulation. We found that the immune response to weight loss was dynamic; caloric restriction of high-[fat](/tag/fat) diet-fed mice led to an initial increase in ATM recruitment, whereas ATM content decreased following an extended period of weight loss. 
+Here we characterized the response of adipose tissue macrophages (ATMs) to weight loss and fasting in mice and identified a role for lipolysis in ATM recruitment and accumulation. We found that the immune response to weight loss was dynamic; caloric restriction of high-fat diet-fed mice led to an initial increase in ATM recruitment, whereas ATM content decreased following an extended period of weight loss. 
 So why is there an immune response when you lose weight?
 
 Well... there isn't really.

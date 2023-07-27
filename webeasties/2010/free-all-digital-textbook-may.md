@@ -7,14 +7,14 @@ category = "webeasties"
 
 _This post initially appeared on [Science Blogs](http://scienceblogs.com/webeasties)_
 
-A few weeks ago, I read [an article](http://www.wired.com/wiredscience/2010/10/wilson-free-biology-textbook/) in Wired talking about an amazing new project led by E.O. Wilson: an all-digital, not-for-profit textbook called Life on Earth. It looks amazing, and it's going to be offered to K-12 [schools](/tag/schools) for free. 
-Neil Patterson, director of Life on Earth with 50 years of science textbook publishing experience to his name, said the format could r[evolution](/tag/evolution)ize science [[education](/tag/education)](/tag/education) for students.
+A few weeks ago, I read [an article](http://www.wired.com/wiredscience/2010/10/wilson-free-biology-textbook/) in Wired talking about an amazing new project led by E.O. Wilson: an all-digital, not-for-profit textbook called Life on Earth. It looks amazing, and it's going to be offered to K-12 schools for free. 
+Neil Patterson, director of Life on Earth with 50 years of science textbook publishing experience to his name, said the format could revolutionize science education for students.
 
 "Motion and film are powerful ways of teaching," Patterson said. "We're trying to exploit the human brain, like videogames do, and it's not a small matter to use technology now available to us."
 
 I doubt many would argue that technology has the potential to provide powerful tools for learning (and based on this article and the promotional video, it looks like they are capitalizing on those tools), but I think there's another revolution lurking in this story, and it's not mentioned in the Wired article.
 
-When I took biology in high school, and when I tutored high school kids while I was in college, THE textbook was ["Biology"](http://www.campbellbiology.com/) by Campbell et. al. It's a great book, and I have a certain nostalgia for it, since it's the book that started my love affair with biology. But it (and all other intro [textbooks](/tag/textbooks) I've encountered) has what I consider a glaring flaw. Take a look at [the chapters](http://www.biologyjunction.com/ap_biology_chapter_objectives%20&%20outlines.htm):
+When I took biology in high school, and when I tutored high school kids while I was in college, THE textbook was ["Biology"](http://www.campbellbiology.com/) by Campbell et. al. It's a great book, and I have a certain nostalgia for it, since it's the book that started my love affair with biology. But it (and all other intro textbooks I've encountered) has what I consider a glaring flaw. Take a look at [the chapters](http://www.biologyjunction.com/ap_biology_chapter_objectives%20&%20outlines.htm):
 
 1) 10 Themes in the Study of Life
 

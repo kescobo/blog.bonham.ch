@@ -15,7 +15,7 @@ Next week: Me! I'll be presenting next wednesday along with my lab mate Sky Brub
 
 Full schedule:
 
-[[SITN](/tag/sitn) archives](https://sitn.hms.harvard.edu/sitnflash_wp/seminar-archive-2011/).
+[SITN archives](https://sitn.hms.harvard.edu/sitnflash_wp/seminar-archive-2011/).
 
 Last year's lecture series[ on Vimeo](http://vimeo.com/sitn/videos).
 

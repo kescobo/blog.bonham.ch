@@ -9,7 +9,7 @@ _This post initially appeared on [Science Blogs](http://scienceblogs.com/webeast
 
 Can you be skeptical about GM but believe in climate change? [So asks](http://www.theguardian.com/science/political-science/2013/jul/31/sceptical-gm-climate-change) Alice Bell in The Guardian. The answer is of course, "Yes," but you can also be a fundamentalist Christian while believing in evolution and [being a great scientist](https://en.wikipedia.org/wiki/Francis_Collins), so being able to hold two things in your brain at the same time is not a useful measure of logical incompatibility. One can be right about one thing and wrong about the other.
 
-But let's get to the real issue raised in Bell's piece, the use of the term "anti-science" to describe opponents of genetically modified organisms ([GMO](/tag/gmo-0)s):
+But let's get to the real issue raised in Bell's piece, the use of the term "anti-science" to describe opponents of genetically modified organisms (GMOs):
 
 When people use the term "anti-science", I want to know what definition of science they've based their concept of anti on.
 
@@ -29,7 +29,7 @@ I think that my main difference with Bell, and perhaps the source of the rest of
 
 It's also a lot easier for the GM lobby to play a game of "you are wrong on science" rather than acknowledging that the bulk of the critique against them is economic and political. [emphasis mine]
 
-It's simply not true that the bulk of objections to GMO are economic and political, and this is a huge problem. There *are* very reasonable political and economic arguments about the problems with modern [agriculture](/tag/agriculture), like industrial farming, monoculture and sustainability. But anti-GMO activists rail against "frankenfoods" as the boogyman for everything that ails agriculture, when most of these problems are not unique to genetically modified crops.
+It's simply not true that the bulk of objections to GMO are economic and political, and this is a huge problem. There *are* very reasonable political and economic arguments about the problems with modern agriculture, like industrial farming, monoculture and sustainability. But anti-GMO activists rail against "frankenfoods" as the boogyman for everything that ails agriculture, when most of these problems are not unique to genetically modified crops.
 
 If my experience with people on the internet, family members, friends and acquaintances that oppose or are skeptical of GMOs is at all representative, the main objection is a vague feeling that GMO is unnatural, and therefore unsafe. For those that rise to the level of activism, economics and politics are almost never brought up, except as a last resort after I've addressed their other concerns.
 

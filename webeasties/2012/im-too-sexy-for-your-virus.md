@@ -13,7 +13,7 @@ I know something's amiss when my google news alert returns headlines like these:
 
 [It's His Immune System That You Actually Want to Sleep With](http://jezebel.com/5887562/its-his-immune-system-that-you-actually-want-to-sleep-with)
 
-[The key to male [sex](/tag/sex)iness: A powerful immune system?](http://theweek.com/article/index/224843/the-key-to-male-sexiness-a-powerful-immune-system)
+[The key to male sexiness: A powerful immune system?](http://theweek.com/article/index/224843/the-key-to-male-sexiness-a-powerful-immune-system)
 
 and my personal favorite
 

@@ -7,7 +7,7 @@ category = "webeasties"
 
 _This post initially appeared on [Science Blogs](http://scienceblogs.com/webeasties)_
 
-Monday's [announcement for the Nobel Prize](http://www.nobelprize.org/nobel_prizes/medicine/laureates/[[2](http://www.ncbi.nlm.nih.gov/pubmed/8808[6](http://www.ncbi.nlm.nih.gov/pubmed/1008[7](http://www.ncbi.nlm.nih.gov/pubmed/17185603)992)[3](http://www.ncbi.nlm.nih.gov/pubmed/19[5](http://www.ncbi.nlm.nih.gov/pubmed/9751057)38928)2)](http://www.ncbi.nlm.nih.gov/pubmed/8808[6](http://www.ncbi.nlm.nih.gov/pubmed/[1](http://www.ncbi.nlm.nih.gov/pubmed/2700931)008[7](http://www.ncbi.nlm.nih.gov/pubmed/17185603)992)[3](http://www.ncbi.nlm.nih.gov/pubmed/19[5](http://www.ncbi.nlm.nih.gov/pubmed/9751057)38928)2)0[1](http://www.ncbi.nlm.nih.gov/pubmed/2700931)1/press.html) in physiology or medicine should have been a happy occasion for my lab. On the one hand, it was given for early discoveries in the field of [innate immunity](/tag/innate-immunity) - my field! On the other hand, it was given to a scientist that many* feel is undeserving of the honor, while at the same time sullying the legacy of my scientific great-grandfather.
+Monday's [announcement for the Nobel Prize](http://www.nobelprize.org/nobel_prizes/medicine/laureates/) in physiology or medicine should have been a happy occasion for my lab. On the one hand, it was given for early discoveries in the field of [innate immunity](/tag/innate-immunity) - my field! On the other hand, it was given to a scientist that many* feel is undeserving of the honor, while at the same time sullying the legacy of my scientific great-grandfather.
 
 Let me explain.
 
@@ -29,7 +29,7 @@ In the preceding decades, a group of scientists had been quietly plugging away a
 
 But T-cell and B-cell immunologists had what Janeway called their "dirty little secret." T-cells and B-cells could recognize any protein, but they can't mount an immune response on their own. Injection of purified proteins doesn't lead to immunity, or activation of T-cells and B-cells. Janeway:
 
-In order to obtain readily detectable responses to these [proteins], they must be incorporated into a remarkable mixture termed complete Freund's adjuvant, heavily laced with killed Mycobacteriam tuberculosis organisms or precipitated in alum and mixed with dead Bordetella pertussis organisms
+In order to obtain readily detectable responses to these [proteins], they must be incorporated into a remarkable mixture termed complete Freund's adjuvant, heavily laced with killed Mycobacterium tuberculosis organisms or precipitated in alum and mixed with dead Bordetella pertussis organisms
 
 These special additions are called "adjuvants," and they are absolutely necessary to get immune activation with pure proteins.
 

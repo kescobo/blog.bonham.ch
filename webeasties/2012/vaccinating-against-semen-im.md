@@ -11,7 +11,7 @@ I promise, this will be my last semen post for a while.
 
 I've talked about [allergy to semen](http://scienceblogs.com/webeasties/2011/07/allergic_to_spunk.php).
 
-I've talked about [allergens in semen](http://scienceblogs.com/webeasties/2011/07/[sex](/tag/sex)ually_transmitted_allergies.php).
+I've talked about [allergens in semen](http://scienceblogs.com/webeasties/2011/07/sexually_transmitted_allergies.php).
 
 And I've talked about [autoimmunity to semen](http://scienceblogs.com/webeasties/2012/01/autoimmunity_to_spunk.php).
 
@@ -29,7 +29,7 @@ An estimated 80 million women have unintended/unwanted pregnancies worldwide ann
 
 Another major problem is access. In the developing world, where one might argue family planning is most needed, medical services are not always readily available. Since hormonal birth control requires consistant use, and access to a daily pill or monthly shot just won't cut it.
 
-This calls for a better method of contraception that is acceptable, effective, and available both in the developed and developing nations. It should be non-steroidal, non-barrier, non-surgical, intercourse independent, and reversible. Contraceptive [vaccines](/tag/vaccines) (CV) have been proposed as valuable alternatives that can fulfill most, if not all, of the properties of an ideal contraceptive. Because of their high target specificity, long-term action, low cost, and without any side-effect, the development of CV is indeed an advancement in the field of contraception. As the developed and most of the developing nations have an infrastructure for mass immunization, constructing vaccines for contraception is an exciting proposition.
+This calls for a better method of contraception that is acceptable, effective, and available both in the developed and developing nations. It should be non-steroidal, non-barrier, non-surgical, intercourse independent, and reversible. Contraceptive vaccines (CV) have been proposed as valuable alternatives that can fulfill most, if not all, of the properties of an ideal contraceptive. Because of their high target specificity, long-term action, low cost, and without any side-effect, the development of CV is indeed an advancement in the field of contraception. As the developed and most of the developing nations have an infrastructure for mass immunization, constructing vaccines for contraception is an exciting proposition.
 
 There are several approaches to a contraceptive vaccine*, all involving different targets. Some target certain hormones, which would prevent the production or development of sperm/eggs. However, as many of these hormones are required for non-reproductive processes, these vaccines can have unwanted side effects. As an example, a protein called  [GnRH](http://en.wikipedia.org/wiki/Gonadotropin-releasing_hormone) triggers the release of other hormones necessary for the development of sperm and eggs, and can be effectively targeted by a vaccine. However, loss of these hormones also leads to impotence, and so is essentially off the table for human use (though it is currently being used as a non-surgical way to sterilize pets and feral animals).
 

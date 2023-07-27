@@ -7,13 +7,13 @@ category = "webeasties"
 
 _This post initially appeared on [Science Blogs](http://scienceblogs.com/webeasties)_
 
-At the risk of seeming like a one-trick pony, and piggybacking on [my recent appearance](http://scienceblogs.com/webeasties/2012/01/confidential_to_savage_lovecas.php) on the Savage Lovecast, I thought I would close the loop on immune reactions to semen. I've already written about [allergens being transmitted](http://scienceblogs.com/webeasties/2011/07/[sex](/tag/sex)ually_transmitted_allergies.php) in semen, and about women having [allergies to seminal plasma](http://scienceblogs.com/webeasties/2011/07/allergic_to_spunk.php) itself. In the latter case, I say women having allergies not only because the only examples I found were in women, but also because by definition men cannot have allergic reactions to semen. In response to a comment on that post I wrote:
+At the risk of seeming like a one-trick pony, and piggybacking on [my recent appearance](http://scienceblogs.com/webeasties/2012/01/confidential_to_savage_lovecas.php) on the Savage Lovecast, I thought I would close the loop on immune reactions to semen. I've already written about [allergens being transmitted](http://scienceblogs.com/webeasties/2011/07/sexually_transmitted_allergies.php) in semen, and about women having [allergies to seminal plasma](http://scienceblogs.com/webeasties/2011/07/allergic_to_spunk.php) itself. In the latter case, I say women having allergies not only because the only examples I found were in women, but also because by definition men cannot have allergic reactions to semen. In response to a comment on that post I wrote:
 
 If a man did get an immune response, it would probably be called "autoimmunity" rather than allergy. And the symptoms would likely be quite different - the cells that produced the protein in the prostate (alliteration not intended) would likely be destroyed without much outward symptoms, but the man might be infertile.
 
 I wasn't far off the mark. Allergies aren't the only type of immunity gone wrong (they're just among the most annoying).
 
-[Antisperm [antibodies](/tag/antibodies) and conception](http://www.ncbi.nlm.nih.gov/pubmed/17621702)
+[Antisperm antibodies and conception](http://www.ncbi.nlm.nih.gov/pubmed/17621702)
 
 Antisperm antibodies (ASA) may be found in both males and females and are reported in up to 9-12.8% of infertile couples. However, these antibodies are present also in approximately 1-2.5% of fertile men and in 1.4% of fertile women[...]
 

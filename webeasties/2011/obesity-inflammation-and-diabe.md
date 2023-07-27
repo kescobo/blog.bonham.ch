@@ -7,7 +7,7 @@ category = "webeasties"
 
 _This post initially appeared on [Science Blogs](http://scienceblogs.com/webeasties)_
 
-This entry is [cross posted](https://sitn.hms.harvard.edu/sitnflash_wp/2011/12/issue108/) from the the SITN [Flash](/tag/flash), a bimonthly publication written and edited by Harvard graduate students. You can find my piece, as well as archives of previous articles written by many graduate students at the [Science in the News website](https://sitn.hms.harvard.edu/sitn-flash/).
+This entry is [cross posted](https://sitn.hms.harvard.edu/sitnflash_wp/2011/12/issue108/) from the the SITN Flash, a bimonthly publication written and edited by Harvard graduate students. You can find my piece, as well as archives of previous articles written by many graduate students at the [Science in the News website](https://sitn.hms.harvard.edu/sitn-flash/).
 
 In 1985, the Centers for Disease Control (CDC) began tracking the prevalence of obesity in the United States. Since then, a clear trend has emerged: obesity is on the rise. The maps below compare obesity levels across the United States in 2004 and 2008:
 
@@ -31,7 +31,7 @@ Today, diabetes can be effectively managed with the use of synthetic insulin inj
 
 Inflammation, Obesity, and Diabetes
 
-Though aberrant immune responses have long been associated with type 1 diabetes, recent evidence has begun to mount that [inflammation](/tag/inflammation) and the immune system is also heavily involved in type 2 diabetes. Inflammation is the immune system's normal response to infection. Immune cells called macrophages can detect the presence of bacteria and viruses, and release signals that alert the rest of the immune system to an invading bug. These signals are called cytokines, and they promote an anti-pathogen response by increasing blood flow to the infected tissue, recruiting other immune cells from the blood and activating other, more potent immune cells. These activities result in the characteristic redness, swelling and pain associated with inflammation.
+Though aberrant immune responses have long been associated with type 1 diabetes, recent evidence has begun to mount that inflammation and the immune system is also heavily involved in type 2 diabetes. Inflammation is the immune system's normal response to infection. Immune cells called macrophages can detect the presence of bacteria and viruses, and release signals that alert the rest of the immune system to an invading bug. These signals are called cytokines, and they promote an anti-pathogen response by increasing blood flow to the infected tissue, recruiting other immune cells from the blood and activating other, more potent immune cells. These activities result in the characteristic redness, swelling and pain associated with inflammation.
 
 One of the first suggestions that the immune system was involved in type 2 diabetes came in 1993, when researchers at Dana Farber Cancer Institute in Boston, MA noticed an increased production of inflammatory cytokines in obese rats that are prone to diabetes. These cytokines were produced directly by adipocytes, the cells that store fat. Interestingly, when cytokine activity was blocked, these rats became less resistant to insulin and their blood-sugar levels dropped [7].
 

@@ -7,7 +7,7 @@ category = "webeasties"
 
 _This post initially appeared on [Science Blogs](http://scienceblogs.com/webeasties)_
 
-[A while back, I received a question from a reader via e-mail.
+A while back, I received a question from a reader via e-mail.
 
 Dear Beasties:
 

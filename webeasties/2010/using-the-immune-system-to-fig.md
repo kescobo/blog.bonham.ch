@@ -7,7 +7,7 @@ category = "webeasties"
 
 _This post initially appeared on [Science Blogs](http://scienceblogs.com/webeasties)_
 
-Cancer sucks. I'm sure I don't have to tell you that - it's one of the [leading causes](http://www.cdc.gov/nchs/fastats/lcod.htm) of death in developed countries, and our treatment options are pretty thin. Basically, it amounts to cutting out the tumors that can be seen, and then giving a controlled administration of poison in the hopes that the [cancer](/tag/cancer) cells die before you do. Don't get me wrong - advances in oncology have saved many lives, but it's no surprise that there's a lot of research happening to find better options.
+Cancer sucks. I'm sure I don't have to tell you that - it's one of the [leading causes](http://www.cdc.gov/nchs/fastats/lcod.htm) of death in developed countries, and our treatment options are pretty thin. Basically, it amounts to cutting out the tumors that can be seen, and then giving a controlled administration of poison in the hopes that the cancer cells die before you do. Don't get me wrong - advances in oncology have saved many lives, but it's no surprise that there's a lot of research happening to find better options.
 
 One promising avenue of study is augmenting the immune system to fight cancer directly. It's known that the immune system already plays a role in protecting us from tumors (immunodeficient mice and humans are more prone to cancer), and we already know it's great at targeted destruction, so it seems like a no-brainer. Indeed, my weekly "immunology research" google news alert almost always has at least one article about a new study curing cancer with the immune system. [Case in point](http://goo.gl/32rF3):
 

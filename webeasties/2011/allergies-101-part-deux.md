@@ -7,7 +7,7 @@ category = "webeasties"
 
 _This post initially appeared on [Science Blogs](http://scienceblogs.com/webeasties)_
 
-Earlier this week, [I wrote a little bit](http://scienceblogs.com/webeasties/2011/11/[allergies](/tag/allergies)_101.php) about what causes allergic symptoms - your immune system confuses pollen (or some other allergen) for a worm, and then arms your granulocytic grenades to explode every time you come into contact with it. But why does this confusion happen? This is a bit more complicated.
+Earlier this week, [I wrote a little bit](http://scienceblogs.com/webeasties/2011/11/allergies_101.php) about what causes allergic symptoms - your immune system confuses pollen (or some other allergen) for a worm, and then arms your granulocytic grenades to explode every time you come into contact with it. But why does this confusion happen? This is a bit more complicated.
 
 As I mentioned in the first post, the immune system broadly speaking is geared for 3 types of infections:
 

@@ -7,9 +7,9 @@ category = "webeasties"
 
 _This post initially appeared on [Science Blogs](http://scienceblogs.com/webeasties)_
 
-It occurred to me after I posted [my piece](http://scienceblogs.com/webeasties/2013/01/22/rock-[climbing](/tag/climbing)-fat-fingers-and-arthritis/) last week about [rock climbing](/tag/rock-climbing) and arthritis that all of the photos of climbing were of men. This was purely coincidence - I was editing photos of [last week's competition](http://darkhorseseries.com/) in reverse chronological order, and I'd only finished the photos of the Men's finals by the time I was done with the post.
+It occurred to me after I posted [my piece](http://scienceblogs.com/webeasties/2013/01/22/rock-climbing-fat-fingers-and-arthritis/) last week about [rock climbing](/tag/rock-climbing) and arthritis that all of the photos of climbing were of men. This was purely coincidence - I was editing photos of [last week's competition](http://darkhorseseries.com/) in reverse chronological order, and I'd only finished the photos of the Men's finals by the time I was done with the post.
 
-But I think it's important to note how amazing the [women](/tag/women) were as well (and it gives me an excuse to post more of my photography). In fact, this year, I thought that the women's bouldering problems were more interesting, and better demonstrated the skill and power of these climbers.
+But I think it's important to note how amazing the women were as well (and it gives me an excuse to post more of my photography). In fact, this year, I thought that the women's bouldering problems were more interesting, and better demonstrated the skill and power of these climbers.
 
 Molly Gaynor on the first of the Women's finals routes
 

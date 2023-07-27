@@ -22,7 +22,7 @@ Update (2/28/2012): Brett Favaro weighed in below in the comments - [check it ou
 
 -----
 
-PS - To any graduates students reading this: if you're interested in making yourself heard politically, check out the [ASBMB's Hill Day](http://www.asbmb.org/Advocacy/[advocacy](/tag/advocacy).aspx?id=13812). It's a free trip to DC where you learn about policy making and meet with your congress people to try to influence their votes. [I did it ](http://scienceblogs.com/webeasties/2011/03/lobbying_congress.php)last year and had a blast. Go apply!
+PS - To any graduates students reading this: if you're interested in making yourself heard politically, check out the [ASBMB's Hill Day](http://www.asbmb.org/Advocacy/advocacy.aspx?id=13812). It's a free trip to DC where you learn about policy making and meet with your congress people to try to influence their votes. [I did it ](http://scienceblogs.com/webeasties/2011/03/lobbying_congress.php)last year and had a blast. Go apply!
 
       
   

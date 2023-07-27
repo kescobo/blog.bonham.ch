@@ -7,7 +7,7 @@ category = "webeasties"
 
 _This post initially appeared on [Science Blogs](http://scienceblogs.com/webeasties)_
 
-A mini furor erupted this weekend, when republican Senate nominee Todd Akin defended his position of denying abortions even to victims of [rape](/tag/rape), because in the case of "legitimate rape," women have biological defenses that [prevent pregnancy](http://2012.talkingpointsmemo.com/2012/08/todd-akin-legitimate-rape.php):
+A mini furor erupted this weekend, when republican Senate nominee Todd Akin defended his position of denying abortions even to victims of rape, because in the case of "legitimate rape," women have biological defenses that [prevent pregnancy](http://2012.talkingpointsmemo.com/2012/08/todd-akin-legitimate-rape.php):
 
 “First of all, from what I understand from doctors [pregnancy from rape] is really rare,” Akin told KTVI-TV in an interview [posted](http://fox2now.com/2012/08/19/the-jaco-report-august-19-2012/) Sunday. “If it’s a legitimate rape, the female body has ways to try to shut that whole thing down.”
 

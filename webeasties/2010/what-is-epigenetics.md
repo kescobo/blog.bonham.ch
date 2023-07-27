@@ -11,7 +11,7 @@ I think understanding the basics of inheritance is pretty easy for most people -
 
 There's far more nuance than you learn in basic biology, of course. Most visible traits aren't governed by a single gene the way Mendel saw in his peas. Even human eye color - which is often touted as an easy one to understand - [is polygenic](http://goo.gl/HQ8cu). And of course there are characteristics that are heavily influenced by the environment. But still, heritable traits depend on genes, and genes are made of DNA, and the way DNA is divided up and passed on to offspring more or less follows the rules Mendel worked out over a hundred years ago.
 
-That is, until we start talking about [epigenetics](/tag/epigenetics), which is all kinds of confusing.
+That is, until we start talking about epigenetics, which is all kinds of confusing.
 
 So where to start? 
 You could try your hand at [this recent nature article](http://goo.gl/CLIKO). It's behind a paywall, but that's probably a good thing. I can barely penetrate the jargon, and I'm a biologist:

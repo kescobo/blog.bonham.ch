@@ -25,7 +25,7 @@ The major criticism was that this photo is just a glamour shot showing off cleav
 
 My impression has been that climbers in general are the coolest community of people ever, and I think this was reaffirmed here. A bunch of people made great points about wanting women to feel comfortable in the community (climbing in general or that subreddit), and there was some good debate about whether or not the reaction was appropriate. Hopefully some consciousness was raised, and of course there are going to be guys who won't get it, but most of the discussion was thoughtful and civil. Why can't people bahave this way everywhere on the internet?
 
-PS - Some pictures of awesome female climbers doing retardedlyincredibly hard stuff (also from that thread on reddit) after the jump.
+PS - Some pictures of awesome female climbers doing retardedly incredibly hard stuff (also from that thread on reddit) after the jump.
 
 Plus, a video.
 

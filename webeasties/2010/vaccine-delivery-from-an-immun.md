@@ -9,7 +9,7 @@ _This post initially appeared on [Science Blogs](http://scienceblogs.com/webeast
 
 I have a love/hate relationship with Nature Reviews: Immunology. It comes out once per month, and is usually packed with easy to read articles about fascinating (to me) topics, and each is filled with tons of great references so I can dig into the issue more. On the one hand, I get really excited about all the great things to read and new ways to expand my knowledge. On the other hand - that's a lot of reading. My [Instapaper](http://goo.gl/uCh8J) queue is about 80% Nature Reviews (15% other papers, and 5% random crap).
 
-This month is no different, but I decided to have the goal of blogging about the ones that I read as motivation to actually make that reading happen. First up: [Vaccines](/tag/[vaccines](/tag/vaccines)-0)!
+This month is no different, but I decided to have the goal of blogging about the ones that I read as motivation to actually make that reading happen. First up: Vaccines!
 
 Abbie has apparently [conscripted me](http://scienceblogs.com/erv/2010/11/yay_we_beasties.php) into the vaccine wars, which is fine, except that I feel woefully inadequate in the face of her and Orac. So I was naturally excited to see this paper in this month's issue:
 

@@ -7,7 +7,7 @@ category = "webeasties"
 
 _This post initially appeared on [Science Blogs](http://scienceblogs.com/webeasties)_
 
-[Last week](http://scienceblogs.com/webeasties/2010/11/vaccine_delivery_from_an_immun.php), I talked about strategies to improve vaccine efficacy and safety. Most of those strategies were in the context of standard, inject-into-your-arm [vaccines](/tag/vaccines), but what about totally new delivery methods? This week, there was a review in PLoS Pathogens of strategies for generating vaccines that you can swallow:
+[Last week](http://scienceblogs.com/webeasties/2010/11/vaccine_delivery_from_an_immun.php), I talked about strategies to improve vaccine efficacy and safety. Most of those strategies were in the context of standard, inject-into-your-arm vaccines, but what about totally new delivery methods? This week, there was a review in PLoS Pathogens of strategies for generating vaccines that you can swallow:
 
 [Enhancing Oral Vaccine Potency by Targeting Intestinal M Cells](http://www.plospathogens.org/article/info:doi/[10.1371/journal.ppat.1001147](review))
 

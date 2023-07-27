@@ -7,7 +7,7 @@ category = "webeasties"
 
 _This post initially appeared on [Science Blogs](http://scienceblogs.com/webeasties)_
 
-I rely on my phone to keep track of time - I tend to lose/break or cover watches[ in chalk](http://goo.gl/wRK7Y), but my phone is pretty reliable. But how does it know the time, and how to people keep track of the passing seconds? Find out in this month's [SITN [Flash](/tag/flash)](https://sitn.hms.harvard.edu/sitnflash_wp/2010/12/issue84/).
+I rely on my phone to keep track of time - I tend to lose/break or cover watches[ in chalk](http://goo.gl/wRK7Y), but my phone is pretty reliable. But how does it know the time, and how to people keep track of the passing seconds? Find out in this month's [SITN Flash](https://sitn.hms.harvard.edu/sitnflash_wp/2010/12/issue84/).
 
 Last month, the Flash was[ spintronics](http://scienceblogs.com/webeasties/2010/12/spintronics_and_quantum_circui.php#more), but the latest is [atomic clocks](https://sitn.hms.harvard.edu/sitnflash_wp/2010/12/issue84/):
 
