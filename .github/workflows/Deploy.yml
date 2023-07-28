@@ -14,7 +14,7 @@ env:
   PREVIEWS_PREFIX: "previews/PR"  # will be followed by PR number
 
 jobs:
-  docs:
+  build-and-deploy:
     runs-on: ubuntu-latest
     permissions: write-all
     steps:
