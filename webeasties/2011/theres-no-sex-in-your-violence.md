@@ -13,5 +13,3 @@ With a pulse of light, Dayu Lin from New York University can turn docile mice in
 
 Lin focused on a primitive part of the brain called the hypothalamus that keeps our basic bodily functions ticking over. It lords over body temperature, hunger, thirst, sleep and more. In particular, Lin found that a small part of this area - the ventrolateral ventromedial hypothalamus (VMHvl) - acts as a hub for both sex and violence.
 
-      
-  

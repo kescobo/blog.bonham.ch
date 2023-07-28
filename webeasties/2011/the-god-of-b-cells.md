@@ -19,7 +19,7 @@ This is sort of how it works, but it's a bit more complicated. Even if you vary 
 In order for B-cells to accomplish this, they actually break apart their DNA. An enzyme randomly picks a D and a J, cuts across both strands of DNA and then stitches them back together. Then, the same enzyme grabs a random V as well as the new DJ segment, cuts the DNA again and mashes V to DJ. 
 This is astonishing - double-strand breaks are incredibly dangerous, but B-cells in your body are doing it all the time. As Abbie mentioned with regards to class-switching:
 
-This is an abomination. This should not happen (HELLO??? CANCER!!! We have a million safe-guards in our DNA to kill cells that start doing crazy stuff like CUT UP THEIR OWN DNA!!!), but in this case, it does, for a very good reason.
+This is an abomination. This should not happen (HELLO\?\?\? CANCER!!! We have a million safe-guards in our DNA to kill cells that start doing crazy stuff like CUT UP THEIR OWN DNA!!!), but in this case, it does, for a very good reason.
 
 The reason for doing this at the DNA level is a topic for another post, but we're not through with GoD just yet. The algebra-obsessed among you might have noticed that 100 x 30 x 6 does not equal 10 billion. This is true, but I've left out a few things. First, an antibody isn't just a single protein, it's actually four proteins stuck together - two copies of a heavy chain, and two copies of a light chain.
 

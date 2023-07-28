@@ -19,7 +19,7 @@ This has puzzled scientists for a long time. There are a number of different def
 
 It turns out, those scientists forgot one tiny little detail: your colon is not like the laboratory.
 
-[Reduction of disulfide bonds unmasks potent anti-microbial action of human Î²-defensin 1](http://www.ncbi.nlm.nih.gov/pubmed?term=[21248850](review))
+[Reduction of disulfide bonds unmasks potent anti-microbial action of human Î²-defensin 1](http://www.ncbi.nlm.nih.gov/pubmed?term=21248850)
 
 A disulfide bond is a chemical bridge formed between two parts of a protein chain. In the oxidizing environment present in most of our bodies (and in solutions in the lab), these disulfide bonds are very stable, and help form the [shape of the protein](http://www.nature.com/nature/journal/v469/n7330/abstract/469309a.html).
 
