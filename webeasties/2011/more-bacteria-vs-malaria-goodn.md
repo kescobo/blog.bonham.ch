@@ -7,7 +7,7 @@ category = "webeasties"
 
 _This post initially appeared on [Science Blogs](http://scienceblogs.com/webeasties)_
 
-In the wild, as I [wrote about ](http://scienceblogs.com/webeasties/2011/06/bacterial_ros_[malaria](http://www.cdc.gov/malaria/).php)last week, some strains of commensal bacteria in mosquitoes seem to confer some resistance to infection with Plasmodium, the parasite that causes malaria in humans. Not content to wait for for nature to get around to it, researchers at Johns Hopkins University decided to see if they could nudge the process along:
+In the wild, as I [wrote about ](http://scienceblogs.com/webeasties/2011/06/bacterial_ros_malaria.php)last week, some strains of commensal bacteria in mosquitoes seem to confer some resistance to infection with Plasmodium, the parasite that causes malaria in humans. Not content to wait for for nature to get around to it, researchers at Johns Hopkins University decided to see if they could nudge the process along:
 
 [Wolbachia Infections Are Virulent and Inhibit the Human Malaria Parasite Plasmodium Falciparum in Anopheles Gambiae](http://www.plospathogens.org/article/info%3Adoi%2F10.1371%2Fjournal.ppat.1002043)
 
