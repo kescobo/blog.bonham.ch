@@ -2,4 +2,4 @@
 title = "We, Beasties Archive"
 +++
 
-{{webeastiesposts}}
+{{webeasties_posts}}
