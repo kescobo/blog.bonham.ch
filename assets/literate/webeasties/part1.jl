@@ -10,14 +10,6 @@ Note: you should really never use Regex to parse an HTML file,
 but I'm not _really_ parsing them, I actually am looking for a simple pattern.
 """
 
-projectdir = joinpath(pwd(), "_assets", "literate", "webeasties")
-
-using Pkg #hide
-Pkg.activate(projectdir) #hide
-Pkg.instantiate() #hide
-
-#-
-
 using Downloads: download
 
 posturls = Set(String[])
