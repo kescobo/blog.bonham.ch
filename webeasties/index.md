@@ -1,7 +1,5 @@
-@def title = "We, Beasties Archive"
-
-\begin{section}{name="Blog", class=""}
++++
+title = "We, Beasties Archive"
++++
 
 {{webeastiesposts}}
-
-\end{section}
