@@ -57,14 +57,9 @@ To see these gals (and the guys as well) in action, check out the official video
 
 [Dark Horse 2013 Series 4 Championship Highlights](http://vimeo.com/57884070) from [Louder Than Eleven](http://vimeo.com/louderthan11) on [Vimeo](http://vimeo.com).
 
-<em>[All photos in this post were taken by me and are licensed under a <a href="[[http://creativecommons.org/licenses/by-sa/3.0/deed.en_US](http://creativecommons.org/licenses/by-sa/3.0/deed.en_US)](http://creativecommons.org/licenses/by-sa/3.0/deed.en_US)">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>]</em>
+All photos in this post were taken by me and are licensed under a [Creative Commons Attribution-ShareAlike 3.0 Unported License](http://creativecommons.org/licenses/by-sa/3.0/deed.en_US)
 
-<a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US" rel="license"><img style="border-width: 0;" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" alt="Creative Commons License" />
-
-</a>
- 
-
-      
+     
   
 
  ## Post Images

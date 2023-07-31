@@ -222,9 +222,9 @@ version = "1.6.2"
 
 [[deps.Parsers]]
 deps = ["Dates", "PrecompileTools", "UUIDs"]
-git-tree-sha1 = "4b2e829ee66d4218e0cef22c0a64ee37cf258c29"
+git-tree-sha1 = "716e24b21538abc91f6205fd1d8363f39b442851"
 uuid = "69de0a69-1ddd-5017-9359-2bf0b02dc9f0"
-version = "2.7.1"
+version = "2.7.2"
 
 [[deps.Pkg]]
 deps = ["Artifacts", "Dates", "Downloads", "FileWatching", "LibGit2", "Libdl", "Logging", "Markdown", "Printf", "REPL", "Random", "SHA", "Serialization", "TOML", "Tar", "UUIDs", "p7zip_jll"]
@@ -323,7 +323,7 @@ uuid = "4ec0a83e-493e-50e2-b9ac-8f72acf5a8f5"
 
 [[deps.Xranklin]]
 deps = ["ANSIColoredPrinters", "CRC32c", "Dates", "FranklinParser", "IOCapture", "LiveServer", "Logging", "Markdown", "OrderedCollections", "Pkg", "REPL", "Reexport", "Serialization", "TOML", "URIs"]
-git-tree-sha1 = "153b40d3fcf8093921bd3c720d6fed357fe93b5c"
+git-tree-sha1 = "fde0bd2cfc27b85ca1d79233be0122b8a973dae9"
 repo-rev = "main"
 repo-url = "https://github.com/tlienart/Xranklin.jl"
 uuid = "558449b0-171e-4e1f-900f-d076a5ddf486"

@@ -37,7 +37,7 @@ Why do we need to use adjuvants? To be quite honest, the answer is not known.
 
 But Janeway had a theory. In the preceding years, scientists had discovered that in addition to the signal T-cells and B-cells received through their main receptors, they required a second signal, or "co-stimulation." Other researchers had independently shown that certain microbial products like LPS, a component of bacterial cell walls, had strong adjuvent activities. Janeway's insight was that the 2nd signal for T-cell and B-cell activation was linked to recognition of particular molecular patterns associated with infection.
 
-I contend that the immune system has evolved specificalty to recognize and respond to infectious microorganisms, and that this involves recognition not only of specific [proteins], but also of certain characteristics or patterns common on infectious agents but absent from the host[...] By ignoring the importance of this microbial component of immunological recognition, I contend that we have collectively ignored a critical feature of self/nonself discrimination, the requirement for a microbially induced second signal[...] Indeed, I believe that if we fail to incorporate such ideas into our thinking, we shall fail to understand immune recognition at its most fundamental level, that is, the discrimination of self from nonself, and in the defense of the host against infection.
+I contend that the immune system has evolved specificalty to recognize and respond to infectious microorganisms, and that this involves recognition not only of specific [proteins], but also of certain characteristics or patterns common on infectious agents but absent from the host[...] By ignoring the importance of this microbial component of immunological recognition, I contend that we have collectively ignored a critical feature of self/nonself discrimination, the requirement for a microbially induced second signal... Indeed, I believe that if we fail to incorporate such ideas into our thinking, we shall fail to understand immune recognition at its most fundamental level, that is, the discrimination of self from nonself, and in the defense of the host against infection.
 
 The Evidence
 
@@ -61,7 +61,7 @@ This was the paradigm suggested by Janeway in 1989 and validated by discoveries 
 
 I should note here that I'm not exactly an unbiased source (though I think the publication record speaks for itself). My boss was a post-doc in Medzhitov's lab, putting him (and me) in Janeway's direct lineage. And there's no love lost between Medzhitov and Beutler. For the past decade, Beutler has been publishing review articles playing up his own contribution and down-playing that of Janeway. And the feud isn't restricted to the peer reviewed journals. The latest sortie in this rivalry occurred earlier this year, after Medzhitov gave a presentation to an audience of innate immunologists (including Beutler). At the end of his talk, Medzhitov announced that he wouldn't take questions, but wanted to comment on the fact that "someone" had [changed the wikipedia entry](http://en.wikipedia.org/w/index.php?title=Charles_Janeway&diff=405734593&oldid=399914393) on Charlie Janeway to read:
 
-Janeway and coworkers did not actually demonstrate the existence of receptors for LPS or any other PAMPs. However, receptors for specific molecules made by microbes were eventually identified by other workers, notably [[Bruce Beutler]] , who discovered the LPS receptor[...]
+> Janeway and coworkers did not actually demonstrate the existence of receptors for LPS or any other PAMPs. However, receptors for specific molecules made by microbes were eventually identified by other workers, notably Bruce Beutler , who discovered the LPS receptor...
 
 He didn't name names, but said "there's only one person that would do this, and we all know who." And I don't think he was referring to [Sarah Palin](http://thecaucus.blogs.nytimes.com/2011/06/06/paul-revere-sarah-palin-and-wikipedia/).
 
@@ -75,7 +75,7 @@ But regardless of the arguments for or against Medzhitov, giving the reward to B
 
 References:
 
-1 Approaching the Asymptote? Evolution and revolution in immunology. [Note: It's a pain in the ass to find the full text of this - shoot me an[ e-mail ](mailto:webeastiesblog@gmail.com)if you're looking]
+1 Approaching the Asymptote? Evolution and revolution in immunology. [Note: It's a pain in the ass to find the full text of this - shoot me an[ e-mail](mailto:webeastiesblog@gmail.com) if you're looking]
 
 2The dorsoventral regulatory gene cassette spätzle/Toll/cactus controls the potent antifungal response in Drosophila adults.
 
@@ -90,7 +90,6 @@ References:
 7Adjuvant-enhanced antibody responses in the absence of toll-like receptor signaling.
 
       
-  
 
  ## Post Images
 

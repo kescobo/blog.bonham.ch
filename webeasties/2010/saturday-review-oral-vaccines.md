@@ -9,7 +9,7 @@ _This post initially appeared on [Science Blogs](http://scienceblogs.com/webeast
 
 [Last week](http://scienceblogs.com/webeasties/2010/11/vaccine_delivery_from_an_immun.php), I talked about strategies to improve vaccine efficacy and safety. Most of those strategies were in the context of standard, inject-into-your-arm vaccines, but what about totally new delivery methods? This week, there was a review in PLoS Pathogens of strategies for generating vaccines that you can swallow:
 
-[Enhancing Oral Vaccine Potency by Targeting Intestinal M Cells](http://www.plospathogens.org/article/info:doi/[10.1371/journal.ppat.1001147](review))
+[Enhancing Oral Vaccine Potency by Targeting Intestinal M Cells](http://www.plospathogens.org/article/info:doi/10.1371/journal.ppat.1001147(review))
 
 The immune system in the gastrointestinal tract plays a crucial role in the control of infection, as it constitutes the first line of defense against mucosal pathogens. The attractive features of oral immunization have led to the exploration of a variety of oral delivery systems. However, none of these oral delivery systems have been applied to existing commercial vaccines. To overcome this, a new generation of oral vaccine delivery systems that target antigens to gut-associated lymphoid tissue is required.
 
