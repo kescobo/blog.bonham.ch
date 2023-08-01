@@ -21,6 +21,3 @@ Babies born through the traditional route are very quickly exposed to the bacter
 It's important to note that we can't yet draw a distinct causative link between early establishment of bacterial communities and future disease (allergies, asthma etc), right now it's just correlation. And though infants are colonized by very few types of microbes, as they develop, the microbial ecosystem diversifies into thousands or millions of different species. Researchers are hard at work using new technologies to try to figure out all the different things living in an adult gut (given the spiffy name, "the microbiome"), and we've barely scratched the surface.
 
 The one thing that is clear is that the little things living in us and on us can have a profound effect on our health, and with new research, hopefully we can use that knowledge to our advantage.
-
-      
-  
