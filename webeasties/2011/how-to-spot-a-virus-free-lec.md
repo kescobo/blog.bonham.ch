@@ -1,6 +1,6 @@
 +++
 title = "'How to Spot a Virus' - Free lecture tomorrow night in Boston"
-pubdate = Date("2011-09-27")
+date = Date("2011-09-27")
 tags = ["pattern-recognition", "sitn", "innate-immunity"]
 category = "webeasties"
 +++

@@ -1,6 +1,6 @@
 +++
 title = "The Future of Science Publishing"
-pubdate = Date("2012-02-21")
+date = Date("2012-02-21")
 tags = ["policy-0", "science-process", "publicness", "scientific-controversy", "policy-0"]
 category = "webeasties"
 +++

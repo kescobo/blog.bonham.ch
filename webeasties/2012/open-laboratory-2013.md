@@ -1,6 +1,6 @@
 +++
 title = "Open Laboratory 2013"
-pubdate = Date("2012-02-27")
+date = Date("2012-02-27")
 tags = ["science-process", "blogging", "open-laboratory-0", "personal", "science-writing"]
 category = "webeasties"
 +++

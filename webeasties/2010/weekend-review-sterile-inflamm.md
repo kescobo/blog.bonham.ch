@@ -1,6 +1,6 @@
 +++
 title = "Weekend Review: Sterile Inflammation"
-pubdate = Date("2010-11-28")
+date = Date("2010-11-28")
 tags = ["immune-system", "pattern-recognition", "inflammasome", "inflammation"]
 category = "webeasties"
 +++

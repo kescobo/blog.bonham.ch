@@ -1,6 +1,6 @@
 +++
 title = "On Stress in Biomedical Research"
-pubdate = Date("2010-11-10")
+date = Date("2010-11-10")
 tags = ["science-process"]
 category = "webeasties"
 +++

@@ -1,6 +1,6 @@
 +++
 title = "Last chance to help out with Movember!"
-pubdate = Date("2011-11-30")
+date = Date("2011-11-30")
 tags = ["random", "personal"]
 category = "webeasties"
 +++

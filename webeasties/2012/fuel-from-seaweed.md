@@ -1,6 +1,6 @@
 +++
 title = "Fuel from Seaweed"
-pubdate = Date("2012-01-26")
+date = Date("2012-01-26")
 tags = ["energy", "microbial-metabolism", "technology", "awesome", "research"]
 category = "webeasties"
 +++

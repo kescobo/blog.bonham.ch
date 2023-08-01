@@ -1,6 +1,6 @@
 +++
 title = "Antibiotic resistance ignores boundaries - of species and countries"
-pubdate = Date("2011-05-11")
+date = Date("2011-05-11")
 tags = ["microbiology", "pathogens"]
 category = "webeasties"
 +++

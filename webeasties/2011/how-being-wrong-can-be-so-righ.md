@@ -1,6 +1,6 @@
 +++
 title = "How 'Being Wrong' can be so right"
-pubdate = Date("2011-01-13")
+date = Date("2011-01-13")
 tags = ["book-review"]
 category = "webeasties"
 +++

@@ -1,6 +1,6 @@
 +++
 title = "That guy must be crazy"
-pubdate = Date("2011-01-11")
+date = Date("2011-01-11")
 tags = ["random"]
 category = "webeasties"
 +++

@@ -1,6 +1,6 @@
 +++
 title = "The Center for Science and Democracy"
-pubdate = Date("2012-05-23")
+date = Date("2012-05-23")
 tags = ["policy-0", "science-process", "democracy", "politics", "science-policy", "ucs", "policy-0"]
 category = "webeasties"
 +++

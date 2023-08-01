@@ -1,6 +1,6 @@
 +++
 title = "What is knowledge?"
-pubdate = Date("2010-12-08")
+date = Date("2010-12-08")
 tags = ["education", "random", "science-process"]
 category = "webeasties"
 +++

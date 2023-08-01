@@ -1,6 +1,6 @@
 +++
 title = "My own cognitive dissonance, unresolved"
-pubdate = Date("2011-07-27")
+date = Date("2011-07-27")
 tags = ["random"]
 category = "webeasties"
 +++

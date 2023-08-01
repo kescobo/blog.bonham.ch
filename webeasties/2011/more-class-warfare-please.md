@@ -1,6 +1,6 @@
 +++
 title = "More class warfare please"
-pubdate = Date("2011-08-24")
+date = Date("2011-08-24")
 tags = ["random"]
 category = "webeasties"
 +++

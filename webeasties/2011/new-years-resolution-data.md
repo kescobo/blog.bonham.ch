@@ -1,6 +1,6 @@
 +++
 title = "New Years Resolution: Data"
-pubdate = Date("2011-04-13")
+date = Date("2011-04-13")
 tags = ["random", "science-process"]
 category = "webeasties"
 +++

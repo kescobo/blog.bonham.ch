@@ -1,6 +1,6 @@
 +++
 title = "Maybe He Was Talking About Ducks"
-pubdate = Date("2012-08-21")
+date = Date("2012-08-21")
 tags = ["policy-0", "random", "duck-sex", "politics", "rape", "reproductive-rights", "todd-akin", "policy-0"]
 category = "webeasties"
 +++

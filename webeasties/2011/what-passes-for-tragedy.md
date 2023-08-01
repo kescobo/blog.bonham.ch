@@ -1,6 +1,6 @@
 +++
 title = "What passes for tragedy"
-pubdate = Date("2011-08-20")
+date = Date("2011-08-20")
 tags = ["random", "personal"]
 category = "webeasties"
 +++

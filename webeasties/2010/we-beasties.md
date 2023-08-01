@@ -1,6 +1,6 @@
 +++
 title = "We, Beasties"
-pubdate = Date("2010-11-01")
+date = Date("2010-11-01")
 tags = ["uncategorized"]
 category = "webeasties"
 +++

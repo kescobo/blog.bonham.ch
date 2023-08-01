@@ -1,6 +1,6 @@
 +++
 title = "Everything's contaminated (repost)"
-pubdate = Date("2010-07-08")
+date = Date("2010-07-08")
 tags = ["uncategorized"]
 category = "webeasties"
 +++

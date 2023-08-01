@@ -1,6 +1,6 @@
 +++
 title = "Allergies 101 - Part deux"
-pubdate = Date("2011-11-17")
+date = Date("2011-11-17")
 tags = ["allergiesautoimmunity", "allergies", "allergies-101", "t-cell-differentiation"]
 category = "webeasties"
 +++

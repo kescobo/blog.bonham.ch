@@ -1,6 +1,6 @@
 +++
 title = "There's no sex in your violence... or is there?"
-pubdate = Date("2011-02-10")
+date = Date("2011-02-10")
 tags = ["random", "technology"]
 category = "webeasties"
 +++

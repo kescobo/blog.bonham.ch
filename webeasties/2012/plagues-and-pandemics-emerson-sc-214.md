@@ -1,6 +1,6 @@
 +++
 title = "Plagues and Pandemics - Emerson SC-214"
-pubdate = Date("2012-08-28")
+date = Date("2012-08-28")
 tags = ["education", "sc-214", "emerson", "infectious-disease", "pandemic", "plague", "science", "education"]
 category = "webeasties"
 +++

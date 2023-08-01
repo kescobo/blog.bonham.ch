@@ -1,6 +1,6 @@
 +++
 title = "Be more wrong"
-pubdate = Date("2011-04-21")
+date = Date("2011-04-21")
 tags = ["random"]
 category = "webeasties"
 +++

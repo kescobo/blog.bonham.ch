@@ -1,6 +1,6 @@
 +++
 title = "It itches! The immune system turns up in the strangest places"
-pubdate = Date("2010-11-09")
+date = Date("2010-11-09")
 tags = ["other-uses-immune-system", "pattern-recognition"]
 category = "webeasties"
 +++

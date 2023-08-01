@@ -1,6 +1,6 @@
 +++
 title = "The Best Argument in Favor of Open Access Science is All of Them"
-pubdate = Date("2012-08-09")
+date = Date("2012-08-09")
 tags = ["science-process", "oas", "open-access"]
 category = "webeasties"
 +++

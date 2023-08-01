@@ -1,6 +1,6 @@
 +++
 title = "Why must you use that word, 'Profit?'"
-pubdate = Date("2011-04-14")
+date = Date("2011-04-14")
 tags = ["random"]
 category = "webeasties"
 +++

@@ -1,6 +1,6 @@
 +++
 title = "A reward well deserved"
-pubdate = Date("2011-09-20")
+date = Date("2011-09-20")
 tags = ["education", "random"]
 category = "webeasties"
 +++

@@ -1,6 +1,6 @@
 +++
 title = "Devastating east coast earthquake"
-pubdate = Date("2011-08-24")
+date = Date("2011-08-24")
 tags = ["random", "personal"]
 category = "webeasties"
 +++

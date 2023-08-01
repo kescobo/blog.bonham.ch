@@ -1,6 +1,6 @@
 +++
 title = "More on the science writing and the internet"
-pubdate = Date("2011-05-10")
+date = Date("2011-05-10")
 tags = ["education", "science-process"]
 category = "webeasties"
 +++

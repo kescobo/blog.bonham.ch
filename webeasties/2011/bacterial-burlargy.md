@@ -1,6 +1,6 @@
 +++
 title = "Bacterial Burglary"
-pubdate = Date("2011-03-22")
+date = Date("2011-03-22")
 tags = ["microbes-always-win", "pathogens"]
 category = "webeasties"
 +++

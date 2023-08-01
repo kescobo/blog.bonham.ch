@@ -1,6 +1,6 @@
 +++
 title = "Speaking Truth in Violent Times"
-pubdate = Date("2011-01-10")
+date = Date("2011-01-10")
 tags = ["uncategorized"]
 category = "webeasties"
 +++

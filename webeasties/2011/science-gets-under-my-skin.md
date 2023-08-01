@@ -1,6 +1,6 @@
 +++
 title = "Science gets under my skin"
-pubdate = Date("2011-06-15")
+date = Date("2011-06-15")
 tags = ["random"]
 category = "webeasties"
 +++

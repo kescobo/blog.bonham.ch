@@ -1,6 +1,6 @@
 +++
 title = "Nobel controversy update"
-pubdate = Date("2011-11-29")
+date = Date("2011-11-29")
 tags = ["random", "science-process", "innate-immunity", "personal"]
 category = "webeasties"
 +++

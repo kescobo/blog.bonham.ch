@@ -1,6 +1,6 @@
 +++
 title = "Surf's up brah"
-pubdate = Date("2011-03-07")
+date = Date("2011-03-07")
 tags = ["book-review"]
 category = "webeasties"
 +++

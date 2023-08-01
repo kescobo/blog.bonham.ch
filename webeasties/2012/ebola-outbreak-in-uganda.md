@@ -1,6 +1,6 @@
 +++
 title = "Ebola Outbreak in Uganda - Both More and Less Frightening Than You Think"
-pubdate = Date("2012-08-01")
+date = Date("2012-08-01")
 tags = ["immune-system", "microbes-always-win"]
 category = "webeasties"
 +++

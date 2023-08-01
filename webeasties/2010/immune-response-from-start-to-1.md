@@ -1,6 +1,6 @@
 +++
 title = "Immune Response from Start to Finish: Part 1"
-pubdate = Date("2010-11-01")
+date = Date("2010-11-01")
 tags = ["immune-system", "innate-immunity"]
 category = "webeasties"
 +++

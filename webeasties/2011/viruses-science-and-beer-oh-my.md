@@ -1,6 +1,6 @@
 +++
 title = "Viruses, science and beer, Oh My!"
-pubdate = Date("2011-06-14")
+date = Date("2011-06-14")
 tags = ["sitn"]
 category = "webeasties"
 +++

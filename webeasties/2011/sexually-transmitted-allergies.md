@@ -1,6 +1,6 @@
 +++
 title = "Sexually transmitted allergies and other oddities"
-pubdate = Date("2011-07-29")
+date = Date("2011-07-29")
 tags = ["allergiesautoimmunity"]
 category = "webeasties"
 +++

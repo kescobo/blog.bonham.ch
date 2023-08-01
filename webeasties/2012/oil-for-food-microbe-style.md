@@ -1,6 +1,6 @@
 +++
 title = "Oil for Food - Microbe Style"
-pubdate = Date("2012-04-20")
+date = Date("2012-04-20")
 tags = ["deep-sea-microbiology", "microbial-metabolism", "microbiology", "oil-spill"]
 category = "webeasties"
 +++

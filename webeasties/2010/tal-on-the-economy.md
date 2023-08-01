@@ -1,6 +1,6 @@
 +++
 title = "TAL on the economy"
-pubdate = Date("2010-11-11")
+date = Date("2010-11-11")
 tags = ["random", "financial-crisis", "american-life", "toxic-asset"]
 category = "webeasties"
 +++

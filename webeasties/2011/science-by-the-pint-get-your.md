@@ -1,6 +1,6 @@
 +++
 title = "Science by the pint - get your science and drink it too"
-pubdate = Date("2011-01-31")
+date = Date("2011-01-31")
 tags = ["sitn"]
 category = "webeasties"
 +++

@@ -1,6 +1,6 @@
 +++
 title = "On Definitions: They Matter"
-pubdate = Date("2010-11-22")
+date = Date("2010-11-22")
 tags = ["immune-system", "science-process", "language", "nk-cells"]
 category = "webeasties"
 +++

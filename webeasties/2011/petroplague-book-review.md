@@ -1,6 +1,6 @@
 +++
 title = "Petroplague - Book Review"
-pubdate = Date("2011-10-15")
+date = Date("2011-10-15")
 tags = ["book-review", "energy", "microbial-metabolism"]
 category = "webeasties"
 +++

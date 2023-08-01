@@ -1,6 +1,6 @@
 +++
 title = "Rock Climbing, Fat Fingers and Arthritis"
-pubdate = Date("2013-01-22")
+date = Date("2013-01-22")
 tags = ["random", "arthritis", "osteoarthritis", "rock-climbing"]
 category = "webeasties"
 +++

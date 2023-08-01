@@ -1,6 +1,6 @@
 +++
 title = "Detour to the top of a mountain"
-pubdate = Date("2011-07-05")
+date = Date("2011-07-05")
 tags = ["random"]
 category = "webeasties"
 +++

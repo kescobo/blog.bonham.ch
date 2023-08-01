@@ -1,6 +1,6 @@
 +++
 title = "Last SITN lecture: Tonight!"
-pubdate = Date("2010-11-16")
+date = Date("2010-11-16")
 tags = ["sitn", "solar-power"]
 category = "webeasties"
 +++

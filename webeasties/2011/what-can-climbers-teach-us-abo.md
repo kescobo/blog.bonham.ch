@@ -1,6 +1,6 @@
 +++
 title = "What can climbers teach us about #elevatorgate?"
-pubdate = Date("2011-08-09")
+date = Date("2011-08-09")
 tags = ["uncategorized"]
 category = "webeasties"
 +++

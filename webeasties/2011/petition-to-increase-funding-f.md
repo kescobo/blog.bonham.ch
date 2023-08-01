@@ -1,6 +1,6 @@
 +++
 title = "Petition to Increase Funding for Scientific Research"
-pubdate = Date("2011-11-16")
+date = Date("2011-11-16")
 tags = ["policy-0"]
 category = "webeasties"
 +++

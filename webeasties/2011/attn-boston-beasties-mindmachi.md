@@ -1,6 +1,6 @@
 +++
 title = "Attn Boston Beasties: Mind/Machine Interface Lecture this week"
-pubdate = Date("2011-09-20")
+date = Date("2011-09-20")
 tags = ["education", "sitn"]
 category = "webeasties"
 +++

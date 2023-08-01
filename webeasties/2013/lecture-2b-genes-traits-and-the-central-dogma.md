@@ -1,6 +1,6 @@
 +++
 title = "Lecture 2b: Genes, Traits and the Central Dogma."
-pubdate = Date("2013-01-13")
+date = Date("2013-01-13")
 tags = ["education", "sc-214"]
 category = "webeasties"
 +++

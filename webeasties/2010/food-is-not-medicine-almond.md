@@ -1,6 +1,6 @@
 +++
 title = "Food is Not Medicine - Almond Edition"
-pubdate = Date("2010-11-02")
+date = Date("2010-11-02")
 tags = ["immune-system", "anti-viral-immunity", "bad-reporting"]
 category = "webeasties"
 +++

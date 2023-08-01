@@ -1,6 +1,6 @@
 +++
 title = "Possible explanations for Tumor Vaccine study"
-pubdate = Date("2011-06-21")
+date = Date("2011-06-21")
 tags = ["immune-system", "other-uses-immune-system"]
 category = "webeasties"
 +++

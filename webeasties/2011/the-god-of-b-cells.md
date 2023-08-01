@@ -1,6 +1,6 @@
 +++
 title = "The GoD of B-cells"
-pubdate = Date("2011-08-10")
+date = Date("2011-08-10")
 tags = ["immune-system", "antibodies", "explainer"]
 category = "webeasties"
 +++

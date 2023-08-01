@@ -1,6 +1,6 @@
 +++
 title = "Essential cold-weather tips for idiots"
-pubdate = Date("2010-12-30")
+date = Date("2010-12-30")
 tags = ["random"]
 category = "webeasties"
 +++

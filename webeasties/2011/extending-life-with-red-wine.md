@@ -1,6 +1,6 @@
 +++
 title = "Extending life with red wine"
-pubdate = Date("2011-09-15")
+date = Date("2011-09-15")
 tags = ["flash", "sitn"]
 category = "webeasties"
 +++

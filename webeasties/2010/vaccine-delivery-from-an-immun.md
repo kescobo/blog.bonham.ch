@@ -1,6 +1,6 @@
 +++
 title = "Saturday Review: Vaccines and the Immune System"
-pubdate = Date("2010-11-06")
+date = Date("2010-11-06")
 tags = ["pattern-recognition", "vaccines-0", "immune-system", "vaccines"]
 category = "webeasties"
 +++

@@ -1,6 +1,6 @@
 +++
 title = "The immune system has trade-offs"
-pubdate = Date("2010-11-05")
+date = Date("2010-11-05")
 tags = ["uncategorized", "immune-system", "natural-selection"]
 category = "webeasties"
 +++

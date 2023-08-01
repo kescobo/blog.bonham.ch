@@ -1,6 +1,6 @@
 +++
 title = "Spintronics and quantum circuits... huh?"
-pubdate = Date("2010-12-19")
+date = Date("2010-12-19")
 tags = ["education", "sitn"]
 category = "webeasties"
 +++

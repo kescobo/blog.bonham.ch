@@ -1,6 +1,6 @@
 +++
 title = "Scientists communicating their science"
-pubdate = Date("2011-09-29")
+date = Date("2011-09-29")
 tags = ["pattern-recognition", "sitn", "innate-immunity"]
 category = "webeasties"
 +++

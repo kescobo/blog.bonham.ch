@@ -1,6 +1,6 @@
 +++
 title = "Should Scientists Blog?"
-pubdate = Date("2010-06-30")
+date = Date("2010-06-30")
 tags = ["science-process"]
 category = "webeasties"
 +++

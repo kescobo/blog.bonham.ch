@@ -1,6 +1,6 @@
 +++
 title = "New Lab Resolutions"
-pubdate = Date("2011-02-10")
+date = Date("2011-02-10")
 tags = ["random", "science-process"]
 category = "webeasties"
 +++

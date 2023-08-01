@@ -1,6 +1,6 @@
 +++
 title = "I love video games (repost)"
-pubdate = Date("2010-08-19")
+date = Date("2010-08-19")
 tags = ["uncategorized"]
 category = "webeasties"
 +++

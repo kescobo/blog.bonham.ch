@@ -1,6 +1,6 @@
 +++
 title = "I'm Too Sexy for Your... Virus? Or, Immunity as it Relates to Peacocks"
-pubdate = Date("2012-02-28")
+date = Date("2012-02-28")
 tags = ["other-uses-immune-system", "science-process", "evolution", "immune-system", "sex"]
 category = "webeasties"
 +++

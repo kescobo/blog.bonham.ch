@@ -1,6 +1,6 @@
 +++
 title = "Give a man's insides to a spud..."
-pubdate = Date("2010-11-11")
+date = Date("2010-11-11")
 tags = ["random"]
 category = "webeasties"
 +++

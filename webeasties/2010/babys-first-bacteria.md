@@ -1,6 +1,6 @@
 +++
 title = "Baby's First Bacteria (repost)"
-pubdate = Date("2010-06-23")
+date = Date("2010-06-23")
 tags = ["uncategorized"]
 category = "webeasties"
 +++

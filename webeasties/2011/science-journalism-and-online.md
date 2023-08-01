@@ -1,6 +1,6 @@
 +++
 title = "Science Journalism and Online Media"
-pubdate = Date("2011-05-04")
+date = Date("2011-05-04")
 tags = ["science-process", "sitn"]
 category = "webeasties"
 +++

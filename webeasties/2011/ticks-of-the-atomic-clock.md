@@ -1,6 +1,6 @@
 +++
 title = "Ticks of the atomic clock"
-pubdate = Date("2011-01-04")
+date = Date("2011-01-04")
 tags = ["education", "flash"]
 category = "webeasties"
 +++

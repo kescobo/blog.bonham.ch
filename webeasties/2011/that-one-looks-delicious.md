@@ -1,6 +1,6 @@
 +++
 title = "That one looks delicious"
-pubdate = Date("2011-10-13")
+date = Date("2011-10-13")
 tags = ["education", "immune-system", "random"]
 category = "webeasties"
 +++

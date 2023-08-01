@@ -1,6 +1,6 @@
 +++
 title = "This I believe"
-pubdate = Date("2011-04-13")
+date = Date("2011-04-13")
 tags = ["random"]
 category = "webeasties"
 +++

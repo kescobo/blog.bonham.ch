@@ -1,6 +1,6 @@
 +++
 title = "Scientific knowledge - getting closer to the right answer"
-pubdate = Date("2010-12-11")
+date = Date("2010-12-11")
 tags = ["random", "science-process"]
 category = "webeasties"
 +++

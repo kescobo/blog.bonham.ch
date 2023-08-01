@@ -1,6 +1,6 @@
 +++
 title = "Biological manufacturing"
-pubdate = Date("2010-12-12")
+date = Date("2010-12-12")
 tags = ["science-process", "technology"]
 category = "webeasties"
 +++

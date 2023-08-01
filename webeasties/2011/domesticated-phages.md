@@ -1,6 +1,6 @@
 +++
 title = "Domesticated Phages"
-pubdate = Date("2011-01-11")
+date = Date("2011-01-11")
 tags = ["pathogens"]
 category = "webeasties"
 +++

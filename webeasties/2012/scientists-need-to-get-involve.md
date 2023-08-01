@@ -1,6 +1,6 @@
 +++
 title = "Scientists need to get involved in policy"
-pubdate = Date("2012-02-15")
+date = Date("2012-02-15")
 tags = ["policy-0", "advocacy", "policy-0"]
 category = "webeasties"
 +++

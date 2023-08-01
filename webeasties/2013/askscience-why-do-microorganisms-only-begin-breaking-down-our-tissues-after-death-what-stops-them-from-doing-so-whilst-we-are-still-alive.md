@@ -1,6 +1,6 @@
 +++
 title = "AskScience: Why do microorganisms only begin breaking down our tissues after death? What stops them from doing so whilst we are still alive?"
-pubdate = Date("2013-01-21")
+date = Date("2013-01-21")
 tags = ["commensals", "microbial-ecology", "microbiology", "bacteria", "immune-system", "microbiology"]
 category = "webeasties"
 +++

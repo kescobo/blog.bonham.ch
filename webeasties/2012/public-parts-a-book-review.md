@@ -1,6 +1,6 @@
 +++
 title = "Public Parts: A book review"
-pubdate = Date("2012-01-13")
+date = Date("2012-01-13")
 tags = ["book-review", "publicness", "book-review"]
 category = "webeasties"
 +++

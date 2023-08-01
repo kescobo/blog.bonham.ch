@@ -1,6 +1,6 @@
 +++
 title = "The Trouble with Magic Bullets"
-pubdate = Date("2011-07-25")
+date = Date("2011-07-25")
 tags = ["allergiesautoimmunity"]
 category = "webeasties"
 +++

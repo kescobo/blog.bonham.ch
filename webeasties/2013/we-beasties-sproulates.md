@@ -1,6 +1,6 @@
 +++
 title = "We, Beasties Sporulates"
-pubdate = Date("2013-09-03")
+date = Date("2013-09-03")
 tags = ["meta", "microbiology"]
 category = "webeasties"
 +++

@@ -1,6 +1,6 @@
 +++
 title = "Diversity Sucks"
-pubdate = Date("2010-12-16")
+date = Date("2010-12-16")
 tags = ["education", "random"]
 category = "webeasties"
 +++

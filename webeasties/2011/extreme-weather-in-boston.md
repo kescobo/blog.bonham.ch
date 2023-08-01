@@ -1,6 +1,6 @@
 +++
 title = "Extreme weather in Boston?"
-pubdate = Date("2011-06-02")
+date = Date("2011-06-02")
 tags = ["random"]
 category = "webeasties"
 +++

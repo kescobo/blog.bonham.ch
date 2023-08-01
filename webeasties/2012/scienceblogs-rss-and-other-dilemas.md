@@ -1,6 +1,6 @@
 +++
 title = "Scienceblogs RSS and other dilemas"
-pubdate = Date("2012-05-27")
+date = Date("2012-05-27")
 tags = ["meta", "personal", "we-beasties", "meta"]
 category = "webeasties"
 +++

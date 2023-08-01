@@ -1,6 +1,6 @@
 +++
 title = "Geek Manifesto - go help"
-pubdate = Date("2011-01-23")
+date = Date("2011-01-23")
 tags = ["random", "science-process"]
 category = "webeasties"
 +++

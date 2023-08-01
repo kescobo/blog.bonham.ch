@@ -1,6 +1,6 @@
 +++
 title = "Allergies 101: Part the Third"
-pubdate = Date("2011-12-19")
+date = Date("2011-12-19")
 tags = ["allergiesautoimmunity", "allergies", "allergies-101"]
 category = "webeasties"
 +++

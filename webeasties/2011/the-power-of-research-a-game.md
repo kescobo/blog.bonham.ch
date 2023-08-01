@@ -1,6 +1,6 @@
 +++
 title = "The Power of Research (a game!)"
-pubdate = Date("2011-03-11")
+date = Date("2011-03-11")
 tags = ["random", "science-process"]
 category = "webeasties"
 +++

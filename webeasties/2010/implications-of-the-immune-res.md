@@ -1,6 +1,6 @@
 +++
 title = "Implications of the immune response"
-pubdate = Date("2010-11-04")
+date = Date("2010-11-04")
 tags = ["immune-system", "microbes-always-win"]
 category = "webeasties"
 +++

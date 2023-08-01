@@ -1,6 +1,6 @@
 +++
 title = "AskScience: Is it possible to get multiple different colds/flu viruses at the same time?"
-pubdate = Date("2013-01-15")
+date = Date("2013-01-15")
 tags = ["education", "immune-system", "pathogens", "askscience", "bacteria", "infection", "influenza", "reddit", "viruses", "education"]
 category = "webeasties"
 +++

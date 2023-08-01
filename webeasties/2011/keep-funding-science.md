@@ -1,6 +1,6 @@
 +++
 title = "Keep Funding Science"
-pubdate = Date("2011-03-20")
+date = Date("2011-03-20")
 tags = ["policy-0"]
 category = "webeasties"
 +++

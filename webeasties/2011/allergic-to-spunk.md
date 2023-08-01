@@ -1,6 +1,6 @@
 +++
 title = "Allergic to Spunk"
-pubdate = Date("2011-07-27")
+date = Date("2011-07-27")
 tags = ["allergiesautoimmunity"]
 category = "webeasties"
 +++

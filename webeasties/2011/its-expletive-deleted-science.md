@@ -1,6 +1,6 @@
 +++
 title = "It's [expletive deleted]* Science!"
-pubdate = Date("2011-01-04")
+date = Date("2011-01-04")
 tags = ["random"]
 category = "webeasties"
 +++

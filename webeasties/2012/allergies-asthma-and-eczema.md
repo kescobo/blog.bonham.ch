@@ -1,6 +1,6 @@
 +++
 title = "Allergies, Asthma and Eczema - New SITN Flash"
-pubdate = Date("2012-01-09")
+date = Date("2012-01-09")
 tags = ["uncategorized"]
 category = "webeasties"
 +++

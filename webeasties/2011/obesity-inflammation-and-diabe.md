@@ -1,6 +1,6 @@
 +++
 title = "Obesity, Inflammation, and Diabetes"
-pubdate = Date("2011-12-21")
+date = Date("2011-12-21")
 tags = ["flash", "immune-system", "inflammation"]
 category = "webeasties"
 +++

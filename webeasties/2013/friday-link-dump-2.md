@@ -1,6 +1,6 @@
 +++
 title = "Friday Link Dump"
-pubdate = Date("2013-04-05")
+date = Date("2013-04-05")
 tags = ["uncategorized"]
 category = "webeasties"
 +++

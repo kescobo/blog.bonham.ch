@@ -1,6 +1,6 @@
 +++
 title = "The best offense is a good defensin"
-pubdate = Date("2011-02-23")
+date = Date("2011-02-23")
 tags = ["commensals", "immune-system", "pathogens"]
 category = "webeasties"
 +++

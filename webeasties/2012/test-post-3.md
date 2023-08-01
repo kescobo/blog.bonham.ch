@@ -1,6 +1,6 @@
 +++
 title = "Test post infinity"
-pubdate = Date("2012-05-22")
+date = Date("2012-05-22")
 tags = ["uncategorized"]
 category = "webeasties"
 +++

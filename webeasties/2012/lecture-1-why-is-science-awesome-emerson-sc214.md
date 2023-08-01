@@ -1,6 +1,6 @@
 +++
 title = "Lecture 1: Why is Science Awesome? #Emerson #SC214"
-pubdate = Date("2012-09-10")
+date = Date("2012-09-10")
 tags = ["sc-214", "bias", "emerson", "observation", "plague", "science"]
 category = "webeasties"
 +++

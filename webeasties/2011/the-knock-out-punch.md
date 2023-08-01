@@ -1,6 +1,6 @@
 +++
 title = "The knock-out punch: Zinc Finger Nucleases"
-pubdate = Date("2011-01-02")
+date = Date("2011-01-02")
 tags = ["science-process", "technology"]
 category = "webeasties"
 +++

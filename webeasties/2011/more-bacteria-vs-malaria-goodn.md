@@ -1,6 +1,6 @@
 +++
 title = "Badass Bacteria vs Malaria"
-pubdate = Date("2011-06-09")
+date = Date("2011-06-09")
 tags = ["immune-system", "pathogens"]
 category = "webeasties"
 +++

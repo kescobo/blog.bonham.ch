@@ -1,6 +1,6 @@
 +++
 title = "Leveraging Immunology Research to Treat Disease"
-pubdate = Date("2012-06-06")
+date = Date("2012-06-06")
 tags = ["allergiesautoimmunity", "immune-system", "science-process"]
 category = "webeasties"
 +++

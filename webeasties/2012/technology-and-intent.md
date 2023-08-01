@@ -1,6 +1,6 @@
 +++
 title = "Technology and Intent"
-pubdate = Date("2012-05-12")
+date = Date("2012-05-12")
 tags = ["pathogens", "science-process", "technology", "controversy", "flu", "influenza", "research"]
 category = "webeasties"
 +++

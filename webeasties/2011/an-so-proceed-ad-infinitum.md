@@ -1,6 +1,6 @@
 +++
 title = "An so proceed ad infinitum"
-pubdate = Date("2011-01-04")
+date = Date("2011-01-04")
 tags = ["commensals", "microbes-always-win"]
 category = "webeasties"
 +++

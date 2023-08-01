@@ -1,6 +1,6 @@
 +++
 title = "Everything's contamin... oh to hell with it"
-pubdate = Date("2011-03-09")
+date = Date("2011-03-09")
 tags = ["commensals", "pathogens"]
 category = "webeasties"
 +++

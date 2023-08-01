@@ -1,6 +1,6 @@
 +++
 title = "Living Factories: How Scientists Engineer Microbes to Make Useful Molecules"
-pubdate = Date("2013-06-12")
+date = Date("2013-06-12")
 tags = ["microbial-metabolism", "microbiology", "sitn", "technology"]
 category = "webeasties"
 +++

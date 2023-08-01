@@ -1,6 +1,6 @@
 +++
 title = "AskScience Live a Success! (I think) #askscilive"
-pubdate = Date("2013-04-12")
+date = Date("2013-04-12")
 tags = ["ask-science", "askscience-live", "breath-print", "fusion-rocket", "hiv", "science"]
 category = "webeasties"
 +++

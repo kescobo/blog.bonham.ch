@@ -1,6 +1,6 @@
 +++
 title = "Definitely politicize this tragedy "
-pubdate = Date("2011-01-10")
+date = Date("2011-01-10")
 tags = ["random"]
 category = "webeasties"
 +++

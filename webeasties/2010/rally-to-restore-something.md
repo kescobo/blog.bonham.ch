@@ -1,6 +1,6 @@
 +++
 title = "Rally to Restore... Something"
-pubdate = Date("2010-11-01")
+date = Date("2010-11-01")
 tags = ["uncategorized", "rally4sanity", "jon-stewart", "stephen-colbert"]
 category = "webeasties"
 +++

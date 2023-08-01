@@ -1,6 +1,6 @@
 +++
 title = "Free, all-digital textbook may be a revolution in more ways than one"
-pubdate = Date("2010-11-05")
+date = Date("2010-11-05")
 tags = ["education", "evolution", "schools", "textbooks", "education"]
 category = "webeasties"
 +++

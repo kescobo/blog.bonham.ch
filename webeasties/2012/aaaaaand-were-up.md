@@ -1,6 +1,6 @@
 +++
 title = "Aaaaaand we're up!"
-pubdate = Date("2012-05-23")
+date = Date("2012-05-23")
 tags = ["meta"]
 category = "webeasties"
 +++

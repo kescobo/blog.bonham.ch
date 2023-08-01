@@ -1,6 +1,6 @@
 +++
 title = "Walking bacteria - and some weighty researcher cajones (repost)"
-pubdate = Date("2010-10-07")
+date = Date("2010-10-07")
 tags = ["uncategorized"]
 category = "webeasties"
 +++

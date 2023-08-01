@@ -1,6 +1,6 @@
 +++
 title = "Let's talk about sex (at dawn)"
-pubdate = Date("2011-06-17")
+date = Date("2011-06-17")
 tags = ["book-review"]
 category = "webeasties"
 +++

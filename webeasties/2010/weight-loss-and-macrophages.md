@@ -1,6 +1,6 @@
 +++
 title = "Weight loss and macrophages"
-pubdate = Date("2010-11-12")
+date = Date("2010-11-12")
 tags = ["other-uses-immune-system", "fat", "immune-system", "macrophages", "obesity"]
 category = "webeasties"
 +++

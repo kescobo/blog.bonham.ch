@@ -1,6 +1,6 @@
 +++
 title = "Science by the Pint... Tonight!"
-pubdate = Date("2011-04-12")
+date = Date("2011-04-12")
 tags = ["sitn"]
 category = "webeasties"
 +++

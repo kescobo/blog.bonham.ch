@@ -1,6 +1,6 @@
 +++
 title = "Bacterial ROS to the malaria rescue!"
-pubdate = Date("2011-06-01")
+date = Date("2011-06-01")
 tags = ["commensals", "other-uses-immune-system"]
 category = "webeasties"
 +++

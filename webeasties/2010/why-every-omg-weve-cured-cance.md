@@ -1,6 +1,6 @@
 +++
 title = "Why every 'OMG we've cured cancer!!' article is about melanoma"
-pubdate = Date("2010-03-27")
+date = Date("2010-03-27")
 tags = ["other-uses-immune-system", "technology"]
 category = "webeasties"
 +++

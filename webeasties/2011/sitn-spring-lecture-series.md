@@ -1,6 +1,6 @@
 +++
 title = "SITN Spring Lecture Series"
-pubdate = Date("2011-05-02")
+date = Date("2011-05-02")
 tags = ["sitn"]
 category = "webeasties"
 +++

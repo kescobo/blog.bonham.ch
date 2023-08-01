@@ -1,6 +1,6 @@
 +++
 title = "Science publishers don't care about the public"
-pubdate = Date("2011-06-18")
+date = Date("2011-06-18")
 tags = ["science-process"]
 category = "webeasties"
 +++

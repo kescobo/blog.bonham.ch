@@ -1,6 +1,6 @@
 +++
 title = "Women climbers are amazing too"
-pubdate = Date("2013-01-26")
+date = Date("2013-01-26")
 tags = ["random", "climbing", "rock-climbing", "women"]
 category = "webeasties"
 +++

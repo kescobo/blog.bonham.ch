@@ -1,6 +1,6 @@
 +++
 title = "Halleluja, Amen."
-pubdate = Date("2011-09-22")
+date = Date("2011-09-22")
 tags = ["random", "massachussetts", "policy-0"]
 category = "webeasties"
 +++

@@ -1,6 +1,6 @@
 +++
 title = "Saturday Review: The Inflammasome!"
-pubdate = Date("2010-11-20")
+date = Date("2010-11-20")
 tags = ["pattern-recognition"]
 category = "webeasties"
 +++

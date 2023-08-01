@@ -1,6 +1,6 @@
 +++
 title = "Problem Solving Bacteria"
-pubdate = Date("2010-11-17")
+date = Date("2010-11-17")
 tags = ["microbiology", "technology", "bioengineering", "e-coli-0", "igem", "sudoku", "microbiology"]
 category = "webeasties"
 +++

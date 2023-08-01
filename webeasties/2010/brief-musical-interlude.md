@@ -1,6 +1,6 @@
 +++
 title = "Brief musical interlude"
-pubdate = Date("2010-11-08")
+date = Date("2010-11-08")
 tags = ["random"]
 category = "webeasties"
 +++

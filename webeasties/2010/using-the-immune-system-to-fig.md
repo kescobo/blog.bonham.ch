@@ -1,6 +1,6 @@
 +++
 title = "Using the immune system to fight cancer"
-pubdate = Date("2010-11-30")
+date = Date("2010-11-30")
 tags = ["other-uses-immune-system", "vaccines-0", "cancer", "cancer-vaccine", "immune-system"]
 category = "webeasties"
 +++

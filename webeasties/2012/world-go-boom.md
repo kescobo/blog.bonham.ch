@@ -1,6 +1,6 @@
 +++
 title = "World go Boom"
-pubdate = Date("2012-01-06")
+date = Date("2012-01-06")
 tags = ["random", "personal"]
 category = "webeasties"
 +++

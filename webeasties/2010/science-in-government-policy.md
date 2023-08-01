@@ -1,6 +1,6 @@
 +++
 title = "Science in Government Policy"
-pubdate = Date("2010-12-13")
+date = Date("2010-12-13")
 tags = ["education", "science-process"]
 category = "webeasties"
 +++

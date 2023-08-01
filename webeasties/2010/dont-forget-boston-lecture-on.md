@@ -1,6 +1,6 @@
 +++
 title = "Don't forget Boston: lecture on the microbes of the gut... TONIGHT!"
-pubdate = Date("2010-11-03")
+date = Date("2010-11-03")
 tags = ["uncategorized", "microbiology", "sitn"]
 category = "webeasties"
 +++

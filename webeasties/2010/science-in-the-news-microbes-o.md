@@ -1,6 +1,6 @@
 +++
 title = "Science in the News: Microbes of the Gut!"
-pubdate = Date("2010-11-01")
+date = Date("2010-11-01")
 tags = ["uncategorized", "microbiology", "sitn"]
 category = "webeasties"
 +++

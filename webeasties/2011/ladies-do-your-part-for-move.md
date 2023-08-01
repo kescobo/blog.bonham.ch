@@ -1,6 +1,6 @@
 +++
 title = "Ladies - Do your part for Movember"
-pubdate = Date("2011-11-22")
+date = Date("2011-11-22")
 tags = ["random", "personal"]
 category = "webeasties"
 +++

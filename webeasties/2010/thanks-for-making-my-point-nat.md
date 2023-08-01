@@ -1,6 +1,6 @@
 +++
 title = "Thanks for making my point, Nature"
-pubdate = Date("2010-09-14")
+date = Date("2010-09-14")
 tags = ["education", "science-process"]
 category = "webeasties"
 +++

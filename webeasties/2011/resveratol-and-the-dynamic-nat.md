@@ -1,6 +1,6 @@
 +++
 title = "Resveratol and the dynamic nature of science"
-pubdate = Date("2011-10-28")
+date = Date("2011-10-28")
 tags = ["flash", "sitn"]
 category = "webeasties"
 +++

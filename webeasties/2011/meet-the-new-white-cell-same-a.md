@@ -1,6 +1,6 @@
 +++
 title = "Meet the new white cell, same as the old white cell"
-pubdate = Date("2011-07-08")
+date = Date("2011-07-08")
 tags = ["immune-system"]
 category = "webeasties"
 +++

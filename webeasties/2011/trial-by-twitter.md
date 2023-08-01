@@ -1,6 +1,6 @@
 +++
 title = "Trial by Twitter"
-pubdate = Date("2011-01-20")
+date = Date("2011-01-20")
 tags = ["education", "science-process"]
 category = "webeasties"
 +++

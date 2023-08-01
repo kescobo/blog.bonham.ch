@@ -1,6 +1,6 @@
 +++
 title = "Whatever you do, just do it for peace"
-pubdate = Date("2011-10-12")
+date = Date("2011-10-12")
 tags = ["random"]
 category = "webeasties"
 +++

@@ -1,6 +1,6 @@
 +++
 title = "Movember"
-pubdate = Date("2011-11-01")
+date = Date("2011-11-01")
 tags = ["random"]
 category = "webeasties"
 +++

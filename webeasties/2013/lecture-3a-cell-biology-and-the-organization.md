@@ -1,6 +1,6 @@
 +++
 title = "Lecture 3a - Cell Biology and the Organization of Multicellular Life #SC-214"
-pubdate = Date("2013-02-18")
+date = Date("2013-02-18")
 tags = ["sc-214"]
 category = "webeasties"
 +++

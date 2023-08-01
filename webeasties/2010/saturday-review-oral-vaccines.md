@@ -1,6 +1,6 @@
 +++
 title = "Saturday Review: Oral Vaccines"
-pubdate = Date("2010-11-13")
+date = Date("2010-11-13")
 tags = ["immune-system", "vaccines-0", "oral-vaccines", "vaccines"]
 category = "webeasties"
 +++

@@ -1,6 +1,6 @@
 +++
 title = "A few pounds of microbes, only ounces of insight"
-pubdate = Date("2013-03-01")
+date = Date("2013-03-01")
 tags = ["book-review", "commensals", "ebook", "microbiome", "book-review"]
 category = "webeasties"
 +++

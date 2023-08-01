@@ -1,6 +1,6 @@
 +++
 title = "Free will, and why I'm better than you"
-pubdate = Date("2010-12-15")
+date = Date("2010-12-15")
 tags = ["random"]
 category = "webeasties"
 +++

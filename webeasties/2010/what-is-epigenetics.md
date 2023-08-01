@@ -1,6 +1,6 @@
 +++
 title = "What is epigenetics?"
-pubdate = Date("2010-11-06")
+date = Date("2010-11-06")
 tags = ["education", "sitn", "epigenetics", "education"]
 category = "webeasties"
 +++

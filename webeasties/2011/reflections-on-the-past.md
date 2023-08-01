@@ -1,6 +1,6 @@
 +++
 title = "Reflections on the past"
-pubdate = Date("2011-09-01")
+date = Date("2011-09-01")
 tags = ["random", "harvard", "personal"]
 category = "webeasties"
 +++

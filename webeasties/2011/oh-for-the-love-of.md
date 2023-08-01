@@ -1,6 +1,6 @@
 +++
 title = "Oh, for the love of..."
-pubdate = Date("2011-06-09")
+date = Date("2011-06-09")
 tags = ["random"]
 category = "webeasties"
 +++

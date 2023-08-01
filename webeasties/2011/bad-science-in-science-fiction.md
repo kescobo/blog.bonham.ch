@@ -1,6 +1,6 @@
 +++
 title = "Bad Science in Science Fiction"
-pubdate = Date("2011-12-16")
+date = Date("2011-12-16")
 tags = ["random", "science-process", "bad-science", "television"]
 category = "webeasties"
 +++

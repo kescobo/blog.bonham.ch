@@ -1,6 +1,6 @@
 +++
 title = "Allergies 101"
-pubdate = Date("2011-11-15")
+date = Date("2011-11-15")
 tags = ["allergiesautoimmunity", "allergies", "allergies-101", "immune-system"]
 category = "webeasties"
 +++

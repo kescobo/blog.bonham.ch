@@ -1,6 +1,6 @@
 +++
 title = "Ask Science... Live! Thursday at 6pm EDT #askscilive "
-pubdate = Date("2013-04-09")
+date = Date("2013-04-09")
 tags = ["ask-science", "education"]
 category = "webeasties"
 +++

@@ -1,6 +1,6 @@
 +++
 title = "PeerJ - the science journal we need and deserve"
-pubdate = Date("2013-02-12")
+date = Date("2013-02-12")
 tags = ["education", "science-process"]
 category = "webeasties"
 +++
