@@ -6,7 +6,7 @@ date  = Date(2019, 3, 11)
 reading_time = "3-minute read"
 
 tags = ["markdown", "css", "HTML"]
-
+draft = true
 rss_descr = "Markdown syntax etc"
 rss_title = title
 +++

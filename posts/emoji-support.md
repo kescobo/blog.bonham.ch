@@ -6,6 +6,7 @@ date  = Date(2019, 3, 5)
 reading_time = "One-minute read"
 
 tags = ["markdown", "text", "bar"]
+draft = true
 
 rss_descr = "Emoji support yada yada"
 rss_title = title

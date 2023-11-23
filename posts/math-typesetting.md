@@ -4,6 +4,7 @@ using Dates
 title = "Math Typesetting"
 date  = Date(2019, 3, 8)
 reading_time = "One-minute read"
+draft = true
 
 tags = ["markdown", "text", "math"]
 +++
