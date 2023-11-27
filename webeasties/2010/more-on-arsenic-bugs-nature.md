@@ -1,4 +1,5 @@
 +++
+using Dates
 title = "More on Arsenic Bugs - Nature responds to the blogosphere"
 date = Date("2010-12-15")
 tags = ["education", "science-process"]

@@ -1,4 +1,5 @@
 +++
+using Dates
 title = "Cholera is shitty"
 date = Date("2010-12-02")
 tags = ["microbes-always-win", "pathogens"]

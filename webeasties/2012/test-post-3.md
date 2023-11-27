@@ -1,4 +1,5 @@
 +++
+using Dates
 title = "Test post infinity"
 date = Date("2012-05-22")
 tags = ["uncategorized"]

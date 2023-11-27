@@ -1,4 +1,5 @@
 +++
+using Dates
 title = "Free, all-digital textbook may be a revolution in more ways than one"
 date = Date("2010-11-05")
 tags = ["education", "evolution", "schools", "textbooks", "education"]

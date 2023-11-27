@@ -1,4 +1,5 @@
 +++
+using Dates
 title = "It's [expletive deleted]* Science!"
 date = Date("2011-01-04")
 tags = ["random"]

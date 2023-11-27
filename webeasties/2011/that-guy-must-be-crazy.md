@@ -1,4 +1,5 @@
 +++
+using Dates
 title = "That guy must be crazy"
 date = Date("2011-01-11")
 tags = ["random"]

@@ -1,4 +1,5 @@
 +++
+using Dates
 title = "Last SITN lecture: Tonight!"
 date = Date("2010-11-16")
 tags = ["sitn", "solar-power"]

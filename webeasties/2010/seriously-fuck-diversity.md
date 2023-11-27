@@ -1,4 +1,5 @@
 +++
+using Dates
 title = "Diversity Sucks"
 date = Date("2010-12-16")
 tags = ["education", "random"]
