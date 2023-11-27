@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Language" content="en">
+  <meta name="color-scheme" content="light dark">
+
+  <meta name="author" content="Kevin Bonham">
+  <meta name="description" content="Kevin Bonham's website">
+  <meta name="keywords" content="microbiome,data science,teaching">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="kbonham">
+  <meta name="twitter:description" content="Kevin Bonham's website">
+
+  <meta property="og:title" content="summary">
+  <meta property="og:description" content="Kevin Bonham's website">
+  <meta property="og:type" content="website">
+
+  <title>kbonham</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/coder.min.css" media="screen">
+  <link rel="stylesheet" href="/css/coder-dark.min.css" media="screen">
+
+  <link rel="icon" type="image/png" href="/assets/infra/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/assets/infra/favicon-16x16.png" sizes="16x16">
+
+  <link rel="apple-touch-icon" href="/assets/infra/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/infra/apple-touch-icon.png">
+
+  
+  <meta name="generator" content="Franklin.jl" />
+
+  
+    <link rel="stylesheet" href="/libs/katex/katex.min.css">
+  
+
+  
+    <link rel="stylesheet" href="/libs/highlight/atom-one-dark.css">
+  
+
+  <style>
+  :root {
+    --block-background: #f4f0ec;
+  }
+  .hljs {
+    padding: 1em;
+  }
+  </style>
+
+</head>
+
+<body class="preload-transitions colorscheme-auto">
+
+  <div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+      <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+  </div>
+
+  <main class="wrapper">
+
+    <nav class="navigation">
+  <section class="container">
+
+    <a class="navigation-title" href="/">
+      kbonham
+    </a>
+
+    <input type="checkbox" id="menu-toggle">
+    <label class="menu-button float-right" for="menu-toggle">
+      <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+    </label>
+
+    <ul class="navigation-list">
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/about/">About</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/posts/">Blog</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/webeasties/">We, Beasties</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/contact/">Contact me</a>
+        </li>
+      
+
+      
+      
+    </ul>
+
+  </section>
+</nav>
+
+
+    <div class="content">
+
+        
+        <section class="container post">
+          <header>
+  <div class="post-title">
+    <h1 class="title">
+      <a class="title-link" href="/posts/typst-job-apps/index.html">
+        Job applications with Typst and git for fun and profit
+      </a>
+    </h1>
+  </div>
+
+  <div class="post-meta">
+    
+      <div class="date">
+        <span class="posted-on">
+          <i class="fa fa-calendar" aria-hidden="true"></i>
+          <time datetime='2023-11-23'>
+            November 23, 2023
+          </time>
+        </span>
+
+        
+      </div>
+    
+
+    
+      <div class="tags">
+        <i class="fa fa-tag" aria-hidden="true"></i>
+        <span class="tag"><a href="/tags/typst/">typst</a></span><span class="separator">•</span><span class="tag"><a href="/tags/latex/">latex</a></span><span class="separator">•</span><span class="tag"><a href="/tags/job_applications/">job-applications</a></span><span class="separator">•</span><span class="tag"><a href="/tags/code/">code</a></span><span class="separator">•</span><span class="tag"><a href="/tags/typesetting/">typesetting</a></span><span class="separator">•</span><span class="tag"><a href="/tags/git/">git</a></span>
+      </div>
+    
+    </div>
+  </header>
+
+
+       
+       
+       
+<p>Last year at this time,
+I was applying for academic jobs
+and discovered that I <a href="/posts/latex-job-apps/">could use \(\LaTeX\) and git</a>
+to make the experience less painful.</p>
+<p>Well, I didn't get a job in that round,
+so I'm at it again!
+For realsy reals, this is the last year I'm doing this.
+But I've discovered a new hotness for my applications - <a href="https://typst.app/docs/">typst</a>.</p>
+<h2 id="typst_vs_\(\latex\)" > Typst vs \(\LaTeX\)<a class="heading-link" href="#typst_vs_\(\latex\)">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h2><p>Like \(\LaTeX\), typst is a typesetting language -
+the idea is that you write your document in plain text,
+and describe the way it should be formatted,
+the layout, the page properites, etc,
+all in plain text.
+Then you run the compiler,
+and out comes your document
+the same way every time (with caveats).</p>
+<p>Typst is pretty new, which means a few things
+relative to \(\LaTeX\).
+For one, it doesn't have the decades of baggage,
+janky code,
+things that work because one guy figured it out in 1992
+and everyone else has been copying it since etc.
+It also means that it's not as feature-rich as \(\LaTeX\),
+and some things are just impossible to do so far
+(eg, <a href="https://github.com/typst/typst/issues/553">putting figures</a> in arbitrary places on the page).</p>
+<p>But the other thing I love is that there's a markup language -
+it's not quite markdown, but it's similarly easy.
+For example, </p>
+<pre><code class="txt">= This is a level one header
+
+And some *bold* text.
+
+== A level two header
+
+And some _italic_ text.</code></pre>
+<p>Compare to the same thing in \(\LaTeX\):</p>
+<pre><code class="latex">\section&lbrace;This is a level one header&rbrace;
+
+And some \textbf&lbrace;bold&rbrace; text.
+
+\subsection&lbrace;A level two header&rbrace;
+
+And some \textit&lbrace;italic&rbrace; text.</code></pre>
+<p>I also find the actual programming of the layout engine
+more comprehensible -
+the whole thing is rust underneath,
+which is not a lanugage I know,
+but it's still easy enough to look at some examples 
+and figure out what to tweak.
+I completely <a href="https://kescobo.gitlab.io/cv-typst/cv.pdf">re-made my CV in typst</a>
+from scratch in a few hours - 
+with \(\LaTeX\), I had to use a template I didn't understand,
+and couldn't really alter it much
+(I'll try to do a post on that soon).</p>
+<p>The documentation is great too,
+and there's a <a href="https://typst.app">collaborative editor</a> that
+you can use with colleagues and get real-time rendering.</p>
+<h2 id="quick_recap_of_git_tips" > Quick recap of <code>git</code> tips<a class="heading-link" href="#quick_recap_of_git_tips">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h2><p>In <a href="/posts/latex-job-apps/#motivation">that other post</a>,
+I talked about my motivation, and what I wanted:</p>
+<blockquote><ol>
+<li>has a single master version of each document</li>
+<li>is easy to propagate changes from any version and regenerate outputs</li>
+<li>doesn't have dozens of versions floating around in different folders</li>
+</ol>
+</blockquote><p>To accomplish this, you want to</p>
+<ul>
+<li><a href="/posts/latex-job-apps/#generic_files_with_placeholders">Make generic files</a> with placeholders</li>
+<li>Those files should <a href="/posts/latex-job-apps/#semantic_line_breaks">use semantic line breaks</a>...</li>
+<li>... and <a href="/posts/latex-job-apps/#separate_lines_for_placeholders">separate lines for the placeholders</a></li>
+<li>Use <a href="/posts/latex-job-apps/#use_separate_branches_for_specific_applications">separate branches</a>
+  for each application</li>
+</ul>
+<p>Read that other post for more details on how to do that stuff.</p>
+<h2 id="using_typst_for_job_applications" > Using typst for job applications<a class="heading-link" href="#using_typst_for_job_applications">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h2><h3 id="setup" > Setup<a class="heading-link" href="#setup">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h3><p>I'm not going to go through installation -
+the <a href="https://github.com/typst/typst#installation">instructions here</a>
+are better than I would do,
+but note that this workflow does require that you install typst
+locally rather than using their web app.
+For editing, I'm using VS Code with the <a href="https://marketplace.visualstudio.com/items?itemName=nvarner.typst-lsp">Typst LSP</a> extension,
+but you can use any plain text editor
+(and use <code>typst watch $FILE</code> to get live preview that updates automatically).</p>
+<p>Once you have Typst has pretty nice defaults in terms of style.
+For example,</p>
+<pre><code class="txt">== Introduction
+ 
+I'm awesome, and my science is *awesome*.
+Hire me!</code></pre>
+<img src="/assets/img/typst_format1.png"><p>I made a few tweaks to the default styles,
+which is accomplished with <code>#set</code> rules.
+In particular, I wanted a sans serif font,
+and set the font size to 10pt:</p>
+<pre><code class="txt">#set text(10pt, font: &quot;Liberation Sans&quot;)</code></pre>
+<img src="/assets/img/typst_format2.png"><p>And then I wanted to add a header and page numbers.
+I think that US letter is default,
+but I set it to be excplicit:</p>
+<pre><code class="txt">#set page(
+  paper: &quot;us-letter&quot;,
+  header: align(right)[
+    *Bonham - Research Statement*
+  ],
+  numbering: &quot;1&quot;
+)</code></pre>
+<h3 id="adding_highlights_for_placeholders" > Adding highlights for placeholders<a class="heading-link" href="#adding_highlights_for_placeholders">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h3><p>Finally (and this is one of my favorite things about typst),
+I set some <code>#show</code> rules to automatically highlight specific text
+in my placeholder files.
+The basic idea is that, using <code>#show</code>,
+you set certain text to be formatted a certain way.
+For example,</p>
+<pre><code class="txt">#show &quot;awesome&quot;: text =&gt; box(
+    fill: blue,
+    inset: 2pt,
+    [✨ #text ✨]
+)
+
+== Introduction
+ 
+I'm awesome, and my science is *awesome*.
+Hire me!</code></pre>
+<img src="/assets/img/typst_format3.png"><p>But rather than set this on every document,
+and separately for each thing I want highlighted,
+I can create a function in a separate file,
+then set the <code>#show</code> rule to use that function:</p>
+<p><code>highlights.typ</code>:</p>
+<pre><code class="txt">#let hl(content) = box(
+    fill: yellow,
+    inset: 0pt,
+    content
+)</code></pre>
+<p><code>research_statement.typ</code>:</p>
+<pre><code class="txt">#import &quot;includes/highlights.typ&quot;: hl
+#show &quot;INSTITUTION&quot;: hl
+#show &quot;CITE&quot;: hl
+
+Here's an application for
+INSTITUTION
+with a couple of citations
+CITE.</code></pre>
+<img src="/assets/img/typst_format4.png"><p>And that's it!
+Well, other than the writing part...
+If I get an academic job this year,
+I might write up my advice for that.
+If I don't, you probably don't want my advice anyway.</p>
+
+
+      </section>
+    </div>
+
+    <footer class="footer">
+      <section class="container">
+        © 2023 Kevin Bonham · Powered by
+  <a href="https://franklin.jl">Franklin.jl</a> &
+  <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      </section>
+    </footer>
+
+  </main>
+
+  
+    <script src="/libs/katex/katex.min.js"></script>
+    <script src="/libs/katex/auto-render.min.js"></script>
+    <script>renderMathInElement(document.body)</script>
+  
+
+  
+    <script src="/libs/highlight/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();hljs.configure({tabReplace: '    '});</script>
+  
+
+<script src="/libs/coder.min.js"></script>
+
+</body>
+</html>

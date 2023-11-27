@@ -100,3 +100,9 @@ pre {margin-bottom: 2px;}
 .code-output.hljs {
     margin-left: 1rem; 
     margin-bottom: 1rem;}
+
+body.colorscheme-dark pre code {
+      background-color: #292e37;
+      color: inherit
+  }
+
