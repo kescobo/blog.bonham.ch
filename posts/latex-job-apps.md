@@ -35,16 +35,16 @@ My previous workflow was as follows:
    (Eg. Cover letter, Research statement, Teaching statement, Statement on diversity and inclusion).
    I would include places where I'd want to insert job-specific information,
    like
-   > In my independent lab at **INSTITUTION**, I will...
+> In my independent lab at **INSTITUTION**, I will...
    
    or
    
-   > Dear XXX and members of the search committee, ...
+> Dear XXX and members of the search committee, ...
 2. For each job app, make a copy of each document,
    and rename it to eg "Northeastern - Cover Letter" from "Cover Letter".
 3. Change all generic placeholders to specific ones, eg.
 
-   >In my independent lab at Northeastern, I will...
+>In my independent lab at Northeastern, I will...
 4. Add any job-specific flavor. For example,
    If I'm applying to a job at HMS, I'll mention in the cover letter
    that it's where I did my PhD, and maybe do some name-dropping.

@@ -6,6 +6,7 @@ rss = "New literate functionality"
 date = Date("2023-06-23")
 rss_date = Date("2023-06-23")
 category = "code"
+draft = true
 showall = true
 tags = ["web", "julia"]
 math = false

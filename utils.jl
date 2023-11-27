@@ -1,7 +1,6 @@
-import Literate
+using Literate
 
 @reexport using Dates
-using Literate
 import Hyperscript as HS
 
 node = HS.m
@@ -32,13 +31,6 @@ function hfun_page_tags()
     )
 end
 
-# ===============================================
-# Logic to show the list of tags for a page
-# ===============================================
-
-function hfun_taglist()
-    return hfun_list_posts(getlvar(:tag_name))
-end
 
 # ===============================================
 # Logic to retrieve posts in posts/ and display
@@ -80,6 +72,7 @@ function get_posts(t::String, basepath::String="posts")
             date  = getvarfrom(:date, rp),
             title = getvarfrom(:title, rp),
             href  = "/$(splitext(rp)[1])",
+            draft = getvarfrom(:draft, rp),
             tags  = get_page_tags(rp)
         )
         for rp in paths
@@ -87,7 +80,7 @@ function get_posts(t::String, basepath::String="posts")
     sort!(posts, by = x -> x.date, rev=true)
     if !isempty(t)
         filter!(
-            p -> t in values(p.tags),
+            p -> t in values(p.tags) && !isnothing(p.draft) && !p.draft,
             posts
         )
     end
