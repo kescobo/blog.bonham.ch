@@ -8,10 +8,11 @@ node = HS.m
 # March 5, 2019
 dfmt(d) = Dates.format(d, "U d, yyyy")
 
-function hfun_dfmt(p::Vector{String})
-    d = getlvar(Symbol(p[1]))
-    return dfmt(d)
-end
+# this function is now defined in Xranklin, I think
+# function hfun_dfmt(p::Vector{String})
+#     d = getlvar(Symbol(p[1]))
+#     return dfmt(d)
+# end
 
 # ===============================================
 # Logic to show the list of tags for a page

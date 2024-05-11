@@ -1,5 +1,4 @@
 +++
-using Dates
 title = "The Best Argument in Favor of Open Access Science is All of Them"
 date = Date("2012-08-09")
 tags = ["science-process", "oas", "open-access"]

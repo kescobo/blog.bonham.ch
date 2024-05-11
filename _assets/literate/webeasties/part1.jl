@@ -12,7 +12,8 @@ using Downloads: download
 
 posturls = Set(String[])
 baseurl = "https://scienceblogs.com/author/kbonham?page="
-projectdir = pwd()
+projectdir = normpath(pwd(), "_assets/literate/webeasties/")
+isdir(prjectdir) || mkpath(projectdir)
 
 ## for p in 0:7
 for p in 0:0

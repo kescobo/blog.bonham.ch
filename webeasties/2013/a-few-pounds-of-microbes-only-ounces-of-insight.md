@@ -1,5 +1,4 @@
 +++
-using Dates
 title = "A few pounds of microbes, only ounces of insight"
 date = Date("2013-03-01")
 tags = ["book-review", "commensals", "ebook", "microbiome", "book-review"]
@@ -10,13 +9,13 @@ _This post initially appeared on [Science Blogs](http://scienceblogs.com/webeast
 
 [This is my latest review for [Download the Universe](http://www.downloadtheuniverse.com)]
 
-[Honor Thy Symbionts](http://www.amazon.com/Honor-thy-Symbionts-ebook/dp/B00ANVNQA2), by [Jeff Leach](http://humanfoodproject.com/the-people/founder-jeff-leach/). [Kindle](http://www.amazon.com/Honor-thy-Symbionts-ebook/dp/B00ANVNQA2)
+[Honor Thy Symbionts](http://www.amazon.com/Honor-thy-Symbionts-[ebook](/tag/ebook)/dp/B00ANVNQA2), by [Jeff Leach](http://humanfoodproject.com/the-people/founder-jeff-leach/). [Kindle](http://www.amazon.com/Honor-thy-Symbionts-ebook/dp/B00ANVNQA2)
 
 In 2003, the [Human Genome Project](http://www.ornl.gov/sci/techresources/Human_Genome/home.shtml)--an effort to sequence every gene in a human being--[was completed](http://en.wikipedia.org/wiki/Human_Genome_Project#State_of_completion). The success, announced to great fanfare, was supposed to herald a new era in health care. Unfortunately, the promises of personalized medicine, in which treatments are tied to a person's genetic sequence, have not yet come to fruition. A few of the reasons for this are obvious (at least in hindsight). Knowing the location and sequence of a gene is one thing, knowing what it does is quite another. And understanding the role that a gene or gene variant plays in a disease, especially when many afflictions are influenced by tens or hundreds of genes, is even harder.
 
 Complicating matters further is the re-emerging realization that genes are not destiny, and now many new "-[omics](http://en.wikipedia.org/wiki/Omics)" projects are beginning to gain attention. From the transcriptome (what genes are actually expressed), to the proteome (proteins and protein modification), to the epigenome (modifications of the DNA that regulate gene expression), more and more researchers are attempting large-scale analysis of entire biological systems and trying to extract meaningful information from enormous data sets. In his new ebook, Honor Thy Symbionts, Jeff Leach aims to tackle what is, in my opinion, the most fascinating of these new -omics revolutions: [The Human Microbiome Project](http://commonfund.nih.gov/hmp/).
 
-I desperately wanted to like Leach's book. Even though I've repeatedly heard the refrains, "There are 10 times more bacteria cells in your body than human cells," and "There are 100 times more bacterial genes in your gut than there are human genes," and "Bacteria account for 5 to 10 percent of your body mass," these facts never cease to amaze me. And I've been to enough microbiome-related research talks to know that the microscopic bugs that live in our guts can have profound impacts on our health--from metabolic disorders and type-II diabetes to multiple sclerosis and inflammatory bowel disease. The microbiome deserves a book-length discussion, but Honor Thy Symbionts falls short.
+I desperately wanted to like Leach's book. Even though I've repeatedly heard the refrains, "There are 10 times more bacteria cells in your body than human cells," and "There are 100 times more bacterial genes in your gut than there are human genes," and "Bacteria account for 5 to 10 percent of your body mass," these facts never cease to amaze me. And I've been to enough [microbiome](/tag/microbiome)-related research talks to know that the microscopic bugs that live in our guts can have profound impacts on our health--from metabolic disorders and type-II diabetes to multiple sclerosis and inflammatory bowel disease. The microbiome deserves a book-length discussion, but Honor Thy Symbionts falls short.
 
 Problems
 

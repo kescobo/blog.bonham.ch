@@ -1,13 +1,9 @@
-md"""
-## Converting html to markdown
-
-I already figured out how to get all of the elements out of the HTML,
-now it's just a matter of making them into markdown.
-
-Let's review
-"""
-
-#-
+# ## Converting html to markdown
+#
+# I already figured out how to get all of the elements out of the HTML,
+# now it's just a matter of making them into markdown.
+#
+# Let's review
 
 using EzXML
 
@@ -46,6 +42,7 @@ end
 
 #-
 
+htmlout = normpath("./_assets/literate/webeasties/html_out")
 paths = readdir(htmlout, join=true)
 
 stuff = getcontent(last(paths))
@@ -59,20 +56,17 @@ first(stuff.links, 4)
 
 stuff.tags
 
-md"""
-This the [last post](https://scienceblogs.com/webeasties/2013/09/03/we-beasties-sproulates)
-I made on the blog in 2013.
-It's got some pictures and a bunch of links, but not much other formatting,
-so should be pretty straightforward.
-
-The first thing I decided to tackle was how to deal with the links...
-"""
-md"""
-### Link nodes
-
-Looking inside the contents of each element of `links`,
-it looks like all of the useful info I need is there:
-"""
+# This the [last post](https://scienceblogs.com/webeasties/2013/09/03/we-beasties-sproulates)
+# I made on the blog in 2013.
+# It's got some pictures and a bunch of links, but not much other formatting,
+# so should be pretty straightforward.
+#
+# The first thing I decided to tackle was how to deal with the links...
+# 
+# ### Link nodes
+#
+# Looking inside the contents of each element of `links`,
+# it looks like all of the useful info I need is there:
 
 link = stuff.links[2]
 nodecontent(link)

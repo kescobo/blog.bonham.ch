@@ -1,5 +1,4 @@
 +++
-using Dates
 title = "Lecture 2a: Intro to Evolution"
 date = Date("2012-12-22")
 tags = ["microbiology", "sc-214", "education", "evolution", "sc-214", "microbiology"]
@@ -30,7 +29,7 @@ From Lyell's "Principals of Geology" - Click for source
 
 In addition, these same geologists were finding fossilized creatures in the rock that were quite different from the forms of animals that they knew, and others that resemble modern forms, but were found in strange places (seashells atop mountains for instance), and they began to suspect that something wasn't quite right about the conventional wisdom. Of course, there were those that tried to explain away these observations by invoking catastrophes like floods, earthquakes and volcanoes, but it became increasingly clear that the living world was also in a state of flux.
 
-These days, the notion of evolution is almost entirely associated with Charles Darwin, but Darwin was not the first person to come up with the idea - not by a long shot. The notion that organisms could change over time, and the mechanism by which they did so was being seriously debated for decades before Darwin. One of the most well known attempts at a mechanism was from Jean-Baptiste Lamarck, who hypothesized that organisms were constantly struggling to improve themselves in their own lifetimes, and then pass the results of that struggle on to their offspring. In other words, Lamarck's idea suggested that if I do a lot of yoga and weight-lifting, my children will be stronger and more flexible. This idea is a bit reminiscent of the Scala Naturae; organisms in Larmarck's view were always striving towards perfection (striving to climb the ladder of nature).
+These days, the notion of [evolution](/tag/evolution) is almost entirely associated with Charles Darwin, but Darwin was not the first person to come up with the idea - not by a long shot. The notion that organisms could change over time, and the mechanism by which they did so was being seriously debated for decades before Darwin. One of the most well known attempts at a mechanism was from Jean-Baptiste Lamarck, who hypothesized that organisms were constantly struggling to improve themselves in their own lifetimes, and then pass the results of that struggle on to their offspring. In other words, Lamarck's idea suggested that if I do a lot of yoga and weight-lifting, my children will be stronger and more flexible. This idea is a bit reminiscent of the Scala Naturae; organisms in Larmarck's view were always striving towards perfection (striving to climb the ladder of nature).
 
 Jean-Baptiste Lamarck - Source: wikipedia
 

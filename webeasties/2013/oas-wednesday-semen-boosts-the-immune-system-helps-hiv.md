@@ -1,5 +1,4 @@
 +++
-using Dates
 title = "OAS Wednesday - Semen Boosts the Immune System! Helps HIV"
 date = Date("2013-02-19")
 tags = ["immune-system", "microbes-always-win", "hiv", "new-research", "sex"]
@@ -24,7 +23,7 @@ As far as therapy goes, this probably isn't a concern. If a patient has so few T
 
 But the propensity of IL-7 to help out HIV is a concern in another realm - transmission. In someone that isn't already infected, having more T-cells around could make the difference between an infectious encounter and a non-infectious encounter. That's where this [new research](/tag/new-research) comes in. It seems that HIV positive men may actually prime their partner's immune system to make them more susceptible to infection with HIV.
 
-See, semen is not just sperm in an innocuous fluid. It contains all sorts of other factors, including hormones that may improve mood*, stuff from food that the man has eaten ([including allergens](http://scienceblogs.com/webeasties/2011/07/29/sexually-transmitted-allergies/)), and cytokines that modulate the partner's immune system. Scientists have long known that semen contains [cytokines that dampen](http://www.ncbi.nlm.nih.gov/pubmed/8260018) the immune response, a feature that makes sense from an evolutionary perspective (you don't want your partner's immune system attacking your sperm). But scientists have also noticed that semen contains IL-7, and that levels of IL-7 are higher in men with HIV.
+See, semen is not just sperm in an innocuous fluid. It contains all sorts of other factors, including hormones that may improve mood*, stuff from food that the man has eaten ([including allergens](http://scienceblogs.com/webeasties/2011/07/29/[sex](/tag/sex)ually-transmitted-allergies/)), and cytokines that modulate the partner's immune system. Scientists have long known that semen contains [cytokines that dampen](http://www.ncbi.nlm.nih.gov/pubmed/8260018) the immune response, a feature that makes sense from an evolutionary perspective (you don't want your partner's immune system attacking your sperm). But scientists have also noticed that semen contains IL-7, and that levels of IL-7 are higher in men with HIV.
 
 So Andrea Introini et al decided to see what effect if any this might have on HIV transmission rates.
 

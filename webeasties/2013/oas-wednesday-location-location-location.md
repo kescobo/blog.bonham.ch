@@ -1,5 +1,4 @@
 +++
-using Dates
 title = "OAS Wednesday - Location, location, location"
 date = Date("2013-03-20")
 tags = ["immune-system", "pattern-recognition", "localization", "oas", "tlr", "unc93b"]
@@ -16,11 +15,11 @@ When talking about cells, we usually imagine a sac of fluid surrounded by a memb
 
 In reality, the organization within cells is as vast and complicated as the organization of cells in the body, and many essential cell processes are entirely dependent on being in the right location at the right time. If you cast your memory back to high school biology, you may remember the term "organelle" (literally "little organ"), which refers to specific compartments within cells that each have different functions. Each of these organelles require a distinct set of proteins, and there's an elaborate set of processes that manage to direct these proteins to the right place.
 
-[Unc93B1 mediates differential trafficking of endosomal TLRs](http://elife.elifesciences.org/content/2/e00291)
+[Unc93B1 mediates differential trafficking of endosomal [TLR](/tag/tlr)s](http://elife.elifesciences.org/content/2/e00291)
  
 Toll-like receptors or TLRs, are proteins that our immune cells use to detect the presence of potentially infectious microbes. It's been known for several years that these TLR's are found in different locations in cells - either on the surface (plasma membrane), or inside compartments called "endosomes," which form when a cell engulfs a foreign particle or microbe (Cartoon 1).
 
-It's been known for some time that another protein, called Unc93B, is required for those TLRs in endosomes to function. Unc93B is best thought of as a chaperone - it doesn't actively participate in signaling, but it gets the receptors to the right location. Since proper location is essential to the function of these receptors, removing Unc93B blocks the function of all of the endosomal TLRs. But this paper reveals that this chaperone's role in directing TLR localization is more extensive than previously thought.
+It's been known for some time that another protein, called Unc93B, is required for those TLRs in endosomes to function. Unc93B is best thought of as a chaperone - it doesn't actively participate in signaling, but it gets the receptors to the right location. Since proper location is essential to the function of these receptors, removing Unc93B blocks the function of all of the endosomal TLRs. But this paper reveals that this chaperone's role in directing TLR [localization](/tag/localization) is more extensive than previously thought.
 
 All* proteins that end up in vesicles (like endosomes), on the cell surface, or secreted from the cells pass through a similar series of steps called "the [secretory pathway](http://www.ncbi.nlm.nih.gov/books/NBK21471/)." These proteins are translated (made) in the cytoplasm along with every other protein, but contain a signal that causes them to be threaded through a protein channel into the interior of the endoplasmic reticulum (ER). Once in the ER, they can be sent along in vesicles that bud from the ER and enter the Golgi apparatus, where they are further modified and sent off to their final destination (check out the [video here](http://www.ncbi.nlm.nih.gov/books/NBK21471/figure/A4740/?report=objectonly)... I can't figure out how to embed it).
 

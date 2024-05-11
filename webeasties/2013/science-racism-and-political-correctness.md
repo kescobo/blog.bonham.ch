@@ -1,5 +1,4 @@
 +++
-using Dates
 title = "Science, Racism and Political Correctness"
 date = Date("2013-05-21")
 tags = ["education", "policy-0", "science-process", "academia", "heritage-foundation", "hispanic", "immigration", "kennedy-school", "phd", "politics", "race", "richwine", "education", "policy-0"]
@@ -8,13 +7,13 @@ category = "webeasties"
 
 _This post initially appeared on [Science Blogs](http://scienceblogs.com/webeasties)_
 
-Two weeks ago, the Heritage Foundation (a conservative think-tank) released a position paper based largely on the [academic research](http://www.scribd.com/doc/140239668/IQ-and-Immigration-Policy-Jason-Richwine) of one Jason Richwine. The conclusion (roughly paraphrased): Hispanic people have lower IQ's than white people, so an overly permissive immigration policy will drag down the US economy.
+Two weeks ago, the Heritage Foundation (a conservative think-tank) released a position paper based largely on the [academic research](http://www.scribd.com/doc/140239668/IQ-and-Immigration-[[Policy](/tag/policy-0)](/tag/policy-0)-Jason-Richwine) of one Jason Richwine. The conclusion (roughly paraphrased): [Hispanic](/tag/hispanic) people have lower IQ's than white people, so an overly permissive [immigration](/tag/immigration) policy will drag down the US economy.
 
 Ethically, this conclusion is a deep affront to my liberal* sensibilities. The idea of basing our public policy on racism and bigotry is abhorrent.
 
 Politically, this is dangerous territory. This is especially true after the 2012 election, when republican politicians were making noises about inclusiveness and reaching out to minorities - and in fact, the Heritage Foundation dropped Richwine almost as soon as the offending dissertation came to light (I'm not sure if they're disavowing the conclusions of their position paper though).
 
-But what I want to talk about here is what this idea means academically. Jon Wiener at The Nation [wrote a piece](http://www.thenation.com/blog/174291/why-did-harvard-give-phd-discredited-approach-race-and-iq) questioning why Harvard would award Richwine a PhD, and gave a fairly thorough accounting of why the conclusions are questionable based on recent scholarship. My friend and fellow Sbling Ethan Siegel [wrote a post](http://scienceblogs.com/startswithabang/2013/05/19/weekend-diversion-against-scientific-racism/) on Sunday going further, not just questioning why Richwine got his PhD, but flat out saying,
+But what I want to talk about here is what this idea means academically. Jon Wiener at The Nation [wrote a piece](http://www.thenation.com/blog/174291/why-did-harvard-give-[phd](/tag/phd)-discredited-approach-[race](/tag/race)-and-iq) questioning why Harvard would award Richwine a PhD, and gave a fairly thorough accounting of why the conclusions are questionable based on recent scholarship. My friend and fellow Sbling Ethan Siegel [wrote a post](http://scienceblogs.com/startswithabang/2013/05/19/weekend-diversion-against-scientific-racism/) on Sunday going further, not just questioning why Richwine got his PhD, but flat out saying,
 
 This. Is. Not. Okay.
 

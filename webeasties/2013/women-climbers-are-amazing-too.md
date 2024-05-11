@@ -1,5 +1,4 @@
 +++
-using Dates
 title = "Women climbers are amazing too"
 date = Date("2013-01-26")
 tags = ["random", "climbing", "rock-climbing", "women"]
@@ -8,9 +7,9 @@ category = "webeasties"
 
 _This post initially appeared on [Science Blogs](http://scienceblogs.com/webeasties)_
 
-It occurred to me after I posted [my piece](http://scienceblogs.com/webeasties/2013/01/22/rock-climbing-fat-fingers-and-arthritis/) last week about [rock climbing](/tag/rock-climbing) and arthritis that all of the photos of climbing were of men. This was purely coincidence - I was editing photos of [last week's competition](http://darkhorseseries.com/) in reverse chronological order, and I'd only finished the photos of the Men's finals by the time I was done with the post.
+It occurred to me after I posted [my piece](http://scienceblogs.com/webeasties/2013/01/22/rock-[climbing](/tag/climbing)-fat-fingers-and-arthritis/) last week about [rock climbing](/tag/rock-climbing) and arthritis that all of the photos of climbing were of men. This was purely coincidence - I was editing photos of [last week's competition](http://darkhorseseries.com/) in reverse chronological order, and I'd only finished the photos of the Men's finals by the time I was done with the post.
 
-But I think it's important to note how amazing the women were as well (and it gives me an excuse to post more of my photography). In fact, this year, I thought that the women's bouldering problems were more interesting, and better demonstrated the skill and power of these climbers.
+But I think it's important to note how amazing the [women](/tag/women) were as well (and it gives me an excuse to post more of my photography). In fact, this year, I thought that the women's bouldering problems were more interesting, and better demonstrated the skill and power of these climbers.
 
 Molly Gaynor on the first of the Women's finals routes
 
@@ -58,9 +57,14 @@ To see these gals (and the guys as well) in action, check out the official video
 
 [Dark Horse 2013 Series 4 Championship Highlights](http://vimeo.com/57884070) from [Louder Than Eleven](http://vimeo.com/louderthan11) on [Vimeo](http://vimeo.com).
 
-All photos in this post were taken by me and are licensed under a [Creative Commons Attribution-ShareAlike 3.0 Unported License](http://creativecommons.org/licenses/by-sa/3.0/deed.en_US)
+<em>[All photos in this post were taken by me and are licensed under a <a href="[[http://creativecommons.org/licenses/by-sa/3.0/deed.en_US](http://creativecommons.org/licenses/by-sa/3.0/deed.en_US)](http://creativecommons.org/licenses/by-sa/3.0/deed.en_US)">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>]</em>
 
-     
+<a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US" rel="license"><img style="border-width: 0;" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" alt="Creative Commons License" />
+
+</a>
+ 
+
+      
   
 
  ## Post Images

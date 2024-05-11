@@ -1,5 +1,4 @@
 +++
-using Dates
 title = "Ask Science... Live! Thursday at 6pm EDT #askscilive "
 date = Date("2013-04-09")
 tags = ["ask-science", "education"]
