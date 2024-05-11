@@ -6,20 +6,20 @@
   <meta http-equiv="Content-Language" content="en">
   <meta name="color-scheme" content="light dark">
 
-  <meta name="author" content="Kevin Bonham">
-  <meta name="description" content="Kevin Bonham's website">
-  <meta name="keywords" content="microbiome,data science,teaching">
+  <meta name="author" content="{{author}}">
+  <meta name="description" content="{{meta_descr}}">
+  <meta name="keywords" content="{{meta_kw}}">
 
 
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="kbonham">
-  <meta name="twitter:description" content="Kevin Bonham's website">
+  <meta name="twitter:card" content="{{tw_card}}">
+  <meta name="twitter:title" content="{{tw_title}}">
+  <meta name="twitter:description" content="{{tw_descr}}">
 
-  <meta property="og:title" content="summary">
-  <meta property="og:description" content="Kevin Bonham's website">
+  <meta property="og:title" content="{{tw_card}}">
+  <meta property="og:description" content="{{tw_descr}}">
   <meta property="og:type" content="website">
 
-  <title>kbonham</title>
+  <title>{{tw_title}}</title>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
   <link rel="stylesheet" href="/css/coder.min.css" media="screen">
@@ -31,12 +31,16 @@
   <link rel="apple-touch-icon" href="/assets/infra/apple-touch-icon.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/infra/apple-touch-icon.png">
 
-  
+  <!-- <link rel="alternate" type="application/rss+xml" href="/index.xml" title="johndoe" /> -->
   <meta name="generator" content="Franklin.jl" />
 
-  
+  {{hasmath}}
+    <link rel="stylesheet" href="/libs/katex/katex.min.css">
+  {{end}}
 
-  
+  {{hascode}}
+    <link rel="stylesheet" href="/libs/highlight/atom-one-dark.css">
+  {{end}}
 
   <style>
   :root {
@@ -59,61 +63,50 @@
 
   <main class="wrapper">
 
-    <nav class="navigation">
-  <section class="container">
-
-    <a class="navigation-title" href="/">
-      kbonham
-    </a>
-
-    <input type="checkbox" id="menu-toggle">
-    <label class="menu-button float-right" for="menu-toggle">
-      <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
-    </label>
-
-    <ul class="navigation-list">
-      
-        <li class="navigation-item">
-          <a class="navigation-link" href="/about/">About</a>
-        </li>
-      
-        <li class="navigation-item">
-          <a class="navigation-link" href="/posts/">Blog</a>
-        </li>
-      
-        <li class="navigation-item">
-          <a class="navigation-link" href="/webeasties/">We, Beasties</a>
-        </li>
-      
-        <li class="navigation-item">
-          <a class="navigation-link" href="/contact/">Contact me</a>
-        </li>
-      
-
-      
-      
-    </ul>
-
-  </section>
-</nav>
-
+    {{insert nav.html}}
 
     <div class="content">
 
-         
-        <section class="container page">
-          
+      {{ispage / 404/}}
+        <section class="container centered">
 
-       
-       
-       
-       
+      {{else}} {{ispage /posts/}}
+        <section class="container list">
+          <h1 class="title">
+            <a class="title-link" href="/posts/">
+              {{title}}
+            </a>
+          </h1>
+
+      {{else}} {{ispage /posts/*}}
+        <section class="container post">
+          {{insert post_header.html}}
+
+      {{else}} {{ispage /tags/*}}
+        <section class="container list">
+
+      {{else}}
+        <section class="container page">
+          {{isdef header}}
+            <header>
+              <h1 class="title">
+                <a class="title-link" href="/{{_relative_url}}">
+                  {{header}}
+                </a>
+              </h1>
+            </header>
+          {{end}}
+
+      {{end}} <!-- default -->
+      {{end}} <!-- tags -->
+      {{end}} <!-- posts/* -->
+      {{end}} <!-- index/404 -->
 <p><em>This post initially appeared on <a href="http://scienceblogs.com/webeasties">Science Blogs</a></em></p>
-[This fall, I'm <a href="http://scienceblogs.com/webeasties/2012/08/28/plagues-and-pandemics-emerson-sc-214/"This fall, I'm <a href="Plagues]<p>Lecture 1</p>
+{{link_a this_fall,_i'm_[teaching_a_course](http_//scienceblogs.com/webeasties/2012/08/28/[plague](/tag/plague)s_and_pandemics_emerson_sc_214/)_at_[emerson](/tag/emerson)_college_called_"plagues_and_pandemics."_i'll_be_periodically_posting_the_contents_of_my_lectures_and_my_experiences_as_a_first_time_college_instructor "This fall, I'm <a href="/tag/plague)s-and-pandemics-emerson-sc-214/">_This post initially appeared on {{link_a science_blogs "Science Blogs"}}(http://scienceblog<span style="color:red">... truncated content, a parsing error occurred at some point after this ...</span><span style="color:red">... truncated content, a parsing error occurred at some point after this ...</span></a> at <a href="/tag/emerson">Emerson</a> College called "Plagues and Pandemics." I'll be periodically posting the contents of my lectures and my experiences as a first time college instructor"}}<p>Lecture 1</p>
 <p>That was a scene from Monty Python's Holy Grail, demonstrating the lighter side of the plague. Who knew there was a lighter side of plague? Of course the darker side is easier to envision. This is a graph showing <a href="http://www.census.gov/population/international/data/worldpop/table_history.php">estimated human population</a> over the last millenium. That enormous dip during around 1350 is not a result of people having less babies - as much as 10-20% of the entire human population may have been wiped out in that decade in the mid 14th century by a tiny bacterium called Yersinia pestis. In this course, we're going to be talking about a lot of unpleasant things, from viruses that make you bleed from your eyes, to bacteria that give you such terrible diarrhea that you die from dehydration, to infectious diseases with the potential to wipe out humanity.</p>
 <p>But we're also going to discuss some really great things like vaccines, turning viruses into antibiotics, and even sex. I realize that sex in the context of infectious disease doesn't sound like a pleasant topic, but I'm talking about a theory that suggests that the whole reason sex evolved in the first place was to help us evade infectious microorganisms. And of course, we're going to be discussing science itself, which is awesome.</p>
-<p>Why is Science Awesome?</p>
-<p>Principally, science is awesome because we are not. Our ability to perceive things is limited and flawed, our memories are limited and flawed, and our minds are filled with biases that distort reality even when the information is right in front of us. Science helps us overcome our own limitations (to the extent we are able).</p>
+<p>Why is <a href="/tag/science">Science</a> Awesome?</p>
+<p>Principally, science is awesome because we are not. Our ability to perceive things is limited and flawed, our memories are limited and flawed, and our minds are filled with <a href="/tag/bias">bias</a>es that distort reality even when the information is right in front of us. Science helps us overcome our own limitations (to the extent we are able).</p>
 <p>Perception</p>
 <p>Take a look at this image:</p>
 <p>Click image for the source</p>
@@ -125,7 +118,7 @@
 <p>Besides being presented with a limited and often distorted view of the world, our recall of what we perceive also has serious flaws.</p>
 <p>Memory</p>
 <p>In 1974, psychologists Elizabeth Loftus and her mentor John Palmer showed  test subjects a series of videos of car crashes, and then later asked to recall about how fast the cars were going at the time of the accident. But they weren't testing how well people could estimate speed, they were testing their own ability to subtly manipulate the participant's memory. The participants had been randomly assigned to 5 groups, and asked</p>
-<p>About how fast were the cars going when they [contacted]?</p>
+<p>About how fast were the cars going when they {{link_a contacted "contacted"}}?</p>
 <p>But that final word varied - some participants were asked how fast the cars were going when they "hit," "bumped," "collided" or "smashed." The only thing that varied was that final word in the question, yet the memories of participants were dramatically different.</p>
 <p>Further, participants were asked a week later whether they remembered seeing broken glass (there was no broken glass). If the participants had originally been asked how fast the cars were going when they "smashed," they were nearly 3 times as likely to remember seeing broken glass. In other words, the simple act of changing the word used to ask a question can have lasting impacts on people's memories.</p>
 <p>Examples like this abound in the scientific literature. We like to believe that our memories are more or less carbon copies of our experiences, that we store memories away like files on a hard-drive, and that we can pull them up intact and unsullied. In fact, our memories are highly maleable, and are re-formed each time we access them. Scientists have shown that memories can be erased or invented out of whole-cloth. (For more, check out the Radiolab episode "<a href="http://www.radiolab.org/2007/jun/07/">Memory and Forgetting</a>")</p>
@@ -153,17 +146,22 @@
 
     <footer class="footer">
       <section class="container">
-        © 2023 Kevin Bonham · Powered by
-  <a href="https://franklin.jl">Franklin.jl</a> &
-  <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+        {{footer_notice}}
       </section>
     </footer>
 
   </main>
 
-  
+  {{hasmath}}
+    <script src="/libs/katex/katex.min.js"></script>
+    <script src="/libs/katex/auto-render.min.js"></script>
+    <script>renderMathInElement(document.body)</script>
+  {{end}}
 
-  
+  {{hascode}}
+    <script src="/libs/highlight/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();hljs.configure({tabReplace: '    '});</script>
+  {{end}}
 
 <script src="/libs/coder.min.js"></script>
 

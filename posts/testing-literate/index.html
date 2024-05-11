@@ -119,7 +119,7 @@
         <span class="posted-on">
           <i class="fa fa-calendar" aria-hidden="true"></i>
           <time datetime='2023-06-23'>
-            June 23, 2023
+            <span style="color:red;">[FAILED:]&gt;&lbrace;&lbrace; dfmt date&rbrace;&rbrace;&lt;</span>
           </time>
         </span>
 
@@ -133,8 +133,8 @@
         <span class="tag"><a href="/tags/julia/">julia</a></span><span class="separator">•</span><span class="tag"><a href="/tags/web/">web</a></span>
       </div>
     
-    </div>
-  </header>
+  </div>
+</header>
 
 
        
@@ -148,7 +148,10 @@ which should make Literate.jl-based posts easier...</p>
 using Distributions
 
 d = Normal(0, 0.5)</code></pre>
-<div class="code-output"><pre><code class="code-result language-plaintext">Distributions.Normal{Float64}(μ=0.0, σ=0.5)</code></pre></div><pre><code class="julia">fig = Figure()
+<div class="code-output"><pre><code class="code-result language-plaintext">Distributions.Normal{Float64}(μ=0.0, σ=0.5)</code></pre></div><p>That's a normal distribution.
+This is testing out comment-based text.</p>
+<pre><code class="julia">fig = Figure()
+
 for i in 1:4
     ax = Axis(fig[
         ceil(Int, i / 2), # 1,1,2,2
@@ -157,11 +160,11 @@ for i in 1:4
     )
 
     lines!(ax, (d))
-    hist!(ax, rand(d, 10^i))
+    hist!(ax, rand(d, 10^i); normalization=:pdf)
 end
 
 fig</code></pre>
-<div class="code-output"><img class="code-figure" src="/assets/posts/testing-literate/figs-html/__autofig_14024999507694932439.svg">
+<div class="code-output"><img class="code-figure" src="/assets/posts/testing-literate/figs-html/__autofig_6829491492535337890.svg">
 </div> 
 
       </section>

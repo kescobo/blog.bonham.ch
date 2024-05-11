@@ -6,20 +6,20 @@
   <meta http-equiv="Content-Language" content="en">
   <meta name="color-scheme" content="light dark">
 
-  <meta name="author" content="Kevin Bonham">
-  <meta name="description" content="Kevin Bonham's website">
-  <meta name="keywords" content="microbiome,data science,teaching">
+  <meta name="author" content="{{author}}">
+  <meta name="description" content="{{meta_descr}}">
+  <meta name="keywords" content="{{meta_kw}}">
 
 
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="kbonham">
-  <meta name="twitter:description" content="Kevin Bonham's website">
+  <meta name="twitter:card" content="{{tw_card}}">
+  <meta name="twitter:title" content="{{tw_title}}">
+  <meta name="twitter:description" content="{{tw_descr}}">
 
-  <meta property="og:title" content="summary">
-  <meta property="og:description" content="Kevin Bonham's website">
+  <meta property="og:title" content="{{tw_card}}">
+  <meta property="og:description" content="{{tw_descr}}">
   <meta property="og:type" content="website">
 
-  <title>kbonham</title>
+  <title>{{tw_title}}</title>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
   <link rel="stylesheet" href="/css/coder.min.css" media="screen">
@@ -31,12 +31,16 @@
   <link rel="apple-touch-icon" href="/assets/infra/apple-touch-icon.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/infra/apple-touch-icon.png">
 
-  
+  <!-- <link rel="alternate" type="application/rss+xml" href="/index.xml" title="johndoe" /> -->
   <meta name="generator" content="Franklin.jl" />
 
-  
+  {{hasmath}}
+    <link rel="stylesheet" href="/libs/katex/katex.min.css">
+  {{end}}
 
-  
+  {{hascode}}
+    <link rel="stylesheet" href="/libs/highlight/atom-one-dark.css">
+  {{end}}
 
   <style>
   :root {
@@ -59,58 +63,47 @@
 
   <main class="wrapper">
 
-    <nav class="navigation">
-  <section class="container">
-
-    <a class="navigation-title" href="/">
-      kbonham
-    </a>
-
-    <input type="checkbox" id="menu-toggle">
-    <label class="menu-button float-right" for="menu-toggle">
-      <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
-    </label>
-
-    <ul class="navigation-list">
-      
-        <li class="navigation-item">
-          <a class="navigation-link" href="/about/">About</a>
-        </li>
-      
-        <li class="navigation-item">
-          <a class="navigation-link" href="/posts/">Blog</a>
-        </li>
-      
-        <li class="navigation-item">
-          <a class="navigation-link" href="/webeasties/">We, Beasties</a>
-        </li>
-      
-        <li class="navigation-item">
-          <a class="navigation-link" href="/contact/">Contact me</a>
-        </li>
-      
-
-      
-      
-    </ul>
-
-  </section>
-</nav>
-
+    {{insert nav.html}}
 
     <div class="content">
 
-         
-        <section class="container page">
-          
+      {{ispage / 404/}}
+        <section class="container centered">
 
-       
-       
-       
-       
+      {{else}} {{ispage /posts/}}
+        <section class="container list">
+          <h1 class="title">
+            <a class="title-link" href="/posts/">
+              {{title}}
+            </a>
+          </h1>
+
+      {{else}} {{ispage /posts/*}}
+        <section class="container post">
+          {{insert post_header.html}}
+
+      {{else}} {{ispage /tags/*}}
+        <section class="container list">
+
+      {{else}}
+        <section class="container page">
+          {{isdef header}}
+            <header>
+              <h1 class="title">
+                <a class="title-link" href="/{{_relative_url}}">
+                  {{header}}
+                </a>
+              </h1>
+            </header>
+          {{end}}
+
+      {{end}} <!-- default -->
+      {{end}} <!-- tags -->
+      {{end}} <!-- posts/* -->
+      {{end}} <!-- index/404 -->
 <p><em>This post initially appeared on <a href="http://scienceblogs.com/webeasties">Science Blogs</a></em></p>
-<p>It occurred to me after I posted <a href="http://scienceblogs.com/webeasties/2013/01/22/rock-climbing-fat-fingers-and-arthritis/">my piece</a> last week about <a href="/tag/rock-climbing">rock climbing</a> and arthritis that all of the photos of climbing were of men. This was purely coincidence - I was editing photos of <a href="http://darkhorseseries.com/">last week's competition</a> in reverse chronological order, and I'd only finished the photos of the Men's finals by the time I was done with the post.</p>
-<p>But I think it's important to note how amazing the women were as well (and it gives me an excuse to post more of my photography). In fact, this year, I thought that the women's bouldering problems were more interesting, and better demonstrated the skill and power of these climbers.</p>
+<p>It occurred to me after I posted <a href="/tag/climbing)-fat-fingers-and-arthritis/"><em>This post initially appeared on <a href="http://scienceblogs.com/webeasties">Science Blogs</a></em>It occurred to me after I posted {{link_a my_piece "my piece"}}(http://scienceblogs.com/webeast<span style="color:red">... truncated content, a parsing error occurred at some point after this ...</span></a> last week about <a href="/tag/rock-climbing">rock climbing</a> and arthritis that all of the photos of climbing were of men. This was purely coincidence - I was editing photos of <a href="http://darkhorseseries.com/">last week's competition</a> in reverse chronological order, and I'd only finished the photos of the Men's finals by the time I was done with the post.</p>
+<p>But I think it's important to note how amazing the <a href="/tag/women">women</a> were as well (and it gives me an excuse to post more of my photography). In fact, this year, I thought that the women's bouldering problems were more interesting, and better demonstrated the skill and power of these climbers.</p>
 <p>Molly Gaynor on the first of the Women's finals routes</p>
 <p>From the position you see here, the finalists had to scale to the top of that massive round thing with essentially nothing to hold on to. What you can't tell is that she's at least 15 feet off the ground.</p>
 <p>Route 2 of the women's finals required a dyno (that's a move where all four points of contact leave the wall) for the first move.</p>
@@ -133,7 +126,10 @@
 <p>Unfortunately, none of the women were able to finish this problem. I will say that they left these routes up for the public to try after the competition, and I was able to get about as far that first picture in this series - I grabbed the first hold, got my feet off the ground and promptly fell. I think that once I got my foot to touch the next hold, but that's about it. I'm a fairly fit guy and I climb several times a week, but I couldn't hold a candle to these phenomenal athletes.</p>
 <p>To see these gals (and the guys as well) in action, check out the official video (the finals climbing starts around the 3 minute mark.</p>
 <p><a href="http://vimeo.com/57884070">Dark Horse 2013 Series 4 Championship Highlights</a> from <a href="http://vimeo.com/louderthan11">Louder Than Eleven</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
-<p>All photos in this post were taken by me and are licensed under a <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 Unported License</a></p>
+<p><a href="em">em</a>{{link_a all_photos_in_this_post_were_taken_by_me_and_arelicensed_under_a_<a_href="[[http_//creativecommons.org/licenses/by_sa/3.0/deed.en_us](http_//creativecommons.org/licenses/by_sa/3.0/deed.en_us)](http_//creativecommons.org/licenses/by_sa/3.0/deed.en_us)">creative_commons_attribution_sharealike3.0_unported_license "All photos in this post were taken by me and are licensed under a <a href="a href="[[http://creativecommons.org/licenses/by-sa/3.0/deed.en_US](http://creativecommons.org/licenses/by-sa/3.0/deed.en_US)](http://creativecommons.org/licenses/by-sa/3.0/deed.en_US)"">a href="[[http://creativecommons.org/licenses/by-sa/3.0/deed.en_US](http://creativecommons.org/licenses/by-sa/3.0/deed.en_US)](http://creativecommons.org/licenses/by-sa/3.0/deed.en_US)"</a>Creative Commons Attribution-ShareAlike 3.0 Unported License</a>"}}</em></p>
+<p><a href="a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US" rel="license"">a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US" rel="license"</a><a href="img style="border-width: 0;" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" alt="Creative Commons License" /">img style="border-width: 0;" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" alt="Creative Commons License" /</a></p>
+<p></a>
+ </p>
  <h2 id="post_images" > Post Images<a class="heading-link" href="#post_images">
   <i class="fa fa-link" aria-hidden="true"></i>
 </a>
@@ -151,17 +147,22 @@
 
     <footer class="footer">
       <section class="container">
-        © 2023 Kevin Bonham · Powered by
-  <a href="https://franklin.jl">Franklin.jl</a> &
-  <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+        {{footer_notice}}
       </section>
     </footer>
 
   </main>
 
-  
+  {{hasmath}}
+    <script src="/libs/katex/katex.min.js"></script>
+    <script src="/libs/katex/auto-render.min.js"></script>
+    <script>renderMathInElement(document.body)</script>
+  {{end}}
 
-  
+  {{hascode}}
+    <script src="/libs/highlight/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();hljs.configure({tabReplace: '    '});</script>
+  {{end}}
 
 <script src="/libs/coder.min.js"></script>
 
