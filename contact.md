@@ -10,7 +10,7 @@ Most of my code is [on github][github], including the code for [this site][site-
 Some other code is on [gitlab][gitlab], though I mostly put private repos there.
 
 I spend a lot of time on [julia social channels][julia-social],
-including slack (@kescobo), zulip (@**kevin Bonham**), and [discourse][julia-discourse].
+including slack (`@kescobo`), zulip (`@kevin Bonham`), and [discourse][julia-discourse].
 
 [github]: https://github.com/kescobo
 [gitlab]: https://gitlab.com/kescobo
@@ -22,14 +22,15 @@ including slack (@kescobo), zulip (@**kevin Bonham**), and [discourse][julia-dis
 
 I haven't been doing much tweeting since the Muskpocolypse,
 but when I did, it was [@kevbonham][twitter].
-More recently, I've been on Mastodon at [@kbonham@scicomm.xyz][mastodon]
+More recently, I've been on Mastodon at [@kbonham@scicomm.xyz][mastodon],
+bluesky at [@kevbonham.bsky.social][bluesky],
 and on Lemmy at [https://mander.xyz/u/kevin][lemmy].
 
-I've got a [LinkedIn][linkedin] and [Polywork][polywork],
+I've got a [LinkedIn][linkedin],
 though don't count on timely replies there.
 
 [twitter]: https://twitter.com/kevbonham
 [mastodon]: https://scicomm.xyz/@kbonham
+[bluesky]: https://bsky.app/profile/kevbonham.bsky.social
 [lemmy]: https://mander.xyz/u/kevin
 [linkedin]: https://www.linkedin.com/in/kevin-bonham-6a10b566/
-[polywork]: https://www.polywork.com/ksbonham
