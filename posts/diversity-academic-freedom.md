@@ -5,7 +5,6 @@ title = "Diversity and Academic Freedom"
 date = Date("2017-04-07")
 draft = false
 type = "post"
-slug = "diversity-academic-freedom"
 category = "personal"
 tags = ["diversity", "academic freedom", "social policy", "free speech"]
 +++
@@ -35,21 +34,21 @@ anyway. Others may feel differently.
 From the report:
 
 > Both legal and academic principles have generally asserted that universities should not be
-partisan institutions, both because they receive public funds and because their mission requires
-extensive freedoms for a diversity of viewpoints...
-
+  partisan institutions, both because they receive public funds and because their mission requires
+  extensive freedoms for a diversity of viewpoints...
+>
 > This non-partisan ideal was first challenged in the 1970s and 1980s with the widespread creation
-of academic units centered on racial, ethnic, or gender identities. While these new fields of
-inquiry were generally welcome, for the most part they evolved with explicit partisan agendas
-and very limited viewpoint pluralism...
-
+  of academic units centered on racial, ethnic, or gender identities. While these new fields of
+  inquiry were generally welcome, for the most part they evolved with explicit partisan agendas
+  and very limited viewpoint pluralism...
+>  
 > Diversity statements are only a small part of the attempt to reconfigure higher education based
-on a partisan ideology of social engineering. Universities today, including all major colleges and
-universities in Oregon, are pouring millions of dollars each year into “diversity training”,
-“diversity action plans”, and “diversity councils” even as student tuition rises. Diversity
-statements are unique insofar as they represent a clear and imminent threat to academic freedom
-and research excellence, although the more corrosive and insidious effects of the broader
-diversity agenda should not be ignored.
+  on a partisan ideology of social engineering. Universities today, including all major colleges and
+  universities in Oregon, are pouring millions of dollars each year into “diversity training”,
+  “diversity action plans”, and “diversity councils” even as student tuition rises. Diversity
+  statements are unique insofar as they represent a clear and imminent threat to academic freedom
+  and research excellence, although the more corrosive and insidious effects of the broader
+  diversity agenda should not be ignored.
 
 "Corrosive and insidious!" "Clear and imminent threat!" Wow - if this report is
 intended to convince anyone that's not on their side already, this kind of
@@ -65,7 +64,10 @@ immigration is bad. I am personally appalled by this conclusion - it's offensive
 But there were people saying that the university (Harvard) should not have been
 willing to grant the PhD, because the ideas were offensive. I wrote:
 
-> I don’t think academics should be in the habit of silencing any scholarship, regardless of how much it offends our sensibilities. If Jason Richwine put in the work, met the requirements for his program and had his thesis approved by three independent faculty members (he did), then he deserves his PhD.
+> I don’t think academics should be in the habit of silencing any scholarship,
+  regardless of how much it offends our sensibilities.
+  If Jason Richwine put in the work, met the requirements for his program
+  and had his thesis approved by three independent faculty members (he did), then he deserves his PhD.
 
 So, I'm a strong advocate of academic freedom, to the point that I think it
 necessary to overcome my moral horror and defend the principle that people should
@@ -110,3 +112,4 @@ for blocking others from hearing their views.
 In any case, my feeling is that universities and other institutions should be
 free to encourage diversity if they choose to, and so long as scholars continue
 to debate, I remain hopeful that the best ideas will rise to the top.
+

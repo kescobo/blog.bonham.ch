@@ -25,7 +25,7 @@ function getcontent(path)
     post = readhtml(path)
     doc = root(post)
     title = findall("//title", doc) # could have done `findfirst` instead, but then couldn't check if it's unique
-    length(title) != 1 && error("Expected only 1 title block, got $(length(title)) from $p")
+    length(title) != 1 && error("Expected only 1 title block, got $(length(title)) from $path")
     title = first(title) |> nodecontent # get it out of the array
 
     body = findall("//div[@class=\"content\"]", doc)
@@ -95,7 +95,42 @@ end
 linkified = make_md_links(stuff.content, stuff.links)
 print(first(linkified, 500), "...")
 
+# ### EDIT 2024/05/13 - dealing with tag links
+#
+# This approach isn't perfect - a number of links, if they included a tag that was also in the post,
+# got muddled by trying to put a markdown link _inside_ another link, eg:
+
+badstuff = getcontent(paths[findfirst(p-> contains(p, "failing-on-farming"), paths)])
+make_md_links(badstuff.content, badstuff.links)[600:800]
+
+# See that "agricultre" tag link _inside_ the ucsusa.org link?
+# This is happening because the call to `replace` in `make_md_links`
+# just replaces every instance of the string content in the whole post.
+#
+# There's probably a better way to do this,
+# but here I'll just re-write it so if a word is in the `tags`,
+# i skip it.
+
+function make_md_links(content, links, tags)
+    tags = Set(tags)
+    for lnk in links
+        repstring = nodecontent(lnk)
+        link = nodecontent(first(attributes(lnk)))
+        isempty(repstring) && continue # first link doesn't have anything in it
+        repstring in tags && continue
+        any(ext -> endswith(link, ext), [".png", ".jpeg", ".jpg"]) && continue # skip images
+        content = replace(content, repstring=> 
+                                   string("[", repstring, "](", link, ")"),
+                                   count=1)
+    end
+    return content
+end
+
+linkified = make_md_links(stuff.content, stuff.links, stuff.tags)
+
 md"""
+END EDIT
+
 Easy!
 
 Much harder is dealing with images.
@@ -185,7 +220,7 @@ for p in paths
     post_text = replace(post_text, '$'=> raw"\$") # franklin doesn't like these
     post_text = replace(post_text, r"^\s{4,}"=> "") # remove leading spaces
     post_text = replace(post_text, r"\n{3,}"s=> "\n\n") # remove anything more than 3 newlines
-    post_text = make_md_links(post_text, post.links)
+    post_text = make_md_links(post_text, post.links, post.tags)
     post_text = append_image_links(post_text, post.links, post.imgs)
 
 

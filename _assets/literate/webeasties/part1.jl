@@ -13,7 +13,7 @@ using Downloads: download
 posturls = Set(String[])
 baseurl = "https://scienceblogs.com/author/kbonham?page="
 projectdir = normpath(pwd(), "_assets/literate/webeasties/")
-isdir(prjectdir) || mkpath(projectdir)
+isdir(projectdir) || mkpath(projectdir)
 
 ## for p in 0:7
 for p in 0:0
@@ -29,7 +29,7 @@ first(posturls, 5)
 
 #-
 
-length(posturls) # for the full set, this is 191
+length(posturls) # for the full set, this is 192
 
 # Explanation of regex:
 # 
