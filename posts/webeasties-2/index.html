@@ -119,10 +119,15 @@
         <span class="posted-on">
           <i class="fa fa-calendar" aria-hidden="true"></i>
           <time datetime='2021-11-06'>
-            <span style="color:red;">[FAILED:]&gt;&lbrace;&lbrace; dfmt date&rbrace;&rbrace;&lt;</span>
+            November 6, 2021
           </time>
         </span>
-
+        
+        <span class="date-modified">
+          <i class="fa fa-pencil" aria-hidden="true"></i>
+          Modified: May 13, 2024
+        </span>
+        
         
       </div>
     
@@ -177,7 +182,7 @@ function getcontent(path)
     post = readhtml(path)
     doc = root(post)
     title = findall(&quot;//title&quot;, doc) # could have done `findfirst` instead, but then couldn't check if it's unique
-    length(title) != 1 &amp;&amp; error(&quot;Expected only 1 title block, got $(length(title)) from $p&quot;)
+    length(title) != 1 &amp;&amp; error(&quot;Expected only 1 title block, got $(length(title)) from $path&quot;)
     title = first(title) |&gt; nodecontent # get it out of the array
 
     body = findall(&quot;//div[@class=\&quot;content\&quot;]&quot;, doc)
@@ -237,10 +242,10 @@ print(first(stuff.content, 1000), &quot;...&quot;)</code></pre>
             A little over 4 years ago, I joined up with three friends from grad school and launched a brand new science blog, &quot;We, Beasties!&quot; The name was meant to be a play on a phrase from Paul de Kruif&#39;s somewhat tongue-in-cheak translation of the first-ever microbiologist Antonie von Leeuwenhoek&#39;s term &quot;Animacules.&quot; von Leeuwenhoek was the first human being to glimpse the world of life invisible to the naked eye, and de Kruif, 400 years later, dubbed those minuscule replicators &quot;wee beasties.&quot; Of course, we now know much more about our microbial companions, including their immeasurable impact on our planet, on our ecosystems and on our own physiology. There are more microbes in each person&#39;s gut than there have been humans since we first came down from the trees. More microbes in our guts even than human cells in our bodies. As one of my PI&#39;s T-shirts says, we&#39;re 90% microbe, and this led, with a nod to Isaac Asimov, to the name &quot;We, Beasties.&quot;
 The blog was planned as a colla...</code></pre></div><pre><code class="julia">first(stuff.links, 4)</code></pre>
 <div class="code-output"><pre><code class="code-result language-plaintext">4-element Vector{EzXML.Node}:
- EzXML.Node(<ELEMENT_NODE[a]@0x000000000d4910c0>)
- EzXML.Node(<ELEMENT_NODE[a]@0x00000000034932a0>)
- EzXML.Node(<ELEMENT_NODE[a]@0x0000000000cd3cf0>)
- EzXML.Node(<ELEMENT_NODE[a]@0x00000000033ded90>)</code></pre></div><pre><code class="julia">stuff.tags</code></pre>
+ EzXML.Node(<ELEMENT_NODE[a]@0x000000000717d9c0>)
+ EzXML.Node(<ELEMENT_NODE[a]@0x000000000431e3d0>)
+ EzXML.Node(<ELEMENT_NODE[a]@0x0000000008f2af10>)
+ EzXML.Node(<ELEMENT_NODE[a]@0x000000000878b540>)</code></pre></div><pre><code class="julia">stuff.tags</code></pre>
 <div class="code-output"><pre><code class="code-result language-plaintext">2-element Vector{String}:
  "meta"
  "microbiology"</code></pre></div><p>This the <a href="https://scienceblogs.com/webeasties/2013/09/03/we-beasties-sproulates">last post</a>
@@ -277,7 +282,237 @@ linkified = make_md_links(stuff.content, stuff.links)
 print(first(linkified, 500), &quot;...&quot;)</code></pre>
 <div class="code-output"><pre><code class="code-stdout language-plaintext">
     
-            A little over 4 years ago, I joined up with three friends from grad school and launched a brand new science blog, &quot;We, Beasties!&quot; The name was meant to be a play on a phrase from [Paul de Kruif&#39;s](http://www.amazon.com/Microbe-Hunters-Paul-Kruif/dp/0156027771/ref=sr_1_1?ie=UTF8&amp;qid=1377545493&amp;sr=8-1&amp;keywords=microbe+hunters) somewhat tongue-in-cheak translation of the first-ever microbiologist [Antonie von Leeuwenhoek](http://en.wikipedia.org/wiki/Leeuwenhoek)&#39;s term &quot;Animacule...</code></pre></div><p>Easy!</p>
+            A little over 4 years ago, I joined up with three friends from grad school and launched a brand new science blog, &quot;We, Beasties!&quot; The name was meant to be a play on a phrase from [Paul de Kruif&#39;s](http://www.amazon.com/Microbe-Hunters-Paul-Kruif/dp/0156027771/ref=sr_1_1?ie=UTF8&amp;qid=1377545493&amp;sr=8-1&amp;keywords=microbe+hunters) somewhat tongue-in-cheak translation of the first-ever microbiologist [Antonie von Leeuwenhoek](http://en.wikipedia.org/wiki/Leeuwenhoek)&#39;s term &quot;Animacule...</code></pre></div><h3 id="edit_2024/05/13_dealing_with_tag_links" > EDIT 2024/05/13 - dealing with tag links<a class="heading-link" href="#edit_2024/05/13_dealing_with_tag_links">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h3><p>This approach isn't perfect - a number of links, if they included a tag that was also in the post,
+got muddled by trying to put a markdown link <em>inside</em> another link, eg:</p>
+<pre><code class="julia">badstuff = getcontent(paths[findfirst(p-&gt; contains(p, &quot;failing-on-farming&quot;), paths)])
+make_md_links(badstuff.content, badstuff.links)[600:800]</code></pre>
+<div class="code-output"><pre><code class="code-stdout language-plaintext"><span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag section invalid from HTML parser (code: 801, line: 47)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag header invalid from HTML parser (code: 801, line: 67)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag section invalid from HTML parser (code: 801, line: 74)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag nav invalid from HTML parser (code: 801, line: 119)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag section invalid from HTML parser (code: 801, line: 172)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag section invalid from HTML parser (code: 801, line: 204)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag article invalid from HTML parser (code: 801, line: 254)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag article invalid from HTML parser (code: 801, line: 257)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag section invalid from HTML parser (code: 801, line: 307)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag section invalid from HTML parser (code: 801, line: 330)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag article invalid from HTML parser (code: 801, line: 335)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag mark invalid from HTML parser (code: 801, line: 336)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag footer invalid from HTML parser (code: 801, line: 350)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag article invalid from HTML parser (code: 801, line: 354)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag article invalid from HTML parser (code: 801, line: 373)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag mark invalid from HTML parser (code: 801, line: 374)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag footer invalid from HTML parser (code: 801, line: 388)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag article invalid from HTML parser (code: 801, line: 392)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag article invalid from HTML parser (code: 801, line: 411)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag mark invalid from HTML parser (code: 801, line: 412)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag footer invalid from HTML parser (code: 801, line: 426)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag article invalid from HTML parser (code: 801, line: 430)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag article invalid from HTML parser (code: 801, line: 448)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag mark invalid from HTML parser (code: 801, line: 449)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag footer invalid from HTML parser (code: 801, line: 464)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag article invalid from HTML parser (code: 801, line: 468)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag article invalid from HTML parser (code: 801, line: 487)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag mark invalid from HTML parser (code: 801, line: 488)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag footer invalid from HTML parser (code: 801, line: 504)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag article invalid from HTML parser (code: 801, line: 508)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag article invalid from HTML parser (code: 801, line: 527)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag mark invalid from HTML parser (code: 801, line: 528)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag footer invalid from HTML parser (code: 801, line: 542)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag article invalid from HTML parser (code: 801, line: 546)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag article invalid from HTML parser (code: 801, line: 564)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag mark invalid from HTML parser (code: 801, line: 565)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag footer invalid from HTML parser (code: 801, line: 579)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag article invalid from HTML parser (code: 801, line: 583)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag article invalid from HTML parser (code: 801, line: 601)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag mark invalid from HTML parser (code: 801, line: 602)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag footer invalid from HTML parser (code: 801, line: 616)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag article invalid from HTML parser (code: 801, line: 620)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag article invalid from HTML parser (code: 801, line: 639)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag mark invalid from HTML parser (code: 801, line: 640)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag footer invalid from HTML parser (code: 801, line: 655)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag article invalid from HTML parser (code: 801, line: 659)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag article invalid from HTML parser (code: 801, line: 678)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag mark invalid from HTML parser (code: 801, line: 679)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag footer invalid from HTML parser (code: 801, line: 700)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag article invalid from HTML parser (code: 801, line: 704)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag article invalid from HTML parser (code: 801, line: 722)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag mark invalid from HTML parser (code: 801, line: 723)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag footer invalid from HTML parser (code: 801, line: 740)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag article invalid from HTML parser (code: 801, line: 744)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag article invalid from HTML parser (code: 801, line: 762)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag mark invalid from HTML parser (code: 801, line: 763)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag footer invalid from HTML parser (code: 801, line: 778)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag article invalid from HTML parser (code: 801, line: 782)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag article invalid from HTML parser (code: 801, line: 800)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag mark invalid from HTML parser (code: 801, line: 801)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag footer invalid from HTML parser (code: 801, line: 818)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag article invalid from HTML parser (code: 801, line: 822)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag article invalid from HTML parser (code: 801, line: 840)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag mark invalid from HTML parser (code: 801, line: 841)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag footer invalid from HTML parser (code: 801, line: 855)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag article invalid from HTML parser (code: 801, line: 859)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag article invalid from HTML parser (code: 801, line: 878)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag mark invalid from HTML parser (code: 801, line: 879)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag footer invalid from HTML parser (code: 801, line: 900)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag article invalid from HTML parser (code: 801, line: 904)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag article invalid from HTML parser (code: 801, line: 923)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag mark invalid from HTML parser (code: 801, line: 924)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag footer invalid from HTML parser (code: 801, line: 947)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag article invalid from HTML parser (code: 801, line: 951)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag article invalid from HTML parser (code: 801, line: 969)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag mark invalid from HTML parser (code: 801, line: 970)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag footer invalid from HTML parser (code: 801, line: 985)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag article invalid from HTML parser (code: 801, line: 989)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag article invalid from HTML parser (code: 801, line: 1008)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag mark invalid from HTML parser (code: 801, line: 1009)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag footer invalid from HTML parser (code: 801, line: 1024)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag article invalid from HTML parser (code: 801, line: 1028)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag article invalid from HTML parser (code: 801, line: 1047)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag mark invalid from HTML parser (code: 801, line: 1048)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag footer invalid from HTML parser (code: 801, line: 1068)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag article invalid from HTML parser (code: 801, line: 1072)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag article invalid from HTML parser (code: 801, line: 1091)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag mark invalid from HTML parser (code: 801, line: 1092)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag footer invalid from HTML parser (code: 801, line: 1110)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag article invalid from HTML parser (code: 801, line: 1114)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag article invalid from HTML parser (code: 801, line: 1133)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag mark invalid from HTML parser (code: 801, line: 1134)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag footer invalid from HTML parser (code: 801, line: 1148)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag article invalid from HTML parser (code: 801, line: 1152)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag article invalid from HTML parser (code: 801, line: 1170)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag mark invalid from HTML parser (code: 801, line: 1171)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag footer invalid from HTML parser (code: 801, line: 1192)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag article invalid from HTML parser (code: 801, line: 1196)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag aside invalid from HTML parser (code: 801, line: 1229)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+<span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag section invalid from HTML parser (code: 801, line: 1234)
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
+</code></pre><pre><code class="code-result language-plaintext">"o, [UCS](/tag/ucs) decided to branch out into the science of [how we grow our food](http://www.ucsusa.org/food_and_[agriculture](/tag/agriculture)/). This should be a wonderful thing - our agriculture "</code></pre></div><p>See that "agricultre" tag link <em>inside</em> the ucsusa.org link?
+This is happening because the call to <code>replace</code> in <code>make_md_links</code>
+just replaces every instance of the string content in the whole post.</p>
+<p>There's probably a better way to do this,
+but here I'll just re-write it so if a word is in the <code>tags</code>,
+i skip it.</p>
+<pre><code class="julia">function make_md_links(content, links, tags)
+    tags = Set(tags)
+    for lnk in links
+        repstring = nodecontent(lnk)
+        link = nodecontent(first(attributes(lnk)))
+        isempty(repstring) &amp;&amp; continue # first link doesn't have anything in it
+        repstring in tags &amp;&amp; continue
+        any(ext -&gt; endswith(link, ext), [&quot;.png&quot;, &quot;.jpeg&quot;, &quot;.jpg&quot;]) &amp;&amp; continue # skip images
+        content = replace(content, repstring=&gt;
+                                   string(&quot;[&quot;, repstring, &quot;](&quot;, link, &quot;)&quot;),
+                                   count=1)
+    end
+    return content
+end
+
+linkified = make_md_links(stuff.content, stuff.links, stuff.tags)</code></pre>
+<div class="code-output"><pre><code class="code-result language-plaintext">"\n    \n            A little over 4 years ago, I joined up with three friends from grad school and launched a brand new science blog, \"We, Beasties!\" The name was meant to be a play on a phrase from [Paul de Kruif's](http://www.amazon.com/Microbe-Hunters-Paul-Kruif/dp/0156027771/ref=sr_1_1?ie=UTF8&qid=1377545493&sr=8-1&keywords=microbe+hunters) somewhat tongue-in-cheak translation of the first-ever microbiologist [Antonie von Leeuwenhoek](http://en.wikipedia.org/wiki/Leeuwenhoek)'s term \"Animacules.\" von Leeuwenhoek was the first human being to glimpse the world of life invisible to the naked eye, and de Kruif, 400 years later, dubbed those minuscule replicators \"wee beasties.\" Of course, we now know much more about our microbial companions, including their immeasurable impact on our planet, on our ecosystems and on our own physiology. There are more microbes in each person's gut than there have been humans since we first came down from the trees. More microbes in our guts even than human cells in our bodies. As one of my PI's T-shirts says, we're 90% microbe, and this led, with [a nod to Isaac Asimov](http://en.wikipedia.org/wiki/I,_Robot), to the name \"We, Beasties.\"\nThe blog was planned as a collaboration between four microbe-obsessed scientists. I was focused on infectious disease and the immune system, [Heather Olins](http://heatherolins.com/) studied microbial ecology in hydrothermal vents, Emily Gardel used microbes as tools to engineer biological fuel cells, and Dipti Nayak studied microbial evolution. From the beginning though, it was mostly me posting. Even when we got picked up by Scienceblogs less than a year into our effort (thanks mostly to [Abbie's](http://scienceblogs.com/erv) advocacy), Emily and Dipti were too busy with their research to devote much effort to writing. Heather wrote a number of great posts, and is also responsible for [the post that got the most traffic ](http://scienceblogs.com/webeasties/2010/12/05/guest-post-arsenate-based-dna/)in the blog's history (remember #arseniclife?), but several months-long trips to sea broke up the flow, and eventually she slowed down as well.\nSo for the past three years, it's been mostly an immunology blog. I've written about everything about the immune system I could think of, from [autoimmune disease](http://scienceblogs.com/webeasties/2013/05/15/oas-wednesday-activating-immunity-to-suppress-autoimmunity/) to [serum sickness](http://scienceblogs.com/webeasties/2011/07/25/serum-sickness-and-the-problem/) to [semen allergies](http://scienceblogs.com/webeasties/2011/07/27/allergic-to-spunk/), [Nobel prizes](http://scienceblogs.com/webeasties/2011/10/06/a-bitter-sweet-nobel-beutler/) to [parasites](http://scienceblogs.com/webeasties/2011/06/09/more-bacteria-vs-malaria-goodn/), the link between r[ock climbing and inflammation](http://scienceblogs.com/webeasties/2013/01/22/rock-climbing-fat-fingers-and-arthritis/) to the link between [Brad Pitt's sexiness and his defense ](http://scienceblogs.com/webeasties/2012/02/28/im-too-sexy-for-your-virus/)against pathogens. I've written [explainers on allergies](http://scienceblogs.com/webeasties/2011/11/15/allergies-101/), [medications](http://scienceblogs.com/webeasties/2012/06/06/leveraging-immunology-research-to-treat-disease/), and how the immune system responds to a cut from start to finish. I've written about the [problems with scientific publication](http://scienceblogs.com/webeasties/2012/02/21/the-future-of-science-pub/) and about [Open Access](http://scienceblogs.com/webeasties/2013/02/12/peerj-the-science-journal-we-need-and-deserve/).\nA few months ago, I wrote a guest-post for Scientific American's guest blog about [allergies and genetically modified food](http://blogs.scientificamerican.com/guest-blog/2013/05/30/allergic-to-science-proteins-and-allergens-in-our-genetically-engineered-food/). The community manager there, Bora Zivkovich (some of you may know him as the blogfather) has been[ planning to launch ](http://blogs.scientificamerican.com/network-central/2013/09/03/welcome-food-matters-a-big-new-group-blog-at-sciamblogs/)a group food-related blog for some time, and I suppose my post put me onto his radar, so I've been offered a spot on the team. Though GMOs are what got me in the door, I'm planning on sticking to my immunological and microbial roots. There's so much to talk about! From the effect of the microbes in our gut on metabolism, to autoimmune disorders, to food allergies and sensitivities, the list is endless. And I'll probably keep harping on the GMO controversy, but several of my fellow bloggers have much greater expertise in that realm.\nAlas, my new position at SciAm means that I have to close up shop here at Scienceblogs. It's been an amazing experience. Scienceblogs.com was my first exposure to blogs about science (or indeed blogging generally), and the reason I wanted to do it. The idea that professional scientists could have an unmediated conduit to talk to people about their science was immediately appealing, even back in 2006 when I had just graduated from college and didn't really have \"my\" science.\nBut it's time for me to move on to other things. So, like a Bacillus anthracis bacterium deprived of nutrients, We, Beasties is [sporulating](http://en.wikipedia.org/wiki/Spore). It's throwing out all non-essential functions and retreating into a dormant state, where it can live for centuries deprived of water and nutrients. Maybe some day, if the conditions are right and a new host wanders along, We, Beasties may hitch a ride, re-activate its metabolism and cause death and disease wherever...\nOk, the analogy isn't perfect.\nAs for me, I'll be at [Food Matters](http://blogs.scientificamerican.com/food-matters/) on the SciAm network, along with [a host of amazing writers](http://blogs.scientificamerican.com/food-matters/2013/09/03/debut/) focused on the science of what we eat. The science of food won't always sate me though, so for other musings about infectious disease, public health and the like, check out [Red Wine and Lariam](http://redwineandlariam.com), a co-venture with my friend Todd Bixby. Come check them out, update your RSS feeds, and stay in touch!\n\n      \n  \n    Tags\n          \n              [Meta](/tag/meta)\n          microbiology\n              \n      \n[Log in](/user/login?destination=/webeasties/2013/09/03/we-beasties-sproulates%23comment-form) to post comments\n  "</code></pre></div><p>END EDIT</p>
+<p>Easy!</p>
 <p>Much harder is dealing with images.
 When I was blogging back then, I didn't understand the importance
 (for accessibility) of including link text,
@@ -362,7 +597,7 @@ for p in paths
     post_text = replace(post_text, '$'=&gt; raw&quot;\$&quot;) # franklin doesn't like these
     post_text = replace(post_text, r&quot;^\s&lbrace;4,&rbrace;&quot;=&gt; &quot;&quot;) # remove leading spaces
     post_text = replace(post_text, r&quot;\n&lbrace;3,&rbrace;&quot;s=&gt; &quot;\n\n&quot;) # remove anything more than 3 newlines
-    post_text = make_md_links(post_text, post.links)
+    post_text = make_md_links(post_text, post.links, post.tags)
     post_text = append_image_links(post_text, post.links, post.imgs)
 
 

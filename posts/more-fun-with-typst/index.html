@@ -35,6 +35,8 @@
   <meta name="generator" content="Franklin.jl" />
 
   
+    <link rel="stylesheet" href="/libs/katex/katex.min.css">
+  
 
   
     <link rel="stylesheet" href="/libs/highlight/atom-one-dark.css">
@@ -107,8 +109,8 @@
           <header>
   <div class="post-title">
     <h1 class="title">
-      <a class="title-link" href="/posts/testing-literate/index.html">
-        New literate functionality
+      <a class="title-link" href="/posts/more-fun-with-typst/index.html">
+        More Fun with Typst - Building a CV
       </a>
     </h1>
   </div>
@@ -118,25 +120,15 @@
       <div class="date">
         <span class="posted-on">
           <i class="fa fa-calendar" aria-hidden="true"></i>
-          <time datetime='2023-06-23'>
-            June 23, 2023
+          <time datetime='2024-05-13'>
+            May 13, 2024
           </time>
-        </span>
-        
-        <span class="date-modified">
-          <i class="fa fa-pencil" aria-hidden="true"></i>
-          Modified: May 13, 2024
         </span>
         
         
       </div>
     
 
-    
-      <div class="tags">
-        <i class="fa fa-tag" aria-hidden="true"></i>
-        <span class="tag"><a href="/tags/julia/">julia</a></span><span class="separator">•</span><span class="tag"><a href="/tags/web/">web</a></span>
-      </div>
     
   </div>
 </header>
@@ -145,32 +137,40 @@
        
        
        
-<p>Thanks to <a href="https://github.com/tlienart/Xranklin.jl/pull/197">this PR</a>,
-it should be possible to have post-specific environments,
-which should make Literate.jl-based posts easier...</p>
-<p>Let's see if it works:</p>
-<pre><code class="julia">using CairoMakie
-using Distributions
+<p>I'm so predictable. </p>
+<p>Last November, I <a href="/posts/typst-job-apps">wrote a post</a> about <code>typst</code>,
+a new type-setting software written in rust that's meant to replace \(\latex\).
+In that post, I said,</p>
+<blockquote><p>Well, I didn't get a job in that round,
+  so I'm at it again!
+  For realsy reals, this is the last year I'm doing this.</p>
+</blockquote><p>Well, I didn't get a job in this round either.
+I got close with one - full two-day interview.
+They said they loved my science,
+they said that they liked me,
+they said I did a great job explaining computational concepts
+to the wetlab folks (which should have meant a lot,
+since the job was about bringing "novel computational techniques"
+to the department)...</p>
+<p>But they weren't sure I was the right "fit".
+I'm not sure, but this sounds like code for
+"we can't think of a good reason, but we went with someone else".</p>
+<p>Anyway, I'm now waffling on whether I want to try again after all.
+But in the mean time, I'm working on my CV and resume in typst,
+and continuing to love it.
+As I mentioned in that last post,
+I was able to build my entire CV from scratch,
+replicating the layout that I'd needed a template for in \(\latex\).
+This means I actually understand all of the components,
+so I can tweak them to my liking.
+Plus, I recently figured out how to build and post
+the pdfs using CI machinery on gitlab. Fun!</p>
+<h2 id="the_basics" > The Basics<a class="heading-link" href="#the_basics">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h2><p>Typst is a markup language, which means you can get some stlying
+from </p>
 
-d = Normal(0, 0.5)</code></pre>
-<div class="code-output"><pre><code class="code-result language-plaintext">Distributions.Normal{Float64}(μ=0.0, σ=0.5)</code></pre></div><p>That's a normal distribution.
-This is testing out comment-based text.</p>
-<pre><code class="julia">fig = Figure()
-
-for i in 1:4
-    ax = Axis(fig[
-        ceil(Int, i / 2), # 1,1,2,2
-        2 - i % 2]; # 1,2,1,2
-        xlabel = &quot;10^$i samples&quot;
-    )
-
-    lines!(ax, (d))
-    hist!(ax, rand(d, 10^i); normalization=:pdf)
-end
-
-fig</code></pre>
-<div class="code-output"><img class="code-figure" src="/assets/posts/testing-literate/figs-html/__autofig_6829491492535337890.svg">
-</div> 
 
       </section>
     </div>
@@ -185,6 +185,10 @@ fig</code></pre>
 
   </main>
 
+  
+    <script src="/libs/katex/katex.min.js"></script>
+    <script src="/libs/katex/auto-render.min.js"></script>
+    <script>renderMathInElement(document.body)</script>
   
 
   

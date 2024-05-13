@@ -119,10 +119,15 @@
         <span class="posted-on">
           <i class="fa fa-calendar" aria-hidden="true"></i>
           <time datetime='2020-01-06'>
-            <span style="color:red;">[FAILED:]&gt;&lbrace;&lbrace; dfmt date&rbrace;&rbrace;&lt;</span>
+            January 6, 2020
           </time>
         </span>
-
+        
+        <span class="date-modified">
+          <i class="fa fa-pencil" aria-hidden="true"></i>
+          Modified: May 13, 2024
+        </span>
+        
         
       </div>
     
@@ -197,7 +202,7 @@ but I'm not <em>really</em> parsing them, I actually am looking for a simple pat
 posturls = Set(String[])
 baseurl = &quot;https://scienceblogs.com/author/kbonham?page=&quot;
 projectdir = normpath(pwd(), &quot;_assets/literate/webeasties/&quot;)
-isdir(prjectdir) || mkpath(projectdir)
+isdir(projectdir) || mkpath(projectdir)
 
 # for p in 0:7
 for p in 0:0
@@ -210,10 +215,13 @@ for p in 0:0
 end
 
 first(posturls, 5)</code></pre>
-<div class="code-output"><pre><code class="code-stderr language-plaintext">ERROR: UndefVarError: `prjectdir` not defined
-Stacktrace:
-</code></pre></div><pre><code class="julia">length(posturls) # for the full set, this is 191</code></pre>
-<div class="code-output"><pre><code class="code-result language-plaintext">0</code></pre></div><p>Explanation of regex:</p>
+<div class="code-output"><pre><code class="code-result language-plaintext">5-element Vector{String}:
+ "/webeasties/2013/04/09/ask-science-live-thursday-at-6pm-edt-askscilive"
+ "/webeasties/2013/02/12/peerj-the-science-journal-we-need-and-deserve"
+ "/webeasties/2012/08/21/maybe-he-was-talking-about-ducks"
+ "/webeasties/2013/05/21/science-racism-and-political-correctness"
+ "/webeasties/2013/01/26/women-climbers-are-amazing-too"</code></pre></div><pre><code class="julia">length(posturls) # for the full set, this is 192</code></pre>
+<div class="code-output"><pre><code class="code-result language-plaintext">30</code></pre></div><p>Explanation of regex:</p>
 <ul>
 <li><code>href=\&quot;/webeasties</code>: hoepfully self-explanatory, the <code>href</code> looks specifically
   for links, and the <code>&quot;</code> needs to be escaped.</li>
@@ -406,7 +414,7 @@ doc = root(post)
 <span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
 <span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag section invalid from HTML parser (code: 801, line: 917)
 <span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
-</code></pre><pre><code class="code-result language-plaintext">EzXML.Node(<ELEMENT_NODE[html]@0x0000000001f3e290>)</code></pre></div><p>This way, once I get it working on one instance,
+</code></pre><pre><code class="code-result language-plaintext">EzXML.Node(<ELEMENT_NODE[html]@0x000000000a62bd10>)</code></pre></div><p>This way, once I get it working on one instance,
 I can just delete the first line, uncomment the <code>for</code> loop bits,
 and then run it on the whole thing.
 I put in validation checks that throw errors if something violates my assumptions
