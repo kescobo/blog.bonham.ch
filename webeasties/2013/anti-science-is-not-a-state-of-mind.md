@@ -29,7 +29,7 @@ I think that my main difference with Bell, and perhaps the source of the rest of
 
 It's also a lot easier for the GM lobby to play a game of "you are wrong on science" rather than acknowledging that the bulk of the critique against them is economic and political. [emphasis mine]
 
-It's simply not true that the bulk of objections to GMO are economic and political, and this is a huge problem. There *are* very reasonable political and economic arguments about the problems with modern [agriculture](/tag/agriculture), like industrial farming, monoculture and sustainability. But anti-GMO activists rail against "frankenfoods" as the boogyman for everything that ails agriculture, when most of these problems are not unique to genetically modified crops.
+It's simply not true that the bulk of objections to GMO are economic and political, and this is a huge problem. There *are* very reasonable political and economic arguments about the problems with modern agriculture, like industrial farming, monoculture and sustainability. But anti-GMO activists rail against "frankenfoods" as the boogyman for everything that ails agriculture, when most of these problems are not unique to genetically modified crops.
 
 If my experience with people on the internet, family members, friends and acquaintances that oppose or are skeptical of GMOs is at all representative, the main objection is a vague feeling that GMO is unnatural, and therefore unsafe. For those that rise to the level of activism, economics and politics are almost never brought up, except as a last resort after I've addressed their other concerns.
 

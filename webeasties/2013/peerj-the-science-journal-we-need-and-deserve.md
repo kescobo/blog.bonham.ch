@@ -23,7 +23,7 @@ Because the rise of journals occurred in tandem with the rise of professional, p
 
 Institutional barriers prevent individual researchers from innovating with publishing strategy because doing anything outside the standard model would hurt their ability to be promoted and more importantly, to get the grants they need to do science. The good news is that some enterprising people are starting to build journals that work within the current model of science publishing, but aim to disrupt it from the inside. Enter PeerJ, a new online-only journal that published its [first papers today](http://blog.peerj.com/post/42920112598/launch-of-peerj).
 
-The [Open Access movement](http://en.wikipedia.org/wiki/Open_access) has made [great strides](http://crl.acrl.org/content/73/5/493.full.pdf), but there is still a long way to go before all academic content can be freely read, broadly distributed and openly re-used by anyone, regardless of geography, [education](/tag/education) or wealth. A long way, but it is a worthy trip to undertake.
+The [Open Access movement](http://en.wikipedia.org/wiki/Open_access) has made [great strides](http://crl.acrl.org/content/73/5/493.full.pdf), but there is still a long way to go before all academic content can be freely read, broadly distributed and openly re-used by anyone, regardless of geography, education or wealth. A long way, but it is a worthy trip to undertake.
 
 And so this is why we believe so strongly in the [mission of PeerJ](https://peerj.com/about/beliefs/). We want to be a catalyst for change within the system of academic communication. We want  to publish science in an effective, efficient, rapid, innovative, respectful, professional and, above all ‘Open’ manner.
 

@@ -3,7 +3,6 @@ using Dates
 
 title = "Job applications with LaTeX and git for fun and profit"
 date = Date("2022-10-31")
-draft = true
 category = "academia"
 tags = ["latex", "code", "job-applications", "typesetting", "git"]
 

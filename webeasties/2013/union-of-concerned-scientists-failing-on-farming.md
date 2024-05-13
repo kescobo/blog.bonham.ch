@@ -13,7 +13,7 @@ Let me begin by saying I love the [Union of Concerned Scientists](http://www.ucs
 
 Which is why it's so disappointing that they are so wrong on genetically modified organisms.
 
-Several years ago, [UCS](/tag/ucs) decided to branch out into the science of [how we grow our food](http://www.ucsusa.org/food_and_[agriculture](/tag/agriculture)/). This should be a wonderful thing - our agriculture system is badly broken, and there are scientific and technological solutions to help feed a growing human population while minimizing environmental impact.
+Several years ago, [UCS](/tag/ucs) decided to branch out into the science of [how we grow our food](http://www.ucsusa.org/food_and_agriculture/). This should be a wonderful thing - our agriculture system is badly broken, and there are scientific and technological solutions to help feed a growing human population while minimizing environmental impact.
 
 There's a better way to grow our food. Working with nature instead of against it, sustainable agriculture uses 21st-century techniques and technologies to implement time-tested ideas such as crop rotation, integrated plant/animal systems, and organic soil amendments.
 

@@ -11,7 +11,7 @@ _This post initially appeared on [Science Blogs](http://scienceblogs.com/webeast
 
 [Why do microorganisms only begin breaking down our tissues after death? What stops them from doing so whilst we are still alive?](http://www.reddit.com/r/askscience/comments/16pjum/why_do_microorganisms_only_begin_breaking_down/)
 
-The main reason is that our body maintains a multitude of barriers that largely prevent [bacteria](/tag/bacteria) and other microorganisms from gaining entry. The first and most obvious of these barriers is the skin, but there are also similar barriers along all of your mucosal surfaces (gut, ear, genital tract etc). These barriers consist of cells that are knit together incredibly tightly (google: tight junction), and they also secrete compounds that deter bacteria.
+The main reason is that our body maintains a multitude of barriers that largely prevent bacteria and other microorganisms from gaining entry. The first and most obvious of these barriers is the skin, but there are also similar barriers along all of your mucosal surfaces (gut, ear, genital tract etc). These barriers consist of cells that are knit together incredibly tightly (google: tight junction), and they also secrete compounds that deter bacteria.
 
 For instance, in your gut, there are trillions of bacteria (more than there are human cells in your body), but the cells lining the gut secrete a thick layer of mucous that keeps bacteria at bay, and also produce things called "anti-microbial peptides" that kill bacteria that wander too close.
 

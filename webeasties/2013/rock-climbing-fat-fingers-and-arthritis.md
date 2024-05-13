@@ -11,7 +11,7 @@ In any physical activity, there is always the risk of acute injury - cuts, scrap
 
 Me following up a 5.9 in Rumney, NH... probably not risking death.
 
-Those acute sports injuries can sometimes grab headlines, but people are increasingly becoming aware of the long-term consequences of physical stress on the body. Football and hokey players [can suffer from](http://en.wikipedia.org/wiki/Chronic_traumatic_encephalopathy) memory loss and depression as a result of swelling in the brain associated with repeated concussions, tennis players often get [stress fractures](http://orthoinfo.aaos.org/topic.cfm?topic=a00112) on their spine (not to mention the aptly named [tennis elbow](http://www.ncbi.nlm.nih.gov/pubmedhealth/PMH0001485/)), and many, if not all sports are thought to increase the risk of developing [osteo[arthritis](/tag/arthritis)](http://www.ncbi.nlm.nih.gov/pubmedhealth/PMH0001460/) - in which the cartilage in your joints breaks down, allowing bone to rub against bone and inducing inflammation.
+Those acute sports injuries can sometimes grab headlines, but people are increasingly becoming aware of the long-term consequences of physical stress on the body. Football and hokey players [can suffer from](http://en.wikipedia.org/wiki/Chronic_traumatic_encephalopathy) memory loss and depression as a result of swelling in the brain associated with repeated concussions, tennis players often get [stress fractures](http://orthoinfo.aaos.org/topic.cfm?topic=a00112) on their spine (not to mention the aptly named [tennis elbow](http://www.ncbi.nlm.nih.gov/pubmedhealth/PMH0001485/)), and many, if not all sports are thought to increase the risk of developing osteoarthritis - in which the cartilage in your joints breaks down, allowing bone to rub against bone and inducing inflammation.
 
 This increased risk of arthritis is of particular concern for climbers - there are a lot of joints in the hands, and climbing tweaks them in all kinds of ways.
 
@@ -19,7 +19,7 @@ I'm not sure who this climber is, but he was competing in the Dark Horse finals 
 
 It's sort of accepted wisdom in climbing circles, and I never questioned whether or not it was true until a friend of mine told me that actually, climbers have a decreased risk of arthritis. So I decided to do some digging. 
 
-First off, let's take a look at the increased risk of [osteoarthritis](/tag/osteoarthritis) for sports in general - it turns out, it's [not that simple](http://www.ncbi.nlm.nih.gov.ezp-prod1.hul.harvard.edu/pubmed/15314507):
+First off, let's take a look at the increased risk of osteoarthritis for sports in general - it turns out, it's [not that simple](http://www.ncbi.nlm.nih.gov.ezp-prod1.hul.harvard.edu/pubmed/15314507):
 
 Participation in sports that cause minimal joint impact and torsional loading by people with normal joints and neuromuscular function may cause osteophyte [bone spur -kb] formation, but it has minimal, if any, effect on the risk of osteoarthritis. In contrast, participation in sports that subject joints to high levels of impact and torsional loading increases the risk of injury-induced joint degeneration. People with abnormal joint anatomy or alignment, previous joint injury or surgery, osteoarthritis, joint instability, articular surface incongruity or dysplasia, disturbances of joint or muscle innervation, or inadequate muscle strength have increased risk of joint damage during participation in athletics.
 

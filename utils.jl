@@ -71,7 +71,7 @@ function hfun_list_posts(t::String)
                         node("span", class="date", Dates.format(p.date, "U d, yyyy")),
                         node("a", class="title", href=p.href, p.title)
                     )
-                    for p in get_posts(t)
+                    for p in get_posts(t) if !p.draft
                 )...
             )
         )
@@ -94,7 +94,7 @@ function get_posts(t::String, basepath::String="posts")
             date  = getvarfrom(:date, rp),
             title = getvarfrom(:title, rp),
             href  = "/$(splitext(rp)[1])",
-            draft = getvarfrom(:draft, rp),
+            draft = getvarfrom(:draft, rp, false),
             tags  = get_page_tags(rp)
         )
         for rp in paths

@@ -59,4 +59,4 @@ rss_link        = "https://blog.bonham.ch/feed"
 
 # other
 
-ignore=["_drafts/"]
+ignore=["_drafts/", "webeasties/"]

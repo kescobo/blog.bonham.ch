@@ -7,7 +7,7 @@ category = "webeasties"
 
 _This post initially appeared on [Science Blogs](http://scienceblogs.com/webeasties)_
 
-[This fall, I'm [teaching a course](http://scienceblogs.com/webeasties/2012/08/28/[plague](/tag/plague)s-and-pandemics-emerson-sc-214/) at [Emerson](/tag/emerson) College called "Plagues and Pandemics." I'll be periodically posting the contents of my lectures and my experiences as a first time college instructor]
+[This fall, I'm [teaching a course](http://scienceblogs.com/webeasties/2012/08/28/plagues-and-pandemics-emerson-sc-214/) at [Emerson](/tag/emerson) College called "Plagues and Pandemics." I'll be periodically posting the contents of my lectures and my experiences as a first time college instructor]
 
 Lecture 1
 
@@ -17,7 +17,7 @@ But we're also going to discuss some really great things like vaccines, turning 
 
 Why is [Science](/tag/science) Awesome?
 
-Principally, science is awesome because we are not. Our ability to perceive things is limited and flawed, our memories are limited and flawed, and our minds are filled with [bias](/tag/bias)es that distort reality even when the information is right in front of us. Science helps us overcome our own limitations (to the extent we are able).
+Principally, science is awesome because we are not. Our ability to perceive things is limited and flawed, our memories are limited and flawed, and our minds are filled with biases that distort reality even when the information is right in front of us. Science helps us overcome our own limitations (to the extent we are able).
 
 Perception
 
