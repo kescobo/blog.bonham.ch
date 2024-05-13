@@ -73,13 +73,11 @@ nodecontent(link)
 #-
 nodecontent(first(attributes(link)))
 
-md"""
-So all I need to do to start building the markdown is to find the text
-inside `stuff.content`, and replace it with a markdown link.
-Eg, `Paul de Kruif's` will become `[Paul de Kruif's](http://www.amazon...)`.
-
-This is easily done with julia's `replace()` function.
-"""
+# So all I need to do to start building the markdown is to find the text
+# inside `stuff.content`, and replace it with a markdown link.
+# Eg, `Paul de Kruif's` will become `[Paul de Kruif's](http://www.amazon...)`.
+#
+# This is easily done with julia's `replace()` function.
 
 function make_md_links(content, links)
     for lnk in links

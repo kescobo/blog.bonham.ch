@@ -1,4 +1,5 @@
 using Literate
+using TimeZones
 
 @reexport using Dates
 import Hyperscript as HS
@@ -6,13 +7,33 @@ import Hyperscript as HS
 node = HS.m
 
 # March 5, 2019
-dfmt(d) = Dates.format(d, "U d, yyyy")
+date_format(d) = Dates.format(d, "U d, yyyy")
 
-# this function is now defined in Xranklin, I think
-# function hfun_dfmt(p::Vector{String})
-#     d = getlvar(Symbol(p[1]))
-#     return dfmt(d)
-# end
+function hfun_dfmt(p::Vector{String})
+    d = getlvar(Symbol(p[1]))
+    return date_format(d)
+end
+
+function modtime()
+    path = get_rpath()
+    mt = read(pipeline(`git log -1 --pretty="format:%ci" $path`), String)
+    isempty(mt) && return today()
+    return ZonedDateTime(mt, "y-m-d H:M:S z")
+end
+
+
+function hfun_date_modified()
+    mt = modtime()
+    return date_format(mt)
+end
+
+function ismodified()
+    d = getlvar(:date)
+    mt = modtime()
+    Date(mt) > d
+end
+
+## Reading time function - see: https://www.roboleary.net/programming/2020/04/24/pimp-blog-reading-time.html#how-will-we-calculate-it
 
 # ===============================================
 # Logic to show the list of tags for a page

@@ -16,7 +16,12 @@
             {{dfmt date}}
           </time>
         </span>
-
+        {{if e"Utils.ismodified()"}}
+        <span class="date-modified">
+          <i class="fa fa-pencil" aria-hidden="true"></i>
+          Modified: {{date_modified}}
+        </span>
+        {{end}}
         {{isdef reading_time}}
           <span class="reading-time">
             <i class="fa fa-clock-o" aria-hidden="true"></i>
