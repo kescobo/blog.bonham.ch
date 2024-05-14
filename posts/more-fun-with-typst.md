@@ -1,6 +1,5 @@
 +++
 using Dates
-draft = true
 title = "More Fun with Typst - Building a CV"
 date = Date(2024, 5, 13)
 +++
