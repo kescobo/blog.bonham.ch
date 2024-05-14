@@ -84,7 +84,7 @@
         </li>
       
         <li class="navigation-item">
-          <a class="navigation-link" href="/webeasties/">We, Beasties</a>
+          <a class="navigation-link" href="https://github.com/kescobo/blog.bonham.ch/tree/main/webeasties">We, Beasties</a>
         </li>
       
         <li class="navigation-item">
@@ -125,7 +125,7 @@
         
         <span class="date-modified">
           <i class="fa fa-pencil" aria-hidden="true"></i>
-          Modified: May 13, 2024
+          Modified: May 14, 2024
         </span>
         
         
@@ -205,23 +205,19 @@ projectdir = normpath(pwd(), &quot;_assets/literate/webeasties/&quot;)
 isdir(projectdir) || mkpath(projectdir)
 
 # for p in 0:7
-for p in 0:0
+let p = 0
     tmp = download(baseurl*string(p))
-    for line in eachline(tmp)
+    # for line in eachline(tmp)
+    for line in first(eachline(tmp), 5)
         for m in eachmatch(r&quot;href=\&quot;(/webeasties[\w/\-]+)\&quot;&quot;, line)
            push!(posturls, m[1])
         end
     end
 end
 
-first(posturls, 5)</code></pre>
-<div class="code-output"><pre><code class="code-result language-plaintext">5-element Vector{String}:
- "/webeasties/2013/04/09/ask-science-live-thursday-at-6pm-edt-askscilive"
- "/webeasties/2013/02/12/peerj-the-science-journal-we-need-and-deserve"
- "/webeasties/2012/08/21/maybe-he-was-talking-about-ducks"
- "/webeasties/2013/05/21/science-racism-and-political-correctness"
- "/webeasties/2013/01/26/women-climbers-are-amazing-too"</code></pre></div><pre><code class="julia">length(posturls) # for the full set, this is 192</code></pre>
-<div class="code-output"><pre><code class="code-result language-plaintext">30</code></pre></div><p>Explanation of regex:</p>
+posturls</code></pre>
+<div class="code-output"><pre><code class="code-result language-plaintext">Set{String}()</code></pre></div><pre><code class="julia">length(posturls) # for the full set, this is 192</code></pre>
+<div class="code-output"><pre><code class="code-result language-plaintext">0</code></pre></div><p>Explanation of regex:</p>
 <ul>
 <li><code>href=\&quot;/webeasties</code>: hoepfully self-explanatory, the <code>href</code> looks specifically
   for links, and the <code>&quot;</code> needs to be escaped.</li>
@@ -414,7 +410,7 @@ doc = root(post)
 <span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
 <span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag section invalid from HTML parser (code: 801, line: 917)
 <span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
-</code></pre><pre><code class="code-result language-plaintext">EzXML.Node(<ELEMENT_NODE[html]@0x000000000a62bd10>)</code></pre></div><p>This way, once I get it working on one instance,
+</code></pre><pre><code class="code-result language-plaintext">EzXML.Node(<ELEMENT_NODE[html]@0x0000000003f38470>)</code></pre></div><p>This way, once I get it working on one instance,
 I can just delete the first line, uncomment the <code>for</code> loop bits,
 and then run it on the whole thing.
 I put in validation checks that throw errors if something violates my assumptions
@@ -504,7 +500,7 @@ I'll save converting the posts to markdown for the <a href="/posts/2021/webeasti
 
     <footer class="footer">
       <section class="container">
-        © 2023 Kevin Bonham · Powered by
+        © 2024 Kevin Bonham · Powered by
   <a href="https://franklin.jl">Franklin.jl</a> &
   <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
       </section>
