@@ -16,16 +16,17 @@ projectdir = normpath(pwd(), "_assets/literate/webeasties/")
 isdir(projectdir) || mkpath(projectdir)
 
 ## for p in 0:7
-for p in 0:0
+let p = 0
     tmp = download(baseurl*string(p))
-    for line in eachline(tmp)
+    ## for line in eachline(tmp)
+    for line in first(eachline(tmp), 5)
         for m in eachmatch(r"href=\"(/webeasties[\w/\-]+)\"", line)
            push!(posturls, m[1])
         end
     end
 end
 
-first(posturls, 5)
+posturls
 
 #-
 

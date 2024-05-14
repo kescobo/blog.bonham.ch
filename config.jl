@@ -25,14 +25,14 @@ tw_descr = meta_descr
 # Layout
 
 footer_notice = """
-  © 2023 $author · Powered by
+  © 2024 $author · Powered by
     <a href="https://franklin.jl">Franklin.jl</a> &
     <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>."""
 
 nav_items = [
   "About" => "/about/",
   "Blog"  => "/posts/",
-  "We, Beasties"  => "/webeasties/",
+  "We, Beasties"  => "https://github.com/kescobo/blog.bonham.ch/tree/main/webeasties",
   "Contact me" => "/contact/"
 ]
 
@@ -55,6 +55,7 @@ social_twitter  = "https://twitter.com/kevbonham/"
 social_orcid    = "https://orcid.org/0000-0003-3200-7533"
 social_mastodon = "https://www.scicomm.xyz/@kbonham"
 social_linkedin = "https://www.linkedin.com/in/kevin-bonham-6a10b566/"
+social_bluesky  = "https://bsky.app/profile/kevbonham.bsky.social"
 rss_link        = "https://blog.bonham.ch/feed"
 
 # other

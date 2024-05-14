@@ -249,5 +249,5 @@ end
 
 md"""
 And that's it!
-You can now see the [archive here](/webeasties)
+You can now see the [archive here](https://github.com/kescobo/blog.bonham.ch/tree/main/webeasties)
 """
