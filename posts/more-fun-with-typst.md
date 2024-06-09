@@ -1,7 +1,7 @@
 +++
 using Dates
 title = "More Fun with Typst - Building a CV"
-date = Date(2024, 5, 13)
+date = Date(2024, 6, 10)
 +++
 
 I'm so predictable. 
@@ -40,5 +40,97 @@ the pdfs using CI machinery on gitlab. Fun!
 
 ## The Basics
 
-Typst is a markup language, which means you can get some stlying
-from 
+As I mentioned in the last post, typst is in part a markup language,
+so you can get a lot of basic formatting using symbols,
+eg
+
+```typst
+= This is a header
+
+*This will be bold*, while _this will be italic_,
+
+- and bulleted
+- lists are easy
+
+So are numbered lists:
+
++ thing 1
++ thing 2
+
+== This is a level 2 header!
+
+More text
+with semantic line breaks.
+```
+
+You'll want to run through the [tutorial][typst-tutorial]
+to go through all the basics - it's quite well done -
+but I'll just highlight a couple of things
+that will be relevant to this post and took me a while to fully grok.
+
+### The differences between `set` and `show`
+
+There are two ways to change the way that things are displayed,
+and it took me a while to build the intuition about which one should be used when.
+
+#### Using `set`
+
+The `set` function I think of as changing the defaults of some other function.
+So for example, you might use `box` to put highlights around some text.
+
+```typst
+This text: #box(fill: yellow)[is highlighted!]
+```
+
+This results in:
+
+![](/assets/img/typst-highlight.avif)
+
+In this code, we call the function `box()`
+with the keyword argument `fill` set to `yellow`.
+In "content" mode
+(which is all of the document unless otherwise specified),
+we call functions or place variables with `#`.
+
+If I plan to be doing this a lot,
+I can use `set` to make the `fill` argument default `yellow`.
+In other words,
+
+```typst
+#set box(fill: yellow)
+
+Some more #box([highlighted]) text #box([here!]).
+
+But I can still #box(fill: blue)[use other] colors
+or #box(fill: none)[no color] if #box()[I want to].
+```
+
+![](/assets/img/typst-highlight2.avif)
+
+Notice that this does not hold me to yellow - it just changes the default.
+In this case, the default `fill` was `none`,
+and I can always get that back by making it explicit.
+
+#### Using #show
+
+The `show` function is used to replace the way something is rendered.
+I pointed to this in my last post,
+but you can do things like
+
+```typst
+#show "awesome": box(fill: red, outset: 2pt)[💃 Awesome! 💃]
+
+Look at this awesome text.
+
+Every time I type awesome
+```
+
+![](/assets/img/typst-show.avif)
+
+
+#### What's confusing (at least for me)
+
+One thing that I found confusing is that sometimes you use `set`
+to change the defaults of things
+
+[typst-tutorial]: https://typst.app/docs/tutorial/
