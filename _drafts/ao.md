@@ -239,6 +239,6 @@ and 15 extremely far-right decisions that were 6-3 and 5-4.
   In this example, it could be that we're looking at climate variation, where differences in latitute
   are much more consequential than differences in longitude.
   But in general, you should start with the idea of absolute scaling, and be able to justify a difference.
-[^pcsvsvd]: For a mathy explanation of their relationship, see here: https://math.stackexchange.com/questions/3869/what-is-the-intuitive-relationship-between-svd-and-pca
+[^pcavsvd]: For a mathy explanation of their relationship, see here: https://math.stackexchange.com/questions/3869/what-is-the-intuitive-relationship-between-svd-and-pca
   I wasn't able to find a good lay person explanation, but hopefulle you can see from
   the initial plot that they're basically identical.
