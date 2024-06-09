@@ -120,14 +120,9 @@
       <div class="date">
         <span class="posted-on">
           <i class="fa fa-calendar" aria-hidden="true"></i>
-          <time datetime='2024-05-13'>
-            May 13, 2024
+          <time datetime='2024-06-10'>
+            June 10, 2024
           </time>
-        </span>
-        
-        <span class="date-modified">
-          <i class="fa fa-pencil" aria-hidden="true"></i>
-          Modified: May 14, 2024
         </span>
         
         
@@ -173,8 +168,74 @@ the pdfs using CI machinery on gitlab. Fun!</p>
 <h2 id="the_basics" > The Basics<a class="heading-link" href="#the_basics">
   <i class="fa fa-link" aria-hidden="true"></i>
 </a>
-</h2><p>Typst is a markup language, which means you can get some stlying
-from </p>
+</h2><p>As I mentioned in the last post, typst is in part a markup language,
+so you can get a lot of basic formatting using symbols,
+eg</p>
+<pre><code class="typst">= This is a header
+
+*This will be bold*, while _this will be italic_,
+
+- and bulleted
+- lists are easy
+
+So are numbered lists:
+
++ thing 1
++ thing 2
+
+== This is a level 2 header!
+
+More text
+with semantic line breaks.</code></pre>
+<p>You'll want to run through the <a href="https://typst.app/docs/tutorial/">tutorial</a>
+to go through all the basics - it's quite well done -
+but I'll just highlight a couple of things
+that will be relevant to this post and took me a while to fully grok.</p>
+<h3 id="the_differences_between_set_and_show" > The differences between <code>set</code> and <code>show</code><a class="heading-link" href="#the_differences_between_set_and_show">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h3><p>There are two ways to change the way that things are displayed,
+and it took me a while to build the intuition about which one should be used when.</p>
+<h4 id="using_set" > Using <code>set</code><a class="heading-link" href="#using_set">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h4><p>The <code>set</code> function I think of as changing the defaults of some other function.
+So for example, you might use <code>box</code> to put highlights around some text.</p>
+<pre><code class="typst">This text: #box(fill: yellow)[is highlighted!]</code></pre>
+<p>This results in:</p>
+<img src="/blog.bonham.ch/previews/PR6/assets/img/typst-highlight.avif"><p>In this code, we call the function <code>box()</code>
+with the keyword argument <code>fill</code> set to <code>yellow</code>.
+In "content" mode
+(which is all of the document unless otherwise specified),
+we call functions or place variables with <code>#</code>.</p>
+<p>If I plan to be doing this a lot,
+I can use <code>set</code> to make the <code>fill</code> argument default <code>yellow</code>.
+In other words,</p>
+<pre><code class="typst">#set box(fill: yellow)
+
+Some more #box([highlighted]) text #box([here!]).
+
+But I can still #box(fill: blue)[use other] colors
+or #box(fill: none)[no color] if #box()[I want to].</code></pre>
+<img src="/blog.bonham.ch/previews/PR6/assets/img/typst-highlight2.avif"><p>Notice that this does not hold me to yellow - it just changes the default.
+In this case, the default <code>fill</code> was <code>none</code>,
+and I can always get that back by making it explicit.</p>
+<h4 id="using_#show" > Using #show<a class="heading-link" href="#using_#show">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h4><p>The <code>show</code> function is used to replace the way something is rendered.
+I pointed to this in my last post,
+but you can do things like</p>
+<pre><code class="typst">#show &quot;awesome&quot;: box(fill: red, outset: 2pt)[💃 Awesome! 💃]
+
+Look at this awesome text.
+
+Every time I type awesome</code></pre>
+<img src="/blog.bonham.ch/previews/PR6/assets/img/typst-show.avif"><h4 id="what's_confusing_(at_least_for_me)" > What's confusing (at least for me)<a class="heading-link" href="#what's_confusing_(at_least_for_me)">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h4><p>One thing that I found confusing is that sometimes you use <code>set</code>
+to change the defaults of things</p>
 
 
       </section>
