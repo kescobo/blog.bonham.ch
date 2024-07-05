@@ -127,10 +127,81 @@ Every time I type awesome
 
 ![](/assets/img/typst-show.avif)
 
+So this seems fairly straightforward - use `set` to change functions
+and `show` to change the way things look, right?
+
+Well...
 
 #### What's confusing (at least for me)
 
-One thing that I found confusing is that sometimes you use `set`
-to change the defaults of things
+One thing that I found confusing is that often you use `set`
+to change the way things look.
+One example - you use `#set text(font: "Liberation Sans")` to change the font.
+
+Another example from the [tutorial][typst-tutorial] shows the following:
+
+```typst
+#set heading(numbering: "1.")
+
+= Introduction
+#lorem(10)
+
+== Background
+#lorem(12)
+
+== Methods
+#lorem(15)
+```
+
+to get
+
+![](/assets/img/typst_set1.png)
+
+or
+
+```typst
+#set heading(numbering: "1.a")
+
+= Introduction
+#lorem(10)
+
+== Background
+#lorem(12)
+
+== Methods
+#lorem(15)
+```
+
+to get
+
+![](/assets/img/typst_set2.png)
+
+So... `set` here is changing the way stuff is shown - what gives?
+
+The key here is that, even things that are written using the markup language
+are actually calling functions.
+In other words, the text above is like
+
+```typst
+#heading(level: 1)[Introduction]
+
+#text()[#lorem(10)]
+
+#heading(level: 2)[Background]
+
+#text()[#lorem(12)]
+```
+
+etc... So we're using `set` to change the default of the *functions* that are called by the markup.
+But I don't have a strong handle on what is implicitly calling functions,
+so it's still a bit hard to reason about (eg here, there's also calls to `#page`, `#par` etc).
+
+So mostly I just look for examples, either in my previous code,
+in the tutorial, or in this [really excellent resource][typst-book].
+
+## Writing a function / template
+
+
 
 [typst-tutorial]: https://typst.app/docs/tutorial/
+[typst-book]: https://sitandr.github.io/typst-examples-book/book/
