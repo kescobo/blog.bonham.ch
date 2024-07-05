@@ -125,6 +125,11 @@
           </time>
         </span>
         
+        <span class="date-modified">
+          <i class="fa fa-pencil" aria-hidden="true"></i>
+          Modified: July 5, 2024
+        </span>
+        
         
       </div>
     
@@ -231,12 +236,59 @@ but you can do things like</p>
 Look at this awesome text.
 
 Every time I type awesome</code></pre>
-<img src="/blog.bonham.ch/previews/PR6/assets/img/typst-show.avif"><h4 id="what's_confusing_(at_least_for_me)" > What's confusing (at least for me)<a class="heading-link" href="#what's_confusing_(at_least_for_me)">
+<img src="/blog.bonham.ch/previews/PR6/assets/img/typst-show.avif"><p>So this seems fairly straightforward - use <code>set</code> to change functions
+and <code>show</code> to change the way things look, right?</p>
+<p>Well...</p>
+<h4 id="what's_confusing_(at_least_for_me)" > What's confusing (at least for me)<a class="heading-link" href="#what's_confusing_(at_least_for_me)">
   <i class="fa fa-link" aria-hidden="true"></i>
 </a>
-</h4><p>One thing that I found confusing is that sometimes you use <code>set</code>
-to change the defaults of things</p>
+</h4><p>One thing that I found confusing is that often you use <code>set</code>
+to change the way things look.
+One example - you use <code>#set text(font: &quot;Liberation Sans&quot;)</code> to change the font.</p>
+<p>Another example from the <a href="https://typst.app/docs/tutorial/">tutorial</a> shows the following:</p>
+<pre><code class="typst">#set heading(numbering: &quot;1.&quot;)
 
+= Introduction
+#lorem(10)
+
+== Background
+#lorem(12)
+
+== Methods
+#lorem(15)</code></pre>
+<p>to get</p>
+<img src="/blog.bonham.ch/previews/PR6/assets/img/typst_set1.png"><p>or</p>
+<pre><code class="typst">#set heading(numbering: &quot;1.a&quot;)
+
+= Introduction
+#lorem(10)
+
+== Background
+#lorem(12)
+
+== Methods
+#lorem(15)</code></pre>
+<p>to get</p>
+<img src="/blog.bonham.ch/previews/PR6/assets/img/typst_set2.png"><p>So... <code>set</code> here is changing the way stuff is shown - what gives?</p>
+<p>The key here is that, even things that are written using the markup language
+are actually calling functions.
+In other words, the text above is like</p>
+<pre><code class="typst">#heading(level: 1)[Introduction]
+
+#text()[#lorem(10)]
+
+#heading(level: 2)[Background]
+
+#text()[#lorem(12)]</code></pre>
+<p>etc... So we're using <code>set</code> to change the default of the <em>functions</em> that are called by the markup.
+But I don't have a strong handle on what is implicitly calling functions,
+so it's still a bit hard to reason about (eg here, there's also calls to <code>#page</code>, <code>#par</code> etc).</p>
+<p>So mostly I just look for examples, either in my previous code,
+in the tutorial, or in this <a href="https://sitandr.github.io/typst-examples-book/book/">really excellent resource</a>.</p>
+<h2 id="writing_a_function_/_template" > Writing a function / template<a class="heading-link" href="#writing_a_function_/_template">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h2>
 
       </section>
     </div>
