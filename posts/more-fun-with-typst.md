@@ -200,34 +200,46 @@ So mostly I just look for examples, either in my previous code,
 in the tutorial, or in this [really excellent resource][typst-book].
 
 ## Writing the CV
+I previously had a CV using the lovely "clean CV" [ template ][cleancv],
+which I [ had modified ][latexcv] a bit using the [ CV builder template ][cvoverleaf] from overleaf[^overleaf],
+and I am largely trying to replicate that style.
+
 The first thing to do is to set some parameters
 to make things look nice, and write up the front matter saying who I am.
 
 ```typst
-// set some variables that I can use later
-#let name = "Kevin Bonham, PhD",
-#let title = "Senior Research Scientist",
-#let email = "blog@bonham.ch",
-#let addr = "Waltham, MA",
-#let phone = "555.555.5555",
-#let orcid = "0000-0002-1825-0097",
-#let github = "kescobo",
-#let url = "https://blog.bonham.ch",
+#import "includes/fontawesome.typ": *
 
-// shrink the margin, and set paper (I think this is default, but...)
-#set page(margin: 0.8in, paper="us-letter")
-#set text(font: "Liberation Sans", align: center)
+#let name = "Kevin Bonham, PhD"
+#let title = "Senior Research Scientist"
+#let email = "blog@bonham.ch"
+#let addr = "Waltham, MA"
+#let phone = "555.555.5555"
+#let orcid = "0000-0002-1825-0097"
+#let github = "kescobo"
+#let url = "https://blog.bonham.ch"
 
+// shrink the margin, and set paper size
+#set page(margin: 0.8in, paper:"us-letter")
+// The original template uses a serif font, but I prefer sans serif
+#set text(font: "Liberation Sans")
+
+// put name and title centered and large
+#set align(center)
 #text(20pt, weight: "bold", name)
 #linebreak()
 #text(12pt, title)
 
+//use small text for the contact info
 #set text(8pt)
+#set align(left)
 
+// Use a grid to place contact info - things like `#phone` refer to
+// the variables set at the top
 #grid(
     columns: (2fr, 2fr, 1fr),
     gutter: 10pt,
-    [#fa-phone() #phone],
+    [#fa-phone() #phone], // these icons come from the fontawesome package
     [#fa-envelope() #email],
     [#fa-house() #addr],
     [#fa-orcid() #orcid], 
@@ -237,8 +249,20 @@ to make things look nice, and write up the front matter saying who I am.
 
 #set text(10pt)
 
-
 ```
+
+![](/assets/img/typst_cv1.png)
+
+Cool.
+Next, I wanted to have a 
+
+---
+
+[^overleaf]: If you find yourself needing to write latex and you don't know what you're doing,
+           the tutorials on Overleaf are really excellent
 
 [typst-tutorial]: https://typst.app/docs/tutorial/
 [typst-book]: https://sitandr.github.io/typst-examples-book/book/
+[cleancv]: https://www.overleaf.com/latex/templates/clean-cv-template/qqwnkbrspbtr
+[latexcv]: https://gitlab.com/kescobo/cv
+[cvoverleaf]: https://www.overleaf.com/learn/latex/How_to_write_a_LaTeX_class_file_and_design_your_own_CV_(Part_2)
