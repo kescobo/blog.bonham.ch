@@ -199,9 +199,46 @@ so it's still a bit hard to reason about (eg here, there's also calls to `#page`
 So mostly I just look for examples, either in my previous code,
 in the tutorial, or in this [really excellent resource][typst-book].
 
-## Writing a function / template
+## Writing the CV
+The first thing to do is to set some parameters
+to make things look nice, and write up the front matter saying who I am.
+
+```typst
+// set some variables that I can use later
+#let name = "Kevin Bonham, PhD",
+#let title = "Senior Research Scientist",
+#let email = "blog@bonham.ch",
+#let addr = "Waltham, MA",
+#let phone = "555.555.5555",
+#let orcid = "0000-0002-1825-0097",
+#let github = "kescobo",
+#let url = "https://blog.bonham.ch",
+
+// shrink the margin, and set paper (I think this is default, but...)
+#set page(margin: 0.8in, paper="us-letter")
+#set text(font: "Liberation Sans", align: center)
+
+#text(20pt, weight: "bold", name)
+#linebreak()
+#text(12pt, title)
+
+#set text(8pt)
+
+#grid(
+    columns: (2fr, 2fr, 1fr),
+    gutter: 10pt,
+    [#fa-phone() #phone],
+    [#fa-envelope() #email],
+    [#fa-house() #addr],
+    [#fa-orcid() #orcid], 
+    [#fa-github() #github],
+    [#fa-globe() #url]
+)
+
+#set text(10pt)
 
 
+```
 
 [typst-tutorial]: https://typst.app/docs/tutorial/
 [typst-book]: https://sitandr.github.io/typst-examples-book/book/
