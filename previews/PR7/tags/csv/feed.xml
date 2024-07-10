@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:media="http://search.yahoo.com/mrss/"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:georss="http://www.georss.org/georss">
+  <channel>
+    <title>
+      <![CDATA[  <span style="color:red;">[FAILED:]&gt;&lbrace;&lbrace; website_title&rbrace;&rbrace;&lt;</span>  ]]>
+    </title>
+    <link> http://blog.bonham.ch/ </link>
+    <description>
+      <![CDATA[  <span style="color:red;">[FAILED:]&gt;&lbrace;&lbrace; website_description&rbrace;&rbrace;&lt;</span>  ]]>
+    </description>
+
+<item>
+  <title>
+    <![CDATA[  Speeding up loading of HUMAnN gene-families tables using Arrow.jl + Tables.jl  ]]>
+  </title>
+  <link> http://blog.bonham.chposts/genefamilies-speedup/index.html </link>
+  <guid> http://blog.bonham.chposts/genefamilies-speedup/index.html </guid>
+  <description>
+    <![CDATA[  Massive speedup for something I need to do all the time  ]]>
+  </description>
+  <atom:author>
+    <atom:name>Kevin Bonham</atom:name>
+  </atom:author>
+</item>
+</channel></rss>
