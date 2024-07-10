@@ -35,6 +35,8 @@
   <meta name="generator" content="Franklin.jl" />
 
   
+    <link rel="stylesheet" href="/previews/PR6/libs/katex/katex.min.css">
+  
 
   
     <link rel="stylesheet" href="/previews/PR6/libs/highlight/atom-one-dark.css">
@@ -118,8 +120,8 @@
       <div class="date">
         <span class="posted-on">
           <i class="fa fa-calendar" aria-hidden="true"></i>
-          <time datetime='2024-07-01'>
-            July 1, 2024
+          <time datetime='2022-10-31'>
+            October 31, 2022
           </time>
         </span>
         
@@ -145,12 +147,244 @@
        
        
        
-<p>This is a post preview.</p>
-<pre><code class="julia-repl"><span class="sgr32"><span class="sgr1">julia&gt;</span></span> julia&gt; println(&quot;Hello, world!&quot;)
-ERROR: UndefVarError: `julia` not defined
-Stacktrace:
-</code></pre>
-<p>How does that work?</p>
+<p>It's that season again!
+No, I'm not talking about the High Holy Days,
+Halloween, or Thanksgiving...
+It tenure-track faculty application time!</p>
+<p>I have recently been playing around with \(\LaTeX\),
+the type-setting engine, and I've hit upon a pretty sweet workflow
+for writing application materials using it
+along with git,
+enabling me to write one "generic" or template version,
+then tweaking or filling in place-holders for specific positions.</p>
+<p>Let me show you!</p>
+<h2 id="motivation" > Motivation<a class="heading-link" href="#motivation">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h2><p>To grasp the benefits of the new system, it might be worth
+describing my previous workflow and its limitations.
+My previous workflow was as follows:</p>
+<ol>
+<li>Make a google doc for each application component
+   (Eg. Cover letter, Research statement, Teaching statement, Statement on diversity and inclusion).
+   I would include places where I'd want to insert job-specific information,
+   like</li>
+</ol>
+<blockquote><p>In my independent lab at <strong>INSTITUTION</strong>, I will...</p>
+</blockquote><p>   or</p>
+<blockquote><p>Dear XXX and members of the search committee, ...</p>
+</blockquote><ol start="2">
+<li>For each job app, make a copy of each document,
+   and rename it to eg "Northeastern - Cover Letter" from "Cover Letter".</li>
+<li>Change all generic placeholders to specific ones, eg.</li>
+</ol>
+<blockquote><p>In my independent lab at Northeastern, I will...</p>
+</blockquote><ol start="4">
+<li>Add any job-specific flavor. For example,
+   If I'm applying to a job at HMS, I'll mention in the cover letter
+   that it's where I did my PhD, and maybe do some name-dropping.
+   Or when applying to a place that has a great teaching and learning center
+   (like <a href="https://learning.northeastern.edu">Northeastern's CATLR</a> or <a href="https://bokcenter.harvard.edu/">Harvard's Bok Center</a>),
+   I'll add some stuff about working with them to my teaching statement.</li>
+<li>When I'm ready to apply, click through each document, and download it.</li>
+</ol>
+<p>There are several limitations to this approach,
+here's just a smattering:</p>
+<ul>
+<li>Tons of duplication; I applied for ~13 positions this year,
+  and each one has at least 4 documents, meaning that I have over 50 documents from this year alone.
+  ... and I am probably on the low end of total applications</li>
+<li>All the pointing and clicking is tedious.
+  Making copies, opening the documents, changing document names, downloading, etc.
+  Doing this a few times would be bearable but 50 times?</li>
+<li>Nothing is scriptable; if I find a typo after I've made copies and want to change it,
+  it means copying, clicking through ~13 documents, finding the right place, and pasting.
+  The opportunities for missing things or screwing them up is extensive.</li>
+</ul>
+<p>This last is particularly painful if,
+after I've made all of my copies, as I'm working on one of the specific apps,
+I find something I want to change, even just a typo.
+It means going back to the template and every copy I've made manually.
+Sometimes the documents have already undergone a bunch of revision,
+so even finding where the problem is, or knowing how persistent the type was
+can be a challenge.</p>
+<h3 id="what_i_wanted" > What I wanted<a class="heading-link" href="#what_i_wanted">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h3><p>So, what I wanted was something that</p>
+<ol>
+<li>has a single master version of each document</li>
+<li>is easy to propagate changes from any version and regenerate outputs</li>
+<li>doesn't have dozens of versions floating around in different folders</li>
+</ol>
+<h2 id="latex_workflow_and_templates" > LaTeX Workflow and templates<a class="heading-link" href="#latex_workflow_and_templates">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h2><p>First, a disclaimer about what this post <strong>isn't</strong>:</p>
+<ol>
+<li>An introduction to <code>git</code> - if you're not familiar with it,
+   maybe this can be your motivation to learn! It's worth it!
+   And there are a ton of good resources about it online already.</li>
+<li>An introduction to \(\LaTeX\) - frankly, you wouldn't want me to try to teach it,
+   I've mostly cobbled together what little I know from looking at <a href="https://www.overleaf.com/learn">Overleaf Documentation</a>
+   and the <a href="https://tex.stackexchange.com">TeX Stack Exchange</a>.
+   I do provide <a href="https://github.com/kescobo/ac_job_templates">some templates</a> to get you started.
+   In case it helps, I'm using the LaTeX workbench extension of VS Code
+   on Ubuntu and installed LaTeX with <code>sudo apt install texlive-full</code>,
+   but you'll want to look up install instructions for your own OS.</li>
+<li>Advice on how to apply for academic positions or what to put
+   in your cover letter / CV / research statement etc.
+   I haven't landed an academic job yet,
+   so you wouldn't want to trust my advice on this anyway.</li>
+</ol>
+<h3 id="generic_files_with_placeholders" > Generic files with placeholders<a class="heading-link" href="#generic_files_with_placeholders">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h3><p>Write your materials as you normally would,
+except for the following:</p>
+<ol>
+<li>Use <a href="https://sembr.org">semantic line breaks</a>.</li>
+<li>Put anything that will likely change for your different apps
+   on their own line</li>
+</ol>
+<h4 id="semantic_line_breaks" > Semantic line breaks<a class="heading-link" href="#semantic_line_breaks">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h4><p>Semantic line breaks (sembr) can take a little getting used to,
+but they make version control on plain text documents
+much more powerful.
+The basic idea is that, in file formats like markdown and TeX,
+newlines are treated the same as spaces
+in the rendered text.
+For example, this paragraph looks like this
+in the source code:</p>
+<pre><code class="md">Semantic line breaks (sembr) can take a little getting used to,
+but they make version control on plain text documents
+much more powerful.
+The basic idea is that, in file formats like markdown and TeX,
+newlines are treated the same as spaces
+in the rendered text.
+For example, this paragraph looks like this
+in the source code:</code></pre>
+<p>This explains a bit about how,
+but you may be wondering <em>why?</em>.
+The reason is that git version control works
+on a line-by-line basis,
+so if you end up making a change,
+it's much clearer to have this diff:</p>
+<img src="/previews/PR6/assets/img/good_diff.png" alt="A code diff showing a change to a short line of text"><p>rather than this one:</p>
+<img src="/previews/PR6/assets/img/bad_diff.png" alt="A code diff showing a small change to a long line of text"><p>It will also make it easier to make corrections
+and changes to one version and propagate them to other versions
+as we will see.</p>
+<h4 id="separate_lines_for_placeholders" > Separate lines for placeholders<a class="heading-link" href="#separate_lines_for_placeholders">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h4><p>The exact same logic applies to placeholders
+(eg. "...at INSTITUTION" to "...at Northeastern");
+since you <em>know</em> you're going to change these bits,
+keep them on separate lines to keep the diffs nice.</p>
+<p>But it also keeps your app-specific changes
+separate from any other changes
+that you might make,
+which makes it easy to merge those changes
+without conflicts.</p>
+<pre><code class="latex">For example,
+suppose I have the following text about
+\hl&lbrace;INTITUTION&rbrace;
+that has a typoo on the last line.</code></pre>
+<p>Suppose I go though and change <code>\hl&lbrace;INSTITUTION&rbrace;</code>
+to <code>Northeastern</code> in one of my applications,
+then, as I'm editing my <code>Harvard</code> application,
+I notice the typo.
+I can go fix the typo on my <code>main</code> branch,
+then merge the fix for that line into my other branches
+without conflicting with any of the other changes.</p>
+<p>Don't worry, I'll show how to do this in a bit.</p>
+<h3 id="use_separate_branches_for_specific_applications" > Use separate branches for specific applications<a class="heading-link" href="#use_separate_branches_for_specific_applications">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h3><p>Once you have your individual generic documents ready,
+it's time to customize them for your specific applications.
+Rather than making copies of the files,
+use <code>git</code> <strong>branches</strong>.</p>
+<p>For example:</p>
+<pre><code class="sh">❯ git checkout -b umass-ex # University of Massachusetts, Example
+# make changes to `research.tex` and save them
+❯ git commit -am &quot;update research statement&quot;
+# make changes to `teaching.tex`
+❯ git commit -am &quot;update teaching statement&quot;</code></pre>
+<p>If you notice a typo that you want to fix,
+commit everything you have, then</p>
+<pre><code class="sh">❯ git checkout main # this might be `master` instead of `main`
+# fix the typo
+❯ git commit -am &quot;fix typo&quot;
+❯ git checkout umass-ex
+❯ git merge main</code></pre>
+<p>If you have other branches, you can just check them out
+and merge there as well.</p>
+<h4 id="cherry_picking_(advanced)" > <code>cherry-pick</code>ing (advanced)<a class="heading-link" href="#cherry_picking_(advanced)">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h4><p>Sometimes, I don't want to break up my writing flow
+by dealing with all of this branch changes.
+Instead, you can wait and then use <code>git cherry-pick</code> to grab
+a single commit from your app-specific branch onto <code>main</code>.
+That is, on the <code>umass-ex</code> branch:</p>
+<pre><code class="sh">❯ git commit -am &quot;update research statement&quot;
+# fix a typo
+❯ git commit -am &quot;fix apostrophe&quot;
+# keep working on research
+❯ git commit -am &quot;more substitutions on research statement&quot;
+# work on teaching
+❯ git commit -am &quot;update teaching statement&quot;
+# now ready to update `main` branch
+❯ git log --oneline</code></pre>
+<img src="/previews/PR6/assets/img/gitlog_hash.png" alt="snippet of output from <code>git log --oneline</code>"><p>Running <code>git log --oneline</code> will give you a list of commits
+with your commit messages in reverse order
+(see why having descriptive messages is nice?)
+and the <strong>commit hash</strong> which you can use to refer to each commit.</p>
+<p>Now, to get <em>just that one change</em> back on to your main branch
+(or any others),
+just check the branch out and do <code>git cherry-pick</code>:</p>
+<pre><code class="sh">❯ git checkout main
+❯ git cherry-pick 11aa748</code></pre>
+<p>Now, if you've been using semantic line breaks,
+and assuming you haven't previously made changes to the same line,
+your <code>main</code> branch should be updated! Magic!</p>
+<h3 id="export" > Export<a class="heading-link" href="#export">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h3><p>This was the place that felt like the most time was saved.
+Clicking through <code>file -&gt; Download As -&gt; pdf</code> on
+each document was so tedious,
+especially as, if you're anything like me,
+you'll have to do this 10 times per document as you notice more and more typos.</p>
+<p>Because the name of your current git branch can be identified
+with the command <code>git rev-parse --abbrev-ref HEAD</code>,
+you can simply checkout each branch and make a copy of each <code>.pdf</code>
+with the branch name attached.</p>
+<p>I <a href="https://fishshell.com">use <code>fish</code></a>, which has a slightly different syntax
+than the shell you might be familiar with,
+but the following makes a copy of each pdf into my <code>~/Downloads</code> directory
+with the name of the git branch prepended (eg <code>umass-ex-research.pdf</code>):</p>
+<pre><code class="julia">for f in (ls jobapps/*.pdf)
+    cp $f ~/Downloads/(git rev-parse --abbrev-ref HEAD)-(basename $f)
+end</code></pre>
+<p>The same thing in a POSIX shell like bash or zsh is something like this:</p>
+<pre><code class="bash">for f in $(ls jobapps/*.pdf); do
+    cp $f ~/Downloads/$(git rev-parse --abbrev-ref HEAD)-$(basename &quot;$f&quot;)
+done</code></pre>
+<h2 id="conclusion" > Conclusion<a class="heading-link" href="#conclusion">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h2><p>I'm not sure if this would save you a ton of time
+if you haven't already been working on learning LaTeX for other reasons.
+But as I have been, it was a good learning experience and (I think)
+ultimately <em>did</em> save me a bunch of time.</p>
+<p>If you want to play around with it,
+you can use this <a href="https://github.com/kescobo/ac_job_templates">demo repo</a> that I set up
+to give it a whirl.
+Have fun!</p>
 
 
       </section>
@@ -166,6 +400,10 @@ Stacktrace:
 
   </main>
 
+  
+    <script src="/previews/PR6/libs/katex/katex.min.js"></script>
+    <script src="/previews/PR6/libs/katex/auto-render.min.js"></script>
+    <script>renderMathInElement(document.body)</script>
   
 
   
