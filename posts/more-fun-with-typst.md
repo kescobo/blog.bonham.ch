@@ -44,7 +44,7 @@ As I mentioned in the last post, typst is in part a markup language,
 so you can get a lot of basic formatting using symbols,
 eg
 
-```typst
+```javascript
 = This is a header
 
 *This will be bold*, while _this will be italic_,
@@ -78,7 +78,7 @@ and it took me a while to build the intuition about which one should be used whe
 The `set` function I think of as changing the defaults of some other function.
 So for example, you might use `box` to put highlights around some text.
 
-```typst
+```javascript
 This text: #box(fill: yellow)[is highlighted!]
 ```
 
@@ -96,7 +96,7 @@ If I plan to be doing this a lot,
 I can use `set` to make the `fill` argument default `yellow`.
 In other words,
 
-```typst
+```javascript
 #set box(fill: yellow)
 
 Some more #box([highlighted]) text #box([here!]).
@@ -117,7 +117,7 @@ The `show` function is used to replace the way something is rendered.
 I pointed to this in my last post,
 but you can do things like
 
-```typst
+```javascript
 #show "awesome": box(fill: red, outset: 2pt)[💃 Awesome! 💃]
 
 Look at this awesome text.
@@ -140,7 +140,7 @@ One example - you use `#set text(font: "Liberation Sans")` to change the font.
 
 Another example from the [tutorial][typst-tutorial] shows the following:
 
-```typst
+```javascript
 #set heading(numbering: "1.")
 
 = Introduction
@@ -159,7 +159,7 @@ to get
 
 or
 
-```typst
+```javascript
 #set heading(numbering: "1.a")
 
 = Introduction
@@ -182,7 +182,7 @@ The key here is that, even things that are written using the markup language
 are actually calling functions.
 In other words, the text above is like
 
-```typst
+```javascript
 #heading(level: 1)[Introduction]
 
 #text()[#lorem(10)]
@@ -207,7 +207,7 @@ and I am largely trying to replicate that style.
 The first thing to do is to set some parameters
 to make things look nice, and write up the front matter saying who I am.
 
-```typst
+```javascript
 #import "includes/fontawesome.typ": *
 
 #let name = "Kevin Bonham, PhD"
@@ -251,12 +251,192 @@ to make things look nice, and write up the front matter saying who I am.
 
 ```
 
-![](/assets/img/typst_cv1.png)
+![](/assets/img/typst_cv1.avif)
 
 Cool.
-Next, I wanted to have a 
+Next, since I want to have a bunch of headers that display a date on the right hand side
+with some different formatting, I made a function that takes a date, a header level, and text, like so:
 
----
+```javascript
+#let datedheader(
+    date: none,
+    level: 2, // can use different header levels
+    leftcol: 2fr, // fr is "fraction" - this arg sets the proportion of the line the text uses
+    content
+    ) = {
+    grid(
+        columns: (leftcol, 1fr),
+        gutter: 10pt, // this could be a parameter too, but 10 looks nice I think
+        align(left)[
+            #heading(level: level, content)
+        ],
+        align(right)[
+            #heading(level: level, date)
+        ]
+    )
+    v(-5pt) // remove some vertical space
+}
+```
+
+With this I can now do, eg
+
+```javascript
+#datedheader(date: "2006")[Impressive accomplishment]
+
+Some text here
+
+#datedheader(date: "2008", level:3)[This is a smaller line]
+
+Other accomplishment.
+```
+
+![](/assets/img/typst_cv2.avif)
+
+The last major component is adding in my papers.
+This part was a bit tricky at first, because I was trying to use
+typst's native [ bibliography support][bibliography].
+Unfortunately, typst doesn't currently have support for multiple bibliographies,
+and I wanted to so some things like filtering on certain tags,
+or adding some text at the beginning if I was co-first author.
+So I ended up rolling my own function that would format citations
+from a YAML file.
+
+This one is a little complicated, so let's see what it's going to look like first.
+Here's a couple of references from my YAML bibliography:
+
+```YAML
+LaueProspectiveAssociationInfantGut2024:
+  type: article
+  parent:
+    - type: periodical
+      title: Molecular Autism (in press)
+  title:
+    value: Prospective Association of the Infant Gut Microbiome with Social Behaviors in the ECHO Consortium
+    sentence-case: Prospective association of the infant gut microbiome with social behaviors in the echo consortium
+  date: 2024
+  author:
+    - "Laue, Hannah E."
+    - "* Bonham, Kevin S."
+    - "Coker, Modupe O."
+    - "Moroishi, Yuka"
+    - "Pathmasiri, Wimal"
+    - "McRitchie, Susan"
+    - "Sumner, Susan"
+    - "Hoen, Anne G."
+    - "Karagas, Margaret R."
+    - "Klepac-Ceraj, Vanja"
+    - "Madan, Juliette C."
+  doi: 10.1186/s13229-024-00597-2
+  url: https://doi.org/10.1186/s13229-024-00597-2
+  tags:
+    - cofirst
+bonhamGutresidentMicroorganismsTheir2023:
+  type: article
+  title:
+    value: "Gut-resident microorganisms and their genes are associated with cognition and neuroanatomy in children"
+  author:
+  - Bonham, Kevin S.
+  - Bottino, Guilherme Fahur
+  - McCann, Shelley Hoeft
+  - Beauchemin, Jennifer
+  - Weisse, Elizabeth
+  - Barry, Fatoumata
+  - Lorente, Rosa Cano
+  - Consortium, The RESONANCE
+  - Huttenhower, Curtis
+  - Bruchhage, Muriel
+  - D'Sa, Viren
+  - Deoni, Sean
+  - Klepac-Ceraj, Vanja
+  date: 2023
+  page-range: eadi497
+  url: https://www.science.org/doi/abs/10.1126/sciadv.adi0497
+  doi: 10.1126/sciadv.adi0497
+  parent:
+    - type: periodical
+      title: Science Advances
+      issue: 51
+      volume: 9
+bonham-bbm2014:
+  parent:
+    - type: conference
+      title: Boston Bacterial Meeeting
+  type: misc
+  title:
+    value: Identifying horizontal transfer in cheese-associated bacteria
+  date: "2014"
+  author:
+    - "Bonham, Kevin S"
+    - "Wolfe, Benjamin E"
+    - "Dutton, Rachel J"
+  tags:
+    - poster
+```
+
+And I want this to look something like this:
+
+![](/assets/img/typst_cv3.avif)
+
+So I wrote this function - see the comments for explanation:
+
+```javascript
+// Format a bibliography from a YAML file.
+// Args:
+//   - file: string path to yaml file
+//   - entries: list of strings with cite keys. If empty, do everything.
+//   - tag: a string representing a tag. If not none, acts as a filter
+#let refs(file, entries: (), tag: none) = {
+    // if entries arg is an empty list (default), get all the keys in the yaml file
+    if entries.len() == 0 {
+        entries = yaml(file).keys()
+    }
+
+    for (entry, fields) in yaml(file) {
+        if entry not in entries {
+            continue
+        }
+        if not tag == none {
+            // if a tag argument exists and the entry doesn't have that tag, skip
+            if "tags" not in fields or tag not in fields.tags {
+                continue
+            }
+        }
+
+        // add asterisk if entry has "cofirst" tag
+        if "tags" in fields and "cofirst" in fields.tags {
+            [\* ]
+        }
+        // add a dagger if entry has "corresponding" tag
+        if "tags" in fields and "corresponding" in fields.tags {
+            [#sym.dagger ]
+        }
+
+        let auth_n = fields.author.len()
+        let auths = ()
+        // truncate author list if more than 4 entries
+        if auth_n > 4 {
+            auths = fields.author.slice(0, count:4)
+            [#auths.join(", ") _et. al._]
+        } else {
+            auths = fields.author
+            auths.join(", ", last: " and ")
+        }
+        // Now format the entries.
+        [, "#eval("[" + fields.title.value + "]")"]
+        [. #emph(fields.parent.at(0).title)]
+        [. (#fields.date)]
+        if "url" in fields and "doi" in fields {
+            [ doi: #link(fields.url, fields.doi)]
+        }
+        parbreak()
+    }
+}
+```
+
+## Conclusion
+And there you have it!
+If you want to see the full thing (ever evolving),
+check out [the repo][typstcv] if you want to see the whole thing.
 
 [^overleaf]: If you find yourself needing to write latex and you don't know what you're doing,
            the tutorials on Overleaf are really excellent
@@ -266,3 +446,6 @@ Next, I wanted to have a
 [cleancv]: https://www.overleaf.com/latex/templates/clean-cv-template/qqwnkbrspbtr
 [latexcv]: https://gitlab.com/kescobo/cv
 [cvoverleaf]: https://www.overleaf.com/learn/latex/How_to_write_a_LaTeX_class_file_and_design_your_own_CV_(Part_2)
+[bibliography]: https://typst.app/docs/reference/model/bibliography/
+[typstcv]: https://gitlab.com/kescobo/cv-typst
+
