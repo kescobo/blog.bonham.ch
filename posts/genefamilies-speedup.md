@@ -12,7 +12,7 @@ rss_title = title
 +++
 
 
-The human microbiome has on the order of 100-fold more genes [than the human genome][^microbe-genes]
+The human microbiome has on the order of 100-fold more genes than the human genome[^microbe-genes]
 than the human genome.
 We are able to get a window on this enormous functional potential
 using shotgun metagenomic sequencing,

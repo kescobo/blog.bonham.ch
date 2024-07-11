@@ -201,8 +201,10 @@ in the tutorial, or in this [really excellent resource][typst-book].
 
 ## Writing the CV
 I previously had a CV using the lovely "clean CV" [ template ][cleancv],
-which I [ had modified ][latexcv] a bit using the [ CV builder template ][cvoverleaf] from overleaf[^overleaf],
+which I [ had modified ][latexcv] a bit using the [ CV builder template ][cvoverleaf] from overleaf[^over-leaf],
 and I am largely trying to replicate that style.
+
+[^over-leaf]: If you find yourself needing to write latex and you don't know what you're doing, the tutorials on Overleaf are really excellent
 
 The first thing to do is to set some parameters
 to make things look nice, and write up the front matter saying who I am.
@@ -438,8 +440,6 @@ And there you have it!
 If you want to see the full thing (ever evolving),
 check out [the repo][typstcv] if you want to see the whole thing.
 
-[^overleaf]: If you find yourself needing to write latex and you don't know what you're doing,
-           the tutorials on Overleaf are really excellent
 
 [typst-tutorial]: https://typst.app/docs/tutorial/
 [typst-book]: https://sitandr.github.io/typst-examples-book/book/
