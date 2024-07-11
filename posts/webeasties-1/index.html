@@ -216,7 +216,34 @@ let p = 0
 end
 
 posturls</code></pre>
-<div class="code-output"><pre><code class="code-result language-plaintext">Set{String}()</code></pre></div><pre><code class="julia">length(posturls) # for the full set, this is 192</code></pre>
+<div class="code-output"><pre><code class="code-stderr language-plaintext">ERROR: RequestError: Operation too slow. Less than 1 bytes/sec transferred the last 20 seconds while requesting https://scienceblogs.com/author/kbonham?page=0
+Stacktrace:
+  [1] (::Downloads.var&quot;#9#18&quot;{IOStream, Base.DevNull, Nothing, Vector{Pair{String, String}}, Float64, Nothing, Bool, Nothing, Bool, String, Bool, Bool})(easy::Downloads.Curl.Easy)
+    @ Downloads /opt/hostedtoolcache/julia/1.10.4/x64/share/julia/stdlib/v1.10/Downloads/src/Downloads.jl:413
+  [2] with_handle(f::Downloads.var&quot;#9#18&quot;{IOStream, Base.DevNull, Nothing, Vector{Pair{String, String}}, Float64, Nothing, Bool, Nothing, Bool, String, Bool, Bool}, handle::Downloads.Curl.Easy)
+    @ Downloads.Curl /opt/hostedtoolcache/julia/1.10.4/x64/share/julia/stdlib/v1.10/Downloads/src/Curl/Curl.jl:95
+  [3] #8
+    @ /opt/hostedtoolcache/julia/1.10.4/x64/share/julia/stdlib/v1.10/Downloads/src/Downloads.jl:354 [inlined]
+  [4] arg_write(f::Downloads.var&quot;#8#17&quot;{Base.DevNull, Nothing, Vector{Pair{String, String}}, Float64, Nothing, Bool, Nothing, Bool, String, Bool, Bool}, arg::IOStream)
+    @ ArgTools /opt/hostedtoolcache/julia/1.10.4/x64/share/julia/stdlib/v1.10/ArgTools/src/ArgTools.jl:134
+  [5] #7
+    @ /opt/hostedtoolcache/julia/1.10.4/x64/share/julia/stdlib/v1.10/Downloads/src/Downloads.jl:353 [inlined]
+  [6] arg_read
+    @ /opt/hostedtoolcache/julia/1.10.4/x64/share/julia/stdlib/v1.10/ArgTools/src/ArgTools.jl:76 [inlined]
+  [7] request(url::String; input::Nothing, output::IOStream, method::Nothing, headers::Vector{Pair{String, String}}, timeout::Float64, progress::Nothing, verbose::Bool, debug::Nothing, throw::Bool, downloader::Nothing)
+    @ Downloads /opt/hostedtoolcache/julia/1.10.4/x64/share/julia/stdlib/v1.10/Downloads/src/Downloads.jl:352
+  [8] request
+    @ /opt/hostedtoolcache/julia/1.10.4/x64/share/julia/stdlib/v1.10/Downloads/src/Downloads.jl:320 [inlined]
+  [9] #3
+    @ /opt/hostedtoolcache/julia/1.10.4/x64/share/julia/stdlib/v1.10/Downloads/src/Downloads.jl:258 [inlined]
+ [10] arg_write(f::Downloads.var&quot;#3#4&quot;{Nothing, Vector{Pair{String, String}}, Float64, Nothing, Bool, Nothing, Nothing, String}, arg::Nothing)
+    @ ArgTools /opt/hostedtoolcache/julia/1.10.4/x64/share/julia/stdlib/v1.10/ArgTools/src/ArgTools.jl:123
+ [11] #download#2
+    @ /opt/hostedtoolcache/julia/1.10.4/x64/share/julia/stdlib/v1.10/Downloads/src/Downloads.jl:257 [inlined]
+ [12] download
+    @ /opt/hostedtoolcache/julia/1.10.4/x64/share/julia/stdlib/v1.10/Downloads/src/Downloads.jl:246 [inlined]
+ [13] download(url::String)
+    @ Downloads /opt/hostedtoolcache/julia/1.10.4/x64/share/julia/stdlib/v1.10/Downloads/src/Downloads.jl:246</code></pre></div><pre><code class="julia">length(posturls) # for the full set, this is 192</code></pre>
 <div class="code-output"><pre><code class="code-result language-plaintext">0</code></pre></div><p>Explanation of regex:</p>
 <ul>
 <li><code>href=\&quot;/webeasties</code>: hoepfully self-explanatory, the <code>href</code> looks specifically
@@ -410,7 +437,7 @@ doc = root(post)
 <span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
 <span class="sgr33"><span class="sgr1">┌ Warning: </span></span>XMLError: Tag section invalid from HTML parser (code: 801, line: 917)
 <span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ EzXML ~/.julia/packages/EzXML/DL8na/src/error.jl:97</span>
-</code></pre><pre><code class="code-result language-plaintext">EzXML.Node(<ELEMENT_NODE[html]@0x000000000233f330>)</code></pre></div><p>This way, once I get it working on one instance,
+</code></pre><pre><code class="code-result language-plaintext">EzXML.Node(<ELEMENT_NODE[html]@0x00000000039fa010>)</code></pre></div><p>This way, once I get it working on one instance,
 I can just delete the first line, uncomment the <code>for</code> loop bits,
 and then run it on the whole thing.
 I put in validation checks that throw errors if something violates my assumptions
