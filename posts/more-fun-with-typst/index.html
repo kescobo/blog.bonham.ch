@@ -120,14 +120,9 @@
       <div class="date">
         <span class="posted-on">
           <i class="fa fa-calendar" aria-hidden="true"></i>
-          <time datetime='2024-05-13'>
-            May 13, 2024
+          <time datetime='2024-07-11'>
+            July 11, 2024
           </time>
-        </span>
-        
-        <span class="date-modified">
-          <i class="fa fa-pencil" aria-hidden="true"></i>
-          Modified: May 14, 2024
         </span>
         
         
@@ -144,7 +139,7 @@
        
 <p>I'm so predictable. </p>
 <p>Last November, I <a href="/posts/typst-job-apps">wrote a post</a> about <code>typst</code>,
-a new type-setting software written in rust that's meant to replace \(\latex\).
+a new type-setting software written in rust that's meant to replace \(\LaTeX\).
 In that post, I said,</p>
 <blockquote><p>Well, I didn't get a job in that round,
   so I'm at it again!
@@ -165,7 +160,7 @@ But in the mean time, I'm working on my CV and resume in typst,
 and continuing to love it.
 As I mentioned in that last post,
 I was able to build my entire CV from scratch,
-replicating the layout that I'd needed a template for in \(\latex\).
+replicating the layout that I'd needed a template for in \(\LaTeX\).
 This means I actually understand all of the components,
 so I can tweak them to my liking.
 Plus, I recently figured out how to build and post
@@ -173,8 +168,332 @@ the pdfs using CI machinery on gitlab. Fun!</p>
 <h2 id="the_basics" > The Basics<a class="heading-link" href="#the_basics">
   <i class="fa fa-link" aria-hidden="true"></i>
 </a>
-</h2><p>Typst is a markup language, which means you can get some stlying
-from </p>
+</h2><p>As I mentioned in the last post, typst is in part a markup language,
+so you can get a lot of basic formatting using symbols,
+eg</p>
+<pre><code class="javascript">= This is a header
+
+*This will be bold*, while _this will be italic_,
+
+- and bulleted
+- lists are easy
+
+So are numbered lists:
+
++ thing 1
++ thing 2
+
+== This is a level 2 header!
+
+More text
+with semantic line breaks.</code></pre>
+<p>You'll want to run through the <a href="https://typst.app/docs/tutorial/">tutorial</a>
+to go through all the basics - it's quite well done -
+but I'll just highlight a couple of things
+that will be relevant to this post and took me a while to fully grok.</p>
+<h3 id="the_differences_between_set_and_show" > The differences between <code>set</code> and <code>show</code><a class="heading-link" href="#the_differences_between_set_and_show">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h3><p>There are two ways to change the way that things are displayed,
+and it took me a while to build the intuition about which one should be used when.</p>
+<h4 id="using_set" > Using <code>set</code><a class="heading-link" href="#using_set">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h4><p>The <code>set</code> function I think of as changing the defaults of some other function.
+So for example, you might use <code>box</code> to put highlights around some text.</p>
+<pre><code class="javascript">This text: #box(fill: yellow)[is highlighted!]</code></pre>
+<p>This results in:</p>
+<img src="/assets/img/typst-highlight.avif"><p>In this code, we call the function <code>box()</code>
+with the keyword argument <code>fill</code> set to <code>yellow</code>.
+In "content" mode
+(which is all of the document unless otherwise specified),
+we call functions or place variables with <code>#</code>.</p>
+<p>If I plan to be doing this a lot,
+I can use <code>set</code> to make the <code>fill</code> argument default <code>yellow</code>.
+In other words,</p>
+<pre><code class="javascript">#set box(fill: yellow)
+
+Some more #box([highlighted]) text #box([here!]).
+
+But I can still #box(fill: blue)[use other] colors
+or #box(fill: none)[no color] if #box()[I want to].</code></pre>
+<img src="/assets/img/typst-highlight2.avif"><p>Notice that this does not hold me to yellow - it just changes the default.
+In this case, the default <code>fill</code> was <code>none</code>,
+and I can always get that back by making it explicit.</p>
+<h4 id="using_#show" > Using #show<a class="heading-link" href="#using_#show">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h4><p>The <code>show</code> function is used to replace the way something is rendered.
+I pointed to this in my last post,
+but you can do things like</p>
+<pre><code class="javascript">#show &quot;awesome&quot;: box(fill: red, outset: 2pt)[💃 Awesome! 💃]
+
+Look at this awesome text.
+
+Every time I type awesome</code></pre>
+<img src="/assets/img/typst-show.avif"><p>So this seems fairly straightforward - use <code>set</code> to change functions
+and <code>show</code> to change the way things look, right?</p>
+<p>Well...</p>
+<h4 id="what's_confusing_(at_least_for_me)" > What's confusing (at least for me)<a class="heading-link" href="#what's_confusing_(at_least_for_me)">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h4><p>One thing that I found confusing is that often you use <code>set</code>
+to change the way things look.
+One example - you use <code>#set text(font: &quot;Liberation Sans&quot;)</code> to change the font.</p>
+<p>Another example from the <a href="https://typst.app/docs/tutorial/">tutorial</a> shows the following:</p>
+<pre><code class="javascript">#set heading(numbering: &quot;1.&quot;)
+
+= Introduction
+#lorem(10)
+
+== Background
+#lorem(12)
+
+== Methods
+#lorem(15)</code></pre>
+<p>to get</p>
+<img src="/assets/img/typst_set1.png"><p>or</p>
+<pre><code class="javascript">#set heading(numbering: &quot;1.a&quot;)
+
+= Introduction
+#lorem(10)
+
+== Background
+#lorem(12)
+
+== Methods
+#lorem(15)</code></pre>
+<p>to get</p>
+<img src="/assets/img/typst_set2.png"><p>So... <code>set</code> here is changing the way stuff is shown - what gives?</p>
+<p>The key here is that, even things that are written using the markup language
+are actually calling functions.
+In other words, the text above is like</p>
+<pre><code class="javascript">#heading(level: 1)[Introduction]
+
+#text()[#lorem(10)]
+
+#heading(level: 2)[Background]
+
+#text()[#lorem(12)]</code></pre>
+<p>etc... So we're using <code>set</code> to change the default of the <em>functions</em> that are called by the markup.
+But I don't have a strong handle on what is implicitly calling functions,
+so it's still a bit hard to reason about (eg here, there's also calls to <code>#page</code>, <code>#par</code> etc).</p>
+<p>So mostly I just look for examples, either in my previous code,
+in the tutorial, or in this <a href="https://sitandr.github.io/typst-examples-book/book/">really excellent resource</a>.</p>
+<h2 id="writing_the_cv" > Writing the CV<a class="heading-link" href="#writing_the_cv">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h2><p>I previously had a CV using the lovely "clean CV" <a href="https://www.overleaf.com/latex/templates/clean-cv-template/qqwnkbrspbtr"> template </a>,
+which I <a href="https://gitlab.com/kescobo/cv"> had modified </a> a bit using the <a href="https://www.overleaf.com/learn/latex/How_to_write_a_LaTeX_class_file_and_design_your_own_CV_(Part_2)"> CV builder template </a> from overleaf<sup><a href="#fn_overleaf">[1]</a></sup>
+<a id="fnref_overleaf"></a>
+,
+and I am largely trying to replicate that style.</p>
+<p>The first thing to do is to set some parameters
+to make things look nice, and write up the front matter saying who I am.</p>
+<pre><code class="javascript">#import &quot;includes/fontawesome.typ&quot;: *
+
+#let name = &quot;Kevin Bonham, PhD&quot;
+#let title = &quot;Senior Research Scientist&quot;
+#let email = &quot;blog@bonham.ch&quot;
+#let addr = &quot;Waltham, MA&quot;
+#let phone = &quot;555.555.5555&quot;
+#let orcid = &quot;0000-0002-1825-0097&quot;
+#let github = &quot;kescobo&quot;
+#let url = &quot;https://blog.bonham.ch&quot;
+
+// shrink the margin, and set paper size
+#set page(margin: 0.8in, paper:&quot;us-letter&quot;)
+// The original template uses a serif font, but I prefer sans serif
+#set text(font: &quot;Liberation Sans&quot;)
+
+// put name and title centered and large
+#set align(center)
+#text(20pt, weight: &quot;bold&quot;, name)
+#linebreak()
+#text(12pt, title)
+
+//use small text for the contact info
+#set text(8pt)
+#set align(left)
+
+// Use a grid to place contact info - things like `#phone` refer to
+// the variables set at the top
+#grid(
+    columns: (2fr, 2fr, 1fr),
+    gutter: 10pt,
+    [#fa-phone() #phone], // these icons come from the fontawesome package
+    [#fa-envelope() #email],
+    [#fa-house() #addr],
+    [#fa-orcid() #orcid], 
+    [#fa-github() #github],
+    [#fa-globe() #url]
+)
+
+#set text(10pt)</code></pre>
+<img src="/assets/img/typst_cv1.avif"><p>Cool.
+Next, since I want to have a bunch of headers that display a date on the right hand side
+with some different formatting, I made a function that takes a date, a header level, and text, like so:</p>
+<pre><code class="javascript">#let datedheader(
+    date: none,
+    level: 2, // can use different header levels
+    leftcol: 2fr, // fr is &quot;fraction&quot; - this arg sets the proportion of the line the text uses
+    content
+    ) = &lbrace;
+    grid(
+        columns: (leftcol, 1fr),
+        gutter: 10pt, // this could be a parameter too, but 10 looks nice I think
+        align(left)[
+            #heading(level: level, content)
+        ],
+        align(right)[
+            #heading(level: level, date)
+        ]
+    )
+    v(-5pt) // remove some vertical space
+&rbrace;</code></pre>
+<p>With this I can now do, eg</p>
+<pre><code class="javascript">#datedheader(date: &quot;2006&quot;)[Impressive accomplishment]
+
+Some text here
+
+#datedheader(date: &quot;2008&quot;, level:3)[This is a smaller line]
+
+Other accomplishment.</code></pre>
+<img src="/assets/img/typst_cv2.avif"><p>The last major component is adding in my papers.
+This part was a bit tricky at first, because I was trying to use
+typst's native <a href="https://typst.app/docs/reference/model/bibliography/"> bibliography support</a>.
+Unfortunately, typst doesn't currently have support for multiple bibliographies,
+and I wanted to so some things like filtering on certain tags,
+or adding some text at the beginning if I was co-first author.
+So I ended up rolling my own function that would format citations
+from a YAML file.</p>
+<p>This one is a little complicated, so let's see what it's going to look like first.
+Here's a couple of references from my YAML bibliography:</p>
+<pre><code class="YAML">LaueProspectiveAssociationInfantGut2024:
+  type: article
+  parent:
+    - type: periodical
+      title: Molecular Autism (in press)
+  title:
+    value: Prospective Association of the Infant Gut Microbiome with Social Behaviors in the ECHO Consortium
+    sentence-case: Prospective association of the infant gut microbiome with social behaviors in the echo consortium
+  date: 2024
+  author:
+    - &quot;Laue, Hannah E.&quot;
+    - &quot;* Bonham, Kevin S.&quot;
+    - &quot;Coker, Modupe O.&quot;
+    - &quot;Moroishi, Yuka&quot;
+    - &quot;Pathmasiri, Wimal&quot;
+    - &quot;McRitchie, Susan&quot;
+    - &quot;Sumner, Susan&quot;
+    - &quot;Hoen, Anne G.&quot;
+    - &quot;Karagas, Margaret R.&quot;
+    - &quot;Klepac-Ceraj, Vanja&quot;
+    - &quot;Madan, Juliette C.&quot;
+  doi: 10.1186/s13229-024-00597-2
+  url: https://doi.org/10.1186/s13229-024-00597-2
+  tags:
+    - cofirst
+bonhamGutresidentMicroorganismsTheir2023:
+  type: article
+  title:
+    value: &quot;Gut-resident microorganisms and their genes are associated with cognition and neuroanatomy in children&quot;
+  author:
+  - Bonham, Kevin S.
+  - Bottino, Guilherme Fahur
+  - McCann, Shelley Hoeft
+  - Beauchemin, Jennifer
+  - Weisse, Elizabeth
+  - Barry, Fatoumata
+  - Lorente, Rosa Cano
+  - Consortium, The RESONANCE
+  - Huttenhower, Curtis
+  - Bruchhage, Muriel
+  - D'Sa, Viren
+  - Deoni, Sean
+  - Klepac-Ceraj, Vanja
+  date: 2023
+  page-range: eadi497
+  url: https://www.science.org/doi/abs/10.1126/sciadv.adi0497
+  doi: 10.1126/sciadv.adi0497
+  parent:
+    - type: periodical
+      title: Science Advances
+      issue: 51
+      volume: 9
+bonham-bbm2014:
+  parent:
+    - type: conference
+      title: Boston Bacterial Meeeting
+  type: misc
+  title:
+    value: Identifying horizontal transfer in cheese-associated bacteria
+  date: &quot;2014&quot;
+  author:
+    - &quot;Bonham, Kevin S&quot;
+    - &quot;Wolfe, Benjamin E&quot;
+    - &quot;Dutton, Rachel J&quot;
+  tags:
+    - poster</code></pre>
+<p>And I want this to look something like this:</p>
+<img src="/assets/img/typst_cv3.avif"><p>So I wrote this function - see the comments for explanation:</p>
+<pre><code class="javascript">// Format a bibliography from a YAML file.
+// Args:
+//   - file: string path to yaml file
+//   - entries: list of strings with cite keys. If empty, do everything.
+//   - tag: a string representing a tag. If not none, acts as a filter
+#let refs(file, entries: (), tag: none) = &lbrace;
+    // if entries arg is an empty list (default), get all the keys in the yaml file
+    if entries.len() == 0 &lbrace;
+        entries = yaml(file).keys()
+    &rbrace;
+
+    for (entry, fields) in yaml(file) &lbrace;
+        if entry not in entries &lbrace;
+            continue
+        &rbrace;
+        if not tag == none &lbrace;
+            // if a tag argument exists and the entry doesn't have that tag, skip
+            if &quot;tags&quot; not in fields or tag not in fields.tags &lbrace;
+                continue
+            &rbrace;
+        &rbrace;
+
+        // add asterisk if entry has &quot;cofirst&quot; tag
+        if &quot;tags&quot; in fields and &quot;cofirst&quot; in fields.tags &lbrace;
+            [\* ]
+        &rbrace;
+        // add a dagger if entry has &quot;corresponding&quot; tag
+        if &quot;tags&quot; in fields and &quot;corresponding&quot; in fields.tags &lbrace;
+            [#sym.dagger ]
+        &rbrace;
+
+        let auth_n = fields.author.len()
+        let auths = ()
+        // truncate author list if more than 4 entries
+        if auth_n &gt; 4 &lbrace;
+            auths = fields.author.slice(0, count:4)
+            [#auths.join(&quot;, &quot;) _et. al._]
+        &rbrace; else &lbrace;
+            auths = fields.author
+            auths.join(&quot;, &quot;, last: &quot; and &quot;)
+        &rbrace;
+        // Now format the entries.
+        [, &quot;#eval(&quot;[&quot; + fields.title.value + &quot;]&quot;)&quot;]
+        [. #emph(fields.parent.at(0).title)]
+        [. (#fields.date)]
+        if &quot;url&quot; in fields and &quot;doi&quot; in fields &lbrace;
+            [ doi: #link(fields.url, fields.doi)]
+        &rbrace;
+        parbreak()
+    &rbrace;
+&rbrace;</code></pre>
+<h2 id="conclusion" > Conclusion<a class="heading-link" href="#conclusion">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h2><p>And there you have it!
+If you want to see the full thing (ever evolving),
+check out <a href="https://gitlab.com/kescobo/cv-typst">the repo</a> if you want to see the whole thing.</p>
 
 
       </section>
