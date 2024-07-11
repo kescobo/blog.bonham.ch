@@ -1,7 +1,7 @@
 +++
 using Dates
 title = "More Fun with Typst - Building a CV"
-date = Date(2024, 6, 10)
+date = Date(2024, 7, 11)
 +++
 
 I'm so predictable. 
