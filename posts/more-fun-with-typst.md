@@ -32,7 +32,7 @@ But in the mean time, I'm working on my CV and resume in typst,
 and continuing to love it.
 As I mentioned in that last post,
 I was able to build my entire CV from scratch,
-replicating the layout that I'd needed a template for in $\latex$.
+replicating the layout that I'd needed a template for in $\LaTeX$.
 This means I actually understand all of the components,
 so I can tweak them to my liking.
 Plus, I recently figured out how to build and post
