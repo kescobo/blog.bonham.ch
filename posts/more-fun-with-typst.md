@@ -7,7 +7,7 @@ date = Date(2024, 6, 10)
 I'm so predictable. 
 
 Last November, I [wrote a post](/posts/typst-job-apps) about `typst`,
-a new type-setting software written in rust that's meant to replace $\latex$.
+a new type-setting software written in rust that's meant to replace $\LaTeX$.
 In that post, I said,
 
 > Well, I didn't get a job in that round,
