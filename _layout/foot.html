@@ -1,9 +1,10 @@
+      {{isdef comments_id}}
+        <link rel="stylesheet" href="/css/mastodon.comments.css" media="screen">
+        {{insert comments.html}}
+      {{end}}
       </section>
     </div>
 
-    {{isdef comments}}
-      {{insert comments.html}}
-    {{end}}
 
     <footer class="footer">
       <section class="container">
