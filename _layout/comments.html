@@ -1,6 +1,6 @@
 <section class="comments">
   <h4 class="comments-title">COMMENTS</h4>
-  <p>You can use your <a href="https://joinmastodon.org">Mastodon</a> or other ActivityPub account to comment on this article by replying to the associated <a class="link" href="https://{{ comments.host }}/@{{ comments.username }}/{{ comments.id }}">post</a>.</p>
+  <p>You can use your <a href="https://joinmastodon.org">Mastodon</a> or other ActivityPub account to comment on this article by replying to the associated <a class="link" href="https://{{ comments_host }}/@{{ comments_username }}/{{ comments_id }}">post</a>.</p>
   <p id="mastodon-comments-list">
     <button id="load-comment" class="btn btn--twitter">Load comments from Mastodon</button>
   </p>
@@ -18,7 +18,7 @@
 
     document.getElementById("load-comment").addEventListener("click", function() {
       document.getElementById("load-comment").innerHTML = "Loading";
-      fetch('https://{{ comments.host }}/api/v1/statuses/{{ comments.id }}/context')
+      fetch('https://{{ comments_host }}/api/v1/statuses/{{ comments_id }}/context')
         .then(function(response) {
           return response.json();
         })

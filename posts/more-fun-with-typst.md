@@ -2,9 +2,12 @@
 using Dates
 title = "More Fun with Typst - Building a CV"
 date = Date(2024, 7, 11)
+comments_id = "112842335724314238"
+comments_username = "kbonham"
+comments_host = "scicomm.xyz"
 +++
 
-I'm so predictable. 
+I'm so predictable.
 
 Last November, I [wrote a post](/posts/typst-job-apps) about `typst`,
 a new type-setting software written in rust that's meant to replace $\LaTeX$.
@@ -200,8 +203,9 @@ So mostly I just look for examples, either in my previous code,
 in the tutorial, or in this [really excellent resource][typst-book].
 
 ## Writing the CV
-I previously had a CV using the lovely "clean CV" [ template ][cleancv],
-which I [ had modified ][latexcv] a bit using the [ CV builder template ][cvoverleaf] from overleaf[^over-leaf],
+
+I previously had a CV using the lovely "clean CV" [template][cleancv],
+which I [had modified][latexcv] a bit using the [CV builder template][cvoverleaf] from overleaf[^over-leaf],
 and I am largely trying to replicate that style.
 
 [^over-leaf]: If you find yourself needing to write latex and you don't know what you're doing, the tutorials on Overleaf are really excellent
@@ -296,7 +300,7 @@ Other accomplishment.
 
 The last major component is adding in my papers.
 This part was a bit tricky at first, because I was trying to use
-typst's native [ bibliography support][bibliography].
+typst's native [bibliography support][bibliography].
 Unfortunately, typst doesn't currently have support for multiple bibliographies,
 and I wanted to so some things like filtering on certain tags,
 or adding some text at the beginning if I was co-first author.
@@ -436,10 +440,10 @@ So I wrote this function - see the comments for explanation:
 ```
 
 ## Conclusion
+
 And there you have it!
 If you want to see the full thing (ever evolving),
 check out [the repo][typstcv] if you want to see the whole thing.
-
 
 [typst-tutorial]: https://typst.app/docs/tutorial/
 [typst-book]: https://sitandr.github.io/typst-examples-book/book/
@@ -448,4 +452,3 @@ check out [the repo][typstcv] if you want to see the whole thing.
 [cvoverleaf]: https://www.overleaf.com/learn/latex/How_to_write_a_LaTeX_class_file_and_design_your_own_CV_(Part_2)
 [bibliography]: https://typst.app/docs/reference/model/bibliography/
 [typstcv]: https://gitlab.com/kescobo/cv-typst
-
