@@ -100,18 +100,80 @@
 
     <div class="content">
 
-       
-        <section class="container list">
-          <h1 class="title">
-            <a class="title-link" href="/previews/PR8/posts/">
-              Useful Models
-            </a>
-          </h1>
+        
+        <section class="container post">
+          <header>
+  <div class="post-title">
+    <h1 class="title">
+      <a class="title-link" href="/previews/PR8/posts/mastodon-comments/index.html">
+        Mastodon comments on Xranklin
+      </a>
+    </h1>
+  </div>
+
+  <div class="post-meta">
+    
+      <div class="date">
+        <span class="posted-on">
+          <i class="fa fa-calendar" aria-hidden="true"></i>
+          <time datetime='2024-07-24'>
+            July 24, 2024
+          </time>
+        </span>
+        
+        
+      </div>
+    
+
+    
+  </div>
+</header>
+
 
        
        
-<p>All models are wrong...</p>
-<ul><li><span class="date">July 24, 2024</span><a class="title" href="/previews/PR8/posts/mastodon-comments">Mastodon comments on Xranklin</a></li><li><span class="date">July 11, 2024</span><a class="title" href="/previews/PR8/posts/more-fun-with-typst">More Fun with Typst - Building a CV</a></li><li><span class="date">November 23, 2023</span><a class="title" href="/previews/PR8/posts/typst-job-apps">Job applications with Typst and git for fun and profit</a></li><li><span class="date">October 31, 2022</span><a class="title" href="/previews/PR8/posts/latex-job-apps">Job applications with LaTeX and git for fun and profit</a></li><li><span class="date">September 10, 2022</span><a class="title" href="/previews/PR8/posts/dataframes-minilanguage">The DataFrames.jl mini-language just clicked</a></li><li><span class="date">May 4, 2022</span><a class="title" href="/previews/PR8/posts/genefamilies-speedup">Speeding up loading of HUMAnN gene-families tables using Arrow.jl &#43; Tables.jl</a></li><li><span class="date">November 6, 2021</span><a class="title" href="/previews/PR8/posts/webeasties-2">We, Beasties recovery - Part 2</a></li><li><span class="date">January 6, 2020</span><a class="title" href="/previews/PR8/posts/webeasties-1">We, Beasties recovery - Part 1</a></li><li><span class="date">July 20, 2019</span><a class="title" href="/previews/PR8/posts/original-face">Sesshin of the Original Face</a></li><li><span class="date">September 20, 2018</span><a class="title" href="/previews/PR8/posts/lamg2018">Lake Arrowhead Microbial Genomics 2018 #LAMG2018</a></li><li><span class="date">December 10, 2017</span><a class="title" href="/previews/PR8/posts/pubmed-gender-extention">Matching Publications to PubMed IDs</a></li><li><span class="date">October 26, 2017</span><a class="title" href="/previews/PR8/posts/back-on-the-horse-part2">Getting Back on the Horse - Part 2: Deploying a new Site</a></li><li><span class="date">August 15, 2017</span><a class="title" href="/previews/PR8/posts/back-on-the-horse">Getting Back on the Horse</a></li><li><span class="date">April 7, 2017</span><a class="title" href="/previews/PR8/posts/diversity-academic-freedom">Diversity and Academic Freedom</a></li></ul>
+       
+<p>Comments are tricky - they're nice for engagement
+(as if anyone's reading this stuff),
+but moderation can be a hassle,
+and for a static site like this,
+many of the options require you to pay for hosting,
+or require you to send (your reader's) information to 3rd parties etc.</p>
+<p>But I recently saw a few examples of people using <a href="https://joinmastodon.org">Mastodon</a> -
+the twitter-like social platform that's part of the "<a href="https://joinfediverse.wiki/Main_Page">fediverse</a>"
+or "decentralized social web" -
+to serve comments on their site.</p>
+<ol>
+<li>The main source of inspiration <a href="https://jan.wildeboer.net/2023/02/Jekyll-Mastodon-Comments/">from Jan Wildeboer</a></li>
+<li>Some other helpful code and links <a href="https://cassidyjames.com/blog/fediverse-blog-comments-mastodon/">from Cassidy Blaede</a></li>
+</ol>
+<p>But a lot of what I was seeing was using the jekyll static site generator,
+and given I know basically nothing about javascript (which is required here),
+I ended up needing some help from an LLM (claude) to get it working
+with <a href="https://github.com/tlienart/Xranklin.jl">Franklin.jl</a>, which I'm using for this blog.</p>
+<p>But I did!
+I should do a more complete write-up at some point,
+because I learned some things that may be helpful to other folks in a similar situation,
+but this post was really just an excuse to test the functionality.</p>
+
+
+      
+        <link rel="stylesheet" href="/previews/PR8/css/mastodon.comments.css" media="screen">
+        
+<section class="comments">
+  <h2 class="comments-title">Comments</h2>
+  <p>You can use your <a href="https://joinmastodon.org">Mastodon</a> or other ActivityPub account to comment on this article by replying to the associated <a class="link" href="https://scicomm.xyz/@kbonham/112842335724314238">post</a>.</p>
+  <p id="mastodon-comments-list">
+    <button id="load-comment" class="btn btn--twitter">Load comments from Mastodon</button>
+  </p>
+  <noscript><p>You have to allow JavaScript to view the comments.</p></noscript>
+  <script src="/previews/PR8/libs/mastodon.comments.js"></script>
+  <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function() {
+      loadMastodonComments("scicomm.xyz", "112842335724314238");
+    });
+  </script>
+</section>
 
       
       </section>
