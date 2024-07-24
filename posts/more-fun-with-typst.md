@@ -2,9 +2,6 @@
 using Dates
 title = "More Fun with Typst - Building a CV"
 date = Date(2024, 7, 11)
-comments_id = "112842335724314238"
-comments_username = "kbonham"
-comments_host = "scicomm.xyz"
 +++
 
 I'm so predictable.
