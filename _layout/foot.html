@@ -1,6 +1,10 @@
       </section>
     </div>
 
+    {{isdef comments}}
+      {{insert comments.html}}
+    {{end}}
+
     <footer class="footer">
       <section class="container">
         {{footer_notice}}
