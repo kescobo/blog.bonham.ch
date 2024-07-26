@@ -3,8 +3,6 @@ using Dates
 date = Date(2024, 7, 24)
 title = "Mastodon comments on Xranklin"
 comments_id = "112842335724314238"
-comments_username = "kbonham"
-comments_host = "scicomm.xyz"
 +++
 
 Comments are tricky - they're nice for engagement
@@ -31,7 +29,6 @@ But I did!
 I should do a more complete write-up at some point,
 because I learned some things that may be helpful to other folks in a similar situation,
 but this post was really just an excuse to test the functionality.
-
 
 [join-mastodon]: https://joinmastodon.org
 [join-fediverse]: https://joinfediverse.wiki/Main_Page
