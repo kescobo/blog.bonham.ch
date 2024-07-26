@@ -28,13 +28,59 @@ function hfun_date_modified()
   return date_format(mt)
 end
 
-function ismodified()
-  d = getlvar(:date)
-  mt = modtime()
-  Date(mt) > d
-end
+ismodified() = false # need to fix modtime to work without git?
+# function ismodified()
+#   d = getlvar(:date)
+#   mt = modtime()
+#   Date(mt) > d
+# end
 
 ## Reading time function - see: https://www.roboleary.net/programming/2020/04/24/pimp-blog-reading-time.html#how-will-we-calculate-it
+
+# ===============================================
+# Helper functions for comments sections
+# - not currently working...
+# ===============================================
+
+function get_masto_info()
+    url = globvar(:social_mastodon)
+    m = match(r"^https?://([\w.]+)/(@|user/)([\w.]+)$", url)
+    isnothing(m) && error("Comments section requires global variable 'social_mastodon' to fit pattern `^https?//([\\w.]+)/(@|user/)([\\w.]+)\$`, got $url")
+    (host, _, user) = String.(m.captures)
+    return (host, user)
+end
+
+hfun_masto_host() = first(get_masto_info())
+hfun_masto_user() = last(get_masto_info())
+hfun_masto_id() = getlvar(:comments_id)
+
+# TODO: figure out why this can't find the right variables
+# function hfun_masto_comments()
+#     host, user = get_masto_info()
+#     setlvar!(:comments_host, host)
+#     setlvar!(:comments_user, user)
+#     return html("{{ insert comments.html }}")
+# end
+
+function hfun_masto_comments()
+    return """
+        <!-- modified from https://jan.wildeboer.net/2023/02/Jekyll-Mastodon-Comments/ with help from Claude-->
+        <section class="comments">
+        <h2 class="comments-title">Comments</h2>
+        <p>You can use your <a href="https://joinmastodon.org">Mastodon</a> or other ActivityPub account to comment on this article by replying to the associated <a class="link" href="https://{{ comments_host }}/@{{ comments_user }}/{{ comments_id }}">post</a>.</p>
+        <p id="mastodon-comments-list">
+            <button id="load-comment" class="btn btn--twitter">Load comments from Mastodon</button>
+        </p>
+        <noscript><p>You have to allow JavaScript to view the comments.</p></noscript>
+        <script src="/libs/mastodon.comments.js"></script>
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", function() {
+            loadMastodonComments("{{ comments_host }}", "{{ comments_id }}");
+            });
+        </script>
+        </section>
+        """
+end
 
 # ===============================================
 # Logic to show the list of tags for a page
