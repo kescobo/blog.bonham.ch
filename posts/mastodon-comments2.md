@@ -1,12 +1,12 @@
 +++
 using Dates
-date = Date(2024, 7, 26)
+date = Date(2024, 7, 29)
 title = "Mastodon comments in Xranklin - how to do it"
 comments_id = "112842335724314238"
 tags = ["web", "mastodon", "julia"]
 +++
 
-In the [last post](/posts/mastodon-comments.md),
+In the [last post](/posts/mastodon-comments),
 I was showing that I could use replies to a post on [mastodon]
 as comments on this blog.
 Here, I'll show how I did it
@@ -21,6 +21,9 @@ I'll link to things directly as I'm going,
 but if you want to follow along,
 the code for this site is [on github].
 and the state of the repo while working on this post [is here][current-commit].
+
+If you don't care about the details and want to jump to what to do,
+check out the [TL;DR](#tldr-for-adding-mastodon-comments-to-your-xranklin-site) at the end.
 
 [mastodon]: https://joinmastodon.org
 [jan]: https://jan.wildeboer.net/2023/02/Jekyll-Mastodon-Comments/
@@ -70,8 +73,8 @@ which in the case of Xranklin is one of the following places:
    In Xranklin, this is julia code placed within 3 `+` blocks at the beginning.
    Variables defined here are considered "local"
 
-In the following code, you'll see `{{masto_host}}` and `{{masto_user}}`,
-which are defined in `config.jl`, and `{{masto_id}}`,
+In the following code, you'll see `{{comments_host}}` and `{{comments_user}}`,
+which are defined in `config.jl`, and `{{comments_id}}`,
 which is meant to be defined in a post's front matter.
 
 [coder]: https://themes.gohugo.io/themes/hugo-coder/
@@ -379,8 +382,45 @@ file inside a the block that only loads it if the post has comments.
 {{end}}
 ```
 
-!!! note
-    this `{{isdef...}} ... {{end}}` syntax is how Xranklin does things -
-    for other SSGs you'll probably need different syntax.
+Note: this `{{isdef...}} ... {{end}}` syntax is how Xranklin does things -
+for other SSGs you'll probably need different syntax.
+
+There's nothing particularly revolutionary in this CSS,
+but you may need to modify it in order to have comments
+match the style of your site.
+
+## TL;DR for adding mastodon comments to your Xranklin site
+
+1. add [`mastodon.comments.js`][mcjs] to `_libs`
+2. add [`mastodon.comments.css`][mccss] to `_css` and modify accordingly
+3. add [`comments.html`][mchtml] to `_layout`
+4. add [this chunk][footchunk] to `_layout/foot.html`
+5. assign `comments_host` and `comments_username` in `config.jl`
+   to your mastodon instance and username ([see here][assignments])
+
+Then, for any page that you want to add comments for,
+make a mastodon post, copy the numeric ID,
+and then put `comments_id = "<ID here>"` into the frontmatter
+of the page.
+Eg, for this post, the frontmatter looks like this:
+
+```md
++++
+using Dates
+date = Date(2024, 7, 29)
+title = "Mastodon comments in Xranklin - how to do it"
+comments_id = "112842335724314238"
+tags = ["web", "mastodon", "julia"]
++++
+```
+
+And that's it!
+And let me know how it goes in the "comments" 😉
+
+[mcjs]: https://github.com/kescobo/blog.bonham.ch/
+[mccss]: https://github.com/kescobo/blog.bonham.ch
+[mchtml]: https://github.com/kescobo/blog.bonham.ch
+[footchunk]: https://github.com/kescobo/blog.bonham.ch
+[assignments]: https://github.com/kescobo/blog.bonham.ch
 
 {{footnotes}}
