@@ -41,7 +41,7 @@ Like many other SSGs, (X|F)ranklin sites are built around [markdown],
 which is used to author posts and other site content,
 which is combined by the SSG with html, css, and javascript templates
 to produce the final site.
-For this site, I'm using [a template][coder-jl-template] that's based on the [coder template][coder-templete]
+For this site, I'm using [a template][coder-jl-template] that's based on the [coder template][coder]
 for the Hugo SSG, which [Thibaut Lienart][tlienart] (the author of Franklin) adapted.
 
 Crucially, within the html templates, you can include places where code gets executed,
@@ -74,6 +74,7 @@ In the following code, you'll see `{{masto_host}}` and `{{masto_user}}`,
 which are defined in `config.jl`, and `{{masto_id}}`,
 which is meant to be defined in a post's front matter.
 
+[coder]: https://themes.gohugo.io/themes/hugo-coder/
 [xranklin]: https://tlienart.github.io/Xranklin.jl/
 [franklin]: https://tlienart.github.io/Franklin.jl/
 [ssg]: https://indieweb.org/static_site_generator
@@ -263,7 +264,75 @@ This is the function that's actually called from the html -
 it takes in the `commentsHost` and `commentsId` arguments,
 fetches the content of the url that returns the JSON I mentioned above,
 parses the json data, returning a dictionary (or whatever they call it in javascript),
-and then calls `displayMastodonComments`, which is defined higher up in the file.
+and then calls `displayMastodonComments`, which is defined higher up in the file,
+and which does most of the interesting stuff.
+
+That function has a few pieces.
+first, we clear the existing content of `mastodon-comments`,
+which is either the button from above, or the word "Loading...".
+
+```javascript
+const commentsList = document.getElementById('mastodon-comments');
+commentsList.innerHTML = ""; // Clear existing comments
+```
+
+Then, we loop through each item in the JSON, each of which is an individual comment.
+We then make a `div` element containing the relevant fields that we want to include,
+in this case, it's the avatar, the username / display name,
+the time, which we format (will explain that in a sec),
+the contents of the post, and some stats about the post.
+We use inner `div`s so that the different pieces
+can be correctly laid out (we can style them independently via CSS).
+
+```javascript
+const commentDiv = document.createElement('div');
+commentDiv.className = 'mastodon-comment';
+
+const username = reply.account.acct || reply.account.username;
+
+commentDiv.innerHTML = `
+  <img class="comment-avatar" src="${escapeHtml(reply.account.avatar_static)}" alt="Avatar">
+  <div class="comment-content">
+    <div class="comment-header">
+      <div class="user-info">
+        <span class="display-name"><a href=${reply.account.url}>${escapeHtml(reply.account.display_name)}</a></span>
+        <span class="username">@${escapeHtml(username)}</span>
+      </div>
+      <span class="comment-date"><a href=${reply.url}>${formatDate(reply.created_at)}</a></span>
+    </div>
+    <div class="comment-text">${reply.content}</div>
+    <div class="comment-actions">
+      <span class="comment-action">↩ ${reply.replies_count}</span>
+      <span class="comment-action">🔁 ${reply.reblogs_count}</span>
+      <span class="comment-action">⭐ ${reply.favourites_count}</span>
+      <span class="comment-action"><a href=${reply.url}>🔗</a></span>
+    </div>
+  </div>
+`;
+```
+
+I also wrapped this whole chunk in an `if` statement that only does this
+if the visibility is set to `public` -
+mastodon posts can also be `unlisted` or `private` -
+the latter of which shouldn't come through this API,
+but I don't want to post anything that people have explicitly chosen to limit reach on.
+
+```javascript
+if (reply.visibility == "public") {
+  // formatting stuff
+  commentsList.appendChild(commentDiv);
+};
+```
+
+Finally,
+just in case there are no `public` posts,
+I display a message inviting people to comment:
+
+```javascript
+if (commentsList.innerHTML == "") {
+  commentsList.innerHTML = "<p>No comments found (yet! be the first!)</p>"
+};
+```
 
 [^underscores]: Note that in franklin (as with a lot of other SSGs),
 the special folders starting with underscores,
@@ -272,3 +341,46 @@ once the site's actually built, which is why we point to `/libs/` in the html.
 
 [fediverse]: https://joinfediverse.wiki/Main_Page
 [testtoot]: https://scicomm.xyz/@kbonham/112842335724314238
+
+### Formatting the post date / time
+
+This is a little piece that claude helped me with -
+It checks if the comment was within the last 24 hours,
+and if so, displays how old it is in hours,
+otherwise, it displays the date of the post:
+
+```javascript
+function formatDate(dateString) {
+  const date = new Date(dateString);
+  const now = new Date();
+  const diffHours = Math.floor((now - date) / (1000 * 60 * 60));
+  
+  if (diffHours < 24) {
+    return `${diffHours}h`;
+  } else {
+    return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+  }
+}
+```
+
+### Styling
+
+The styling comes in the form of CSS,
+which can be applied to those `div` IDs.
+One of the posts I was following put all this CSS in the same
+javascript code, but I instead but it into a separate file
+`_css/mastodon.comments.css`, and then included it in the `_layout/foot.html`
+file inside a the block that only loads it if the post has comments.
+
+```html
+{{isdef comments_id}}
+  <link rel="stylesheet" href="/css/mastodon.comments.css" media="screen">
+  {{insert comments.html}}
+{{end}}
+```
+
+!!! note
+    this `{{isdef...}} ... {{end}}` syntax is how Xranklin does things -
+    for other SSGs you'll probably need different syntax.
+
+{{footnotes}}
