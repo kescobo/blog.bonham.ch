@@ -7,11 +7,11 @@
   xmlns:georss="http://www.georss.org/georss">
   <channel>
     <title>
-      <![CDATA[  <span style="color:red;">[FAILED:]&gt;&lbrace;&lbrace; fd2rss website_title&rbrace;&rbrace;&lt;</span>  ]]>
+      <![CDATA[  Useful Models  ]]>
     </title>
     <link> http://blog.bonham.ch/ </link>
     <description>
-      <![CDATA[  <span style="color:red;">[FAILED:]&gt;&lbrace;&lbrace; fd2rss website_description&rbrace;&rbrace;&lt;</span>  ]]>
+      <![CDATA[  Personal blog of Kevin Bonham, PhD  ]]>
     </description>
 
 <item>
