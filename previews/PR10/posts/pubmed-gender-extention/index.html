@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Language" content="en">
+  <meta name="color-scheme" content="light dark">
+
+  <meta name="author" content="Kevin Bonham">
+  <meta name="description" content="Kevin Bonham's website">
+  <meta name="keywords" content="microbiome,data science,teaching">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="kbonham">
+  <meta name="twitter:description" content="Kevin Bonham's website">
+
+  <meta property="og:title" content="summary">
+  <meta property="og:description" content="Kevin Bonham's website">
+  <meta property="og:type" content="website">
+
+  <title>kbonham</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+  <link rel="stylesheet" href="/previews/PR10/css/coder.min.css" media="screen">
+  <link rel="stylesheet" href="/previews/PR10/css/coder-dark.min.css" media="screen">
+
+  <link rel="icon" type="image/png" href="/previews/PR10/assets/infra/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/previews/PR10/assets/infra/favicon-16x16.png" sizes="16x16">
+
+  <link rel="apple-touch-icon" href="/previews/PR10/assets/infra/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/previews/PR10/assets/infra/apple-touch-icon.png">
+
+  
+  <meta name="generator" content="Franklin.jl" />
+
+  
+
+  
+    <link rel="stylesheet" href="/previews/PR10/libs/highlight/atom-one-dark.css">
+  
+
+  <style>
+  :root {
+    --block-background: #f4f0ec;
+  }
+  .hljs {
+    padding: 1em;
+  }
+  </style>
+
+</head>
+
+<body class="preload-transitions colorscheme-auto">
+
+  <div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+      <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+  </div>
+
+  <main class="wrapper">
+
+    <nav class="navigation">
+  <section class="container">
+
+    <a class="navigation-title" href="/previews/PR10/">
+      kbonham
+    </a>
+
+    <input type="checkbox" id="menu-toggle">
+    <label class="menu-button float-right" for="menu-toggle">
+      <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+    </label>
+
+    <ul class="navigation-list">
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/previews/PR10/about/">About</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/previews/PR10/posts/">Blog</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="https://github.com/kescobo/blog.bonham.ch/tree/main/webeasties">We, Beasties</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/previews/PR10/contact/">Contact me</a>
+        </li>
+      
+
+      
+      
+    </ul>
+
+  </section>
+</nav>
+
+
+    <div class="content">
+
+        
+        <section class="container post">
+          <header>
+  <div class="post-title">
+    <h1 class="title">
+      <a class="title-link" href="/previews/PR10/posts/pubmed-gender-extention/index.html">
+        Matching Publications to PubMed IDs
+      </a>
+    </h1>
+  </div>
+
+  <div class="post-meta">
+    
+      <div class="date">
+        <span class="posted-on">
+          <i class="fa fa-calendar" aria-hidden="true"></i>
+          <time datetime='2017-12-10'>
+            December 10, 2017
+          </time>
+        </span>
+        
+        
+      </div>
+    
+
+    
+      <div class="tags">
+        <i class="fa fa-tag" aria-hidden="true"></i>
+        <span class="tag"><a href="/previews/PR10/tags/julia/">julia</a></span><span class="separator">•</span><span class="tag"><a href="/previews/PR10/tags/publishing/">publishing</a></span><span class="separator">•</span><span class="tag"><a href="/previews/PR10/tags/gender/">gender</a></span><span class="separator">•</span><span class="tag"><a href="/previews/PR10/tags/science/">science</a></span><span class="separator">•</span><span class="tag"><a href="/previews/PR10/tags/code/">code</a></span><span class="separator">•</span><span class="tag"><a href="/previews/PR10/tags/diversity/">diversity</a></span>
+      </div>
+    
+  </div>
+</header>
+
+
+       
+       
+       
+<p>Earlier this week, I got an e-mail from Lucia Santamaria from the "<a href="https://icsugendergapinscience.org/work-packages/publication-patterns/">Gender Gap in
+Science</a>" project from the International Council for Science. They are
+trying to systematically measure the gender gap in a number of ways, including
+looking at publication records. One of the important parts of their effort is to
+find ways to validate methods of gender assignment or inference.</p>
+<p>Lucia was writing about some data found in <a href="https://doi.org/10.1371/journal.pcbi.1005134">the paper I wrote with with Melanie
+Stefan</a> about women in computational biology. In particular, she
+wanted the dataset that we got from Filardo et. al. that had a list of ~3000
+journal articles with known first-author genders. This is a great dataset to
+have, since the authors of that paper did all the hard work of actually going
+one-by-one through papers and finding the author genders by hand (often
+searching institutional websites and social media profiles for pictures etc).</p>
+<p>This allowed us to validate our gender inference based on author first name
+against a dataset where the truth is known (it did pretty well).</p>
+<img src="/previews/PR10/assets/img/gender_supp1c.png" alt="checking gender inference against known genders"><p>And that's what Lucia wants to do as well. There's just one problem: the
+form of the data from Filardo and colleagues is human-readable, but not machine-
+readable<sup><a href="#fn_dataset">[1]</a></sup>
+<a id="fnref_dataset"></a>
+. For example, one row of the data looks like this:</p>
+<table class="">
+<thead>
+<th > <code>Article_ID</code> </th>
+<th > <code>Full_Title</code> </th>
+<th > <code>Link_to_Article</code> </th>
+<th > <code>Journal</code> </th>
+<th > <code>Year</code> </th>
+<th > <code>Month</code> </th>
+<th > <code>First Author Gender</code> </th>
+</thead>
+<tbody>
+<tr>
+<td > Aaby et al. (2010) </td>
+<td > Non-specific effects of standard measles vaccine at 4.5 and 9 months of age on childhood mortality: randomised controlled trial </td>
+<td > NA </td>
+<td > BMJ </td>
+<td > 2010 </td>
+<td > 12 - Dec </td>
+<td > Male </td>
+</tr>
+</tbody>
+</table>
+<p>What we'd really like to have is some unique identifier (eg the Pubmed ID or
+doi) associated with each record. That would make it much easier to cross-
+reference with other datasets, including the table of hundreds of thousands of
+publications that we downloaded as part of this study. I had this when we
+published - it's how we validated our method, but I'm embarrassed to say it
+didn't get included with the paper, and I recently had to delete my old computer
+backups which is the only place it lived.</p>
+<p>I told her how we initially did this, and it sounds like she managed to make it
+work herself, but I thought it would be worth documenting how I did it
+originally (and maybe improve it slightly). So we've got a table with titles,
+author last names, years, and journals, and what we want is a pubmed id or doi.</p>
+<p>I'm using <a href="http://julialang.org">julia</a> as my go-to language these days, and the first step
+is to load in the table as a dataframe that we can manipulate:</p>
+<pre><code class="julia">using DataFrames
+using CSV
+
+df = CSV.read(&quot;data/known-gender.csv&quot;)
+
+# get an array with the &quot;article id&quot; as a string
+ids = Vector&lbrace;String&rbrace;(df[:Article_ID])
+@show ids[1]</code></pre>
+
+<hr>
+<pre><code class="julia">ids[1] = &quot;Aaby et al. (2010)&quot;</code></pre>
+<p>We can see that the current form of the <code>:Article_ID</code> has both author name and
+the year, but we want to be able to handle these separately. But they all take
+the same form, the author name, sometimes followed by "et al.", followed by the
+year in parentheses<sup><a href="#fn_caveat">[2]</a></sup>
+<a id="fnref_caveat"></a>
+. So I'm going to use regular expressions, which
+can look like gobbledegook if you're not familiar with it. It's beyond the scope
+of this post to describe it, but I highly recomend <a href="https://regexr.com/">regexr</a> as a resource for
+learning and testing. The regex I used for this is composed of 3 parts:</p>
+<ul>
+<li>The author name, which can have some number of letters, spaces, <code>-</code>, and <code>'</code>: <code>([\w\s\-']+)</code><ul>
+<li>these are also at the beginning of the line, so I add a <code>^</code> (just to be safe)</li>
+</ul>
+</li>
+<li>Then "et al.": <code>et al\.</code><ul>
+<li>the <code>.</code> is a special character, so it's escaped with <code>\</code></li>
+<li>this is also optional, so I wrap it in parentheses and add <code>?</code></li>
+</ul>
+</li>
+<li>The year, which is 4 digits, and wrapped in parentheses: <code>\((\d&lbrace;4&rbrace;)\)</code><ul>
+<li>the inner parentheses are so I can grab it as a group</li>
+<li>it should be the end, so I finish with <code>$</code></li>
+</ul>
+</li>
+</ul>
+<p>So, the <a href="https://regexr.com/3hpod">complete regex</a> : <code>^([\w\s\-']+)( et al\.)? \((\d&lbrace;4&rbrace;)\)$</code></p>
+<p>And now I want to apply that search to everything in the <code>Article_ID</code> column:</p>
+<pre><code class="julia"># confirm this matches every row
+length(ids) # --&gt; 3204
+sum(.!ismatch.(r&quot;^([\w\s\-']+)( et al\.)? \((\d&lbrace;4&rbrace;)\)$&quot;, ids)) # --&gt; 3204
+
+# apply match across the whole ids array with `match.()`
+matches = match.(r&quot;^([\w\s\-']+)( et al\.)? \((\d&lbrace;4&rbrace;)\)$&quot;, ids)
+# get the last name of first authors
+firstauthors = [m.captures[1] for m in matches]
+# get the year... yeah there's a column for this, but since we have it...
+years = [parse(Int, m.captures[3]) for m in matches]</code></pre>
+
+<hr>
+<pre><code class="julia">3204-element Array&lbrace;Int64,1&rbrace;:
+ 2010
+ 2007
+     ⋮
+ 2007
+ 2011</code></pre>
+<p>We also have a column for the journal names, but pubmed searching is a bit
+idiosyncratic and works better if you use the right abreviations. So next, I
+built a dictionary of abbreviations, and used an array comprehension to get a
+new array with the journal names:</p>
+<pre><code class="julia">journals = Vector&lbrace;String&rbrace;(df[:Journal])
+
+replacements = Dict(
+    &quot;Archives of Internal Medicine&quot; =&gt; &quot;Arch Intern Med&quot;,
+    &quot;Annals of Internal Medicine&quot; =&gt; &quot;Ann Intern Med&quot;,
+    &quot;The Lancet&quot; =&gt; &quot;Lancet&quot;,
+    &quot;NEJM&quot; =&gt; &quot;N Engl J Med&quot;
+    )
+
+journals = [in(x, keys(replacements)) ? replacements[x] : x for x in journals]</code></pre>
+
+<hr>
+<pre><code class="julia">3204-element Array&lbrace;String,1&rbrace;:
+ &quot;BMJ&quot;
+ &quot;Ann Intern Med&quot;
+ ⋮
+ &quot;Lancet&quot;
+ &quot;Ann Intern Med&quot;</code></pre>
+<p>Finally, words like "and", "in", "over" don't help a lot when searching, and the
+titles currently have special characters (like <code>:</code> or <code>()</code>) that also don't help
+or could even hurt our ability to search. So I took the title column, and built
+new strings using only words that are 5 characters or more. I did this all in
+one go, but to explain, the <code>matchall()</code> function finds all of the 5 or more
+letter words (that's <code>\w&lbrace;5,&rbrace;</code> in regex) and returns an array of matches. Then
+the <code>join()</code> function puts them together in a single string (separated by a
+space since I passed <code>' '</code> as an argument):</p>
+<pre><code class="julia">titles = join.(matchall.(r&quot;\w&lbrace;5,&rbrace;&quot;, Vector&lbrace;String&rbrace;(df[:Full_Title])), ' ')</code></pre>
+
+<hr>
+<pre><code class="julia">3204-element Array&lbrace;String,1&rbrace;:
+ &quot;specific effects standard measles vaccine months childhood mortality randomised controlled trial&quot;
+ &quot;Tiotropium Combination Placebo Salmeterol Fluticasone Salmeterol Treatment Chronic Obstructive Pulmonary Disease Randomized Trial&quot;
+ ⋮
+ &quot;Artemether lumefantrine versus amodiaquine sulfadoxine pyrimethamine uncomplicated falciparum malaria Burkina randomised inferiority trial&quot;
+ &quot;Patient Interest Sharing Personal Health Record Information Based Survey&quot;</code></pre>
+<p>So now we've got all the elements of our search, and I just put them into an
+array of tuples to make them easier to deal with:</p>
+<pre><code class="julia">searches = collect(zip(titles, firstauthors, journals, years))</code></pre>
+
+<hr>
+<pre><code class="julia">3204-element Array&lbrace;Tuple&lbrace;String,SubString&lbrace;String&rbrace;,String,Int64,Int64&rbrace;,1&rbrace;:
+ (&quot;specific effects standard measles vaccine months childhood mortality randomised controlled trial&quot;, &quot;Aaby&quot;, &quot;BMJ&quot;, 12, 2010)
+ (&quot;Tiotropium Combination Placebo Salmeterol Fluticasone Salmeterol Treatment Chronic Obstructive Pulmonary Disease Randomized Trial&quot;, &quot;Aaron&quot;, &quot;Ann Intern Med&quot;, 4, 2007)
+ ⋮</code></pre>
+<p>Finally, I iterated through this array and composed searches, using the
+<a href="https://github.com/BioJulia/BioServices.jl"><code>BioServices.EUtils</code></a> package to do the search and retrieval.</p>
+<pre><code class="julia">using BioServices.EUtils
+
+for s in searches
+    # If you do too many queries in a row, esearch raises an exception.
+    # The solution is to pause (here for 10 sections) and then try again.
+    try
+        res = esearch(db=&quot;pubmed&quot;, term=&quot;($(s[1]) [title]) AND ($(s[2]) [author]) AND ($(s[3]) [ journal]) AND ($(s[4]) [pdat])&quot;)
+    catch
+        sleep(10)
+        res = esearch(db=&quot;pubmed&quot;, term=&quot;($(s[1]) [title]) AND ($(s[2]) [author]) AND ($(s[3]) [ journal]) AND ($(s[4]) [pdat])&quot;)
+    end
+
+
+    doc = parsexml(res.data)
+    #= this returns an array of pmids, since in the xml, they're separated by
+    newlines. The `strip` function removes leading and trailing newlines, but
+    not ones in between ids. =#
+    i = split(content(findfirst(doc, &quot;//IdList&quot;)) |&gt; strip, '\n')
+
+    if length(i) == 1
+        #= if no ids are returned, there's an array with just an empty string,
+        in which case I add 0 to the array =#
+        length(i[1]) == 0 ? push!(pmids, 0) : push!(pmids, parse(Int, i[1]))
+    else
+        # if there are more than 1 pmids returned, I just add 9 to the array
+        push!(pmids, 9)
+    end
+end</code></pre>
+<p>I actually did better than the last time I tried this - 2447 records associated
+with only 1 pmid. 13 of the searches had more than 1 pmid, and the rest (744)
+didn't return any hits.</p>
+<pre><code class="julia">@show sum(pmids .&gt; 9)
+@show sum(pmids .== 9)
+@show sum(pmids .== 0)</code></pre>
+
+<hr>
+<pre><code class="julia">sum(pmids .&gt; 9) = 2447
+sum(pmids .== 9) = 13
+sum(pmids .== 0) = 744</code></pre>
+<p>I added the ids to the dataframe and saved it as a new file (so I don't have to
+do the searching again). Since I have the urls for many of the papers, I was
+thinking I could try to identify the doi's associated with them from their
+webpages, but that will have to wait until another time.</p>
+<p>For now, the last step is to save it as a csv and send it off to Lucia:</p>
+<pre><code class="julia">CSV.write(&quot;data/withpmids.csv&quot;, df)</code></pre>
+
+
+      
+      </section>
+    </div>
+
+
+    <footer class="footer">
+      <section class="container">
+        © 2024 Kevin Bonham · Powered by
+  <a href="https://franklin.jl">Franklin.jl</a> &
+  <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      </section>
+    </footer>
+
+  </main>
+
+  
+
+  
+    <script src="/previews/PR10/libs/highlight/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();hljs.configure({tabReplace: '    '});</script>
+  
+
+<script src="/previews/PR10/libs/coder.min.js"></script>
+
+</body>
+</html>

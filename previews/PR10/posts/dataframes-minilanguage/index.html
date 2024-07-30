@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Language" content="en">
+  <meta name="color-scheme" content="light dark">
+
+  <meta name="author" content="Kevin Bonham">
+  <meta name="description" content="Kevin Bonham's website">
+  <meta name="keywords" content="microbiome,data science,teaching">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="kbonham">
+  <meta name="twitter:description" content="Kevin Bonham's website">
+
+  <meta property="og:title" content="summary">
+  <meta property="og:description" content="Kevin Bonham's website">
+  <meta property="og:type" content="website">
+
+  <title>kbonham</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+  <link rel="stylesheet" href="/previews/PR10/css/coder.min.css" media="screen">
+  <link rel="stylesheet" href="/previews/PR10/css/coder-dark.min.css" media="screen">
+
+  <link rel="icon" type="image/png" href="/previews/PR10/assets/infra/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/previews/PR10/assets/infra/favicon-16x16.png" sizes="16x16">
+
+  <link rel="apple-touch-icon" href="/previews/PR10/assets/infra/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/previews/PR10/assets/infra/apple-touch-icon.png">
+
+  
+  <meta name="generator" content="Franklin.jl" />
+
+  
+
+  
+    <link rel="stylesheet" href="/previews/PR10/libs/highlight/atom-one-dark.css">
+  
+
+  <style>
+  :root {
+    --block-background: #f4f0ec;
+  }
+  .hljs {
+    padding: 1em;
+  }
+  </style>
+
+</head>
+
+<body class="preload-transitions colorscheme-auto">
+
+  <div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+      <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+  </div>
+
+  <main class="wrapper">
+
+    <nav class="navigation">
+  <section class="container">
+
+    <a class="navigation-title" href="/previews/PR10/">
+      kbonham
+    </a>
+
+    <input type="checkbox" id="menu-toggle">
+    <label class="menu-button float-right" for="menu-toggle">
+      <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+    </label>
+
+    <ul class="navigation-list">
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/previews/PR10/about/">About</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/previews/PR10/posts/">Blog</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="https://github.com/kescobo/blog.bonham.ch/tree/main/webeasties">We, Beasties</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/previews/PR10/contact/">Contact me</a>
+        </li>
+      
+
+      
+      
+    </ul>
+
+  </section>
+</nav>
+
+
+    <div class="content">
+
+        
+        <section class="container post">
+          <header>
+  <div class="post-title">
+    <h1 class="title">
+      <a class="title-link" href="/previews/PR10/posts/dataframes-minilanguage/index.html">
+        The DataFrames.jl mini-language just clicked
+      </a>
+    </h1>
+  </div>
+
+  <div class="post-meta">
+    
+      <div class="date">
+        <span class="posted-on">
+          <i class="fa fa-calendar" aria-hidden="true"></i>
+          <time datetime='2022-09-10'>
+            September 10, 2022
+          </time>
+        </span>
+        
+        
+      </div>
+    
+
+    
+      <div class="tags">
+        <i class="fa fa-tag" aria-hidden="true"></i>
+        <span class="tag"><a href="/previews/PR10/tags/julia/">julia</a></span><span class="separator">•</span><span class="tag"><a href="/previews/PR10/tags/dataframes/">dataframes</a></span><span class="separator">•</span><span class="tag"><a href="/previews/PR10/tags/code/">code</a></span>
+      </div>
+    
+  </div>
+</header>
+
+
+       
+       
+       
+<p>I use <a href="https://dataframes.juliadata.org/stable/">DataFrames.jl</a> <em>all</em> the time.
+It's incredibly well engineered, well-tested, and fast!
+But there's one aspect that's eluded me for a while,
+and that's the "mini-language" that's used for <code>transform</code>ations
+and <code>combine</code>ing grouped DataFrames.
+I could use it for basic stuff, but for anything even moderately complicated,
+I'd have to puzzle over the documentation and then go through endless
+rounds of trial and error.</p>
+<p><a href="https://www.juliabloggers.com/dataframes-jl-minilanguage-explained/">This blog post</a> by the primary architect of <code>DataFrames.jl</code>
+covers everything I'm about to say comprehensively -
+I've read it several times, and it is very clear.</p>
+<p>But something just clicked for me in a way it never has before - not sure entirely how,
+but I did something complicated in one go!
+So I thought I'd share the way it makes sense to me
+in case there are others with similar brains to mine 😉.
+Before I get to that, I should say a few things about <code>DataFrame</code>s,
+<code>GroupedDataFrame</code>s, and the basic <code>select()</code>, <code>transform()</code>, and <code>combine()</code>
+invocations.</p>
+<h2 id="the_easy_stuff" > The easy stuff<a class="heading-link" href="#the_easy_stuff">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h2><p>One of the more powerful features of <code>DataFrames.jl</code> is the ability to
+make a <code>GroupedDataFrame</code> using one or more columns as "keys".
+Each subgroup is then just a view into the original <code>DataFrame</code>,
+but acts like a <code>DataFrame</code> in its own right.</p>
+<p>So to set this up, let's make a <code>df</code> that's similar
+to what I've been working with recently -
+a table of metadata about individual patient visits
+Each <code>subject</code> may come in multiple times,
+and get a few different things measured.
+In my case, I'm most interested in visits where the subjects
+collected a stool sample that I have microbiome data for.</p>
+<pre><code class="julia-repl">julia&gt; df = DataFrame(
+           subject = repeat(1:3; inner = 4),
+           timepoint = repeat(1:4; outer = 3),
+           thing1 = rand(12),
+           thing2 = rand(60:100, 12),
+           sample = [missing, missing, &quot;s1&quot;, &quot;s2&quot;, &quot;s10&quot;, missing, &quot;s13&quot;, &quot;s20&quot;, missing, missing, missing, missing]
+       )
+12×5 DataFrame
+ Row │ subject  timepoint  thing1    thing2  sample
+     │ Int64    Int64      Float64   Int64   String?
+─────┼───────────────────────────────────────────────
+   1 │       1          1  0.514054      90  missing
+   2 │       1          2  0.778417      60  missing
+   3 │       1          3  0.157212      91  s1
+   4 │       1          4  0.27137       69  s2
+   5 │       2          1  0.867191      67  s10
+   6 │       2          2  0.254406      78  missing
+   7 │       2          3  0.925755      77  s13
+   8 │       2          4  0.060332      87  s20
+   9 │       3          1  0.9863        81  missing
+  10 │       3          2  0.183848      98  missing
+  11 │       3          3  0.190012      77  missing
+  12 │       3          4  0.300867      71  missing</code></pre>
+<p>Often we want to get summaries on a per-subject basis,
+or do other things within just the samples.
+Using <code>groupby</code> and <code>combine</code>, this is quite easy.</p>
+<pre><code class="julia-repl">julia&gt; gdf = groupby(df, :subject);
+
+julia&gt; combine(gdf,
+           &quot;thing1&quot; =&gt; mean,
+           &quot;thing2&quot; =&gt; median,
+           &quot;sample&quot; =&gt; (col -&gt; any(!ismissing, col)) =&gt; &quot;has_sample&quot;
+       )
+3×4 DataFrame
+ Row │ subject  thing1_mean  thing2_median  has_sample
+     │ Int64    Float64      Float64        Bool
+─────┼─────────────────────────────────────────────────
+   1 │       1     0.430263           79.5        true
+   2 │       2     0.526921           77.5        true
+   3 │       3     0.415257           79.0       false</code></pre>
+<p>The "mini-language" is the bits with <code>=&gt;</code>.
+Each operation works on columns,
+so <code>&quot;thing1&quot; =&gt; mean</code> returns <code>mean(subdf.thing1)</code>
+for each of the <code>SubDataFrame</code>s
+(I could also have done <code>&quot;thing1&quot; =&gt; mean =&gt; &quot;other name&quot;</code>
+to change the name of the resulting column).</p>
+<p>My operation on <code>&quot;sample&quot;</code> doesn't have a built-in function to apply,
+but using "anonymous" functions is pretty straightforward in this context -
+just remember that you're function argument is the <em>column</em> (as a vector).
+That is, writing <code>(col -&gt; any(!ismissing, col))</code> as above is equivalent
+to writing a named function that takes one column as an argument, eg:</p>
+<pre><code class="julia-repl">julia&gt; function has_sample(col)
+           # any elements of the column are not missing
+           return any(!ismissing, col)
+       end
+has_sample (generic function with 1 method)
+
+julia&gt; combine(gdf, &quot;sample&quot; =&gt; has_sample =&gt; &quot;has_sample&quot;)
+3×2 DataFrame
+ Row │ subject  has_sample
+     │ Int64    Bool
+─────┼─────────────────────
+   1 │       1        true
+   2 │       2        true
+   3 │       3       false</code></pre>
+<p>Another thing I do frequently is some per-column transformations.
+To be consistent, <code>transform</code> operations also work on whole-columns.
+Most of the time, I want to do things with <code>transform()</code> on individual rows,
+but happily there's a conventient <code>ByRow()</code> constructor that makes this easy,
+and having access to the whole column can sometimes be useful.
+For example, if I want to get the "relative abundance" (or total sum scaled result):</p>
+<pre><code class="julia-repl">julia&gt; transform(gdf,
+           &quot;thing1&quot; =&gt; ByRow(x-&gt; x*100) =&gt; &quot;thing1_perc&quot;,
+           &quot;thing2&quot; =&gt; (col-&gt; map(el-&gt; el / sum(col), col)) =&gt; &quot;thing2_tss&quot; # total sum scale
+       )
+12×7 DataFrame
+ Row │ subject  timepoint  thing1    thing2  sample   thing1_perc  thing2_tss
+     │ Int64    Int64      Float64   Int64   String?  Float64      Float64
+─────┼────────────────────────────────────────────────────────────────────────
+   1 │       1          1  0.514054      90  missing      51.4054    0.290323
+   2 │       1          2  0.778417      60  missing      77.8417    0.193548
+   3 │       1          3  0.157212      91  s1           15.7212    0.293548
+   4 │       1          4  0.27137       69  s2           27.137     0.222581
+   5 │       2          1  0.867191      67  s10          86.7191    0.216828
+   6 │       2          2  0.254406      78  missing      25.4406    0.252427
+   7 │       2          3  0.925755      77  s13          92.5755    0.249191
+   8 │       2          4  0.060332      87  s20           6.0332    0.281553
+   9 │       3          1  0.9863        81  missing      98.63      0.247706
+  10 │       3          2  0.183848      98  missing      18.3848    0.299694
+  11 │       3          3  0.190012      77  missing      19.0012    0.235474
+  12 │       3          4  0.300867      71  missing      30.0867    0.217125</code></pre>
+<h2 id="getting_complicated" > Getting complicated<a class="heading-link" href="#getting_complicated">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h2><p>OK, so I think that stuff is pretty straightforward,
+but what if we want to do something more complicated,
+maybe involving more than one column and their interactions?
+For example, one thing I wanted to do recently was to check a
+<em>future</em> value for a given stool sample. For example, I want</p>
+<ol>
+<li>If a timepoint doesn't have a stool sample, ignore</li>
+<li>Otherwise, find the <em>next</em> timepoint that has <code>thing1</code>
+   and use that value (even if <em>that</em> timepoint <em>doesn't</em> have a stool sample), BUT</li>
+<li>my timepoints aren't guaranteed to be in order, AND</li>
+<li>I'm not guaranteed to have a measurement in the future, or it may not be the next timepoint.</li>
+</ol>
+<p>So let's show off some of those complications a bit:</p>
+<pre><code class="julia-repl">julia&gt; df.thing1 = [rand() &lt; 0.4 ? missing : x for x in df.thing1];
+
+julia&gt; df = df[randperm(12), :];
+
+julia&gt; gdf = groupby(df, :subject)
+GroupedDataFrame with 3 groups based on key: subject
+First Group (4 rows): subject = 1
+ Row │ subject  timepoint  thing1          thing2  sample
+     │ Int64    Int64      Float64?        Int64   String?
+─────┼─────────────────────────────────────────────────────
+   1 │       1          4  missing             69  s2
+   2 │       1          1  missing             90  missing
+   3 │       1          3        0.157212      91  s1
+   4 │       1          2  missing             60  missing
+⋮
+Last Group (4 rows): subject = 3
+ Row │ subject  timepoint  thing1          thing2  sample
+     │ Int64    Int64      Float64?        Int64   String?
+─────┼─────────────────────────────────────────────────────
+   1 │       3          2  missing             98  missing
+   2 │       3          1        0.9863        81  missing
+   3 │       3          3        0.190012      77  missing
+   4 │       3          4        0.300867      71  missing</code></pre>
+<p>To make this work, we need to know about the <code>AsTable()</code> modifier for <code>transform</code>,
+which gives us a <code>NamedTuple</code> to work with for each group,
+where each key contains a column.
+That is <code>AsTable(&quot;timepoint&quot;, &quot;thing1&quot;, &quot;sample&quot;)</code> will effectively give us</p>
+<pre><code class="julia">julia&gt; (; timepoint = gdf[1].timepoint, thing1 = gdf[1].thing1, sample = gdf[1].sample)
+(timepoint = [4, 1, 3, 2], thing1 = Union&lbrace;Missing, Float64&rbrace;[missing, missing, 0.15721238855765696, missing], sample = Union&lbrace;Missing, String&rbrace;[&quot;s2&quot;, missing, &quot;s1&quot;, missing])</code></pre>
+<p>Two more things to be aware of: first, for complicated anonymous functions, we can use <code>begin .. end</code> syntax
+to make things more manageable, even within another function. That is:</p>
+<pre><code class="julia">args -&gt; begin
+    # function body
+end</code></pre>
+<p>and second, our result needs to be a vector or another <code>Table</code>-compatible object
+(like a Namedtuple with columns) that has the same length as the original.</p>
+<p>We these things in mind, check this out... I didn't get it on the first try, but it was close..</p>
+<pre><code class="julia-repl">julia&gt; transform!(gdf, AsTable([&quot;timepoint&quot;, &quot;thing1&quot;, &quot;sample&quot;]) =&gt; nt -&gt; begin
+           futures = map(eachindex(nt.timepoint)) do i # loop through row indexes
+               timepoint = nt.timepoint
+               srt = sortperm(timepoint) # so we can get the right order
+               sample = nt.sample
+               thing1 = nt.thing1
+
+               ismissing(sample[i]) &amp;&amp; return missing # (1) if there's no sample, ignore
+               fidx = findfirst(j -&gt; timepoint[srt][j] &gt; timepoint[i] &amp;&amp; # Checks the sorted timepoint index to make sure it's bigger
+                                     !ismissing(thing1[srt][j]), # checks that `thing1` (sorted by timepoint) has a value
+                                eachindex(timepoint) # using indexes in case samples are something like [1,3,4,6]
+                )
+               isnothing(fidx) &amp;&amp; return missing
+               return thing1[srt][fidx]
+           end
+           return futures
+       end =&gt; &quot;future_thing1&quot;);
+
+julia&gt; sort(df, [&quot;subject&quot;, &quot;timepoint&quot;]) # just to check
+12×6 DataFrame
+ Row │ subject  timepoint  thing1          thing2  sample   timepoint_thing1_sample_function
+     │ Int64    Int64      Float64?        Int64   String?  Float64?
+─────┼───────────────────────────────────────────────────────────────────────────────────────
+   1 │       1          1  missing             90  missing                    missing
+   2 │       1          2  missing             60  missing                    missing
+   3 │       1          3        0.157212      91  s1                         missing
+   4 │       1          4  missing             69  s2                         missing
+   5 │       2          1  missing             67  s10                              0.925755
+   6 │       2          2  missing             78  missing                    missing
+   7 │       2          3        0.925755      77  s13                              0.060332
+   8 │       2          4        0.060332      87  s20                        missing
+   9 │       3          1        0.9863        81  missing                    missing
+  10 │       3          2  missing             98  missing                    missing
+  11 │       3          3        0.190012      77  missing                    missing
+  12 │       3          4        0.300867      71  missing                    missing</code></pre>
+<p>We ca see that row 5 <code>(; subject = 2, timepoint = 1)</code>
+correctly gets its future score from timepoint 3 (row 7)
+since timepoint 2 didn't have a score,
+Subjects 1 and 3 don't have any stool samples with a valid future <code>thing1</code>.</p>
+<p>This feels complicated, but honestly, it's way easier than a number of other things I tried,
+more robust, and faster too!
+It takes a bit of thinking functionally, and one needs to remember the business with <code>NamedTuple</code>s,
+but after that, it's actually straightforward... famous last words!</p>
+
+
+      
+      </section>
+    </div>
+
+
+    <footer class="footer">
+      <section class="container">
+        © 2024 Kevin Bonham · Powered by
+  <a href="https://franklin.jl">Franklin.jl</a> &
+  <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      </section>
+    </footer>
+
+  </main>
+
+  
+
+  
+    <script src="/previews/PR10/libs/highlight/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();hljs.configure({tabReplace: '    '});</script>
+  
+
+<script src="/previews/PR10/libs/coder.min.js"></script>
+
+</body>
+</html>

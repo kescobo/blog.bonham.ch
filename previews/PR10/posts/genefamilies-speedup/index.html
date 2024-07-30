@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Language" content="en">
+  <meta name="color-scheme" content="light dark">
+
+  <meta name="author" content="Kevin Bonham">
+  <meta name="description" content="Kevin Bonham's website">
+  <meta name="keywords" content="microbiome,data science,teaching">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="kbonham">
+  <meta name="twitter:description" content="Kevin Bonham's website">
+
+  <meta property="og:title" content="summary">
+  <meta property="og:description" content="Kevin Bonham's website">
+  <meta property="og:type" content="website">
+
+  <title>kbonham</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+  <link rel="stylesheet" href="/previews/PR10/css/coder.min.css" media="screen">
+  <link rel="stylesheet" href="/previews/PR10/css/coder-dark.min.css" media="screen">
+
+  <link rel="icon" type="image/png" href="/previews/PR10/assets/infra/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/previews/PR10/assets/infra/favicon-16x16.png" sizes="16x16">
+
+  <link rel="apple-touch-icon" href="/previews/PR10/assets/infra/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/previews/PR10/assets/infra/apple-touch-icon.png">
+
+  
+  <meta name="generator" content="Franklin.jl" />
+
+  
+
+  
+    <link rel="stylesheet" href="/previews/PR10/libs/highlight/atom-one-dark.css">
+  
+
+  <style>
+  :root {
+    --block-background: #f4f0ec;
+  }
+  .hljs {
+    padding: 1em;
+  }
+  </style>
+
+</head>
+
+<body class="preload-transitions colorscheme-auto">
+
+  <div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+      <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+  </div>
+
+  <main class="wrapper">
+
+    <nav class="navigation">
+  <section class="container">
+
+    <a class="navigation-title" href="/previews/PR10/">
+      kbonham
+    </a>
+
+    <input type="checkbox" id="menu-toggle">
+    <label class="menu-button float-right" for="menu-toggle">
+      <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+    </label>
+
+    <ul class="navigation-list">
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/previews/PR10/about/">About</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/previews/PR10/posts/">Blog</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="https://github.com/kescobo/blog.bonham.ch/tree/main/webeasties">We, Beasties</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/previews/PR10/contact/">Contact me</a>
+        </li>
+      
+
+      
+      
+    </ul>
+
+  </section>
+</nav>
+
+
+    <div class="content">
+
+        
+        <section class="container post">
+          <header>
+  <div class="post-title">
+    <h1 class="title">
+      <a class="title-link" href="/previews/PR10/posts/genefamilies-speedup/index.html">
+        Speeding up loading of HUMAnN gene-families tables using Arrow.jl + Tables.jl
+      </a>
+    </h1>
+  </div>
+
+  <div class="post-meta">
+    
+      <div class="date">
+        <span class="posted-on">
+          <i class="fa fa-calendar" aria-hidden="true"></i>
+          <time datetime='2022-05-04'>
+            May 4, 2022
+          </time>
+        </span>
+        
+        
+      </div>
+    
+
+    
+      <div class="tags">
+        <i class="fa fa-tag" aria-hidden="true"></i>
+        <span class="tag"><a href="/previews/PR10/tags/julia/">julia</a></span><span class="separator">•</span><span class="tag"><a href="/previews/PR10/tags/arrow/">arrow</a></span><span class="separator">•</span><span class="tag"><a href="/previews/PR10/tags/data/">data</a></span><span class="separator">•</span><span class="tag"><a href="/previews/PR10/tags/csv/">csv</a></span><span class="separator">•</span><span class="tag"><a href="/previews/PR10/tags/code/">code</a></span><span class="separator">•</span><span class="tag"><a href="/previews/PR10/tags/microbiome/">microbiome</a></span>
+      </div>
+    
+  </div>
+</header>
+
+
+       
+       
+       
+<p>The human microbiome has on the order of 100-fold more genes than the human genome<sup><a href="#fn_microbe_genes">[1]</a></sup>
+<a id="fnref_microbe_genes"></a>
+
+than the human genome.
+We are able to get a window on this enormous functional potential
+using shotgun metagenomic sequencing,
+but using standard tools for working with this much data
+can be challenging.</p>
+<p>I tend to use the tools from the <a href="http://huttenhower.sph.harvard.edu">bioBakery</a>,
+such as <code>MetaPhlAn</code> for taxonomic profiling,
+and <code>HUMAnN</code> for functional profiling.
+Both of these tools can be run on the sequencing files
+of each sample in parallel,
+and generate plain-text table files (<code>.csv</code> or <code>.tsv</code>)
+with a column for the taxa / function, and a column for the abundance.</p>
+<p>So here's my situation: I have about 2000 CSV files, each of which has 2 columns - call them <code>feature</code> and <code>value</code>.
+Each CSV represents a single biospecimen, call them <code>sample</code>s.</p>
+<p>Each sample has several hundreds of thousands of <code>feature</code>s, but most features are not found in most samples.
+Because storing so many zeros is a waste of memory,
+ultimately, I want to end up with a sparse matrix filled with <code>value</code>s, where I know the (column) index of each <code>sample</code> and the (row) index of each <code>feature</code>.</p>
+<p>Here's an extremely naive implementation that works but is Slooooow</p>
+<pre><code class="julia">using DataFrames
+using SparseArrays
+
+function builddf(files)
+    df = DataFrame(feature=String[], value=Float64[], sample=String[])
+    for f in files
+        sdf = CSV.read(f, DataFrame; header=[&quot;feature&quot;, &quot;value&quot;], skipto=2)
+        subset!(sdf, &quot;feature&quot;=&gt; ByRow(f-&gt; !contains(f, '|'))) # skip stratified features
+        samplename = replace(splitext(basename(f))[1], r&quot;_S\d+_genefamilies&quot; =&gt; &quot;&quot;)
+        sdf.sample .= samplename
+        append!(df, sdf)
+    end
+    return df
+end
+
+function matrixize(longdf)
+    fs = Set(longdf.feature)
+    ss = Set(longdf.sample)
+    features = Dict(f =&gt; i for (i, f) in enumerate(fs)) 
+    samples = Dict(s =&gt; i for (i, s) in enumerate(ss))
+
+    m = spzeros(length(fs), length(ss))
+    for row in eachrow(longdf)
+        rowidx = features[row.feature]
+        colidx = samples[row.sample]
+        m[rowidx, colidx] = row.value
+    end
+    return features, samples, m
+end</code></pre>
+<p>So basically,</p>
+<ol>
+<li>I'm reading all of the files in one at a time and making a long dataframe. This is actually reasonably quick</li>
+<li>getting a unique index for each sample and feature.</li>
+<li>looping through the rows and filling the SparseMatrix</li>
+</ol>
+<p>To get a sense of the numbers, trying on a subset of ~70 samples,
+my initial <code>longdf</code> generated by <code>builddf(files)</code> has: ~11M rows, with ~1.1M unique features.</p>
+<p>Step (1) took ~2 sec, step (2) took ~2 sec, and step (3) takes ~ 75 sec.</p>
+<p>I thought maybe I could do the matrix filling in parallel (just using <code>Threads.@threads</code> on the loop), but that caused julia to crash, so I guess maybe filling the sparse matrix isn't thread safe?</p>
+<p>My other idea was to add row / col index columns to the longdf, then use the <code>sparse(I, J, V)</code> syntax,
+where <code>I</code> is the a vector of row indices, <code>J</code> is a vector of column indices,
+and <code>V</code> is the value entries.
+Since I already already have the long dataframe stored essentially like this,
+it's pretty easy to make <code>matrixize2(longdf)</code>,
+which is just</p>
+<pre><code class="julia">function matrixize2(longdf)
+    fs = Set(longdf.feature)
+    ss = Set(longdf.sample)
+    features = Dict(f =&gt; i for (i, f) in enumerate(fs)) 
+    samples = Dict(s =&gt; i for (i, s) in enumerate(ss))
+
+    m = sparse(
+        (features[f] for f in longdf.feature), # this is `I`
+        (samples[s] for s in longdf.sample), # this is `J`
+        longdf.value # this is `V`
+    )
+
+    return features, samples, m
+end</code></pre>
+<p>This actually works a lot better - it essentially combines steps (2) and (3)
+from above, avoiding looping over each row of the long dataframe,
+which in the case of my full dataset gets <em>very</em> long.
+This version only took ~8 sec, for a combined total of 12 sec</p>
+<p>Amazing!</p>
+<div class="fn-defs">
+<a id="fn-defs"></a>
+<ol><li>
+  <a id="fn_microbe_genes"></a>
+  <a href="#fnref_microbe_genes" class="fn-hook-btn">&ldca;</a>
+  Qin J. <em>et. al</em>, Nature, 2010, <a href="https://doi.org/10.1038/nature08821">doi: 10.1038/nature08821</a>
+</li>
+  </ol>
+</div>
+
+
+      
+      </section>
+    </div>
+
+
+    <footer class="footer">
+      <section class="container">
+        © 2024 Kevin Bonham · Powered by
+  <a href="https://franklin.jl">Franklin.jl</a> &
+  <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      </section>
+    </footer>
+
+  </main>
+
+  
+
+  
+    <script src="/previews/PR10/libs/highlight/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();hljs.configure({tabReplace: '    '});</script>
+  
+
+<script src="/previews/PR10/libs/coder.min.js"></script>
+
+</body>
+</html>
