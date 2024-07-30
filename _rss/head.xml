@@ -22,12 +22,12 @@ rss_file variable in your config file if you want to use something different tha
   <channel>
     <title>
       <!-- XXX <![CDATA[  {{fd2rss website_title}}  ]]> -->
-      <![CDATA[  {{fd2rss website_title}}  ]]>
+      <![CDATA[  Useful Models  ]]>
     </title>
     <link> {{website_url}} </link>
     <description>
       <!-- XXX <![CDATA[  {{fd2rss website_description}}  ]]> -->
-      <![CDATA[  {{fd2rss website_description}}  ]]>
+      <![CDATA[  Personal blog of Kevin Bonham, PhD  ]]>
     </description>
     <!-- XXX <atom:link
       href="{{fd_rss_feed_url}}"
