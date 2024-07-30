@@ -2,7 +2,7 @@
 using Dates
 date = Date(2024, 7, 30)
 title = "Mastodon comments in Xranklin - how to do it"
-comments_id = "112842335724314238"
+comments_id = "112875739387630712"
 tags = ["web", "mastodon", "julia", "meta"]
 +++
 
@@ -22,7 +22,7 @@ but if you want to follow along,
 the code for this site is [on github].
 and the state of the repo while working on this post [is here][current-commit].
 
-If you don't care about the details and want to jump to what to do,
+if you don't care about the details and want to jump to what to do,
 check out the [TL;DR](#tldr-for-adding-mastodon-comments-to-your-xranklin-site) at the end.
 
 [mastodon]: https://joinmastodon.org
@@ -409,7 +409,7 @@ Eg, for this post, the frontmatter looks like this:
 using Dates
 date = Date(2024, 7, 30)
 title = "Mastodon comments in Xranklin - how to do it"
-comments_id = "112842335724314238"
+comments_id = "112875739387630712"
 tags = ["web", "mastodon", "julia", "meta"]
 +++
 ```
