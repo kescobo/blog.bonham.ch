@@ -7,19 +7,19 @@
   xmlns:georss="http://www.georss.org/georss">
   <channel>
     <title>
-      <![CDATA[  <span style="color:red;">[FAILED:]&gt;&lbrace;&lbrace; website_title&rbrace;&rbrace;&lt;</span>  ]]>
+      <![CDATA[  <span style="color:red;">[FAILED:]&gt;&lbrace;&lbrace; fd2rss website_title&rbrace;&rbrace;&lt;</span>  ]]>
     </title>
     <link> http://blog.bonham.ch/ </link>
     <description>
-      <![CDATA[  <span style="color:red;">[FAILED:]&gt;&lbrace;&lbrace; website_description&rbrace;&rbrace;&lt;</span>  ]]>
+      <![CDATA[  <span style="color:red;">[FAILED:]&gt;&lbrace;&lbrace; fd2rss website_description&rbrace;&rbrace;&lt;</span>  ]]>
     </description>
 
 <item>
   <title>
     <![CDATA[  Getting Back on the Horse - Part 2: Deploying a new Site  ]]>
   </title>
-  <link> http://blog.bonham.chposts/back-on-the-horse-part2/index.html </link>
-  <guid> http://blog.bonham.chposts/back-on-the-horse-part2/index.html </guid>
+  <link> http://blog.bonham.ch/posts/back-on-the-horse-part2/index.html </link>
+  <guid> http://blog.bonham.ch/posts/back-on-the-horse-part2/index.html </guid>
   <description>
     <![CDATA[  Part 2 of my effort to recover blog posts from my previous life  ]]>
   </description>
