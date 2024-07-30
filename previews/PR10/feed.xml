@@ -16,6 +16,20 @@
 
 <item>
   <title>
+    <![CDATA[  Setting up mastodon comments  ]]>
+  </title>
+  <link> http://blog.bonham.chposts/mastodon-comments2/index.html </link>
+  <guid> http://blog.bonham.chposts/mastodon-comments2/index.html </guid>
+  <description>
+    <![CDATA[  Mastodon comments - take 2  ]]>
+  </description>
+  <atom:author>
+    <atom:name>Kevin Bonham</atom:name>
+  </atom:author>
+</item>
+
+<item>
+  <title>
     <![CDATA[  Job applications with Typst and git for fun and profit  ]]>
   </title>
   <link> http://blog.bonham.chposts/typst-job-apps/index.html </link>
