@@ -1,7 +1,7 @@
 function displayMastodonComments(data) {
-  const commentsList = document.getElementById('mastodon-comments-list');
+  const commentsList = document.getElementById('mastodon-comments');
   commentsList.innerHTML = ""; // Clear existing comments
-
+  
   data.descendants.forEach(function(reply) {
     if (reply.visibility == "public") {
       const commentDiv = document.createElement('div');
@@ -14,16 +14,17 @@ function displayMastodonComments(data) {
         <div class="comment-content">
           <div class="comment-header">
             <div class="user-info">
-              <span class="display-name">${escapeHtml(reply.account.display_name)}</span>
+              <span class="display-name"><a href=${reply.account.url}>${escapeHtml(reply.account.display_name)}</a></span>
               <span class="username">@${escapeHtml(username)}</span>
             </div>
-            <span class="comment-date">${formatDate(reply.created_at)}</span>
+            <span class="comment-date"><a href=${reply.url}>${formatDate(reply.created_at)}</a></span>
           </div>
           <div class="comment-text">${reply.content}</div>
           <div class="comment-actions">
             <span class="comment-action">↩ ${reply.replies_count}</span>
             <span class="comment-action">🔁 ${reply.reblogs_count}</span>
             <span class="comment-action">⭐ ${reply.favourites_count}</span>
+            <span class="comment-action"><a href=${reply.url}>🔗</a></span>
           </div>
         </div>
       `;
@@ -31,6 +32,9 @@ function displayMastodonComments(data) {
       commentsList.appendChild(commentDiv);
     };
   });
+  if (commentsList.innerHTML == "") {
+    commentsList.innerHTML = "<p>No comments found (yet! be the first!)</p>"
+  };
 }
 
 function escapeHtml(unsafe) {
