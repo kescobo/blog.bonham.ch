@@ -118,8 +118,8 @@
       <div class="date">
         <span class="posted-on">
           <i class="fa fa-calendar" aria-hidden="true"></i>
-          <time datetime='2024-07-26'>
-            July 26, 2024
+          <time datetime='2024-07-29'>
+            July 29, 2024
           </time>
         </span>
         
@@ -140,7 +140,7 @@
        
        
        
-<p>In the <a href="/previews/PR9/posts/mastodon-comments.md">last post</a>,
+<p>In the <a href="/previews/PR9/posts/mastodon-comments">last post</a>,
 I was showing that I could use replies to a post on <a href="https://joinmastodon.org">mastodon</a>
 as comments on this blog.
 Here, I'll show how I did it
@@ -154,6 +154,8 @@ this took a bit of effort to translate to the static site generator that I'm usi
 but if you want to follow along,
 the code for this site is <a href="https://github.com/kescobo/blog.bonham.ch/">on github</a>.
 and the state of the repo while working on this post <a href="https://github.com/kescobo/blog.bonham.ch/commit/6c35988c9f34f8c25e937d2047538e0f0ff19ab8">is here</a>.</p>
+<p>If you don't care about the details and want to jump to what to do,
+check out the <a href="#tldr-for-adding-mastodon-comments-to-your-xranklin-site">TL;DR</a> at the end.</p>
 <h2 id="background_on_xranklin.jl_/_franklin.jl" > Background on Xranklin.jl / Franklin.jl<a class="heading-link" href="#background_on_xranklin.jl_/_franklin.jl">
   <i class="fa fa-link" aria-hidden="true"></i>
 </a>
@@ -197,8 +199,8 @@ which in the case of Xranklin is one of the following places:</p>
    In Xranklin, this is julia code placed within 3 <code>+</code> blocks at the beginning.
    Variables defined here are considered "local"</li>
 </ol>
-<p>In the following code, you'll see <code>&lbrace;&lbrace;masto_host&rbrace;&rbrace;</code> and <code>&lbrace;&lbrace;masto_user&rbrace;&rbrace;</code>,
-which are defined in <code>config.jl</code>, and <code>&lbrace;&lbrace;masto_id&rbrace;&rbrace;</code>,
+<p>In the following code, you'll see <code>&lbrace;&lbrace;comments_host&rbrace;&rbrace;</code> and <code>&lbrace;&lbrace;comments_user&rbrace;&rbrace;</code>,
+which are defined in <code>config.jl</code>, and <code>&lbrace;&lbrace;comments_id&rbrace;&rbrace;</code>,
 which is meant to be defined in a post's front matter.</p>
 <h2 id="code_to_fetch_and_display_posts_from_mastodon" > Code to fetch and display posts from Mastodon<a class="heading-link" href="#code_to_fetch_and_display_posts_from_mastodon">
   <i class="fa fa-link" aria-hidden="true"></i>
@@ -447,9 +449,36 @@ file inside a the block that only loads it if the post has comments.</p>
   &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/mastodon.comments.css&quot; media=&quot;screen&quot;&gt;
   &lbrace;&lbrace;insert comments.html&rbrace;&rbrace;
 &lbrace;&lbrace;end&rbrace;&rbrace;</code></pre>
-<p>!!! note
-    this <code>&lbrace;&lbrace;isdef...&rbrace;&rbrace; ... &lbrace;&lbrace;end&rbrace;&rbrace;</code> syntax is how Xranklin does things -
-    for other SSGs you'll probably need different syntax.</p>
+<p>Note: this <code>&lbrace;&lbrace;isdef...&rbrace;&rbrace; ... &lbrace;&lbrace;end&rbrace;&rbrace;</code> syntax is how Xranklin does things -
+for other SSGs you'll probably need different syntax.</p>
+<p>There's nothing particularly revolutionary in this CSS,
+but you may need to modify it in order to have comments
+match the style of your site.</p>
+<h2 id="tl;dr_for_adding_mastodon_comments_to_your_xranklin_site" > TL;DR for adding mastodon comments to your Xranklin site<a class="heading-link" href="#tl;dr_for_adding_mastodon_comments_to_your_xranklin_site">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h2><ol>
+<li>add <a href="https://github.com/kescobo/blog.bonham.ch/"><code>mastodon.comments.js</code></a> to <code>_libs</code></li>
+<li>add <a href="https://github.com/kescobo/blog.bonham.ch"><code>mastodon.comments.css</code></a> to <code>_css</code> and modify accordingly</li>
+<li>add <a href="https://github.com/kescobo/blog.bonham.ch"><code>comments.html</code></a> to <code>_layout</code></li>
+<li>add <a href="https://github.com/kescobo/blog.bonham.ch">this chunk</a> to <code>_layout/foot.html</code></li>
+<li>assign <code>comments_host</code> and <code>comments_username</code> in <code>config.jl</code>
+   to your mastodon instance and username (<a href="https://github.com/kescobo/blog.bonham.ch">see here</a>)</li>
+</ol>
+<p>Then, for any page that you want to add comments for,
+make a mastodon post, copy the numeric ID,
+and then put <code>comments_id = &quot;&lt;ID here&gt;&quot;</code> into the frontmatter
+of the page.
+Eg, for this post, the frontmatter looks like this:</p>
+<pre><code class="md">+++
+using Dates
+date = Date(2024, 7, 29)
+title = &quot;Mastodon comments in Xranklin - how to do it&quot;
+comments_id = &quot;112842335724314238&quot;
+tags = [&quot;web&quot;, &quot;mastodon&quot;, &quot;julia&quot;]
++++</code></pre>
+<p>And that's it!
+And let me know how it goes in the "comments" 😉</p>
 <div class="fn-defs">
 <a id="fn-defs"></a>
 <ol><li>
