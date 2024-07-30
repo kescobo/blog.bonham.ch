@@ -4,7 +4,7 @@ author = "Kevin Bonham"
 author_blurb = "Senior Research Scientist"
 author_short = "kbonham"
 
-website_url = "http://blog.bonham.ch"
+website_url = "http://blog.bonham.ch/"
 website_title = "Blog dot Bonham dot C H"
 website_descr = "Personal website of Kevin Bonham, PhD"
 
