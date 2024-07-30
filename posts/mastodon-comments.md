@@ -3,8 +3,6 @@ using Dates
 date = Date(2024, 7, 24)
 title = "Mastodon comments on Xranklin"
 comments_id = "112842335724314238"
-comments_username = "kbonham"
-comments_host = "scicomm.xyz"
 +++
 
 Comments are tricky - they're nice for engagement

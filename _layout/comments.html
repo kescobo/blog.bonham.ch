@@ -2,13 +2,14 @@
 <section class="comments">
   <h2 class="comments-title">Comments</h2>
   <p>You can use your <a href="https://joinmastodon.org">Mastodon</a> or other ActivityPub account to comment on this article by replying to the associated <a class="link" href="https://{{ comments_host }}/@{{ comments_username }}/{{ comments_id }}">post</a>.</p>
-  <p id="mastodon-comments-list">
-    <button id="load-comment" class="btn btn--twitter">Load comments from Mastodon</button>
-  </p>
-  <noscript><p>You have to allow JavaScript to view the comments.</p></noscript>
+  <div id="mastodon-comments">
+    <button id="load-comment">Load Comments</button>
+    <div id="mastodon-comments-list"></div>
+  </div>
+
   <script src="/libs/mastodon.comments.js"></script>
   <script type="text/javascript">
-    document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("load-comment").addEventListener("click", function() {
       loadMastodonComments("{{ comments_host }}", "{{ comments_id }}");
     });
   </script>

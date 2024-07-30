@@ -87,11 +87,11 @@ I thought maybe I could do the matrix filling in parallel (just using `Threads.@
 
 My other idea was to add row / col index columns to the longdf, then use the `sparse(I, J, V)` syntax,
 where `I` is the a vector of row indices, `J` is a vector of column indices,
-and `V` is the value entries. 
+and `V` is the value entries.
 Since I already already have the long dataframe stored essentially like this,
 it's pretty easy to make `matrixize2(longdf)`,
 which is just
- 
+
 ```julia
 function matrixize2(longdf)
     fs = Set(longdf.feature)
@@ -116,4 +116,4 @@ This version only took ~8 sec, for a combined total of 12 sec
 
 Amazing!
 
-{{footnotes}}
+{{ footnotes }}

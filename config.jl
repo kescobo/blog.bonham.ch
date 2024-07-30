@@ -58,6 +58,11 @@ social_linkedin = "https://www.linkedin.com/in/kevin-bonham-6a10b566/"
 social_bluesky  = "https://bsky.app/profile/kevbonham.bsky.social"
 rss_link        = "https://blog.bonham.ch/feed"
 
+# Comments from Mastodon info
+
+comments_host = "scicomm.xyz"
+comments_username = "kbonham"
+
 # other
 
 ignore=["_drafts/", "webeasties/"]

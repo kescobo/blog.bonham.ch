@@ -449,3 +449,5 @@ check out [the repo][typstcv] if you want to see the whole thing.
 [cvoverleaf]: https://www.overleaf.com/learn/latex/How_to_write_a_LaTeX_class_file_and_design_your_own_CV_(Part_2)
 [bibliography]: https://typst.app/docs/reference/model/bibliography/
 [typstcv]: https://gitlab.com/kescobo/cv-typst
+
+{{footnotes}}
