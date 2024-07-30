@@ -1,9 +1,9 @@
 +++
 using Dates
-date = Date(2024, 7, 29)
+date = Date(2024, 7, 30)
 title = "Mastodon comments in Xranklin - how to do it"
 comments_id = "112842335724314238"
-tags = ["web", "mastodon", "julia"]
+tags = ["web", "mastodon", "julia", "meta"]
 +++
 
 In the [last post](/posts/mastodon-comments),
@@ -407,10 +407,10 @@ Eg, for this post, the frontmatter looks like this:
 ```md
 +++
 using Dates
-date = Date(2024, 7, 29)
+date = Date(2024, 7, 30)
 title = "Mastodon comments in Xranklin - how to do it"
 comments_id = "112842335724314238"
-tags = ["web", "mastodon", "julia"]
+tags = ["web", "mastodon", "julia", "meta"]
 +++
 ```
 
