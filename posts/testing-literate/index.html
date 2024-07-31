@@ -37,8 +37,6 @@
   
 
   
-    <link rel="stylesheet" href="/libs/highlight/atom-one-dark.css">
-  
 
   <style>
   :root {
@@ -144,28 +142,7 @@
 it should be possible to have post-specific environments,
 which should make Literate.jl-based posts easier...</p>
 <p>Let's see if it works:</p>
-<pre><code class="julia">using CairoMakie
-using Distributions
-
-d = Normal(0, 0.5)</code></pre>
-<div class="code-output"><pre><code class="code-result language-plaintext">Distributions.Normal{Float64}(μ=0.0, σ=0.5)</code></pre></div><p>That's a normal distribution.
-This is testing out comment-based text.</p>
-<pre><code class="julia">fig = Figure()
-
-for i in 1:4
-    ax = Axis(fig[
-        ceil(Int, i / 2), # 1,1,2,2
-        2 - i % 2]; # 1,2,1,2
-        xlabel = &quot;10^$i samples&quot;
-    )
-
-    lines!(ax, (d))
-    hist!(ax, rand(d, 10^i); normalization=:pdf)
-end
-
-fig</code></pre>
-<div class="code-output"><img class="code-figure" src="/assets/posts/testing-literate/figs-html/__autofig_6829491492535337890.svg">
-</div> 
+<span style="color:red;">[FAILED:]&gt;\literate{_assets/literate/testing-literate/post.jl; project=.}&lt;</span> 
 
       
       </section>
@@ -184,9 +161,6 @@ fig</code></pre>
 
   
 
-  
-    <script src="/libs/highlight/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();hljs.configure({tabReplace: '    '});</script>
   
 
 <script src="/libs/coder.min.js"></script>

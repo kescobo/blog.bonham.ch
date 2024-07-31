@@ -7,19 +7,33 @@
   xmlns:georss="http://www.georss.org/georss">
   <channel>
     <title>
-      <![CDATA[  <span style="color:red;">[FAILED:]&gt;&lbrace;&lbrace; website_title&rbrace;&rbrace;&lt;</span>  ]]>
+      <![CDATA[  Useful Models  ]]>
     </title>
     <link> http://blog.bonham.ch/ </link>
     <description>
-      <![CDATA[  <span style="color:red;">[FAILED:]&gt;&lbrace;&lbrace; website_description&rbrace;&rbrace;&lt;</span>  ]]>
+      <![CDATA[  Personal blog of Kevin Bonham, PhD  ]]>
     </description>
+
+<item>
+  <title>
+    <![CDATA[  Setting up mastodon comments  ]]>
+  </title>
+  <link> http://blog.bonham.ch/posts/mastodon-comments2/index.html </link>
+  <guid> http://blog.bonham.ch/posts/mastodon-comments2/index.html </guid>
+  <description>
+    <![CDATA[  Mastodon comments - take 2  ]]>
+  </description>
+  <atom:author>
+    <atom:name>Kevin Bonham</atom:name>
+  </atom:author>
+</item>
 
 <item>
   <title>
     <![CDATA[  Job applications with Typst and git for fun and profit  ]]>
   </title>
-  <link> http://blog.bonham.chposts/typst-job-apps/index.html </link>
-  <guid> http://blog.bonham.chposts/typst-job-apps/index.html </guid>
+  <link> http://blog.bonham.ch/posts/typst-job-apps/index.html </link>
+  <guid> http://blog.bonham.ch/posts/typst-job-apps/index.html </guid>
   <description>
     <![CDATA[  Using plain text and git for easy job app customization  ]]>
   </description>
@@ -32,8 +46,8 @@
   <title>
     <![CDATA[  Job applications with LaTeX and git for fun and profit  ]]>
   </title>
-  <link> http://blog.bonham.chposts/latex-job-apps/index.html </link>
-  <guid> http://blog.bonham.chposts/latex-job-apps/index.html </guid>
+  <link> http://blog.bonham.ch/posts/latex-job-apps/index.html </link>
+  <guid> http://blog.bonham.ch/posts/latex-job-apps/index.html </guid>
   <description>
     <![CDATA[  Using plain text and git for easy job app customization  ]]>
   </description>
@@ -46,8 +60,8 @@
   <title>
     <![CDATA[  The DataFrames.jl mini-language just clicked  ]]>
   </title>
-  <link> http://blog.bonham.chposts/dataframes-minilanguage/index.html </link>
-  <guid> http://blog.bonham.chposts/dataframes-minilanguage/index.html </guid>
+  <link> http://blog.bonham.ch/posts/dataframes-minilanguage/index.html </link>
+  <guid> http://blog.bonham.ch/posts/dataframes-minilanguage/index.html </guid>
   <description>
     <![CDATA[  The mini-language is complicated, but powerful  ]]>
   </description>
@@ -60,8 +74,8 @@
   <title>
     <![CDATA[  Speeding up loading of HUMAnN gene-families tables using Arrow.jl + Tables.jl  ]]>
   </title>
-  <link> http://blog.bonham.chposts/genefamilies-speedup/index.html </link>
-  <guid> http://blog.bonham.chposts/genefamilies-speedup/index.html </guid>
+  <link> http://blog.bonham.ch/posts/genefamilies-speedup/index.html </link>
+  <guid> http://blog.bonham.ch/posts/genefamilies-speedup/index.html </guid>
   <description>
     <![CDATA[  Massive speedup for something I need to do all the time  ]]>
   </description>
@@ -72,38 +86,10 @@
 
 <item>
   <title>
-    <![CDATA[  Markdown Syntax Guide  ]]>
-  </title>
-  <link> http://blog.bonham.chposts/markdown-syntax/index.html </link>
-  <guid> http://blog.bonham.chposts/markdown-syntax/index.html </guid>
-  <description>
-    <![CDATA[  Markdown syntax etc  ]]>
-  </description>
-  <atom:author>
-    <atom:name>Kevin Bonham</atom:name>
-  </atom:author>
-</item>
-
-<item>
-  <title>
-    <![CDATA[  Emoji Support  ]]>
-  </title>
-  <link> http://blog.bonham.chposts/emoji-support/index.html </link>
-  <guid> http://blog.bonham.chposts/emoji-support/index.html </guid>
-  <description>
-    <![CDATA[  Emoji support yada yada  ]]>
-  </description>
-  <atom:author>
-    <atom:name>Kevin Bonham</atom:name>
-  </atom:author>
-</item>
-
-<item>
-  <title>
     <![CDATA[  Getting Back on the Horse - Part 2: Deploying a new Site  ]]>
   </title>
-  <link> http://blog.bonham.chposts/back-on-the-horse-part2/index.html </link>
-  <guid> http://blog.bonham.chposts/back-on-the-horse-part2/index.html </guid>
+  <link> http://blog.bonham.ch/posts/back-on-the-horse-part2/index.html </link>
+  <guid> http://blog.bonham.ch/posts/back-on-the-horse-part2/index.html </guid>
   <description>
     <![CDATA[  Part 2 of my effort to recover blog posts from my previous life  ]]>
   </description>

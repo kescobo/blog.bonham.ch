@@ -7,10 +7,24 @@
   xmlns:georss="http://www.georss.org/georss">
   <channel>
     <title>
-      <![CDATA[  <span style="color:red;">[FAILED:]&gt;&lbrace;&lbrace; website_title&rbrace;&rbrace;&lt;</span>  ]]>
+      <![CDATA[  Useful Models  ]]>
     </title>
     <link> http://blog.bonham.ch/ </link>
     <description>
-      <![CDATA[  <span style="color:red;">[FAILED:]&gt;&lbrace;&lbrace; website_description&rbrace;&rbrace;&lt;</span>  ]]>
+      <![CDATA[  Personal blog of Kevin Bonham, PhD  ]]>
     </description>
+
+<item>
+  <title>
+    <![CDATA[  Setting up mastodon comments  ]]>
+  </title>
+  <link> http://blog.bonham.ch/posts/mastodon-comments2/index.html </link>
+  <guid> http://blog.bonham.ch/posts/mastodon-comments2/index.html </guid>
+  <description>
+    <![CDATA[  Mastodon comments - take 2  ]]>
+  </description>
+  <atom:author>
+    <atom:name>Kevin Bonham</atom:name>
+  </atom:author>
+</item>
 </channel></rss>
