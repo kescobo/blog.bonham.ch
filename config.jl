@@ -4,8 +4,8 @@ author = "Kevin Bonham"
 author_blurb = "Senior Research Scientist"
 author_short = "kbonham"
 
-website_url = "http://blog.bonham.ch"
-website_title = "Blog dot Bonham dot C H"
+website_url = "http://blog.bonham.ch/"
+website_title = "Useful models"
 website_descr = "Personal website of Kevin Bonham, PhD"
 
 meta_descr = "Kevin Bonham's website"
@@ -56,7 +56,7 @@ social_orcid    = "https://orcid.org/0000-0003-3200-7533"
 social_mastodon = "https://www.scicomm.xyz/@kbonham"
 social_linkedin = "https://www.linkedin.com/in/kevin-bonham-6a10b566/"
 social_bluesky  = "https://bsky.app/profile/kevbonham.bsky.social"
-rss_link        = "https://blog.bonham.ch/feed"
+rss_link        = "/feed"
 
 # Comments from Mastodon info
 

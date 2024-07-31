@@ -4,6 +4,9 @@ date = Date(2024, 7, 30)
 title = "Mastodon comments in Xranklin - how to do it"
 comments_id = "112875739387630712"
 tags = ["web", "mastodon", "julia", "meta"]
+
+rss_descr = "Mastodon comments - take 2"
+rss_title = "Setting up mastodon comments"
 +++
 
 In the [last post](/posts/mastodon-comments),
