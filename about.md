@@ -2,10 +2,12 @@
 header = "About"
 +++
 
-I am a Senior Research Scientist
-in the Klepac-Ceraj lab at Wellesley College.
+I am an Assistant Professor
+in the Department of Medicine at Tufts Medical Center.
 I study the human microbiome :hankey: :toilet:
-and its effect on brain :brain: development in kids :baby:.
+and its effect on brain :brain: development in kids :baby:,
+and write to make it easier to analyze complex biological datasets.
+
 Feel free to [be in touch](/contact/)!
 
 I also write open-source software for the [julia programming language](http://julialang.org).

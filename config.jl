@@ -1,7 +1,7 @@
 # Site information.
 
 author = "Kevin Bonham"
-author_blurb = "Senior Research Scientist"
+author_blurb = "Assistant Professor"
 author_short = "kbonham"
 
 website_url = "http://blog.bonham.ch/"
@@ -9,7 +9,7 @@ website_title = "Useful models"
 website_descr = "Personal website of Kevin Bonham, PhD"
 
 meta_descr = "Kevin Bonham's website"
-meta_kw = "microbiome,data science,teaching"
+meta_kw = "microbiome,data science,teaching,immune system"
 
 # RSS settings
 
