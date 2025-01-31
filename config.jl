@@ -1,7 +1,7 @@
 # Site information.
 
 author = "Kevin Bonham"
-author_blurb = "Assistant Professor"
+author_blurb = "Assistant Professor | Tufts Medicine"
 author_short = "kbonham"
 
 website_url = "http://blog.bonham.ch/"
@@ -55,7 +55,7 @@ social_twitter  = "https://twitter.com/kevbonham/"
 social_orcid    = "https://orcid.org/0000-0003-3200-7533"
 social_mastodon = "https://www.scicomm.xyz/@kbonham"
 social_linkedin = "https://www.linkedin.com/in/kevin-bonham-6a10b566/"
-social_bluesky  = "https://bsky.app/profile/kevbonham.bsky.social"
+social_bluesky  = "https://bsky.app/profile/kevinbonham.com"
 rss_link        = "/feed"
 
 # Comments from Mastodon info

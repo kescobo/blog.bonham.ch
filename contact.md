@@ -23,7 +23,7 @@ including slack (`@kescobo`), zulip (`@kevin Bonham`), and [discourse][julia-dis
 I haven't been doing much tweeting since the Muskpocolypse,
 but when I did, it was [@kevbonham][twitter].
 More recently, I've been on Mastodon at [@kbonham@scicomm.xyz][mastodon],
-bluesky at [@kevbonham.bsky.social][bluesky],
+bluesky at [@kevinbonham.com][bluesky],
 and on Lemmy at [https://mander.xyz/u/kevin][lemmy].
 
 I've got a [LinkedIn][linkedin],
@@ -31,6 +31,6 @@ though don't count on timely replies there.
 
 [twitter]: https://twitter.com/kevbonham
 [mastodon]: https://scicomm.xyz/@kbonham
-[bluesky]: https://bsky.app/profile/kevbonham.bsky.social
+[bluesky]: https://bsky.app/profile/kevinbonham.com
 [lemmy]: https://mander.xyz/u/kevin
 [linkedin]: https://www.linkedin.com/in/kevin-bonham-6a10b566/
