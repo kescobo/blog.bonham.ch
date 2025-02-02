@@ -30,7 +30,7 @@ jobs:
         shell: bash
 
       - name: 🚀 Build and Deploy
-        uses: tlienart/xranklin-build-action@main
+        uses: kescobo/xranklin-build-action@main
         with:
           SITE_FOLDER: "./"
           BASE_URL_PREFIX: ${{ env.REPO_PREFIX }}
