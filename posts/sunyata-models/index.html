@@ -283,6 +283,25 @@ and our modern understanding of molecular biology and the DNA basis for genes
 
 
       
+        <link rel="stylesheet" href="/css/mastodon.comments.css" media="screen">
+        
+<section class="comments">
+  <h2 class="comments-title">Comments</h2>
+  <p>You can use your <a href="https://joinmastodon.org">Mastodon</a> or other ActivityPub account to comment on this article by replying to the associated <a class="link" href="https://scicomm.xyz/@kbonham/114043084055880022">post</a>.</p>
+  <div id="mastodon-comments">
+    <button id="load-comment">Load Comments</button>
+    <div id="mastodon-comments-list"></div>
+  </div>
+
+  <script src="/libs/mastodon.comments.js"></script>
+  <script type="text/javascript">
+    document.getElementById("load-comment").addEventListener("click", function() {
+      loadMastodonComments("scicomm.xyz", "114043084055880022");
+    });
+  </script>
+</section>
+
+      
       </section>
     </div>
 
