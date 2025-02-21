@@ -16,6 +16,20 @@
 
 <item>
   <title>
+    <![CDATA[  On the inherant unreality of probability, and also everything else  ]]>
+  </title>
+  <link> http://blog.bonham.ch/posts/sunyata-models/index.html </link>
+  <guid> http://blog.bonham.ch/posts/sunyata-models/index.html </guid>
+  <description>
+    <![CDATA[  Using plain text and git for easy job app customization  ]]>
+  </description>
+  <atom:author>
+    <atom:name>Kevin Bonham</atom:name>
+  </atom:author>
+</item>
+
+<item>
+  <title>
     <![CDATA[  Setting up mastodon comments  ]]>
   </title>
   <link> http://blog.bonham.ch/posts/mastodon-comments2/index.html </link>
