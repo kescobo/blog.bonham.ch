@@ -10,12 +10,16 @@ rss_descr = "Using plain text and git for easy job app customization"
 rss_title = title
 +++
 
- h/t https://bsky.app/profile/bobehayes.bsky.social/post/3lek62dil3n2q
 
-A few weeks ago,
-before the American science universe started crumbling around our ears,
+A few months ago,
+before the American science universe started crumbling around our ears[^death-of-science],
 [this article](https://www.nature.com/articles/d41586-024-04096-5)
 was posted to Nature News.
+
+[^death-of-science]: I've been working on this post off-and-on for a while.
+Part of me now thinks it's maybe glib to post this now,
+as the US shuts of science funding and descends into authoritarianism.
+At the same time, the philosophy here is part of how I am coping with the world.
 
 > And yet, any numerical probability, I will argue...
   is not an objective property of the world,
@@ -38,7 +42,7 @@ But the truth is that my embrace of Buddhism is deeply informed by my science.
 The central argument in this Nature News article, is that probability is in some sense "made up".
 A useful fiction to be sure, but it doesn't represent "an objective property of the world".
 This is essentially a narrow instance of a core Buddhist concept -
-_śūnyatā_ (the first 's' is pronounced with a 'sh', and the emphasis is on the last syllable - \[shoon-yah-TAH\]). 
+_śūnyatā_ (the first 's' is pronounced with a 'sh', and the emphasis is on the last syllable - [shoon-yah-TAH]). 
 
 This word is often translated as "emptiness",
 and the basic teaching, at least in the [school of Buddhism](https://en.wikipedia.org/wiki/Mahayana_sutras)
@@ -137,3 +141,7 @@ Instead, it's an invitation to humility, to grasp your ideas a little less tight
 Being more consciously aware of our models helps us to recognize **when** they are useful,
 and when we should instead look up and see the sky.
 
+[h/t Bob Hayes](https://bsky.app/profile/bobehayes.bsky.social/post/3lek62dil3n2q)
+for pointing me to the _Nature News_ article.
+
+{{footnotes}}
