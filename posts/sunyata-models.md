@@ -29,14 +29,14 @@ At the same time, the philosophy here is part of how I am coping with the world.
 With a minor modification, this unintentionally articulates a central tenant of Buddhism -
 one which also has important implications for science and beyond.
 In fact, any _concept_ at all, not just numerical probabilities,
-are not objective properties of the world.
+is not an objective property of the world.
 
 ---
 
 Folks that know me casually are often surprised to learn that I'm a Zen Buddhist.
 After all, I'm a scientist, skeptic, biologist, and atheist.
 Add this to my personality (extroverted, opinionated, loud),
-and it seems odds with what most people associate with Zen -
+and it seems at odds with what most people associate with Zen -
 quite, calm, woo-woo spirituality.
 But the truth is that my embrace of Buddhism is deeply informed by my science. 
 
