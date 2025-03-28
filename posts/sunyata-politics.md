@@ -25,9 +25,9 @@ and we have a historically geographic clustering of genotypes.
 Some of these genotypes are linked to readily observable phenotypes,
 such as melanin content in the skin and hair, epicanthic folds on the eyelids, etc.
 There are also less readily observable phenotypes like metabolism of certain drugs,
-and these sometimes appear to segregate with the things we can see.
+and these traits sometimes appear to segregate with the things we can see.
 
-When you map genotype onto self-identitified race,
+When you map genotype onto self-identified race,
 there's a pretty clear link.
 And this can have important implications in certain medical contexts -
 for example, if a patient says they're Jewish,
@@ -103,7 +103,7 @@ and some is surely cultural
 (eg honor cultures may increase male aggression
 in response to perceived slights),
 but isolating the precise proportion of nature vs nurture is,
-as it always tends to be, a mugs game.
+as it always tends to be, a mug's game.
 
 In any case, culture can have a massive influence
 on the actual expression of even biologically-driven traits.
@@ -132,11 +132,26 @@ is over-selling.
 Even ignoring the naturalistic fallacy -
 the mistaken belief that something which is natural is also normatively good -
 actual biology is never as cut and dry as political actors would have you believe.
-And in any case, it doesn't matter -
-we have to make social, moral, and political decisions based on values.
+
+
+In any case the naturalistic fallacy *is* a fallacy 
+and biology cannot tell us what is right or wrong.
+We have to make social, moral, and political decisions based on values.
 
 For example, let's take the issue of trans women competing in sports.
-There's an argument-from-biology that goes like this:
+Again, we'll put aside for the moment that many ideologues
+are attempting to use this issue as a wedge
+to marginalize trans people generally,
+and just focus on the most good-faith argument
+that could be espoused.
+
+The argument-from-biology that goes like this:
 
 1. People that have gone through male puberty tend to be taller,
-   have more bone density, and 
+   have more bone density, and other physical characteristics
+   that give them a competitive advantage in many sports
+2. Some trans women have been through male puberty
+3. Therefore, trans women have an unfair advantage
+   over other women and should therefore be banned from female sports
+
+There are several problems with this argument,
