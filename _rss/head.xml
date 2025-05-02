@@ -22,7 +22,7 @@ rss_file variable in your config file if you want to use something different tha
   <channel>
     <title>
       <!-- XXX <![CDATA[  {{fd2rss website_title}}  ]]> -->
-      <![CDATA[  Useful Models  ]]>
+      <![CDATA[  Empty Models  ]]>
     </title>
     <link> {{website_url}} </link>
     <description>

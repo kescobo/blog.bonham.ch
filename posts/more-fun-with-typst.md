@@ -450,4 +450,3 @@ check out [the repo][typstcv] if you want to see the whole thing.
 [bibliography]: https://typst.app/docs/reference/model/bibliography/
 [typstcv]: https://gitlab.com/kescobo/cv-typst
 
-{{footnotes}}

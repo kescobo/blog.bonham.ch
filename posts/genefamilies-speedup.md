@@ -116,4 +116,3 @@ This version only took ~8 sec, for a combined total of 12 sec
 
 Amazing!
 
-{{ footnotes }}

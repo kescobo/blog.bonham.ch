@@ -145,4 +145,3 @@ and when we should instead look up and see the sky.
 [h/t Bob Hayes](https://bsky.app/profile/bobehayes.bsky.social/post/3lek62dil3n2q)
 for pointing me to the _Nature News_ article.
 
-{{footnotes}}

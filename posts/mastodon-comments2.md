@@ -426,4 +426,3 @@ And let me know how it goes in the "comments" 😉
 [footchunk]: https://github.com/kescobo/blog.bonham.ch/blob/78ebc80adae5729124db401e6ac9e48218d6be9c/_layout/foot.html#L1-L4
 [assignments]: https://github.com/kescobo/blog.bonham.ch/blob/78ebc80adae5729124db401e6ac9e48218d6be9c/config.jl#L61-L64
 
-{{footnotes}}

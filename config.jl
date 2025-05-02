@@ -5,7 +5,7 @@ author_blurb = "Assistant Professor | Tufts Medicine"
 author_short = "kbonham"
 
 website_url = "http://blog.bonham.ch/"
-website_title = "Useful models"
+website_title = "Empty Models"
 website_descr = "Personal website of Kevin Bonham, PhD"
 
 meta_descr = "Kevin Bonham's website"

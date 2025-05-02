@@ -7,6 +7,9 @@ in the Department of Medicine at Tufts Medical Center.
 I study the human microbiome :hankey: :toilet:
 and its effect on brain :brain: development in kids :baby:,
 and write to make it easier to analyze complex biological datasets.
+My lab's website (WIP) can be [found here][lab-site].
+
+[lab-site]: https://lab.bonham.ch
 
 Feel free to [be in touch](/contact/)!
 
